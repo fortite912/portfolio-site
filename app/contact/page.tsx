@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Contact — Sean Fritsch",
+  description: "Disponible pour un stage en systèmes, réseaux ou cybersécurité.",
+};
 
 export default function ContactPage() {
   return (

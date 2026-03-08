@@ -4,9 +4,21 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Sean Fritsch — Portfolio SISR",
+  metadataBase: new URL("https://portfolio-sisr.vercel.app"),
+  title: {
+    default: "Sean Fritsch — Portfolio SISR",
+    template: "%s | Portfolio SISR",
+  },
   description:
     "Systèmes • Réseaux • Cybersécurité — labs documentés avec preuves vérifiables.",
+  keywords: ["SISR", "BTS SIO", "portfolio", "systèmes", "réseaux", "cybersécurité", "Azure", "Cisco", "stage"],
+  authors: [{ name: "Sean Fritsch" }],
+  openGraph: {
+    title: "Sean Fritsch — Portfolio SISR",
+    description: "Systèmes • Réseaux • Cybersécurité — labs documentés avec preuves vérifiables.",
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { getProjects } from "@/lib/projects";
 import { ProjectsGridClient } from "@/components/projects-grid.client";
+
+export const metadata: Metadata = {
+  title: "Projets — Sean Fritsch",
+  description: "Labs documentés avec objectifs, configuration, validations et preuves reproductibles.",
+};
 
 export default function ProjectsPage() {
   const projects = getProjects();

@@ -1,6 +1,25 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProjectBySlug } from "@/lib/projects";
+import { getProjectBySlug, getProjects } from "@/lib/projects";
+import type { Metadata } from "next";
+
+export async function generateStaticParams() {
+  return getProjects().map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+  if (!project) return {};
+  return {
+    title: `Rapport — ${project.title} — Sean Fritsch`,
+    description: `Rapport de preuves : ${project.subtitle}`,
+  };
+}
 
 export default async function ReportPage({
   params,

@@ -2,35 +2,86 @@ import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { getFeaturedProjects } from "@/lib/projects";
 import { ProjectCard } from "@/components/project-card";
+import { AnimateOnScroll } from "@/components/animate-on-scroll";
 
+/* ===== SVG icon components ===== */
+const IconFolder = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+  </svg>
+);
+const IconCheck = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-green)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+    <polyline points="22 4 12 14.01 9 11.01" />
+  </svg>
+);
+const IconZap = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-yellow)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+  </svg>
+);
+const IconAward = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent2)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="8" r="7" />
+    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+  </svg>
+);
+
+const IconMonitor = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+    <line x1="8" y1="21" x2="16" y2="21" />
+    <line x1="12" y1="17" x2="12" y2="21" />
+  </svg>
+);
+const IconGlobe = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" />
+    <line x1="2" y1="12" x2="22" y2="12" />
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+  </svg>
+);
+const IconShield = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+  </svg>
+);
+const IconCloud = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+  </svg>
+);
+
+/* ===== Data ===== */
 const STATS = [
-  { value: "4", label: "Labs documentés", icon: "📁" },
-  { value: "15+", label: "Validations", icon: "✓" },
-  { value: "3", label: "Technos clés", icon: "⚡" },
-  { value: "2", label: "Certifs visées", icon: "🎯" },
+  { value: "4", label: "Labs documentés", Icon: IconFolder },
+  { value: "15+", label: "Validations", Icon: IconCheck },
+  { value: "3", label: "Technos clés", Icon: IconZap },
+  { value: "2", label: "Certifs visées", Icon: IconAward },
 ];
 
 const SKILLS = [
   {
-    icon: "🖥️",
+    Icon: IconMonitor,
     title: "Systèmes",
     items: ["Windows Server", "AD DS", "DNS", "DHCP", "GPO", "PowerShell"],
     color: "accent",
   },
   {
-    icon: "🌐",
+    Icon: IconGlobe,
     title: "Réseau",
     items: ["Cisco IOS", "VLAN", "STP", "LACP", "OSPF", "Wireshark"],
     color: "purple",
   },
   {
-    icon: "🛡️",
+    Icon: IconShield,
     title: "Cybersécurité",
     items: ["NSG", "Firewall rules", "ARP analysis", "Capture réseau"],
     color: "green",
   },
   {
-    icon: "☁️",
+    Icon: IconCloud,
     title: "Cloud",
     items: ["Azure VNet", "NSG", "VMs", "CLI", "Portal"],
     color: "cyan",
@@ -67,7 +118,6 @@ export default function HomePage() {
         />
 
         <div className="relative space-y-8 pt-4">
-          {/* Status badge */}
           <div className="animate-in">
             <span
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium"
@@ -142,112 +192,121 @@ export default function HomePage() {
       <section>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {STATS.map((s, i) => (
-            <div key={s.label} className="card p-5 text-center animate-in" style={{ animationDelay: `${i * 80}ms` }}>
-              <div className="text-2xl mb-2">{s.icon}</div>
-              <div className="stat-number">{s.value}</div>
-              <p className="text-xs font-medium mt-1" style={{ color: "var(--color-muted)" }}>{s.label}</p>
-            </div>
+            <AnimateOnScroll key={s.label} delay={i * 80}>
+              <div className="card p-5 text-center">
+                <div className="flex justify-center mb-3">
+                  <s.Icon />
+                </div>
+                <div className="stat-number">{s.value}</div>
+                <p className="text-xs font-medium mt-1" style={{ color: "var(--color-muted)" }}>{s.label}</p>
+              </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </section>
 
       {/* ===== Skills ===== */}
       <section className="space-y-6">
-        <div>
-          <p className="heading-section">Compétences</p>
-          <h2 className="heading-lg mt-2">Stack technique</h2>
-        </div>
+        <AnimateOnScroll>
+          <div>
+            <p className="heading-section">Compétences</p>
+            <h2 className="heading-lg mt-2">Stack technique</h2>
+          </div>
+        </AnimateOnScroll>
         <div className="grid gap-4 sm:grid-cols-2">
           {SKILLS.map((skill, i) => (
-            <div
-              key={skill.title}
-              className="card p-5 animate-in"
-              style={{ animationDelay: `${i * 80}ms`, borderColor: borderMap[skill.color] }}
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-lg"
-                  style={{ background: colorMap[skill.color], border: `1px solid ${borderMap[skill.color]}` }}
-                >
-                  {skill.icon}
-                </div>
-                <h3 className="font-semibold">{skill.title}</h3>
-              </div>
-              <div className="flex flex-wrap gap-1.5">
-                {skill.items.map((item) => (
-                  <span
-                    key={item}
-                    className="text-xs px-2.5 py-1 rounded-md"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      color: "var(--color-muted)",
-                      fontFamily: "var(--font-mono)",
-                      border: "1px solid rgba(255,255,255,0.05)",
-                    }}
+            <AnimateOnScroll key={skill.title} delay={i * 100}>
+              <div
+                className="card card-hover p-5"
+                style={{ borderColor: borderMap[skill.color] }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center"
+                    style={{ background: colorMap[skill.color], border: `1px solid ${borderMap[skill.color]}` }}
                   >
-                    {item}
-                  </span>
-                ))}
+                    <skill.Icon />
+                  </div>
+                  <h3 className="font-semibold">{skill.title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {skill.items.map((item) => (
+                    <span
+                      key={item}
+                      className="tag-code"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </section>
 
       {/* ===== Approach ===== */}
       <section className="space-y-6">
-        <div>
-          <p className="heading-section">Méthodologie</p>
-          <h2 className="heading-lg mt-2">Preuves avant tout</h2>
-        </div>
+        <AnimateOnScroll>
+          <div>
+            <p className="heading-section">Méthodologie</p>
+            <h2 className="heading-lg mt-2">Preuves avant tout</h2>
+          </div>
+        </AnimateOnScroll>
         <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {SITE.focus.map((f, i) => (
-            <div key={f.title} className="card p-4 animate-in" style={{ animationDelay: `${i * 60}ms` }}>
-              <div
-                className="mb-1"
-                style={{ fontFamily: "var(--font-mono)", color: "var(--color-accent)", fontSize: "11px" }}
-              >
-                {String(i + 1).padStart(2, "0")}
+            <AnimateOnScroll key={f.title} delay={i * 60}>
+              <div className="card card-hover p-4">
+                <div
+                  className="mb-1"
+                  style={{ fontFamily: "var(--font-mono)", color: "var(--color-accent)", fontSize: "11px" }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <p className="text-sm font-semibold mb-1">{f.title}</p>
+                <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>{f.hint}</p>
               </div>
-              <p className="text-sm font-semibold mb-1">{f.title}</p>
-              <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>{f.hint}</p>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </section>
 
       {/* ===== Featured projects ===== */}
       <section className="space-y-6">
-        <div className="flex items-end justify-between gap-4">
-          <div>
-            <p className="heading-section">Sélection</p>
-            <h2 className="heading-lg mt-2">Projets à la une</h2>
+        <AnimateOnScroll>
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <p className="heading-section">Sélection</p>
+              <h2 className="heading-lg mt-2">Projets à la une</h2>
+            </div>
+            <Link className="btn text-sm" href="/projects">
+              Tout voir →
+            </Link>
           </div>
-          <Link className="btn text-sm" href="/projects">
-            Tout voir →
-          </Link>
-        </div>
+        </AnimateOnScroll>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((p, i) => (
-            <div key={p.slug} className="animate-in" style={{ animationDelay: `${i * 100}ms` }}>
+            <AnimateOnScroll key={p.slug} delay={i * 100}>
               <ProjectCard project={p} />
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </section>
 
       {/* ===== CTA final ===== */}
-      <section className="card card-glow p-8 md:p-12 text-center space-y-5">
-        <h2 className="heading-lg">Intéressé par mon profil ?</h2>
-        <p className="max-w-lg mx-auto text-sm leading-relaxed" style={{ color: "var(--color-muted)" }}>
-          Je cherche un stage en systèmes, réseaux ou cybersécurité.
-          Chaque lab est documenté avec des preuves vérifiables.
-        </p>
-        <div className="flex flex-wrap justify-center gap-3 pt-2">
-          <Link className="btn btn-primary btn-lg" href="/contact">Me contacter</Link>
-          <a className="btn btn-lg" href={SITE.links.cv} target="_blank" rel="noreferrer">Télécharger le CV</a>
-        </div>
-      </section>
+      <AnimateOnScroll>
+        <section className="card card-glow p-8 md:p-12 text-center space-y-5">
+          <h2 className="heading-lg">Intéressé par mon profil ?</h2>
+          <p className="max-w-lg mx-auto text-sm leading-relaxed" style={{ color: "var(--color-muted)" }}>
+            Je cherche un stage en systèmes, réseaux ou cybersécurité.
+            Chaque lab est documenté avec des preuves vérifiables.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 pt-2">
+            <Link className="btn btn-primary btn-lg" href="/contact">Me contacter</Link>
+            <a className="btn btn-lg" href={SITE.links.cv} target="_blank" rel="noreferrer">Télécharger le CV</a>
+          </div>
+        </section>
+      </AnimateOnScroll>
     </div>
   );
 }

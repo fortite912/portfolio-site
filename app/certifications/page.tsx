@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { certifications } from "@/lib/certifications";
+
+export const metadata: Metadata = {
+  title: "Certifications — Sean Fritsch",
+  description: "Parcours certifications Azure : AZ-900 acquis, AZ-104 en préparation.",
+};
 
 const statusStyle: Record<string, { pill: string; icon: string }> = {
   Acquis: { pill: "pill-green", icon: "✓" },

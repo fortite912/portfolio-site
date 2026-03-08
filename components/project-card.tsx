@@ -96,7 +96,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <div
-          className="flex items-center gap-1.5 text-sm font-medium pt-1 opacity-0 transition-all duration-200 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0"
+          className="flex items-center gap-1.5 text-sm font-medium pt-1 opacity-100 md:opacity-0 transition-all duration-200 md:group-hover:opacity-100 md:translate-y-1 md:group-hover:translate-y-0"
           style={{ color: "var(--color-accent)" }}
         >
           Voir le projet
