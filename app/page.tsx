@@ -3,6 +3,7 @@ import { SITE } from "@/lib/site";
 import { getFeaturedProjects } from "@/lib/projects";
 import { ProjectCard } from "@/components/project-card";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { CountUp } from "@/components/count-up";
 
 /* ===== SVG icon components ===== */
 const IconFolder = () => (
@@ -197,7 +198,7 @@ export default function HomePage() {
                 <div className="flex justify-center mb-3">
                   <s.Icon />
                 </div>
-                <div className="stat-number">{s.value}</div>
+                <div className="stat-number"><CountUp value={s.value} /></div>
                 <p className="text-xs font-medium mt-1" style={{ color: "var(--color-muted)" }}>{s.label}</p>
               </div>
             </AnimateOnScroll>

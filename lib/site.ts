@@ -4,7 +4,7 @@ export const SITE: Site = {
   name: "Sean Fritsch",
   role: "BTS SIO SISR",
   title: "Portfolio SISR",
-  tagline: "Systemes \u2022 Reseaux \u2022 Cybersecurite \u2014 preuves a l\u2019appui.",
+  tagline: "Syst\u00e8mes \u2022 R\u00e9seaux \u2022 Cybers\u00e9curit\u00e9 \u2014 preuves \u00e0 l\u2019appui.",
   location: "\u00cele-de-France",
   availability: {
     label: "Ouvert aux stages",
@@ -18,10 +18,10 @@ export const SITE: Site = {
     email: "seanfritsch6@gmail.com",
   },
   focus: [
-    { title: "Topologies", hint: "schemas + adressage + VLAN/OSPF" },
+    { title: "Topologies", hint: "sch\u00e9mas + adressage + VLAN/OSPF" },
     { title: "Configs", hint: "CLI/PowerShell + fichiers + versions" },
-    { title: "Tests", hint: "procedures + attendu/observe" },
-    { title: "Captures", hint: "Wireshark + analyse + interpretation" },
+    { title: "Tests", hint: "proc\u00e9dures + attendu/observ\u00e9" },
+    { title: "Captures", hint: "Wireshark + analyse + interpr\u00e9tation" },
     { title: "Livrables", hint: "PDF + checklists + preuves" },
   ],
   badges: ["BTS SIO SISR", "\u00cele-de-France", "Ouvert aux stages"],
