@@ -61,7 +61,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div
-              className="flex items-center justify-center w-8 h-8 rounded-lg text-sm font-bold transition-transform duration-300 group-hover:scale-110"
+              className="flex items-center justify-center w-8 h-8 rounded-lg text-sm font-bold transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
               style={{
                 background:
                   "linear-gradient(135deg, rgba(96,165,250,0.15), rgba(167,139,250,0.15))",
@@ -74,7 +74,7 @@ export function Navbar() {
             <div className="flex flex-col">
               <span className="text-sm font-bold tracking-tight">{SITE.name}</span>
               <span
-                className="text-[10px] font-medium tracking-wider uppercase"
+                className="text-[10px] font-medium tracking-wider uppercase transition-colors duration-300 group-hover:text-[var(--color-accent)]"
                 style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
               >
                 {SITE.role}
@@ -105,6 +105,7 @@ export function Navbar() {
                     style={{
                       background:
                         "linear-gradient(90deg, var(--color-accent), var(--color-accent2))",
+                      boxShadow: "0 2px 12px rgba(96,165,250,0.3), 0 0px 4px rgba(167,139,250,0.2)",
                     }}
                   />
                 )}

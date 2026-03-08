@@ -30,8 +30,15 @@ export default function CertificationsPage() {
           return (
             <article
               key={c.slug}
-              className="card card-hover overflow-hidden animate-in"
-              style={{ animationDelay: `${i * 100}ms` }}
+              className={`card card-hover overflow-hidden animate-in${c.status === "Acquis" ? " card-glow" : ""}`}
+              style={{
+                animationDelay: `${i * 100}ms`,
+                ...(c.status === "Acquis"
+                  ? { borderColor: "rgba(52,211,153,0.2)", boxShadow: "0 0 30px rgba(52,211,153,0.06)" }
+                  : c.status === "En cours"
+                  ? { borderColor: "rgba(251,191,36,0.15)", borderStyle: "dashed" }
+                  : { opacity: 0.7 }),
+              }}
             >
               {c.cover && (
                 <div className="relative h-40 overflow-hidden">

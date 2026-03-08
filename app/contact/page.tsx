@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
+import { CopyTemplate } from "@/components/copy-template";
 
 export const metadata: Metadata = {
   title: "Contact — Sean Fritsch",
@@ -164,6 +165,7 @@ export default function ContactPage() {
                 </li>
               ))}
             </ul>
+            <CopyTemplate />
           </div>
         </div>
       </div>

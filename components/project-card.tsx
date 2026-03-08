@@ -15,6 +15,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <Link
       href={`/projects/${project.slug}`}
       className="group card card-hover block overflow-hidden"
+      aria-label={`${project.title} — ${st.label}`}
     >
       {/* Cover */}
       {project.cover ? (
@@ -93,6 +94,19 @@ export function ProjectCard({ project }: { project: Project }) {
               {t}
             </span>
           ))}
+          {project.tags.length > 4 && (
+            <span
+              className="text-[11px] px-2 py-0.5 rounded-md"
+              style={{
+                background: "rgba(96,165,250,0.06)",
+                color: "var(--color-accent)",
+                border: "1px solid rgba(96,165,250,0.12)",
+                fontFamily: "var(--font-mono)",
+              }}
+            >
+              +{project.tags.length - 4}
+            </span>
+          )}
         </div>
 
         <div
