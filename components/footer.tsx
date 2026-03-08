@@ -2,13 +2,13 @@ import { SITE } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="mt-16 border-t border-white/8">
-      <div className="mx-auto flex max-w-[1100px] flex-col gap-3 px-4 py-8 md:flex-row md:items-center md:justify-between">
-        <div className="text-sm text-white/50">
+    <footer style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <div className="mx-auto flex max-w-[1100px] flex-col gap-3 px-5 py-8 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-xs text-[var(--color-muted)]">
           &copy; {new Date().getFullYear()} {SITE.name} &mdash; Portfolio SISR
-        </div>
+        </p>
 
-        <div className="flex flex-wrap gap-4 text-sm">
+        <div className="flex gap-4 text-xs">
           <a
             className="link"
             href={SITE.links.github}

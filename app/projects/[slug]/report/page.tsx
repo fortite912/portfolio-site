@@ -2,31 +2,30 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProjectBySlug } from "@/lib/projects";
 
-type Params = { slug: string };
-
 export default async function ReportPage({
   params,
 }: {
-  params: Promise<Params>;
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return notFound();
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
         <div className="space-y-2">
           <Link
-            className="text-sm text-white/50 hover:text-white transition-colors"
             href={`/projects/${project.slug}`}
+            className="text-sm transition-colors"
+            style={{ color: "var(--color-muted)" }}
           >
             &larr; {project.title}
           </Link>
-          <h1 className="text-2xl font-bold">Rapport</h1>
-          <p className="text-white/55">
-            Attendu : preuves + proc&eacute;dure reproductible.
+          <h1 className="heading-lg">Rapport</h1>
+          <p style={{ color: "var(--color-muted)" }}>
+            Preuves + proc&eacute;dure reproductible.
           </p>
         </div>
         <div className="flex gap-2 shrink-0">
@@ -42,16 +41,23 @@ export default async function ReportPage({
       {/* Proof */}
       {project.proof?.length ? (
         <section className="card p-6">
-          <h2 className="text-sm font-semibold text-[rgb(var(--accent))] uppercase tracking-wide">
+          <p
+            className="heading-section mb-4"
+            style={{ color: "var(--color-accent)" }}
+          >
             Preuves attendues
-          </h2>
-          <ul className="mt-4 space-y-2">
+          </p>
+          <ul className="space-y-2.5">
             {project.proof.map((p) => (
               <li
                 key={p}
-                className="flex items-start gap-3 text-sm text-white/80"
+                className="flex items-start gap-3 text-sm"
+                style={{ color: "rgba(255,255,255,0.8)" }}
               >
-                <span className="mt-0.5 text-[rgb(var(--green))] shrink-0">
+                <span
+                  className="mt-0.5 shrink-0"
+                  style={{ color: "var(--color-green)" }}
+                >
                   &check;
                 </span>
                 {p}
@@ -61,33 +67,46 @@ export default async function ReportPage({
         </section>
       ) : null}
 
-      {/* Timeline steps */}
+      {/* Steps */}
       {project.timeline?.length ? (
         <section className="card p-6">
-          <h2 className="text-sm font-semibold text-white/70 uppercase tracking-wide">
-            &Eacute;tapes
-          </h2>
-          <div className="mt-4 space-y-4">
+          <p className="heading-section mb-4">&Eacute;tapes</p>
+          <div className="space-y-4">
             {project.timeline.map((step, idx) => (
               <div
                 key={`${step.title}-${idx}`}
-                className={
-                  idx > 0 ? "border-t border-white/8 pt-4" : undefined
+                className={idx > 0 ? "pt-4" : undefined}
+                style={
+                  idx > 0
+                    ? { borderTop: "1px solid rgba(255,255,255,0.06)" }
+                    : undefined
                 }
               >
                 <div className="flex items-center gap-3">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[rgba(var(--accent),0.12)] text-xs font-bold text-[rgb(var(--accent))]">
+                  <span
+                    className="flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold"
+                    style={{
+                      background: "rgba(94,187,255,0.12)",
+                      color: "var(--color-accent)",
+                    }}
+                  >
                     {idx + 1}
                   </span>
                   <span className="text-sm font-semibold">{step.title}</span>
                   {step.badge && (
-                    <span className="pill pill-muted text-[11px] ml-auto">
+                    <span
+                      className="pill pill-muted ml-auto"
+                      style={{ fontSize: 11 }}
+                    >
                       {step.badge}
                     </span>
                   )}
                 </div>
                 {step.details?.length ? (
-                  <ul className="mt-2 ml-9 space-y-1 text-sm text-white/65">
+                  <ul
+                    className="mt-2 ml-9 space-y-1 text-sm"
+                    style={{ color: "var(--color-muted)" }}
+                  >
                     {step.details.map((d, i) => (
                       <li key={`${d}-${i}`}>{d}</li>
                     ))}
@@ -101,10 +120,8 @@ export default async function ReportPage({
 
       {/* Deliverables */}
       <section className="card p-6">
-        <h2 className="text-sm font-semibold text-white/70 uppercase tracking-wide">
-          Livrables
-        </h2>
-        <div className="mt-3 flex flex-wrap gap-2">
+        <p className="heading-section mb-3">Livrables</p>
+        <div className="flex flex-wrap gap-2">
           {project.deliverables.map((d) => (
             <span key={d} className="pill">
               {d}
@@ -113,14 +130,12 @@ export default async function ReportPage({
         </div>
       </section>
 
-      {/* PDF download */}
+      {/* PDF */}
       {project.reportPdf && (
         <section className="card p-6">
-          <h2 className="text-sm font-semibold text-white/70 uppercase tracking-wide">
-            PDF
-          </h2>
+          <p className="heading-section mb-3">Document</p>
           <a
-            className="link mt-3 inline-block"
+            className="link"
             href={project.reportPdf}
             target="_blank"
             rel="noreferrer"

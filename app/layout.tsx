@@ -16,10 +16,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="min-h-screen">
         <div className="scanlines" />
         <Navbar />
-        <main className="container" style={{ padding: "32px 0 64px" }}>
+        <main className="mx-auto w-full max-w-[1100px] px-5 py-10 md:py-14">
           {children}
         </main>
         <Footer />

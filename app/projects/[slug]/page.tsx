@@ -3,13 +3,12 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProjectBySlug } from "@/lib/projects";
 
-const statusStyle: Record<string, string> = {
+const sBadge: Record<string, string> = {
   Done: "pill-green",
   "In progress": "pill-yellow",
   Planned: "pill-accent",
 };
-
-const statusLabel: Record<string, string> = {
+const sLabel: Record<string, string> = {
   Done: "Termin\u00e9",
   "In progress": "En cours",
   Planned: "Planifi\u00e9",
@@ -25,16 +24,17 @@ export default async function ProjectDetailPage({
   if (!project) return notFound();
 
   return (
-    <div className="space-y-8">
-      {/* Back link */}
+    <div className="space-y-10">
+      {/* Back */}
       <Link
-        className="inline-flex items-center gap-1 text-sm text-white/50 hover:text-white transition-colors"
         href="/projects"
+        className="inline-flex items-center gap-1.5 text-sm transition-colors"
+        style={{ color: "var(--color-muted)" }}
       >
-        &larr; Projets
+        &larr; Retour aux projets
       </Link>
 
-      {/* Cover + header */}
+      {/* Cover */}
       {project.cover && (
         <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden">
           <Image
@@ -45,21 +45,31 @@ export default async function ProjectDetailPage({
             sizes="1100px"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to top, rgba(10,12,16,0.9) 0%, rgba(10,12,16,0.3) 50%, transparent)",
+            }}
+          />
         </div>
       )}
 
+      {/* Header */}
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
         <div className="space-y-3">
-          <h1 className="text-2xl md:text-3xl font-bold">{project.title}</h1>
-          <p className="text-white/60 max-w-2xl">{project.subtitle}</p>
-
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
+            {project.title}
+          </h1>
+          <p style={{ color: "var(--color-muted)" }} className="max-w-2xl">
+            {project.subtitle}
+          </p>
           <div className="flex flex-wrap items-center gap-2">
             {project.category && (
               <span className="pill pill-accent">{project.category}</span>
             )}
-            <span className={`pill ${statusStyle[project.status] ?? ""}`}>
-              {statusLabel[project.status] ?? project.status}
+            <span className={`pill ${sBadge[project.status] ?? ""}`}>
+              {sLabel[project.status] ?? project.status}
             </span>
           </div>
         </div>
@@ -70,9 +80,6 @@ export default async function ProjectDetailPage({
             href={`/projects/${project.slug}/report`}
           >
             Rapport
-          </Link>
-          <Link className="btn" href="/contact">
-            Contact
           </Link>
           {project.pdf && (
             <a
@@ -89,23 +96,23 @@ export default async function ProjectDetailPage({
 
       {/* Objective */}
       <section className="card p-6">
-        <h2 className="text-sm font-semibold text-[rgb(var(--accent))] uppercase tracking-wide">
+        <p
+          className="heading-section mb-3"
+          style={{ color: "var(--color-accent)" }}
+        >
           Objectif
-        </h2>
-        <p className="mt-2 text-white/80 leading-relaxed">
+        </p>
+        <p className="leading-relaxed" style={{ color: "rgba(255,255,255,0.8)" }}>
           {project.objective}
         </p>
       </section>
 
       {/* Info grid */}
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {/* Stack */}
         {project.stack?.length ? (
           <div className="card p-5">
-            <h3 className="text-sm font-semibold text-white/70 uppercase tracking-wide">
-              Stack
-            </h3>
-            <div className="mt-3 flex flex-wrap gap-2">
+            <p className="heading-section mb-3">Stack</p>
+            <div className="flex flex-wrap gap-2">
               {project.stack.map((s) => (
                 <span key={s} className="pill">
                   {s}
@@ -115,34 +122,24 @@ export default async function ProjectDetailPage({
           </div>
         ) : null}
 
-        {/* Method */}
         <div className="card p-5">
-          <h3 className="text-sm font-semibold text-white/70 uppercase tracking-wide">
-            M&eacute;thode
-          </h3>
-          <ul className="mt-3 space-y-1.5 text-sm text-white/75">
+          <p className="heading-section mb-3">M&eacute;thode</p>
+          <ul className="space-y-1.5 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
             {project.method.map((m, i) => (
               <li key={i} className="flex gap-2">
-                <span className="text-[rgb(var(--accent))] shrink-0">
-                  &bull;
-                </span>
+                <span style={{ color: "var(--color-accent)" }}>&bull;</span>
                 {m}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Validation */}
         <div className="card p-5">
-          <h3 className="text-sm font-semibold text-white/70 uppercase tracking-wide">
-            Validation
-          </h3>
-          <ul className="mt-3 space-y-1.5 text-sm text-white/75">
+          <p className="heading-section mb-3">Validation</p>
+          <ul className="space-y-1.5 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
             {project.validation.map((v, i) => (
               <li key={i} className="flex gap-2">
-                <span className="text-[rgb(var(--green))] shrink-0">
-                  &check;
-                </span>
+                <span style={{ color: "var(--color-green)" }}>&check;</span>
                 {v}
               </li>
             ))}
@@ -153,29 +150,34 @@ export default async function ProjectDetailPage({
       {/* Timeline */}
       {project.timeline?.length ? (
         <section className="space-y-4">
-          <h2 className="text-sm font-semibold text-white/70 uppercase tracking-wide">
-            Timeline
-          </h2>
-
+          <p className="heading-section">Timeline</p>
           <div className="grid gap-3">
             {project.timeline.map((step, idx) => (
               <div key={`${step.title}-${idx}`} className="card p-5">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[rgba(var(--accent),0.12)] text-xs font-bold text-[rgb(var(--accent))]">
+                    <span
+                      className="flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold"
+                      style={{
+                        background: "rgba(94,187,255,0.12)",
+                        color: "var(--color-accent)",
+                      }}
+                    >
                       {idx + 1}
                     </span>
                     <span className="font-semibold">{step.title}</span>
                   </div>
                   {step.badge && (
-                    <span className="pill pill-muted text-[11px]">
+                    <span className="pill pill-muted" style={{ fontSize: 11 }}>
                       {step.badge}
                     </span>
                   )}
                 </div>
-
                 {step.details?.length ? (
-                  <ul className="mt-3 ml-10 space-y-1 text-sm text-white/65">
+                  <ul
+                    className="mt-3 ml-10 space-y-1 text-sm"
+                    style={{ color: "var(--color-muted)" }}
+                  >
                     {step.details.map((d, i) => (
                       <li key={`${d}-${i}`}>{d}</li>
                     ))}
@@ -189,10 +191,8 @@ export default async function ProjectDetailPage({
 
       {/* Deliverables */}
       <section className="card p-6">
-        <h2 className="text-sm font-semibold text-white/70 uppercase tracking-wide">
-          Livrables
-        </h2>
-        <div className="mt-3 flex flex-wrap gap-2">
+        <p className="heading-section mb-3">Livrables</p>
+        <div className="flex flex-wrap gap-2">
           {project.deliverables.map((d) => (
             <span key={d} className="pill">
               {d}
