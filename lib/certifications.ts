@@ -9,6 +9,7 @@ export const certifications: Certification[] = [
     status: "Acquis",
     tags: ["Azure", "Fundamentals", "Cloud"],
     cover: "/media/az900.png",
+    proofUrl: "https://learn.microsoft.com/fr-fr/users/seanfritschnkatiah-0194/credentials/d4590e5e382dda04",
     description:
       "Certification obtenue — concepts cloud, services Azure, sécurité, pricing. Preuves et labs documentés.",
   },
