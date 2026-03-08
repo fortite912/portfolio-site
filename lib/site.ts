@@ -8,7 +8,7 @@ export const SITE: Site = {
   location: "\u00cele-de-France",
   availability: {
     label: "Ouvert aux stages",
-    dateRange: "2026 \u2014 selon calendrier",
+    dateRange: "18 mai \u2014 19 juin 2026",
     location: "\u00cele-de-France / Remote",
   },
   links: {
