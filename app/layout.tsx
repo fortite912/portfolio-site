@@ -4,9 +4,9 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Portfolio SISR \u2014 Sean Fritsch",
+  title: "Sean Fritsch — Portfolio SISR",
   description:
-    "Syst\u00e8mes \u2022 R\u00e9seaux \u2022 Cybers\u00e9curit\u00e9 \u2014 preuves \u00e0 l\u2019appui.",
+    "Systèmes • Réseaux • Cybersécurité — labs documentés avec preuves vérifiables.",
 };
 
 export default function RootLayout({
@@ -24,14 +24,15 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen">
-        <div className="scanlines" />
+      <body className="min-h-screen flex flex-col">
+        <div className="dot-grid" />
+        <div className="ambient-glow" />
         <Navbar />
-        <main className="mx-auto w-full max-w-[1100px] px-5 py-10 md:py-14">
+        <main className="relative z-10 mx-auto w-full max-w-[1120px] px-5 py-10 md:py-16 flex-1 page-enter">
           {children}
         </main>
         <Footer />

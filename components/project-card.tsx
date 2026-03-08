@@ -2,25 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/types";
 
-const sBadge: Record<string, string> = {
-  Done: "pill-green",
-  "In progress": "pill-yellow",
-  Planned: "pill-accent",
-};
-
-const sLabel: Record<string, string> = {
-  Done: "Termin\u00e9",
-  "In progress": "En cours",
-  Planned: "Planifi\u00e9",
+const statusStyle: Record<string, { pill: string; label: string }> = {
+  Done: { pill: "pill-green", label: "Terminé" },
+  "In progress": { pill: "pill-yellow", label: "En cours" },
+  Planned: { pill: "pill-accent", label: "Planifié" },
 };
 
 export function ProjectCard({ project }: { project: Project }) {
+  const st = statusStyle[project.status] ?? { pill: "", label: project.status };
+
   return (
     <Link
       href={`/projects/${project.slug}`}
       className="group card card-hover block overflow-hidden"
     >
-      {/* Cover image */}
+      {/* Cover */}
       {project.cover ? (
         <div className="relative h-44 overflow-hidden">
           <Image
@@ -30,49 +26,52 @@ export function ProjectCard({ project }: { project: Project }) {
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width:768px) 100vw, 50vw"
           />
-          {/* gradient overlay */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to top, rgba(10,12,16,0.95) 0%, rgba(10,12,16,0.3) 50%, transparent 100%)",
+                "linear-gradient(to top, rgba(6,8,13,0.95) 0%, rgba(6,8,13,0.4) 50%, rgba(6,8,13,0.1) 100%)",
             }}
           />
-
-          {/* badges on image */}
           <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between">
             {project.category && (
               <span className="pill pill-accent" style={{ fontSize: 11 }}>
                 {project.category}
               </span>
             )}
-            <span
-              className={`pill ${sBadge[project.status] ?? ""}`}
-              style={{ fontSize: 11 }}
-            >
-              {sLabel[project.status] ?? project.status}
+            <span className={`pill ${st.pill}`} style={{ fontSize: 11 }}>
+              {st.label}
             </span>
           </div>
         </div>
       ) : (
-        /* fallback gradient si pas de cover */
         <div
-          className="h-32"
+          className="h-36 relative overflow-hidden"
           style={{
-            background:
-              "linear-gradient(135deg, rgba(94,187,255,0.1), rgba(155,120,255,0.08))",
+            background: "linear-gradient(135deg, rgba(96,165,250,0.08), rgba(167,139,250,0.06))",
           }}
-        />
+        >
+          <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between">
+            {project.category && (
+              <span className="pill pill-accent" style={{ fontSize: 11 }}>
+                {project.category}
+              </span>
+            )}
+            <span className={`pill ${st.pill}`} style={{ fontSize: 11 }}>
+              {st.label}
+            </span>
+          </div>
+        </div>
       )}
 
       {/* Content */}
       <div className="p-5 space-y-3">
         <div>
-          <h3 className="text-[15px] font-semibold leading-snug">
+          <h3 className="text-[15px] font-semibold leading-snug group-hover:text-[var(--color-accent)] transition-colors">
             {project.title}
           </h3>
           <p
-            className="mt-1 text-sm leading-relaxed line-clamp-2"
+            className="mt-1.5 text-sm leading-relaxed line-clamp-2"
             style={{ color: "var(--color-muted)" }}
           >
             {project.subtitle}
@@ -81,18 +80,31 @@ export function ProjectCard({ project }: { project: Project }) {
 
         <div className="flex flex-wrap gap-1.5">
           {project.tags.slice(0, 4).map((t) => (
-            <span key={t} className="pill pill-muted" style={{ fontSize: 11 }}>
+            <span
+              key={t}
+              className="text-[11px] px-2 py-0.5 rounded-md"
+              style={{
+                background: "rgba(255,255,255,0.03)",
+                color: "var(--color-muted)",
+                border: "1px solid rgba(255,255,255,0.05)",
+                fontFamily: "var(--font-mono)",
+              }}
+            >
               {t}
             </span>
           ))}
         </div>
 
-        <span
-          className="inline-block text-sm font-medium opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+        <div
+          className="flex items-center gap-1.5 text-sm font-medium pt-1 opacity-0 transition-all duration-200 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0"
           style={{ color: "var(--color-accent)" }}
         >
-          Voir le projet &rarr;
-        </span>
+          Voir le projet
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </div>
       </div>
     </Link>
   );

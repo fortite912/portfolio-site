@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Project } from "@/lib/types";
 import { ProjectCard } from "@/components/project-card";
 
-const CATS = ["Tous", "Syst\u00e8mes", "R\u00e9seau", "Cloud", "Preuves"] as const;
+const CATS = ["Tous", "Systèmes", "Réseau", "Cloud", "Preuves"] as const;
 
 export function ProjectsGridClient({ projects }: { projects: Project[] }) {
   const [active, setActive] = useState<string>("Tous");
@@ -22,10 +22,16 @@ export function ProjectsGridClient({ projects }: { projects: Project[] }) {
           <button
             key={c}
             onClick={() => setActive(c)}
-            className={`pill cursor-pointer transition-all ${
-              active === c ? "pill-accent" : ""
-            }`}
-            style={active === c ? {} : { opacity: 0.6 }}
+            className="px-3.5 py-1.5 rounded-lg text-sm font-medium cursor-pointer transition-all duration-200"
+            style={{
+              background:
+                active === c ? "rgba(96,165,250,0.1)" : "rgba(255,255,255,0.03)",
+              border: `1px solid ${
+                active === c ? "rgba(96,165,250,0.2)" : "rgba(255,255,255,0.06)"
+              }`,
+              color:
+                active === c ? "var(--color-accent)" : "var(--color-muted)",
+            }}
           >
             {c}
           </button>
@@ -34,15 +40,24 @@ export function ProjectsGridClient({ projects }: { projects: Project[] }) {
 
       {/* Grid */}
       <div className="grid gap-5 sm:grid-cols-2">
-        {list.map((p) => (
-          <ProjectCard key={p.slug} project={p} />
+        {list.map((p, i) => (
+          <div
+            key={p.slug}
+            className="animate-in"
+            style={{ animationDelay: `${i * 60}ms` }}
+          >
+            <ProjectCard project={p} />
+          </div>
         ))}
       </div>
 
       {list.length === 0 && (
-        <p className="text-center py-12" style={{ color: "var(--color-muted)" }}>
-          Aucun projet dans cette cat&eacute;gorie.
-        </p>
+        <div className="text-center py-16">
+          <p className="text-2xl mb-2">🔍</p>
+          <p className="text-sm" style={{ color: "var(--color-muted)" }}>
+            Aucun projet dans cette catégorie.
+          </p>
+        </div>
       )}
     </div>
   );

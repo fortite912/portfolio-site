@@ -6,11 +6,11 @@ export const certifications: Certification[] = [
     slug: "az-900",
     title: "AZ-900 — Fundamentals",
     subtitle: "Cloud concepts, core services, sécurité, pricing + preuves",
-    status: "À venir",
+    status: "Acquis",
     tags: ["Azure", "Fundamentals", "Cloud"],
     cover: "/media/az900.png",
     description:
-      "Plan : cours + labs documentés, captures et checklists. Objectif : validation reproductible (notes + preuves).",
+      "Certification obtenue — concepts cloud, services Azure, sécurité, pricing. Preuves et labs documentés.",
   },
   {
     slug: "az-104",

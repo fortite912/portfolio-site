@@ -6,15 +6,13 @@ export default function ProjectsPage() {
 
   return (
     <div className="space-y-8">
-      <header className="space-y-2">
+      <header className="space-y-3">
         <p className="heading-section">Portfolio</p>
-        <h1 className="heading-lg">Projets</h1>
-        <p style={{ color: "var(--color-muted)" }} className="text-[15px]">
-          TPs document&eacute;s : objectifs &rarr; config &rarr; validations
-          &rarr; preuves.
+        <h1 className="heading-lg">Tous les projets</h1>
+        <p className="text-[15px] max-w-xl leading-relaxed" style={{ color: "var(--color-muted)" }}>
+          Labs documentés avec objectifs, configuration, validations et preuves reproductibles.
         </p>
       </header>
-
       <ProjectsGridClient projects={projects} />
     </div>
   );

@@ -10,6 +10,9 @@ const PROJECTS: Project[] = [
     status: "In progress",
     category: "Syst\u00e8mes",
     stack: ["Windows Server", "VMware", "PowerShell"],
+    pdf: "/projects/rapport-dhcp-ddns-ssh.pdf",
+    reportTitle: "Rapports DNS & DHCP",
+    reportPdf: "/projects/rapport-dns-bind9.pdf",
     objective:
       "D\u00e9ployer un domaine AD avec DNS + DHCP et valider l\u2019int\u00e9gration de clients + GPO.",
     method: [
@@ -61,6 +64,8 @@ const PROJECTS: Project[] = [
     status: "Done",
     category: "Preuves",
     stack: ["Wireshark", "Linux"],
+    pdf: "/projects/rapport-arp-wireshark.pdf",
+    reportTitle: "Rapport ARP Wireshark",
     objective:
       "Capturer et expliquer des \u00e9changes ARP en conditions contr\u00f4l\u00e9es.",
     method: [
@@ -101,6 +106,9 @@ const PROJECTS: Project[] = [
     status: "In progress",
     category: "R\u00e9seau",
     stack: ["Cisco IOS", "Packet Tracer"],
+    pdf: "/projects/rapport-vlan-stp-etherchannel.pdf",
+    reportTitle: "Rapport VLAN / InterVLAN / EtherChannel",
+    reportPdf: "/projects/rapport-vlan-intervlan.pdf",
     objective:
       "Segmenter (VLAN), s\u00e9curiser L2 (STP), agr\u00e9ger liens (LACP) et prouver le fonctionnement.",
     method: ["Cr\u00e9ation VLANs", "Trunks", "STP tuning", "Port-channel LACP"],
