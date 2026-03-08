@@ -1,33 +1,25 @@
-// lib/types.ts
-
 export type Availability = {
-  label: string;      // ex: "Ouvert aux stages"
-  dateRange?: string; // ex: "2026 — selon calendrier"
-  location?: string;  // ex: "Île-de-France / Remote"
+  label: string;
+  dateRange?: string;
+  location?: string;
 };
 
 export type SiteLinks = {
   github: string;
   linkedin: string;
-  cv: string;      // ex: "/cv.pdf"
-  email?: string;  // optionnel
+  cv: string;
+  email?: string;
 };
 
 export type Site = {
   name: string;
+  role: string;
   title: string;
   tagline: string;
   location: string;
   availability: Availability;
   links: SiteLinks;
-
-  // utilisé sur la home (ton erreur actuelle vient de là)
-  focus: Array<{
-    title: string;
-    hint: string;
-  }>;
-
-  // petits “chips” en haut de hero si tu les utilises
+  focus: Array<{ title: string; hint: string }>;
   badges?: string[];
 };
 
@@ -35,7 +27,8 @@ export type ProjectStatus = "Done" | "In progress" | "Planned";
 
 export type ProjectTimelineStep = {
   title: string;
-  details: string[];
+  details?: string[];
+  badge?: string;
 };
 
 export type Project = {
@@ -43,27 +36,17 @@ export type Project = {
   title: string;
   subtitle: string;
   tags: string[];
-  cover?: string; // ex: "/media/ad-dns.png"
+  cover?: string;
   status: ProjectStatus;
-
-  // pour ProjectQuickPanel / grouping / affichage
   category?: "Réseau" | "Systèmes" | "Cloud" | "Preuves";
-
-  // si tu veux des stacks / badges techniques
   stack?: string[];
-
-  // optional: PDF livrable
-  pdf?: string; // ex: "/projects/ad-dns-dhcp/report.pdf"
-
-  // page /projects/[slug]
+  pdf?: string;
   objective: string;
   method: string[];
   validation: string[];
   deliverables: string[];
-
+  proof?: string[];
   timeline?: ProjectTimelineStep[];
-
-  // page /projects/[slug]/report
   reportTitle?: string;
   reportPdf?: string;
 };
@@ -79,10 +62,4 @@ export type Certification = {
   tags: string[];
   cover?: string;
   proofUrl?: string;
-};
-
-export type ProjectTimelineStep = {
-  title: string;
-  details?: string[];
-  badge?: string; // ✅ optionnel
 };

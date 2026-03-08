@@ -1,15 +1,15 @@
-// lib/site.ts
 import type { Site } from "./types";
 
 export const SITE: Site = {
   name: "Sean Fritsch",
+  role: "BTS SIO SISR",
   title: "Portfolio SISR",
-  tagline: "Systèmes • Réseaux • Cybersécurité — preuves à l’appui.",
-  location: "Île-de-France",
+  tagline: "Systemes \u2022 Reseaux \u2022 Cybersecurite \u2014 preuves a l\u2019appui.",
+  location: "\u00cele-de-France",
   availability: {
     label: "Ouvert aux stages",
-    dateRange: "2026 — selon calendrier",
-    location: "Île-de-France / Remote",
+    dateRange: "2026 \u2014 selon calendrier",
+    location: "\u00cele-de-France / Remote",
   },
   links: {
     github: "https://github.com/",
@@ -18,11 +18,11 @@ export const SITE: Site = {
     email: "seanfritsch6@gmail.com",
   },
   focus: [
-    { title: "Topologies", hint: "schémas + adressage + VLAN/OSPF" },
+    { title: "Topologies", hint: "schemas + adressage + VLAN/OSPF" },
     { title: "Configs", hint: "CLI/PowerShell + fichiers + versions" },
-    { title: "Tests", hint: "procédures + attendu/observé" },
-    { title: "Captures", hint: "Wireshark + analyse + interprétation" },
+    { title: "Tests", hint: "procedures + attendu/observe" },
+    { title: "Captures", hint: "Wireshark + analyse + interpretation" },
     { title: "Livrables", hint: "PDF + checklists + preuves" },
   ],
-  badges: ["BTS SIO SISR", "Île-de-France", "Ouvert aux stages"],
+  badges: ["BTS SIO SISR", "\u00cele-de-France", "Ouvert aux stages"],
 };

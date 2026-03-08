@@ -2,48 +2,68 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/types";
 
+const statusStyle: Record<string, string> = {
+  Done: "pill-green",
+  "In progress": "pill-yellow",
+  Planned: "pill-accent",
+};
+
+const statusLabel: Record<string, string> = {
+  Done: "Termin\u00e9",
+  "In progress": "En cours",
+  Planned: "Planifi\u00e9",
+};
+
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden hover:bg-white/[0.05] transition"
+      className="group card card-hover block no-underline"
     >
-      <div className="relative h-40">
-        <Image
-          src={project.cover}
-          alt={project.title}
-          fill
-          className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-300"
-          sizes="(max-width: 768px) 100vw, 50vw"
-          priority={false}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-      </div>
+      {project.cover && (
+        <div className="relative h-44 overflow-hidden">
+          <Image
+            src={project.cover}
+            alt={project.title}
+            fill
+            className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-500"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
-      <div className="p-4">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <div className="text-white font-semibold leading-snug">{project.title}</div>
-            <div className="text-white/70 text-sm mt-1">{project.subtitle}</div>
-          </div>
-          <div className="text-xs text-white/70 whitespace-nowrap">
-            {project.year} • {project.statusLabel}
+          <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between gap-2">
+            {project.category && (
+              <span className="pill pill-accent text-[11px]">
+                {project.category}
+              </span>
+            )}
+            <span
+              className={`pill text-[11px] ${statusStyle[project.status] ?? ""}`}
+            >
+              {statusLabel[project.status] ?? project.status}
+            </span>
           </div>
         </div>
+      )}
 
-        <div className="mt-3 flex flex-wrap gap-2">
-          {project.tags.slice(0, 5).map((t) => (
-            <span
-              key={t}
-              className="px-2 py-1 rounded-full text-[11px] border border-white/10 bg-white/5 text-white/70"
-            >
+      <div className="p-5">
+        <h3 className="text-[15px] font-semibold leading-snug text-white">
+          {project.title}
+        </h3>
+        <p className="mt-1.5 text-sm leading-relaxed text-white/60 line-clamp-2">
+          {project.subtitle}
+        </p>
+
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {project.tags.slice(0, 4).map((t) => (
+            <span key={t} className="pill pill-muted text-[11px]">
               {t}
             </span>
           ))}
         </div>
 
-        <div className="mt-4 text-sm text-cyan-300/90 group-hover:text-cyan-200 transition">
-          Ouvrir →
+        <div className="mt-4 text-sm font-medium text-[rgb(var(--accent))] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          Voir le projet &rarr;
         </div>
       </div>
     </Link>
