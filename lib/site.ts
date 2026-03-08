@@ -12,8 +12,8 @@ export const SITE: Site = {
     location: "\u00cele-de-France / Remote",
   },
   links: {
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/fortite912",
+    linkedin: "https://www.linkedin.com/in/sean-fritsch",
     cv: "/cv.pdf",
     email: "seanfritsch6@gmail.com",
   },
