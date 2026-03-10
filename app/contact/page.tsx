@@ -109,11 +109,10 @@ export default function ContactPage() {
                 <p className="text-sm font-semibold">{SITE.availability.label}</p>
                 <div className="flex items-center gap-1.5 mt-0.5">
                   <span
-                    className="w-1.5 h-1.5 rounded-full"
+                    className="w-2 h-2 rounded-full badge-live"
                     style={{
                       background: "var(--color-green)",
                       boxShadow: "0 0 6px var(--color-green)",
-                      animation: "pulse-glow 2s infinite",
                     }}
                   />
                   <span className="text-xs" style={{ color: "var(--color-green)" }}>Disponible</span>
@@ -136,6 +135,10 @@ export default function ContactPage() {
                   {SITE.availability.location}
                 </div>
               )}
+              <div className="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="13 17 18 12 13 7" /><polyline points="6 17 11 12 6 7" /></svg>
+                Réponse sous 24h
+              </div>
             </div>
           </div>
 

@@ -13,15 +13,96 @@ const statusStyle: Record<string, { pill: string; icon: string }> = {
   "À venir": { pill: "pill-accent", icon: "○" },
 };
 
+const statusOrder = ["Acquis", "En cours", "À venir"];
+
 export default function CertificationsPage() {
+  const acquired = certifications.filter((c) => c.status === "Acquis").length;
+  const total = certifications.length;
+  const progressPercent = Math.round((acquired / total) * 100);
+
   return (
-    <div className="space-y-8">
-      <header className="space-y-3">
-        <p className="heading-section">Parcours</p>
-        <h1 className="heading-lg">Certifications</h1>
-        <p className="text-[15px] max-w-xl leading-relaxed" style={{ color: "var(--color-muted)" }}>
-          Plan structuré : cours, labs documentés, captures et checklists de validation.
-        </p>
+    <div className="space-y-10">
+      <header className="space-y-6">
+        <div className="space-y-3">
+          <p className="heading-section">Parcours</p>
+          <h1 className="heading-lg">Certifications</h1>
+          <p className="text-[15px] max-w-xl leading-relaxed" style={{ color: "var(--color-muted)" }}>
+            Plan structuré : cours, labs documentés, captures et checklists de validation.
+          </p>
+        </div>
+
+        {/* Roadmap progress */}
+        <div className="card p-5 space-y-4">
+          <div className="flex items-center justify-between">
+            <p className="text-sm font-semibold">Progression globale</p>
+            <span
+              className="text-sm font-bold"
+              style={{ color: "var(--color-accent)", fontFamily: "var(--font-mono)" }}
+            >
+              {acquired}/{total}
+            </span>
+          </div>
+          <div className="progress-bar" style={{ height: 6 }}>
+            <div
+              className="progress-bar-fill"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
+          {/* Roadmap steps */}
+          <div className="flex items-center gap-0">
+            {certifications
+              .sort((a, b) => statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status))
+              .map((c, i) => {
+                const st = statusStyle[c.status] ?? { pill: "", icon: "?" };
+                return (
+                  <div key={c.slug} className="flex items-center flex-1">
+                    <div className="flex flex-col items-center gap-1.5 flex-1">
+                      <div
+                        className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
+                        style={{
+                          background: c.status === "Acquis"
+                            ? "rgba(52,211,153,0.15)"
+                            : c.status === "En cours"
+                            ? "rgba(251,191,36,0.1)"
+                            : "rgba(255,255,255,0.04)",
+                          border: `2px solid ${
+                            c.status === "Acquis"
+                              ? "rgba(52,211,153,0.4)"
+                              : c.status === "En cours"
+                              ? "rgba(251,191,36,0.3)"
+                              : "rgba(255,255,255,0.08)"
+                          }`,
+                          color: c.status === "Acquis"
+                            ? "var(--color-green)"
+                            : c.status === "En cours"
+                            ? "var(--color-yellow)"
+                            : "var(--color-muted)",
+                        }}
+                      >
+                        {st.icon}
+                      </div>
+                      <span
+                        className="text-[10px] font-medium text-center leading-tight"
+                        style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
+                      >
+                        {c.title.split("—")[0].trim()}
+                      </span>
+                    </div>
+                    {i < certifications.length - 1 && (
+                      <div
+                        className="h-[2px] flex-1 min-w-[20px] mx-1"
+                        style={{
+                          background: c.status === "Acquis"
+                            ? "linear-gradient(90deg, rgba(52,211,153,0.4), rgba(52,211,153,0.1))"
+                            : "rgba(255,255,255,0.06)",
+                        }}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+          </div>
+        </div>
       </header>
 
       <div className="grid gap-5 sm:grid-cols-2">

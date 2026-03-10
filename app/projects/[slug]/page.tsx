@@ -54,7 +54,7 @@ export default async function ProjectDetailPage({
 
       {/* Cover */}
       {project.cover && (
-        <div className="relative h-56 md:h-72 rounded-2xl overflow-hidden">
+        <div className="relative h-56 md:h-80 rounded-2xl overflow-hidden">
           <Image
             src={project.cover}
             alt={project.title}
@@ -67,9 +67,14 @@ export default async function ProjectDetailPage({
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to top, rgba(6,8,13,0.95) 0%, rgba(6,8,13,0.3) 50%, rgba(6,8,13,0.1) 100%)",
+                "linear-gradient(to top, rgba(6,8,13,0.98) 0%, rgba(6,8,13,0.4) 40%, rgba(6,8,13,0.15) 100%)",
             }}
           />
+          {/* Floating badges on cover */}
+          <div className="absolute bottom-5 left-6 right-6 flex items-end justify-between">
+            <h1 className="heading-lg text-white drop-shadow-lg">{project.title}</h1>
+            <span className={`pill ${st.pill}`}>{st.label}</span>
+          </div>
         </div>
       )}
 

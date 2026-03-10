@@ -88,7 +88,7 @@ export function Navbar() {
               <Link
                 key={i.href}
                 href={i.href}
-                className="relative text-[13px] font-medium h-8 px-3.5 rounded-lg flex items-center transition-all duration-200"
+                className="relative text-sm font-medium h-9 px-4 rounded-lg flex items-center transition-all duration-200 hover:text-[var(--color-text)]"
                 style={{
                   color: isActive(i.href)
                     ? "var(--color-text)"
@@ -112,7 +112,7 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              className="btn btn-primary text-[13px] h-8 px-3.5 ml-2"
+              className="btn btn-primary text-sm h-9 px-4 ml-2"
               href={SITE.links.cv}
               target="_blank"
               rel="noreferrer"
