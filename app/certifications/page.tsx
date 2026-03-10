@@ -49,58 +49,60 @@ export default function CertificationsPage() {
             />
           </div>
           {/* Roadmap steps */}
-          <div className="flex items-center gap-0">
-            {certifications
-              .sort((a, b) => statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status))
-              .map((c, i) => {
-                const st = statusStyle[c.status] ?? { pill: "", icon: "?" };
-                return (
-                  <div key={c.slug} className="flex items-center flex-1">
-                    <div className="flex flex-col items-center gap-1.5 flex-1">
-                      <div
-                        className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold"
-                        style={{
-                          background: c.status === "Acquis"
-                            ? "rgba(52,211,153,0.15)"
-                            : c.status === "En cours"
-                            ? "rgba(251,191,36,0.1)"
-                            : "rgba(255,255,255,0.04)",
-                          border: `2px solid ${
-                            c.status === "Acquis"
-                              ? "rgba(52,211,153,0.4)"
+          <div className="overflow-x-auto -mx-5 px-5 pb-2">
+            <div className="flex items-center gap-0 min-w-[400px]">
+              {certifications
+                .sort((a, b) => statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status))
+                .map((c, i) => {
+                  const st = statusStyle[c.status] ?? { pill: "", icon: "?" };
+                  return (
+                    <div key={c.slug} className="flex items-center flex-1">
+                      <div className="flex flex-col items-center gap-1.5 flex-1">
+                        <div
+                          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-xs font-bold transition-transform duration-300 hover:scale-110"
+                          style={{
+                            background: c.status === "Acquis"
+                              ? "rgba(52,211,153,0.15)"
                               : c.status === "En cours"
-                              ? "rgba(251,191,36,0.3)"
-                              : "rgba(255,255,255,0.08)"
-                          }`,
-                          color: c.status === "Acquis"
-                            ? "var(--color-green)"
-                            : c.status === "En cours"
-                            ? "var(--color-yellow)"
-                            : "var(--color-muted)",
-                        }}
-                      >
-                        {st.icon}
+                              ? "rgba(251,191,36,0.1)"
+                              : "rgba(255,255,255,0.04)",
+                            border: `2px solid ${
+                              c.status === "Acquis"
+                                ? "rgba(52,211,153,0.4)"
+                                : c.status === "En cours"
+                                ? "rgba(251,191,36,0.3)"
+                                : "rgba(255,255,255,0.08)"
+                            }`,
+                            color: c.status === "Acquis"
+                              ? "var(--color-green)"
+                              : c.status === "En cours"
+                              ? "var(--color-yellow)"
+                              : "var(--color-muted)",
+                          }}
+                        >
+                          {st.icon}
+                        </div>
+                        <span
+                          className="text-[11px] sm:text-xs font-medium text-center leading-tight max-w-[80px]"
+                          style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
+                        >
+                          {c.title.split("—")[0].trim()}
+                        </span>
                       </div>
-                      <span
-                        className="text-[10px] font-medium text-center leading-tight"
-                        style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
-                      >
-                        {c.title.split("—")[0].trim()}
-                      </span>
+                      {i < certifications.length - 1 && (
+                        <div
+                          className="h-[2px] flex-1 min-w-[24px] mx-1"
+                          style={{
+                            background: c.status === "Acquis"
+                              ? "linear-gradient(90deg, rgba(52,211,153,0.4), rgba(52,211,153,0.1))"
+                              : "rgba(255,255,255,0.06)",
+                          }}
+                        />
+                      )}
                     </div>
-                    {i < certifications.length - 1 && (
-                      <div
-                        className="h-[2px] flex-1 min-w-[20px] mx-1"
-                        style={{
-                          background: c.status === "Acquis"
-                            ? "linear-gradient(90deg, rgba(52,211,153,0.4), rgba(52,211,153,0.1))"
-                            : "rgba(255,255,255,0.06)",
-                        }}
-                      />
-                    )}
-                  </div>
-                );
-              })}
+                  );
+                })}
+            </div>
           </div>
         </div>
       </header>
@@ -111,7 +113,7 @@ export default function CertificationsPage() {
           return (
             <article
               key={c.slug}
-              className={`card card-hover overflow-hidden animate-in${c.status === "Acquis" ? " card-glow" : ""}`}
+              className={`card card-hover card-spotlight overflow-hidden animate-in${c.status === "Acquis" ? " card-glow" : ""}`}
               style={{
                 animationDelay: `${i * 100}ms`,
                 ...(c.status === "Acquis"

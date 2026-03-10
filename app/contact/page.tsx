@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="space-y-10">
-      <header className="space-y-3">
+      <header className="space-y-4">
         <p className="heading-section">Contact</p>
-        <h1 className="heading-lg">Travaillons ensemble</h1>
+        <h1 className="heading-lg text-gradient-animated">Travaillons ensemble</h1>
         <p className="text-[15px] max-w-xl leading-relaxed" style={{ color: "var(--color-muted)" }}>
           Disponible pour un stage en systèmes, réseaux ou cybersécurité.
           Réponse rapide si le message est précis.

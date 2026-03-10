@@ -197,7 +197,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: Terminal card */}
+          {/* Right: Terminal card — Desktop */}
           <div className="hidden md:block animate-in w-[340px]" style={{ animationDelay: "300ms" }}>
             <div className="terminal">
               <div className="terminal-header">
@@ -220,6 +220,27 @@ export default function HomePage() {
                 <p className="success">15+ checks passed</p>
                 <p className="mt-2 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--stage</span></p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Terminal card — Mobile (condensed) */}
+        <div className="md:hidden animate-in mt-4" style={{ animationDelay: "300ms" }}>
+          <div className="terminal">
+            <div className="terminal-header">
+              <span className="terminal-dot" style={{ background: "#ff5f57" }} />
+              <span className="terminal-dot" style={{ background: "#febc2e" }} />
+              <span className="terminal-dot" style={{ background: "#28c840" }} />
+              <span className="text-[10px] ml-2" style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}>
+                portfolio.sh
+              </span>
+            </div>
+            <div className="terminal-body space-y-0.5" style={{ padding: "12px", fontSize: "12px" }}>
+              <p><span className="prompt">$</span> <span className="cmd">whoami</span></p>
+              <p className="output">Sean Fritsch — BTS SIO SISR</p>
+              <p className="mt-1.5"><span className="prompt">$</span> <span className="cmd">verify</span> <span className="flag">--proofs</span></p>
+              <p className="success">4/4 labs validated ✓</p>
+              <p className="mt-1.5 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--stage</span></p>
             </div>
           </div>
         </div>

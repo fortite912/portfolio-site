@@ -169,12 +169,19 @@ export function Navbar() {
                   key={i.href}
                   href={i.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm font-medium py-2.5 px-3 rounded-lg transition-colors"
+                  className="text-sm font-medium py-2.5 px-3 rounded-lg transition-colors flex items-center gap-2"
                   style={{
                     color: isActive(i.href) ? "var(--color-text)" : "var(--color-muted)",
-                    background: isActive(i.href) ? "rgba(255,255,255,0.06)" : "transparent",
+                    background: isActive(i.href) ? "rgba(96,165,250,0.08)" : "transparent",
+                    borderLeft: isActive(i.href) ? "2px solid var(--color-accent)" : "2px solid transparent",
                   }}
                 >
+                  {isActive(i.href) && (
+                    <span
+                      className="w-1.5 h-1.5 rounded-full"
+                      style={{ background: "var(--color-accent)", boxShadow: "0 0 6px var(--color-accent)" }}
+                    />
+                  )}
                   {i.label}
                 </Link>
               ))}

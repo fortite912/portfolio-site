@@ -164,13 +164,23 @@ export default async function ProjectDetailPage({
           <div className="flex items-center justify-between">
             <p className="heading-section">Timeline</p>
             <span className="text-[11px] font-medium" style={{ color: "var(--color-accent)", fontFamily: "var(--font-mono)" }}>
-              {project.timeline.length}/{project.timeline.length} étapes
+              {project.status === "Done"
+                ? `${project.timeline.length}/${project.timeline.length}`
+                : project.status === "In progress"
+                ? `${Math.ceil(project.timeline.length * 0.6)}/${project.timeline.length}`
+                : `0/${project.timeline.length}`} étapes
             </span>
           </div>
-          <div className="progress-bar">
+          <div className="progress-bar" style={{ height: 6 }}>
             <div
               className="progress-bar-fill"
-              style={{ width: project.status === "Done" ? "100%" : project.status === "In progress" ? "60%" : "0%" }}
+              style={{
+                width: project.status === "Done"
+                  ? "100%"
+                  : project.status === "In progress"
+                  ? `${Math.round((Math.ceil(project.timeline.length * 0.6) / project.timeline.length) * 100)}%`
+                  : "0%",
+              }}
             />
           </div>
           <div className="space-y-3">

@@ -809,3 +809,108 @@ img {
   pointer-events: none;
   border-radius: inherit;
 }
+
+/* ===== Spotlight hover effect for cards ===== */
+.card-spotlight {
+  position: relative;
+  overflow: hidden;
+}
+.card-spotlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(96, 165, 250, 0.06),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.card-spotlight:hover::after {
+  opacity: 1;
+}
+
+/* ===== Gradient text animation ===== */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.text-gradient-animated {
+  background: linear-gradient(135deg, #fff 0%, var(--color-accent) 30%, var(--color-accent2) 60%, var(--color-green) 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Subtle border shimmer on cards ===== */
+@keyframes border-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.card-shimmer-border {
+  position: relative;
+}
+.card-shimmer-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(90deg, transparent 30%, rgba(96, 165, 250, 0.2) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: border-shimmer 4s linear infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card-shimmer-border:hover::before {
+  opacity: 1;
+}
+
+/* ===== Scrollbar gutter styling ===== */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+}
+
+/* ===== Icon bounce on hover ===== */
+.icon-bounce:hover {
+  animation: bounce-subtle 0.5s cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-4px); }
+  60% { transform: translateY(-2px); }
+}
+
+/* ===== Link underline animation ===== */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-underline:hover::after {
+  width: 100%;
+}

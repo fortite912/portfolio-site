@@ -14,7 +14,7 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group card card-hover block overflow-hidden"
+      className="group card card-hover card-spotlight block overflow-hidden"
       aria-label={`${project.title} — ${st.label}`}
     >
       {/* Cover */}
