@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, getProjects } from "@/lib/projects";
 import type { Metadata } from "next";
+import { ReadingProgress } from "@/components/reading-progress";
 
 export async function generateStaticParams() {
   return getProjects().map((p) => ({ slug: p.slug }));
@@ -41,6 +42,7 @@ export default async function ProjectDetailPage({
 
   return (
     <div className="space-y-10">
+      <ReadingProgress />
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm" style={{ color: "var(--color-muted)" }}>
         <Link href="/projects" className="hover:text-[var(--color-text)] transition-colors">

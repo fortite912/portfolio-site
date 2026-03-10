@@ -18,24 +18,36 @@ export function ProjectsGridClient({ projects }: { projects: Project[] }) {
     <div className="space-y-6">
       {/* Filter tabs */}
       <div className="flex flex-wrap gap-2">
-        {CATS.map((c) => (
-          <button
-            key={c}
-            onClick={() => setActive(c)}
-            className="px-3.5 py-1.5 rounded-lg text-sm font-medium cursor-pointer transition-all duration-200"
-            style={{
-              background:
-                active === c ? "rgba(96,165,250,0.1)" : "rgba(255,255,255,0.03)",
-              border: `1px solid ${
-                active === c ? "rgba(96,165,250,0.2)" : "rgba(255,255,255,0.06)"
-              }`,
-              color:
-                active === c ? "var(--color-accent)" : "var(--color-muted)",
-            }}
-          >
-            {c}
-          </button>
-        ))}
+        {CATS.map((c) => {
+          const count = c === "Tous" ? projects.length : projects.filter((p) => p.category === c).length;
+          return (
+            <button
+              key={c}
+              onClick={() => setActive(c)}
+              className="px-3.5 py-1.5 rounded-lg text-sm font-medium cursor-pointer transition-all duration-200 inline-flex items-center gap-1.5"
+              style={{
+                background:
+                  active === c ? "rgba(96,165,250,0.1)" : "rgba(255,255,255,0.03)",
+                border: `1px solid ${
+                  active === c ? "rgba(96,165,250,0.2)" : "rgba(255,255,255,0.06)"
+                }`,
+                color:
+                  active === c ? "var(--color-accent)" : "var(--color-muted)",
+              }}
+            >
+              {c}
+              <span
+                className="text-[10px] px-1.5 py-0.5 rounded-full"
+                style={{
+                  background: active === c ? "rgba(96,165,250,0.15)" : "rgba(255,255,255,0.06)",
+                  fontFamily: "var(--font-mono)",
+                }}
+              >
+                {count}
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       {/* Grid */}

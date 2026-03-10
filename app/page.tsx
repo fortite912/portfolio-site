@@ -121,10 +121,8 @@ export default function HomePage() {
         <div className="relative space-y-8 pt-4">
           <div className="animate-in">
             <span
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium"
+              className="availability-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium"
               style={{
-                background: "rgba(52,211,153,0.06)",
-                border: "1px solid rgba(52,211,153,0.15)",
                 color: "var(--color-green)",
                 fontFamily: "var(--font-mono)",
               }}
@@ -134,6 +132,7 @@ export default function HomePage() {
                 style={{
                   background: "var(--color-green)",
                   boxShadow: "0 0 6px var(--color-green)",
+                  animation: "pulse-glow 2s infinite",
                 }}
               />
               {SITE.availability.label}
