@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Project } from "@/lib/types";
 import { ProjectCard } from "@/components/project-card";
 
-const CATS = ["Tous", "Systèmes", "Réseau", "Cloud", "Preuves"] as const;
+const CATS = ["Tous", "Systèmes", "Réseau", "Cloud", "Cybersécurité", "Preuves"] as const;
 
 const STATUS_FILTERS = [
   { key: "all", label: "Tout statut", color: "var(--color-muted)" },

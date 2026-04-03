@@ -56,9 +56,9 @@ const IconCloud = () => (
 
 /* ===== Data ===== */
 const STATS = [
-  { value: "4", label: "Labs documentés", sublabel: "avec preuves", Icon: IconFolder },
-  { value: "15+", label: "Validations", sublabel: "100% taux de réussite", Icon: IconCheck },
-  { value: "3", label: "Technos clés", sublabel: "sys / réseau / cloud", Icon: IconZap },
+  { value: "6", label: "Labs documentés", sublabel: "avec preuves", Icon: IconFolder },
+  { value: "20+", label: "Validations", sublabel: "100% taux de réussite", Icon: IconCheck },
+  { value: "4", label: "Technos clés", sublabel: "sys / réseau / cloud / cyber", Icon: IconZap },
   { value: "2", label: "Certifs visées", sublabel: "AZ-900 acquis", Icon: IconAward },
 ];
 
@@ -80,9 +80,9 @@ const SKILLS = [
   {
     Icon: IconShield,
     title: "Cybersécurité",
-    items: ["NSG", "Firewall rules", "ARP analysis", "Capture réseau"],
+    items: ["SSH hardening", "PKI / TLS", "ARP analysis", "Capture réseau", "Firewall / NSG"],
     color: "green",
-    level: 60,
+    level: 65,
   },
   {
     Icon: IconCloud,
@@ -215,9 +215,10 @@ export default function HomePage() {
                 <p className="output">systemes=AD,DNS,DHCP,GPO</p>
                 <p className="output">reseau=VLAN,STP,LACP,OSPF</p>
                 <p className="output">cloud=Azure,VNet,NSG</p>
+                <p className="output">cyber=SSH,PKI,TLS</p>
                 <p className="mt-2"><span className="prompt">$</span> <span className="cmd">verify</span> <span className="flag">--proofs</span></p>
-                <p className="success">4/4 labs validated</p>
-                <p className="success">15+ checks passed</p>
+                <p className="success">6/6 labs validated</p>
+                <p className="success">20+ checks passed</p>
                 <p className="mt-2 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--stage</span></p>
               </div>
             </div>
@@ -239,7 +240,7 @@ export default function HomePage() {
               <p><span className="prompt">$</span> <span className="cmd">whoami</span></p>
               <p className="output">Sean Fritsch — BTS SIO SISR</p>
               <p className="mt-1.5"><span className="prompt">$</span> <span className="cmd">verify</span> <span className="flag">--proofs</span></p>
-              <p className="success">4/4 labs validated ✓</p>
+              <p className="success">6/6 labs validated ✓</p>
               <p className="mt-1.5 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--stage</span></p>
             </div>
           </div>

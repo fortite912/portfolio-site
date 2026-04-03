@@ -38,7 +38,7 @@ export type Project = {
   tags: string[];
   cover?: string;
   status: ProjectStatus;
-  category?: "Réseau" | "Systèmes" | "Cloud" | "Preuves";
+  category?: "Réseau" | "Systèmes" | "Cloud" | "Preuves" | "Cybersécurité";
   stack?: string[];
   pdf?: string;
   objective: string;
