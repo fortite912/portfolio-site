@@ -219,7 +219,7 @@ export default function HomePage() {
                 <p className="mt-2"><span className="prompt">$</span> <span className="cmd">verify</span> <span className="flag">--proofs</span></p>
                 <p className="success">6/6 labs validated</p>
                 <p className="success">20+ checks passed</p>
-                <p className="mt-2 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--stage</span></p>
+                <p className="mt-2 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--prod</span></p>
               </div>
             </div>
           </div>
@@ -241,7 +241,7 @@ export default function HomePage() {
               <p className="output">Sean Fritsch — BTS SIO SISR</p>
               <p className="mt-1.5"><span className="prompt">$</span> <span className="cmd">verify</span> <span className="flag">--proofs</span></p>
               <p className="success">6/6 labs validated ✓</p>
-              <p className="mt-1.5 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--stage</span></p>
+              <p className="mt-1.5 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--prod</span></p>
             </div>
           </div>
         </div>
@@ -396,7 +396,7 @@ export default function HomePage() {
           <div className="relative space-y-6">
             <h2 className="heading-lg text-gradient">Intéressé par mon profil ?</h2>
             <p className="max-w-lg mx-auto text-sm leading-relaxed" style={{ color: "var(--color-muted)" }}>
-              Je cherche un stage en systèmes, réseaux ou cybersécurité.
+              Je cherche un CDD en systèmes, réseaux ou cybersécurité.
               Chaque lab est documenté avec des preuves vérifiables.
             </p>
             <div className="flex flex-wrap justify-center gap-3 pt-2">

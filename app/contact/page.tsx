@@ -4,7 +4,7 @@ import { CopyTemplate } from "@/components/copy-template";
 
 export const metadata: Metadata = {
   title: "Contact — Sean Fritsch",
-  description: "Disponible pour un stage en systèmes, réseaux ou cybersécurité.",
+  description: "Disponible pour un CDD en systèmes, réseaux ou cybersécurité.",
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
         <p className="heading-section">Contact</p>
         <h1 className="heading-lg text-gradient-animated">Travaillons ensemble</h1>
         <p className="text-[15px] max-w-xl leading-relaxed" style={{ color: "var(--color-muted)" }}>
-          Disponible pour un stage en systèmes, réseaux ou cybersécurité.
+          Disponible pour un CDD en systèmes, réseaux ou cybersécurité.
           Réponse rapide si le message est précis.
         </p>
       </header>
