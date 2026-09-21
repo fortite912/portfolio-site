@@ -1,4 +1,4 @@
-import type { Ccf, TimelineEntry, Veille, Venture } from "./types";
+import type { Ccf, PriorRole, TimelineEntry, Veille, Venture } from "./types";
 
 /**
  * Parcours affiché sur /parcours.
@@ -218,3 +218,78 @@ export const veilleE4: Veille = {
   ],
   syntheses: [],
 };
+
+/**
+ * Expériences antérieures au BTS, présentées en tableau compact :
+ * elles montrent une trajectoire, pas des réalisations d'épreuve.
+ * Ajouter une ligne suffit à étendre la section.
+ */
+export const priorRoles: PriorRole[] = [
+  {
+    period: "11/2024 — 12/2024",
+    role: "Service Data RH et marque employeur",
+    org: "AXA France",
+    place: "Nanterre",
+    kind: "Stage PFMP",
+    detail:
+      "Support sur analyses de données, coordination de la communication, création de contenus digitaux et validation de solutions IA.",
+    it: true,
+  },
+  {
+    period: "06/2024",
+    role: "Technicien réseau informatique",
+    org: "Mairie de Garches",
+    place: "Garches",
+    kind: "Stage PFMP",
+    detail:
+      "Dépannage des problèmes de performance du réseau, interventions sur les postes des agents et les infrastructures de la ville.",
+    it: true,
+  },
+  {
+    period: "01/2024 — 02/2024",
+    role: "Technicien systèmes de surveillance",
+    org: "Mediterranean Protection Solutions",
+    place: "Pietà, Malte",
+    kind: "Stage PFMP",
+    detail:
+      "Installation, tests et mise en service de caméras, équipements rayons X et contrôle d'accès — hôtels, aéroport, port de La Valette.",
+    it: true,
+  },
+  {
+    period: "06/2023",
+    role: "Technicien",
+    org: "Apilog Automation",
+    place: "Massy",
+    kind: "Stage PFMP",
+    detail: "Réalisation d'une platine automate et programmation.",
+    it: true,
+  },
+  {
+    period: "01/2023 — 02/2023",
+    role: "Technicien fibre optique SAV",
+    org: "FIT Telecom",
+    place: "Paris",
+    kind: "Stage PFMP",
+    detail:
+      "Diagnostic de connectivité et résolution de pannes abonnés (SFR, Free, Orange), application des procédures et contrôle qualité.",
+    it: true,
+  },
+  {
+    period: "étés 2025 et 2026",
+    role: "Surveillant de baignade",
+    org: "Ville de Garches",
+    place: "Garches",
+    kind: "Emploi saisonnier",
+    detail: "Responsabilité de sécurité en autonomie — diplômes PSE1 et BNSSA.",
+    it: false,
+  },
+  {
+    period: "02/2022",
+    role: "Stage d'observation de 3e",
+    org: "PwC France-Maghreb",
+    place: "Levallois-Perret",
+    kind: "Stage",
+    detail: "Première découverte d'un environnement professionnel.",
+    it: false,
+  },
+];

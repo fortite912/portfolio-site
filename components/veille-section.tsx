@@ -38,7 +38,7 @@ export function VeilleSection() {
           </div>
 
           <h2 className="heading-lg">
-            <SectionNum n={3}>
+            <SectionNum n={4}>
               <span style={{ color: "var(--color-green)" }}>{epreuve}</span>
               {" — "}
               Veille technologique

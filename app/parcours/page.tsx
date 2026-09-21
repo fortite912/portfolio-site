@@ -4,6 +4,7 @@ import { timeline, soveris } from "@/lib/experience";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { CcfSection } from "@/components/ccf-section";
 import { VeilleSection } from "@/components/veille-section";
+import { PriorRoles } from "@/components/prior-roles";
 import { CountUp } from "@/components/count-up";
 import { DocMeta, SectionNum } from "@/components/doc-meta";
 
@@ -278,6 +279,10 @@ export default function ParcoursPage() {
 
       <div className="section-divider" />
 
+      <PriorRoles />
+
+      <div className="section-divider" />
+
       <CcfSection />
 
       <div className="section-divider" />
@@ -307,7 +312,7 @@ export default function ParcoursPage() {
               </span>
             </div>
             <h2 className="heading-lg">
-              <SectionNum n={4}>{soveris.name}</SectionNum>
+              <SectionNum n={5}>{soveris.name}</SectionNum>
             </h2>
             <p className="text-[15px] font-medium" style={{ color: "var(--color-accent2)" }}>
               {soveris.tagline}

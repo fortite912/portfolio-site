@@ -130,3 +130,13 @@ export type Veille = {
   sources: VeilleSource[];
   syntheses: Array<{ date: string; sujet: string; impact: string }>;
 };
+
+export type PriorRole = {
+  period: string;
+  role: string;
+  org: string;
+  place: string;
+  kind: "Stage PFMP" | "Stage" | "Emploi saisonnier";
+  detail: string;
+  it: boolean;
+};

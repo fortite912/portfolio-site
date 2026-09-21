@@ -45,7 +45,7 @@ export function CcfSection() {
 
           <div className="flex flex-wrap items-baseline gap-3">
             <h2 className="heading-lg">
-              <SectionNum n={2}>
+              <SectionNum n={3}>
                 <span style={{ color: "var(--color-accent)" }}>{code}</span>
                 {" — "}
                 {title}
