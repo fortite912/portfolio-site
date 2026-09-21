@@ -914,3 +914,35 @@ img {
 .link-underline:hover::after {
   width: 100%;
 }
+
+/* ===== Mode embed (?embed=1) =====
+   Affichage allégé pour l'intégration en iframe : on coupe les décors
+   plein écran et toutes les animations, et on rend visible d'emblée le
+   contenu animé au scroll — dans une iframe haute, l'IntersectionObserver
+   ne se déclencherait jamais pour le contenu du bas. */
+[data-embed="1"] .dot-grid,
+[data-embed="1"] .ambient-glow {
+  display: none !important;
+}
+[data-embed="1"] .aos {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
+}
+[data-embed="1"] .animate-in,
+[data-embed="1"] .page-enter {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+[data-embed="1"] .badge-live,
+[data-embed="1"] .typing-cursor,
+[data-embed="1"] .text-gradient-animated,
+[data-embed="1"] .glow-text {
+  animation: none !important;
+}
+[data-embed="1"] .card-spotlight::after {
+  display: none !important;
+}

@@ -3,47 +3,30 @@
 import { useEffect } from "react";
 
 /**
- * Wires up cursor-following glow on all .btn elements.
- * Sets --x and --y CSS custom properties used by the .btn::after pseudo-element.
- * Mount once in the layout — no render output.
+ * Cursor-following glow sur les éléments .btn.
+ * Définit les propriétés CSS --x et --y utilisées par le pseudo-élément .btn::after.
+ *
+ * Délégation : un seul écouteur sur document, donc les boutons ajoutés
+ * dynamiquement fonctionnent sans avoir à rebrancher quoi que ce soit.
  */
 export function CursorGlow() {
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      const target = e.currentTarget as HTMLElement;
-      const rect = target.getBoundingClientRect();
+      const target = e.target as HTMLElement | null;
+      const btn = target?.closest<HTMLElement>(".btn");
+      if (!btn) return;
+
+      const rect = btn.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+
       const x = ((e.clientX - rect.left) / rect.width) * 100;
       const y = ((e.clientY - rect.top) / rect.height) * 100;
-      target.style.setProperty("--x", `${x}%`);
-      target.style.setProperty("--y", `${y}%`);
+      btn.style.setProperty("--x", `${x}%`);
+      btn.style.setProperty("--y", `${y}%`);
     };
 
-    const attach = () => {
-      document.querySelectorAll<HTMLElement>(".btn").forEach((btn) => {
-        btn.addEventListener("mousemove", handler as EventListener);
-      });
-    };
-
-    const detach = () => {
-      document.querySelectorAll<HTMLElement>(".btn").forEach((btn) => {
-        btn.removeEventListener("mousemove", handler as EventListener);
-      });
-    };
-
-    // Attach immediately + re-attach on route changes via MutationObserver
-    attach();
-
-    const observer = new MutationObserver(() => {
-      detach();
-      attach();
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => {
-      detach();
-      observer.disconnect();
-    };
+    document.addEventListener("mousemove", handler, { passive: true });
+    return () => document.removeEventListener("mousemove", handler);
   }, []);
 
   return null;

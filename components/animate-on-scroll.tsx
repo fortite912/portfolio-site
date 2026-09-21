@@ -33,7 +33,7 @@ export function AnimateOnScroll({ children, className = "", delay = 0 }: Props) 
   return (
     <div
       ref={ref}
-      className={className}
+      className={`aos ${className}`.trim()}
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0) scale(1)" : "translateY(20px) scale(0.98)",
