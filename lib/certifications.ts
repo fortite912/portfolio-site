@@ -8,7 +8,7 @@ export const certifications: Certification[] = [
     subtitle: "Cloud concepts, core services, sécurité, pricing + preuves",
     status: "Acquis",
     tags: ["Azure", "Fundamentals", "Cloud"],
-    cover: "/media/az900.png",
+    cover: "/media/az900.webp",
     proofUrl: "https://learn.microsoft.com/fr-fr/users/seanfritschnkatiah-0194/credentials/d4590e5e382dda04",
     description:
       "Certification obtenue — concepts cloud, services Azure, sécurité, pricing. Preuves et labs documentés.",
@@ -19,7 +19,7 @@ export const certifications: Certification[] = [
     subtitle: "Réseau, compute, storage, IAM, monitoring (VM/VNet/NSG)",
     status: "À venir",
     tags: ["Azure", "Admin", "VNet", "NSG"],
-    cover: "/media/az104.png",
+    cover: "/media/az104.webp",
     description:
       "Approche pratique : labs guidés + scénarios. Livrables : captures, tests de connectivité, procédures.",
   },

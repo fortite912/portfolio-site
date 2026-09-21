@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ccfE5 } from "@/lib/experience";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { SectionNum } from "@/components/doc-meta";
 
 const IconClipboard = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -44,9 +45,11 @@ export function CcfSection() {
 
           <div className="flex flex-wrap items-baseline gap-3">
             <h2 className="heading-lg">
-              <span style={{ color: "var(--color-accent)", fontFamily: "var(--font-mono)" }}>{code}</span>
-              {" — "}
-              {title}
+              <SectionNum n={2}>
+                <span style={{ color: "var(--color-accent)" }}>{code}</span>
+                {" — "}
+                {title}
+              </SectionNum>
             </h2>
           </div>
 
@@ -65,8 +68,8 @@ export function CcfSection() {
         <div
           className="relative rounded-xl p-4 flex gap-3 items-start"
           style={{
-            background: "rgba(251,191,36,0.05)",
-            border: "1px dashed rgba(251,191,36,0.25)",
+            background: "rgba(217,164,65,0.05)",
+            border: "1px dashed rgba(217,164,65,0.25)",
           }}
         >
           <span
@@ -95,13 +98,13 @@ export function CcfSection() {
               <div
                 key={c.title}
                 className="card card-hover p-5 space-y-3"
-                style={{ borderColor: "rgba(96,165,250,0.12)" }}
+                style={{ borderColor: "rgba(226,105,60,0.12)" }}
               >
                 <div
                   className="w-9 h-9 rounded-xl flex items-center justify-center"
                   style={{
-                    background: "rgba(96,165,250,0.08)",
-                    border: "1px solid rgba(96,165,250,0.18)",
+                    background: "rgba(226,105,60,0.08)",
+                    border: "1px solid rgba(226,105,60,0.18)",
                   }}
                 >
                   <span
@@ -148,9 +151,9 @@ export function CcfSection() {
                     className="mt-0.5 w-5 h-5 rounded-md shrink-0 flex items-center justify-center"
                     style={{
                       border: `1px ${d.done ? "solid" : "dashed"} ${
-                        d.done ? "rgba(52,211,153,0.5)" : "rgba(251,191,36,0.35)"
+                        d.done ? "rgba(127,163,127,0.5)" : "rgba(217,164,65,0.35)"
                       }`,
-                      background: d.done ? "rgba(52,211,153,0.12)" : "transparent",
+                      background: d.done ? "rgba(127,163,127,0.12)" : "transparent",
                       color: d.done ? "var(--color-green)" : "var(--color-yellow)",
                       fontSize: 11,
                       fontFamily: "var(--font-mono)",

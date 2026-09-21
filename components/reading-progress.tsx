@@ -25,7 +25,7 @@ export function ReadingProgress() {
       style={{
         width: `${progress}%`,
         background: "linear-gradient(90deg, var(--color-accent), var(--color-accent2))",
-        boxShadow: "0 0 8px rgba(96,165,250,0.4)",
+        boxShadow: "0 0 8px rgba(226,105,60,0.4)",
         transition: "width 0.1s linear",
       }}
     />

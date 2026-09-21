@@ -31,7 +31,7 @@ export function ProjectCard({ project }: { project: Project }) {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to top, rgba(6,8,13,0.98) 0%, rgba(6,8,13,0.5) 40%, rgba(6,8,13,0.15) 100%)",
+                "linear-gradient(to top, rgba(12,11,10,0.98) 0%, rgba(12,11,10,0.5) 40%, rgba(12,11,10,0.15) 100%)",
             }}
           />
           <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between">
@@ -49,7 +49,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div
           className="h-40 relative overflow-hidden"
           style={{
-            background: "linear-gradient(135deg, rgba(96,165,250,0.08), rgba(167,139,250,0.06))",
+            background: "linear-gradient(135deg, rgba(226,105,60,0.08), rgba(79,138,139,0.06))",
           }}
         >
           <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between">
@@ -87,9 +87,9 @@ export function ProjectCard({ project }: { project: Project }) {
                 key={s}
                 className="text-[11px] px-2 py-0.5 rounded-md"
                 style={{
-                  background: "rgba(96,165,250,0.06)",
+                  background: "rgba(226,105,60,0.06)",
                   color: "var(--color-accent)",
-                  border: "1px solid rgba(96,165,250,0.1)",
+                  border: "1px solid rgba(226,105,60,0.1)",
                   fontFamily: "var(--font-mono)",
                 }}
               >

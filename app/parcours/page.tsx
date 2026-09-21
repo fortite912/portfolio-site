@@ -5,6 +5,7 @@ import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { CcfSection } from "@/components/ccf-section";
 import { VeilleSection } from "@/components/veille-section";
 import { CountUp } from "@/components/count-up";
+import { DocMeta, SectionNum } from "@/components/doc-meta";
 
 export const metadata: Metadata = {
   title: "Parcours — Sean Fritsch",
@@ -50,22 +51,22 @@ type KindStyle = {
 const kindStyle: Record<string, KindStyle> = {
   Statut: {
     color: "var(--color-accent2)",
-    bg: "rgba(167,139,250,0.1)",
-    border: "rgba(167,139,250,0.25)",
+    bg: "rgba(79,138,139,0.1)",
+    border: "rgba(79,138,139,0.25)",
     pill: "pill-purple",
     Icon: IconRocket,
   },
   Expérience: {
     color: "var(--color-accent)",
-    bg: "rgba(96,165,250,0.1)",
-    border: "rgba(96,165,250,0.25)",
+    bg: "rgba(226,105,60,0.1)",
+    border: "rgba(226,105,60,0.25)",
     pill: "pill-accent",
     Icon: IconBriefcase,
   },
   Formation: {
     color: "var(--color-cyan)",
-    bg: "rgba(34,211,238,0.1)",
-    border: "rgba(34,211,238,0.25)",
+    bg: "rgba(107,130,153,0.1)",
+    border: "rgba(107,130,153,0.25)",
     pill: "pill-muted",
     Icon: IconGraduation,
   },
@@ -100,11 +101,22 @@ export default function ParcoursPage() {
 
         <div className="relative space-y-3">
           <p className="heading-section">Parcours</p>
-          <h1 className="heading-lg text-gradient-animated">Expérience &amp; entrepreneuriat</h1>
+          <h1 className="heading-lg">
+            <SectionNum n={1}>Expérience &amp; entrepreneuriat</SectionNum>
+          </h1>
           <p className="text-[15px] max-w-2xl leading-relaxed" style={{ color: "var(--color-muted)" }}>
             Du support de proximité en environnement réel au prototype développé sous statut
             étudiant-entrepreneur. Les faits, les dates et les chiffres — rien d’autre.
           </p>
+
+          <DocMeta
+            doc="parcours-professionnel"
+            statut="En cours de constitution — BTS SIO SISR 2e année"
+            extra={[
+              { label: "épreuves", value: "E4 (veille) · E5 (administration SR)" },
+              { label: "période", value: "2025 — 2027" },
+            ]}
+          />
         </div>
 
         <div className="relative grid grid-cols-3 gap-3 sm:gap-4">
@@ -159,7 +171,7 @@ export default function ParcoursPage() {
                   className="card card-hover card-spotlight p-5 sm:p-6 space-y-4"
                   style={
                     entry.upcoming
-                      ? { borderStyle: "dashed", borderColor: "rgba(251,191,36,0.22)" }
+                      ? { borderStyle: "dashed", borderColor: "rgba(217,164,65,0.22)" }
                       : undefined
                   }
                 >
@@ -281,7 +293,7 @@ export default function ParcoursPage() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at 20% 0%, rgba(167,139,250,0.08), transparent 65%)",
+                "radial-gradient(ellipse at 20% 0%, rgba(79,138,139,0.08), transparent 65%)",
             }}
           />
 
@@ -294,7 +306,9 @@ export default function ParcoursPage() {
                 Prototype
               </span>
             </div>
-            <h2 className="heading-lg text-gradient">{soveris.name}</h2>
+            <h2 className="heading-lg">
+              <SectionNum n={4}>{soveris.name}</SectionNum>
+            </h2>
             <p className="text-[15px] font-medium" style={{ color: "var(--color-accent2)" }}>
               {soveris.tagline}
             </p>
@@ -311,7 +325,7 @@ export default function ParcoursPage() {
             {soveris.metrics.map((m) => (
               <div
                 key={m.label}
-                className="rounded-xl p-4 text-center space-y-1 transition-colors duration-300 hover:border-[rgba(167,139,250,0.25)]"
+                className="rounded-xl p-4 text-center space-y-1 transition-colors duration-300 hover:border-[rgba(79,138,139,0.25)]"
                 style={{
                   background: "rgba(255,255,255,0.025)",
                   border: "1px solid rgba(255,255,255,0.05)",
@@ -342,8 +356,8 @@ export default function ParcoursPage() {
           <div
             className="relative rounded-xl p-5 space-y-2.5"
             style={{
-              background: "rgba(251,191,36,0.04)",
-              border: "1px solid rgba(251,191,36,0.15)",
+              background: "rgba(217,164,65,0.04)",
+              border: "1px solid rgba(217,164,65,0.15)",
             }}
           >
             <p

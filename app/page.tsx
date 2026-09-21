@@ -95,17 +95,17 @@ const SKILLS = [
 ];
 
 const colorMap: Record<string, string> = {
-  accent: "rgba(96,165,250,0.08)",
-  purple: "rgba(167,139,250,0.08)",
-  green: "rgba(52,211,153,0.08)",
-  cyan: "rgba(34,211,238,0.08)",
+  accent: "rgba(226,105,60,0.08)",
+  purple: "rgba(79,138,139,0.08)",
+  green: "rgba(127,163,127,0.08)",
+  cyan: "rgba(107,130,153,0.08)",
 };
 
 const borderMap: Record<string, string> = {
-  accent: "rgba(96,165,250,0.15)",
-  purple: "rgba(167,139,250,0.15)",
-  green: "rgba(52,211,153,0.15)",
-  cyan: "rgba(34,211,238,0.15)",
+  accent: "rgba(226,105,60,0.15)",
+  purple: "rgba(79,138,139,0.15)",
+  green: "rgba(127,163,127,0.15)",
+  cyan: "rgba(107,130,153,0.15)",
 };
 
 const accentColors: Record<string, string> = {
@@ -126,14 +126,14 @@ export default function HomePage() {
         <div
           className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full pointer-events-none hidden md:block"
           style={{
-            background: "radial-gradient(circle, rgba(96,165,250,0.08) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(226,105,60,0.08) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
         />
         <div
           className="absolute -top-20 right-0 w-[400px] h-[400px] rounded-full pointer-events-none hidden md:block"
           style={{
-            background: "radial-gradient(circle, rgba(167,139,250,0.06) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(79,138,139,0.06) 0%, transparent 70%)",
             filter: "blur(50px)",
           }}
         />
@@ -340,8 +340,8 @@ export default function HomePage() {
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center mx-auto"
                   style={{
-                    background: "linear-gradient(135deg, rgba(96,165,250,0.1), rgba(167,139,250,0.08))",
-                    border: "1px solid rgba(96,165,250,0.15)",
+                    background: "linear-gradient(135deg, rgba(226,105,60,0.1), rgba(79,138,139,0.08))",
+                    border: "1px solid rgba(226,105,60,0.15)",
                   }}
                 >
                   <span
@@ -395,7 +395,7 @@ export default function HomePage() {
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: "radial-gradient(ellipse at 50% 0%, rgba(96,165,250,0.06), transparent 70%)",
+              background: "radial-gradient(ellipse at 50% 0%, rgba(226,105,60,0.06), transparent 70%)",
             }}
           />
           <div className="relative space-y-6">

@@ -23,8 +23,8 @@ export function Footer() {
               <div
                 className="flex items-center justify-center w-8 h-8 rounded-lg text-sm font-bold transition-transform duration-300 group-hover:scale-110"
                 style={{
-                  background: "linear-gradient(135deg, rgba(96,165,250,0.15), rgba(167,139,250,0.15))",
-                  border: "1px solid rgba(96,165,250,0.2)",
+                  background: "linear-gradient(135deg, rgba(226,105,60,0.15), rgba(79,138,139,0.15))",
+                  border: "1px solid rgba(226,105,60,0.2)",
                   color: "var(--color-accent)",
                 }}
               >

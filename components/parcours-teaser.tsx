@@ -26,8 +26,8 @@ const CARDS = [
       "Support utilisateur sur Request Tracker, interventions de proximité, déploiement MFA, diagnostic VLAN et masterisation de 122 postes pour les concours d’entrée.",
     tags: ["Request Tracker", "MFA", "VLAN", "Masterisation"],
     color: "var(--color-accent)",
-    bg: "rgba(96,165,250,0.08)",
-    border: "rgba(96,165,250,0.18)",
+    bg: "rgba(226,105,60,0.08)",
+    border: "rgba(226,105,60,0.18)",
     pill: "pill-accent",
   },
   {
@@ -39,8 +39,8 @@ const CARDS = [
       "Statut SNEE obtenu auprès du Pépite Paris Ouest Nord pour développer Soveris, un prototype de tri des demandes de support N1 qui tourne entièrement en local.",
     tags: ["Python", "100% local", "92% de précision", "19/19 tests"],
     color: "var(--color-accent2)",
-    bg: "rgba(167,139,250,0.08)",
-    border: "rgba(167,139,250,0.18)",
+    bg: "rgba(79,138,139,0.08)",
+    border: "rgba(79,138,139,0.18)",
     pill: "pill-purple",
   },
 ];
@@ -113,7 +113,7 @@ export function ParcoursTeaser() {
       <AnimateOnScroll delay={200}>
         <div
           className="card p-5 flex flex-wrap items-center justify-between gap-4"
-          style={{ borderColor: "rgba(167,139,250,0.14)" }}
+          style={{ borderColor: "rgba(79,138,139,0.14)" }}
         >
           <div className="flex items-center gap-3 min-w-0">
             <span

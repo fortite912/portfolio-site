@@ -50,15 +50,12 @@ export function Navbar() {
         style={{
           borderBottom: "1px solid rgba(255,255,255,0.05)",
           background: scrolled
-            ? "rgba(6,8,13,0.92)"
-            : "rgba(6,8,13,0.85)",
-          backdropFilter: scrolled
-            ? "blur(24px) saturate(1.8)"
-            : "blur(20px) saturate(1.5)",
+            ? "rgba(12,11,10,0.92)"
+            : "rgba(12,11,10,0.85)",
           boxShadow: scrolled
             ? "0 4px 30px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.03)"
             : "none",
-          transition: "background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease",
+          transition: "background 0.3s ease, box-shadow 0.3s ease",
         }}
       >
         <div className="mx-auto flex max-w-[1120px] items-center justify-between px-5 h-16">
@@ -68,8 +65,8 @@ export function Navbar() {
               className="flex items-center justify-center w-8 h-8 rounded-lg text-sm font-bold transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
               style={{
                 background:
-                  "linear-gradient(135deg, rgba(96,165,250,0.15), rgba(167,139,250,0.15))",
-                border: "1px solid rgba(96,165,250,0.2)",
+                  "linear-gradient(135deg, rgba(226,105,60,0.15), rgba(79,138,139,0.15))",
+                border: "1px solid rgba(226,105,60,0.2)",
                 color: "var(--color-accent)",
               }}
             >
@@ -109,7 +106,7 @@ export function Navbar() {
                     style={{
                       background:
                         "linear-gradient(90deg, var(--color-accent), var(--color-accent2))",
-                      boxShadow: "0 2px 12px rgba(96,165,250,0.3), 0 0px 4px rgba(167,139,250,0.2)",
+                      boxShadow: "0 2px 12px rgba(226,105,60,0.3), 0 0px 4px rgba(79,138,139,0.2)",
                     }}
                   />
                 )}
@@ -176,7 +173,7 @@ export function Navbar() {
                   className="text-sm font-medium py-2.5 px-3 rounded-lg transition-colors flex items-center gap-2"
                   style={{
                     color: isActive(i.href) ? "var(--color-text)" : "var(--color-muted)",
-                    background: isActive(i.href) ? "rgba(96,165,250,0.08)" : "transparent",
+                    background: isActive(i.href) ? "rgba(226,105,60,0.08)" : "transparent",
                     borderLeft: isActive(i.href) ? "2px solid var(--color-accent)" : "2px solid transparent",
                   }}
                 >

@@ -36,8 +36,8 @@ export default function ProjectsPage() {
           <div
             className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm"
             style={{
-              background: "rgba(52,211,153,0.04)",
-              border: "1px solid rgba(52,211,153,0.1)",
+              background: "rgba(127,163,127,0.04)",
+              border: "1px solid rgba(127,163,127,0.1)",
             }}
           >
             <span style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)", fontSize: 12 }}>Terminés</span>
@@ -46,8 +46,8 @@ export default function ProjectsPage() {
           <div
             className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm"
             style={{
-              background: "rgba(251,191,36,0.04)",
-              border: "1px solid rgba(251,191,36,0.1)",
+              background: "rgba(217,164,65,0.04)",
+              border: "1px solid rgba(217,164,65,0.1)",
             }}
           >
             <span style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)", fontSize: 12 }}>En cours</span>

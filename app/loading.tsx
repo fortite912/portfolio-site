@@ -21,7 +21,7 @@ export default function Loading() {
             key={i}
             className="rounded-2xl overflow-hidden"
             style={{
-              background: "rgba(17,22,34,0.7)",
+              background: "rgba(26,24,21,0.7)",
               border: "1px solid rgba(255,255,255,0.06)",
             }}
           >

@@ -67,7 +67,7 @@ export default async function ProjectDetailPage({
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to top, rgba(6,8,13,0.98) 0%, rgba(6,8,13,0.4) 40%, rgba(6,8,13,0.15) 100%)",
+                "linear-gradient(to top, rgba(12,11,10,0.98) 0%, rgba(12,11,10,0.4) 40%, rgba(12,11,10,0.15) 100%)",
             }}
           />
           {/* Floating badges on cover */}
@@ -191,8 +191,8 @@ export default async function ProjectDetailPage({
                     <span
                       className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold"
                       style={{
-                        background: "linear-gradient(135deg, rgba(96,165,250,0.15), rgba(167,139,250,0.1))",
-                        border: "1px solid rgba(96,165,250,0.2)",
+                        background: "linear-gradient(135deg, rgba(226,105,60,0.15), rgba(79,138,139,0.1))",
+                        border: "1px solid rgba(226,105,60,0.2)",
                         color: "var(--color-accent)",
                         fontFamily: "var(--font-mono)",
                       }}

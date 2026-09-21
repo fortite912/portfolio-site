@@ -1,5 +1,6 @@
 import { veilleE4 } from "@/lib/experience";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { SectionNum } from "@/components/doc-meta";
 
 const IconRadar = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -37,11 +38,11 @@ export function VeilleSection() {
           </div>
 
           <h2 className="heading-lg">
-            <span style={{ color: "var(--color-green)", fontFamily: "var(--font-mono)" }}>
-              {epreuve}
-            </span>
-            {" — "}
-            Veille technologique
+            <SectionNum n={3}>
+              <span style={{ color: "var(--color-green)" }}>{epreuve}</span>
+              {" — "}
+              Veille technologique
+            </SectionNum>
           </h2>
 
           <div className="flex flex-wrap gap-1.5">
@@ -58,14 +59,14 @@ export function VeilleSection() {
         <div className="grid gap-4 md:grid-cols-2">
           <div
             className="card card-hover p-5 space-y-3"
-            style={{ borderColor: "rgba(52,211,153,0.2)" }}
+            style={{ borderColor: "rgba(127,163,127,0.2)" }}
           >
             <div className="flex items-center gap-2">
               <span
                 className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
                 style={{
-                  background: "rgba(52,211,153,0.1)",
-                  border: "1px solid rgba(52,211,153,0.22)",
+                  background: "rgba(127,163,127,0.1)",
+                  border: "1px solid rgba(127,163,127,0.22)",
                   color: "var(--color-green)",
                 }}
                 aria-hidden
@@ -87,8 +88,8 @@ export function VeilleSection() {
               <span
                 className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
                 style={{
-                  background: "rgba(96,165,250,0.08)",
-                  border: "1px solid rgba(96,165,250,0.18)",
+                  background: "rgba(226,105,60,0.08)",
+                  border: "1px solid rgba(226,105,60,0.18)",
                   color: "var(--color-accent)",
                 }}
                 aria-hidden
@@ -183,8 +184,8 @@ export function VeilleSection() {
             <div
               className="rounded-xl p-5"
               style={{
-                background: "rgba(251,191,36,0.04)",
-                border: "1px dashed rgba(251,191,36,0.22)",
+                background: "rgba(217,164,65,0.04)",
+                border: "1px dashed rgba(217,164,65,0.22)",
               }}
             >
               <p className="text-[13px] leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>

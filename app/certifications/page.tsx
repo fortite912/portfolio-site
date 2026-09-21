@@ -62,15 +62,15 @@ export default function CertificationsPage() {
                           className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-xs font-bold transition-transform duration-300 hover:scale-110"
                           style={{
                             background: c.status === "Acquis"
-                              ? "rgba(52,211,153,0.15)"
+                              ? "rgba(127,163,127,0.15)"
                               : c.status === "En cours"
-                              ? "rgba(251,191,36,0.1)"
+                              ? "rgba(217,164,65,0.1)"
                               : "rgba(255,255,255,0.04)",
                             border: `2px solid ${
                               c.status === "Acquis"
-                                ? "rgba(52,211,153,0.4)"
+                                ? "rgba(127,163,127,0.4)"
                                 : c.status === "En cours"
-                                ? "rgba(251,191,36,0.3)"
+                                ? "rgba(217,164,65,0.3)"
                                 : "rgba(255,255,255,0.08)"
                             }`,
                             color: c.status === "Acquis"
@@ -94,7 +94,7 @@ export default function CertificationsPage() {
                           className="h-[2px] flex-1 min-w-[24px] mx-1"
                           style={{
                             background: c.status === "Acquis"
-                              ? "linear-gradient(90deg, rgba(52,211,153,0.4), rgba(52,211,153,0.1))"
+                              ? "linear-gradient(90deg, rgba(127,163,127,0.4), rgba(127,163,127,0.1))"
                               : "rgba(255,255,255,0.06)",
                           }}
                         />
@@ -117,9 +117,9 @@ export default function CertificationsPage() {
               style={{
                 animationDelay: `${i * 100}ms`,
                 ...(c.status === "Acquis"
-                  ? { borderColor: "rgba(52,211,153,0.2)", boxShadow: "0 0 30px rgba(52,211,153,0.06)" }
+                  ? { borderColor: "rgba(127,163,127,0.2)", boxShadow: "0 0 30px rgba(127,163,127,0.06)" }
                   : c.status === "En cours"
-                  ? { borderColor: "rgba(251,191,36,0.15)", borderStyle: "dashed" }
+                  ? { borderColor: "rgba(217,164,65,0.15)", borderStyle: "dashed" }
                   : { opacity: 0.7 }),
               }}
             >
@@ -137,7 +137,7 @@ export default function CertificationsPage() {
                     className="absolute inset-0"
                     style={{
                       background:
-                        "linear-gradient(to top, rgba(6,8,13,0.98), rgba(6,8,13,0.4), rgba(6,8,13,0.2))",
+                        "linear-gradient(to top, rgba(12,11,10,0.98), rgba(12,11,10,0.4), rgba(12,11,10,0.2))",
                     }}
                   />
                   <div className="absolute bottom-3 right-4">

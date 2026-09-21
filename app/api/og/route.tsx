@@ -13,7 +13,7 @@ export async function GET() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #06080d 0%, #0c0f17 50%, #111622 100%)",
+          background: "linear-gradient(135deg, #0c0b0a 0%, #131210 50%, #1a1815 100%)",
           fontFamily: "system-ui, sans-serif",
           position: "relative",
         }}
@@ -27,7 +27,7 @@ export async function GET() {
             width: "500px",
             height: "500px",
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(96,165,250,0.12) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(226,105,60,0.12) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
         />
@@ -39,7 +39,7 @@ export async function GET() {
             width: "400px",
             height: "400px",
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(167,139,250,0.1) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(79,138,139,0.1) 0%, transparent 70%)",
             filter: "blur(50px)",
           }}
         />
@@ -53,12 +53,12 @@ export async function GET() {
             width: "80px",
             height: "80px",
             borderRadius: "20px",
-            background: "linear-gradient(135deg, rgba(96,165,250,0.2), rgba(167,139,250,0.2))",
-            border: "2px solid rgba(96,165,250,0.3)",
+            background: "linear-gradient(135deg, rgba(226,105,60,0.2), rgba(79,138,139,0.2))",
+            border: "2px solid rgba(226,105,60,0.3)",
             marginBottom: "32px",
             fontSize: "32px",
             fontWeight: 800,
-            color: "#60a5fa",
+            color: "#e2693c",
           }}
         >
           SF
@@ -70,7 +70,7 @@ export async function GET() {
             fontSize: "56px",
             fontWeight: 800,
             letterSpacing: "-0.03em",
-            color: "#eef2ff",
+            color: "#ece8e1",
             marginBottom: "12px",
           }}
         >
@@ -82,7 +82,7 @@ export async function GET() {
           style={{
             fontSize: "24px",
             fontWeight: 500,
-            color: "#64748b",
+            color: "#8a8377",
             marginBottom: "40px",
           }}
         >
@@ -102,9 +102,9 @@ export async function GET() {
               style={{
                 padding: "8px 20px",
                 borderRadius: "10px",
-                background: "rgba(96,165,250,0.08)",
-                border: "1px solid rgba(96,165,250,0.2)",
-                color: "#60a5fa",
+                background: "rgba(226,105,60,0.08)",
+                border: "1px solid rgba(226,105,60,0.2)",
+                color: "#e2693c",
                 fontSize: "16px",
                 fontWeight: 600,
               }}

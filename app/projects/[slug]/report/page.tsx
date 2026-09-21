@@ -76,8 +76,8 @@ export default async function ReportPage({
                 <span
                   className="mt-0.5 flex h-5 w-5 items-center justify-center rounded-full shrink-0"
                   style={{
-                    background: "rgba(52,211,153,0.1)",
-                    border: "1px solid rgba(52,211,153,0.2)",
+                    background: "rgba(127,163,127,0.1)",
+                    border: "1px solid rgba(127,163,127,0.2)",
                   }}
                 >
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--color-green)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
@@ -102,8 +102,8 @@ export default async function ReportPage({
                   <span
                     className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold shrink-0"
                     style={{
-                      background: "linear-gradient(135deg, rgba(96,165,250,0.15), rgba(167,139,250,0.1))",
-                      border: "1px solid rgba(96,165,250,0.2)",
+                      background: "linear-gradient(135deg, rgba(226,105,60,0.15), rgba(79,138,139,0.1))",
+                      border: "1px solid rgba(226,105,60,0.2)",
                       color: "var(--color-accent)",
                       fontFamily: "var(--font-mono)",
                     }}
