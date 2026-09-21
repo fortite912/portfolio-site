@@ -61,20 +61,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="fr"
-      className={`${inter.variable} ${jetbrainsMono.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="fr" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="min-h-screen flex flex-col">
-        {/* Mode embed : ?embed=1 allège le rendu en iframe (Google Sites).
-            Posé avant l'hydratation, d'où suppressHydrationWarning ci-dessus. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "try{if(new URLSearchParams(location.search).get('embed')==='1'){document.documentElement.setAttribute('data-embed','1')}}catch(e){}",
-          }}
-        />
         <div className="dot-grid" />
         <div className="ambient-glow" />
         <CursorGlow />
