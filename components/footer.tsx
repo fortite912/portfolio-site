@@ -3,6 +3,7 @@ import { SITE } from "@/lib/site";
 
 const quickLinks = [
   { href: "/", label: "Accueil" },
+  { href: "/parcours", label: "Parcours" },
   { href: "/projects", label: "Projets" },
   { href: "/certifications", label: "Certifications" },
   { href: "/contact", label: "Contact" },

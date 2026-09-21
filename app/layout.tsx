@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { SITE } from "@/lib/site";
 import { CursorGlow } from "@/components/cursor-glow";
 import { BackToTop } from "@/components/back-to-top";
 
@@ -19,14 +20,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-site-ten-pearl-61.vercel.app"),
+  metadataBase: new URL(SITE.url),
   title: {
     default: "Sean Fritsch — Portfolio SISR",
     template: "%s | Portfolio SISR",
   },
   description:
     "Systèmes • Réseaux • Cybersécurité — labs documentés avec preuves vérifiables.",
-  keywords: ["SISR", "BTS SIO", "portfolio", "systèmes", "réseaux", "cybersécurité", "Azure", "Cisco", "stage", "Sean Fritsch"],
+  keywords: ["SISR", "BTS SIO", "portfolio", "systèmes", "réseaux", "cybersécurité", "Azure", "Cisco", "stage", "CentraleSupélec", "étudiant-entrepreneur", "Soveris", "Sean Fritsch"],
   authors: [{ name: "Sean Fritsch" }],
   openGraph: {
     title: "Sean Fritsch — Portfolio SISR",

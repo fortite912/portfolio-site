@@ -4,7 +4,7 @@ import { CopyTemplate } from "@/components/copy-template";
 
 export const metadata: Metadata = {
   title: "Contact — Sean Fritsch",
-  description: "Disponible pour un CDD en systèmes, réseaux ou cybersécurité.",
+  description: "Recherche un stage conventionné du 16 novembre au 18 décembre 2026 en infrastructure, support IT ou cybersécurité.",
 };
 
 export default function ContactPage() {
@@ -14,8 +14,8 @@ export default function ContactPage() {
         <p className="heading-section">Contact</p>
         <h1 className="heading-lg text-gradient-animated">Travaillons ensemble</h1>
         <p className="text-[15px] max-w-xl leading-relaxed" style={{ color: "var(--color-muted)" }}>
-          Disponible pour un CDD en systèmes, réseaux ou cybersécurité.
-          Réponse rapide si le message est précis.
+          Je recherche un stage conventionné du 16 novembre au 18 décembre 2026,
+          en infrastructure, support IT ou cybersécurité. Réponse rapide si le message est précis.
         </p>
       </header>
 
@@ -115,7 +115,7 @@ export default function ContactPage() {
                       boxShadow: "0 0 6px var(--color-green)",
                     }}
                   />
-                  <span className="text-xs" style={{ color: "var(--color-green)" }}>Disponible</span>
+                  <span className="text-xs" style={{ color: "var(--color-green)" }}>{SITE.availability.dateRange}</span>
                 </div>
               </div>
             </div>

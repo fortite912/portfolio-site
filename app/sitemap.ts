@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getProjects } from "@/lib/projects";
+import { SITE } from "@/lib/site";
 
-const BASE = "https://portfolio-sisr.vercel.app";
+const BASE = SITE.url;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projects = getProjects();
@@ -45,6 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
+    },
+    {
+      url: `${BASE}/parcours`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     ...projectPages,
   ];

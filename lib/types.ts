@@ -13,6 +13,8 @@ export type SiteLinks = {
 
 export type Site = {
   name: string;
+  /** URL canonique de production (sans slash final). */
+  url: string;
   role: string;
   title: string;
   tagline: string;
@@ -62,4 +64,51 @@ export type Certification = {
   tags: string[];
   cover?: string;
   proofUrl?: string;
+};
+
+export type TimelineKind = "Expérience" | "Statut" | "Formation";
+
+export type TimelineEntry = {
+  slug: string;
+  kind: TimelineKind;
+  title: string;
+  org: string;
+  orgNote?: string;
+  period: string;
+  current?: boolean;
+  /** Entrée planifiée, pas encore commencée. */
+  upcoming?: boolean;
+  summary: string;
+  highlights: string[];
+  stack?: string[];
+  note?: string;
+};
+
+export type Venture = {
+  name: string;
+  tagline: string;
+  description: string;
+  metrics: Array<{ value: string; label: string }>;
+  stack: string[];
+  repo?: string;
+  caveats: string[];
+};
+
+export type CcfDeliverable = {
+  label: string;
+  detail: string;
+  done?: boolean;
+};
+
+export type Ccf = {
+  code: string;
+  title: string;
+  option: string;
+  coefficient: number;
+  evaluation: string;
+  status: "À venir" | "En cours" | "Prêt";
+  intro: string;
+  competences: Array<{ title: string; detail: string }>;
+  deliverables: CcfDeliverable[];
+  notes: string[];
 };

@@ -7,6 +7,7 @@ import { SITE } from "@/lib/site";
 
 const nav = [
   { href: "/", label: "Accueil" },
+  { href: "/parcours", label: "Parcours" },
   { href: "/projects", label: "Projets" },
   { href: "/certifications", label: "Certifications" },
   { href: "/contact", label: "Contact" },
@@ -34,10 +35,13 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menu on route change
-  useEffect(() => {
+  // Close menu on route change (ajustement pendant le rendu :
+  // evite le setState synchrone dans un effet)
+  const [menuPath, setMenuPath] = useState(pathname);
+  if (menuPath !== pathname) {
+    setMenuPath(pathname);
     setOpen(false);
-  }, [pathname]);
+  }
 
   return (
     <>

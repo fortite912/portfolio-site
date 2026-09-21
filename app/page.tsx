@@ -4,6 +4,7 @@ import { getFeaturedProjects } from "@/lib/projects";
 import { ProjectCard } from "@/components/project-card";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { CountUp } from "@/components/count-up";
+import { ParcoursTeaser } from "@/components/parcours-teaser";
 
 /* ===== SVG icon components ===== */
 const IconFolder = () => (
@@ -210,7 +211,7 @@ export default function HomePage() {
               </div>
               <div className="terminal-body space-y-1">
                 <p><span className="prompt">$</span> <span className="cmd">whoami</span></p>
-                <p className="output">Sean Fritsch — BTS SIO SISR</p>
+                <p className="output">Sean Fritsch — BTS SIO SISR (2e année)</p>
                 <p className="mt-2"><span className="prompt">$</span> <span className="cmd">cat</span> <span className="flag">skills.conf</span></p>
                 <p className="output">systemes=AD,DNS,DHCP,GPO</p>
                 <p className="output">reseau=VLAN,STP,LACP,OSPF</p>
@@ -238,7 +239,7 @@ export default function HomePage() {
             </div>
             <div className="terminal-body space-y-0.5" style={{ padding: "12px", fontSize: "12px" }}>
               <p><span className="prompt">$</span> <span className="cmd">whoami</span></p>
-              <p className="output">Sean Fritsch — BTS SIO SISR</p>
+              <p className="output">Sean Fritsch — BTS SIO SISR (2e année)</p>
               <p className="mt-1.5"><span className="prompt">$</span> <span className="cmd">verify</span> <span className="flag">--proofs</span></p>
               <p className="success">6/6 labs validated ✓</p>
               <p className="mt-1.5 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--prod</span></p>
@@ -314,6 +315,10 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <div className="section-divider" />
+
+      <ParcoursTeaser />
 
       <div className="section-divider" />
 
@@ -396,8 +401,9 @@ export default function HomePage() {
           <div className="relative space-y-6">
             <h2 className="heading-lg text-gradient">Intéressé par mon profil ?</h2>
             <p className="max-w-lg mx-auto text-sm leading-relaxed" style={{ color: "var(--color-muted)" }}>
-              Je cherche un CDD en systèmes, réseaux ou cybersécurité.
-              Chaque lab est documenté avec des preuves vérifiables.
+              Je recherche un stage conventionné du 16 novembre au 18 décembre 2026,
+              en infrastructure, support IT ou cybersécurité. Chaque lab est documenté
+              avec des preuves vérifiables.
             </p>
             <div className="flex flex-wrap justify-center gap-3 pt-2">
               <Link className="btn btn-primary btn-lg" href="/contact">

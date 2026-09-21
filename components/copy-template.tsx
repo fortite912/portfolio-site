@@ -1,18 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { SITE } from "@/lib/site";
 
-const TEMPLATE = `Objet : Candidature CDD Technicien IT — [Votre entreprise]
+const TEMPLATE = `Objet : Candidature stage BTS SIO SISR (16/11 — 18/12/2026) — [Votre entreprise]
 
 Bonjour,
 
-Je suis actuellement en BTS SIO option SISR et je recherche un CDD pour juillet — août 2026 dans le domaine suivant :
+Je suis en 2e année de BTS SIO option SISR et je recherche un stage conventionné du 16 novembre au 18 décembre 2026, en infrastructure, support IT ou cybersécurité.
 
 - Stack / environnement : [Windows Server / Cisco / Azure / ...]
 - Mission visée : [Support / Infra / Réseau / Cybersécurité]
-- Disponibilité : Juillet — Août 2026
+- Période : 16 novembre — 18 décembre 2026
 
-Mon portfolio avec preuves vérifiables : https://portfolio-site-ten-pearl-61.vercel.app
+Mon portfolio avec preuves vérifiables : ${SITE.url}
 
 Cordialement,
 Sean Fritsch`;

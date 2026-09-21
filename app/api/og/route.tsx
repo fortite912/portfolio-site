@@ -86,7 +86,7 @@ export async function GET() {
             marginBottom: "40px",
           }}
         >
-          Portfolio SISR — BTS SIO
+          Portfolio SISR — BTS SIO 2e année
         </div>
 
         {/* Skills bar */}
