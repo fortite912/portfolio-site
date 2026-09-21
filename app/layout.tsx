@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { SITE } from "@/lib/site";
 import { CursorGlow } from "@/components/cursor-glow";
 import { BackToTop } from "@/components/back-to-top";
+import { SiteChrome } from "@/components/site-chrome";
 
 const plexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -65,15 +66,19 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${plexSans.variable} ${plexMono.variable}`}>
       <body className="min-h-screen flex flex-col">
-        <div className="dot-grid" />
-        <div className="ambient-glow" />
-        <CursorGlow />
-        <Navbar />
+        <SiteChrome>
+          <div className="dot-grid" />
+          <div className="ambient-glow" />
+          <CursorGlow />
+          <Navbar />
+        </SiteChrome>
         <main className="relative z-10 mx-auto w-full max-w-[1120px] px-5 py-10 md:py-16 flex-1 page-enter">
           {children}
         </main>
-        <Footer />
-        <BackToTop />
+        <SiteChrome>
+          <Footer />
+          <BackToTop />
+        </SiteChrome>
       </body>
     </html>
   );

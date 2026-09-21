@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { useIsEmbed } from "@/components/site-chrome";
 
 interface CountUpProps {
   value: string;
@@ -10,6 +11,7 @@ interface CountUpProps {
 export function CountUp({ value, duration = 1800 }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const [display, setDisplay] = useState("0");
+  const isEmbed = useIsEmbed();
   const [trigger, setTrigger] = useState(0);
 
   // Extract numeric part and suffix (e.g. "15+" -> 15, "+")
@@ -39,6 +41,8 @@ export function CountUp({ value, duration = 1800 }: CountUpProps) {
 
   // Initial trigger on scroll into view
   useEffect(() => {
+    if (isEmbed) return;
+
     const el = ref.current;
     if (!el) return;
 
@@ -54,7 +58,7 @@ export function CountUp({ value, duration = 1800 }: CountUpProps) {
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [trigger]);
+  }, [trigger, isEmbed]);
 
   // Run animation whenever trigger changes
   useEffect(() => {
@@ -71,9 +75,12 @@ export function CountUp({ value, duration = 1800 }: CountUpProps) {
   };
 
   return (
-    <span ref={ref} onMouseEnter={handleHover} className="cursor-default">
-      {display}
-      {suffix}
+    <span
+      ref={ref}
+      onMouseEnter={isEmbed ? undefined : handleHover}
+      className={isEmbed ? undefined : "cursor-default"}
+    >
+      {isEmbed ? value : `${display}${suffix}`}
     </span>
   );
 }
