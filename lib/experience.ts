@@ -1,4 +1,4 @@
-import type { Ccf, TimelineEntry, Venture } from "./types";
+import type { Ccf, TimelineEntry, Veille, Venture } from "./types";
 
 /**
  * Parcours affiché sur /parcours.
@@ -162,4 +162,59 @@ export const ccfE5: Ccf = {
     "Les labs déjà publiés dans la section Projets (VLAN, AD/DNS/DHCP, PKI, SSH) constituent la base méthodologique de ces réalisations.",
     "Le stage du 16 novembre au 18 décembre 2026 fournira les situations professionnelles en environnement réel.",
   ],
+};
+
+/**
+ * Veille technologique — épreuve E4, compétence "Organiser son
+ * développement professionnel". Le jury évalue la méthode et l'impact
+ * concret, pas un exposé. Pour changer de thème, il suffit d'éditer
+ * themePrincipal ci-dessous.
+ */
+export const veilleE4: Veille = {
+  epreuve: "E4",
+  competence: "Organiser son développement professionnel",
+  status: "En cours",
+  themePrincipal: {
+    title: "L'intégration de l'IA dans le support informatique de niveau 1",
+    why:
+      "Thème choisi parce qu'il est directement adossé à un projet mené : Soveris, un prototype de tri automatique des demandes de support. La veille ne reste donc pas théorique — chaque lecture est confrontée à un banc de test réel.",
+  },
+  themeSecondaire: {
+    title: "Durcissement des accès : MFA, SSH et PKI",
+    why:
+      "Prolonge le déploiement MFA conduit en stage à la DISI et les labs SSH et PKI du portfolio.",
+  },
+  method: [
+    "Flux RSS agrégés dans un lecteur unique : la réception de l'information est automatisée, pas subie",
+    "Revue hebdomadaire d'environ 30 minutes, le même jour chaque semaine",
+    "Pour chaque élément retenu : une fiche courte — source, date, ce que ça change concrètement sur une infrastructure",
+    "Les éléments qui concernent un lab du portfolio sont reportés dans le lab correspondant",
+  ],
+  sources: [
+    {
+      name: "CERT-FR",
+      kind: "Alertes et avis",
+      detail: "Alertes de sécurité officielles et bulletins d'actualité du centre gouvernemental de veille.",
+      url: "https://www.cert.ssi.gouv.fr/",
+    },
+    {
+      name: "ANSSI",
+      kind: "Guides et publications",
+      detail: "Référentiels et recommandations de durcissement.",
+      url: "https://cyber.gouv.fr/",
+    },
+    {
+      name: "IT Connect",
+      kind: "Blog technique FR",
+      detail: "Tutoriels et actualité administration systèmes et réseaux.",
+      url: "https://www.it-connect.fr/",
+    },
+    {
+      name: "Zataz",
+      kind: "Actualité cybersécurité FR",
+      detail: "Suivi des incidents et des fuites de données.",
+      url: "https://www.zataz.com/",
+    },
+  ],
+  syntheses: [],
 };

@@ -3,12 +3,13 @@ import Link from "next/link";
 import { timeline, soveris } from "@/lib/experience";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { CcfSection } from "@/components/ccf-section";
+import { VeilleSection } from "@/components/veille-section";
 import { CountUp } from "@/components/count-up";
 
 export const metadata: Metadata = {
   title: "Parcours — Sean Fritsch",
   description:
-    "Stage à la DISI de CentraleSupélec, statut étudiant-entrepreneur avec le projet Soveris, épreuve E5 et BTS SIO SISR 2e année.",
+    "Stage à la DISI de CentraleSupélec, statut étudiant-entrepreneur avec le projet Soveris, épreuves E5 et E4 (veille technologique), BTS SIO SISR 2e année.",
 };
 
 /* ===== Icons ===== */
@@ -266,6 +267,10 @@ export default function ParcoursPage() {
       <div className="section-divider" />
 
       <CcfSection />
+
+      <div className="section-divider" />
+
+      <VeilleSection />
 
       <div className="section-divider" />
 

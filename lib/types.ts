@@ -112,3 +112,21 @@ export type Ccf = {
   deliverables: CcfDeliverable[];
   notes: string[];
 };
+
+export type VeilleSource = {
+  name: string;
+  kind: string;
+  detail: string;
+  url?: string;
+};
+
+export type Veille = {
+  epreuve: string;
+  competence: string;
+  status: "À venir" | "En cours" | "Prêt";
+  themePrincipal: { title: string; why: string };
+  themeSecondaire: { title: string; why: string };
+  method: string[];
+  sources: VeilleSource[];
+  syntheses: Array<{ date: string; sujet: string; impact: string }>;
+};
