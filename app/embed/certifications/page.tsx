@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { CertificationsContent } from "@/components/certifications-content";
 
+/** Route d'integration : meme contenu que /certifications, sans decor de site. */
 export const metadata: Metadata = {
   title: "Certifications — Sean Fritsch",
-  description: "Parcours certifications Azure : AZ-900 acquis, AZ-104 en préparation.",
+  robots: { index: false, follow: false },
 };
 
-export default function CertificationsPage() {
+export default function EmbedCertificationsPage() {
   return <CertificationsContent />;
 }

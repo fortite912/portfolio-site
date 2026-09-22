@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { ProjectsContent } from "@/components/projects-content";
 
+/** Route d'integration : meme contenu que /projects, sans decor de site. */
 export const metadata: Metadata = {
   title: "Projets — Sean Fritsch",
-  description: "Labs documentés avec objectifs, configuration, validations et preuves reproductibles.",
+  robots: { index: false, follow: false },
 };
 
-export default function ProjectsPage() {
+export default function EmbedProjectsPage() {
   return <ProjectsContent />;
 }
