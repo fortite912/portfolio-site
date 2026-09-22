@@ -2,19 +2,39 @@
 
 import { useEffect, useState } from "react";
 
+/**
+ * Barre de progression de lecture, sur les pages de rapport.
+ *
+ * Le calcul est throttle par requestAnimationFrame : sans cela, chaque
+ * evenement de defilement declenchait un rendu React, ce qui saccadait
+ * le scroll sur les pages longues.
+ */
 export function ReadingProgress() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => {
+    let raf = 0;
+
+    const compute = () => {
+      raf = 0;
       const el = document.documentElement;
-      const scrollTop = el.scrollTop;
-      const scrollHeight = el.scrollHeight - el.clientHeight;
-      setProgress(scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0);
+      const scrollable = el.scrollHeight - el.clientHeight;
+      const pct = scrollable > 0 ? (el.scrollTop / scrollable) * 100 : 0;
+      // Arrondi : evite un rendu pour des variations invisibles
+      setProgress(Math.round(pct));
     };
 
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(compute);
+    };
+
+    compute();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   if (progress < 1) return null;

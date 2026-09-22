@@ -127,14 +127,12 @@ export default function HomePage() {
           className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full pointer-events-none hidden md:block"
           style={{
             background: "radial-gradient(circle, rgba(226,105,60,0.08) 0%, transparent 70%)",
-            filter: "blur(60px)",
           }}
         />
         <div
           className="absolute -top-20 right-0 w-[400px] h-[400px] rounded-full pointer-events-none hidden md:block"
           style={{
             background: "radial-gradient(circle, rgba(79,138,139,0.06) 0%, transparent 70%)",
-            filter: "blur(50px)",
           }}
         />
 
