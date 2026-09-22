@@ -916,3 +916,17 @@ img {
 .link-underline:hover::after {
   width: 100%;
 }
+
+/* ===== Sommaire de document ===== */
+.doc-toc {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 14px 0 12px;
+}
+.doc-toc-link {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.doc-toc-link:hover {
+  color: var(--color-text) !important;
+}

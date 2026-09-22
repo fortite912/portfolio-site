@@ -10,6 +10,7 @@ import { VeilleSection } from "@/components/veille-section";
 import { PriorRoles } from "@/components/prior-roles";
 import { CountUp } from "@/components/count-up";
 import { DocMeta, SectionNum } from "@/components/doc-meta";
+import { DocToc } from "@/components/doc-toc";
 
 /* ===== Icons ===== */
 const IconBriefcase = () => (
@@ -115,6 +116,8 @@ export function ParcoursContent() {
               { label: "période", value: "2025 — 2027" },
             ]}
           />
+
+          <DocToc />
         </div>
 
         <div className="relative grid grid-cols-3 gap-3 sm:gap-4">
@@ -138,7 +141,7 @@ export function ParcoursContent() {
       </header>
 
       {/* ===== Timeline ===== */}
-      <section className="space-y-5">
+      <section id="timeline" className="space-y-5 scroll-mt-24">
         {timeline.map((entry, i) => {
           const st = kindStyle[entry.kind] ?? kindStyle["Expérience"];
           const isLast = i === timeline.length - 1;
@@ -290,7 +293,7 @@ export function ParcoursContent() {
 
       {/* ===== Soveris ===== */}
       <AnimateOnScroll>
-        <section className="card-gradient-border p-6 md:p-10 space-y-7 relative overflow-hidden noise">
+        <section id="soveris" className="card-gradient-border p-6 md:p-10 space-y-7 relative overflow-hidden noise scroll-mt-24">
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
