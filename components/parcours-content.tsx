@@ -64,8 +64,8 @@ const kindStyle: Record<string, KindStyle> = {
   },
   Formation: {
     color: "var(--color-cyan)",
-    bg: "rgba(107,130,153,0.1)",
-    border: "rgba(107,130,153,0.25)",
+    bg: "rgba(114,138,161,0.1)",
+    border: "rgba(114,138,161,0.25)",
     pill: "pill-muted",
     Icon: IconGraduation,
   },

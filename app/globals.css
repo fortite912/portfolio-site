@@ -11,7 +11,7 @@
   --color-green: #7fa37f;
   --color-yellow: #d9a441;
   --color-red: #c96a5a;
-  --color-cyan: #6b8299;
+  --color-cyan: #728aa1;
   --color-border: rgba(255, 255, 255, 0.06);
   --color-border-h: rgba(255, 255, 255, 0.12);
   --color-text: #ece8e1;
@@ -493,12 +493,12 @@ a {
   box-shadow: 0 0 20px rgba(127, 163, 127, 0.1);
 }
 .icon-box-cyan {
-  background: rgba(107, 130, 153, 0.08);
-  border-color: rgba(107, 130, 153, 0.12);
+  background: rgba(114, 138, 161, 0.08);
+  border-color: rgba(114, 138, 161, 0.12);
   color: var(--color-cyan);
 }
 .icon-box-cyan:hover {
-  box-shadow: 0 0 20px rgba(107, 130, 153, 0.1);
+  box-shadow: 0 0 20px rgba(114, 138, 161, 0.1);
 }
 
 /* ===== Step connector ===== */

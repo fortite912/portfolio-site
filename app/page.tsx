@@ -98,14 +98,14 @@ const colorMap: Record<string, string> = {
   accent: "rgba(226,105,60,0.08)",
   purple: "rgba(79,138,139,0.08)",
   green: "rgba(127,163,127,0.08)",
-  cyan: "rgba(107,130,153,0.08)",
+  cyan: "rgba(114,138,161,0.08)",
 };
 
 const borderMap: Record<string, string> = {
   accent: "rgba(226,105,60,0.15)",
   purple: "rgba(79,138,139,0.15)",
   green: "rgba(127,163,127,0.15)",
-  cyan: "rgba(107,130,153,0.15)",
+  cyan: "rgba(114,138,161,0.15)",
 };
 
 const accentColors: Record<string, string> = {

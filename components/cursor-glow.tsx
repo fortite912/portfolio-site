@@ -3,30 +3,54 @@
 import { useEffect } from "react";
 
 /**
- * Cursor-following glow sur les éléments .btn.
- * Définit les propriétés CSS --x et --y utilisées par le pseudo-élément .btn::after.
+ * Effets qui suivent le curseur :
+ * - .btn            : reflet (--x, --y en pourcentage)
+ * - .card-spotlight : halo radial (--mouse-x, --mouse-y en pixels)
  *
- * Délégation : un seul écouteur sur document, donc les boutons ajoutés
- * dynamiquement fonctionnent sans avoir à rebrancher quoi que ce soit.
+ * Un seul écouteur délégué sur document, throttlé par
+ * requestAnimationFrame : un calcul par frame au maximum, et les éléments
+ * ajoutés dynamiquement fonctionnent sans rebranchement.
+ * Non monté sur les routes /embed/* (voir SiteChrome).
  */
 export function CursorGlow() {
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
+    let raf = 0;
+    let last: MouseEvent | null = null;
+
+    const apply = () => {
+      raf = 0;
+      const e = last;
+      if (!e) return;
       const target = e.target as HTMLElement | null;
-      const btn = target?.closest<HTMLElement>(".btn");
-      if (!btn) return;
+      if (!target) return;
 
-      const rect = btn.getBoundingClientRect();
-      if (!rect.width || !rect.height) return;
+      const btn = target.closest<HTMLElement>(".btn");
+      if (btn) {
+        const r = btn.getBoundingClientRect();
+        if (r.width && r.height) {
+          btn.style.setProperty("--x", `${((e.clientX - r.left) / r.width) * 100}%`);
+          btn.style.setProperty("--y", `${((e.clientY - r.top) / r.height) * 100}%`);
+        }
+      }
 
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      btn.style.setProperty("--x", `${x}%`);
-      btn.style.setProperty("--y", `${y}%`);
+      const card = target.closest<HTMLElement>(".card-spotlight");
+      if (card) {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--mouse-x", `${e.clientX - r.left}px`);
+        card.style.setProperty("--mouse-y", `${e.clientY - r.top}px`);
+      }
     };
 
-    document.addEventListener("mousemove", handler, { passive: true });
-    return () => document.removeEventListener("mousemove", handler);
+    const onMove = (e: MouseEvent) => {
+      last = e;
+      if (!raf) raf = requestAnimationFrame(apply);
+    };
+
+    document.addEventListener("mousemove", onMove, { passive: true });
+    return () => {
+      document.removeEventListener("mousemove", onMove);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   return null;
