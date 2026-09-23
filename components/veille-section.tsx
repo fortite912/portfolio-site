@@ -1,6 +1,7 @@
 import { veilleE4 } from "@/lib/experience";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { SectionNum } from "@/components/doc-meta";
+import { VeilleFeed } from "@/components/veille-feed";
 
 const IconRadar = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -162,6 +163,9 @@ export function VeilleSection() {
             ))}
           </div>
         </div>
+
+        {/* Collecte automatique (GitHub Actions) */}
+        <VeilleFeed />
 
         {/* Synthèses */}
         <div className="space-y-4">

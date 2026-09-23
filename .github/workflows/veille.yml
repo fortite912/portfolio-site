@@ -1,0 +1,51 @@
+# Veille technologique automatisee — epreuve E4 du BTS SIO.
+#
+# Chaque matin, lit les flux RSS des sources suivies (CERT-FR, IT Connect,
+# Zataz), retient les articles qui touchent les deux themes de veille et
+# les accumule dans data/veille-feed.json. Le portfolio relit ce fichier
+# toutes les heures : aucun redeploiement n'est necessaire.
+#
+# Le workflow ne commite que les jours ou la collecte apporte du nouveau.
+# L'historique des executions sert de preuve d'automatisation.
+
+name: Veille automatique
+
+on:
+  schedule:
+    # 05:30 UTC = 07:30 a Paris l'ete, 06:30 l'hiver
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: veille
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    name: Collecte des flux
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collecter et trier
+        run: python scripts/veille/collect.py
+
+      - name: Enregistrer les nouveaux articles
+        run: |
+          if git diff --quiet -- data/veille-feed.json; then
+            echo "Aucun nouvel article aujourd'hui."
+            exit 0
+          fi
+          git config user.name "veille-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/veille-feed.json
+          git commit -m "veille: collecte du $(date -u +%Y-%m-%d)"
+          git push

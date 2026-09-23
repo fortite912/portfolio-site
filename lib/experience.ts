@@ -185,7 +185,7 @@ export const veilleE4: Veille = {
       "Prolonge le déploiement MFA conduit en stage à la DISI et les labs SSH et PKI du portfolio.",
   },
   method: [
-    "Flux RSS agrégés dans un lecteur unique : la réception de l'information est automatisée, pas subie",
+    "Réception automatisée : un workflow GitHub Actions lit chaque matin les flux RSS des sources, retient les articles liés aux deux thèmes et les publie sur ce portfolio",
     "Revue hebdomadaire d'environ 30 minutes, le même jour chaque semaine",
     "Pour chaque élément retenu : une fiche courte — source, date, ce que ça change concrètement sur une infrastructure",
     "Les éléments qui concernent un lab du portfolio sont reportés dans le lab correspondant",
@@ -200,7 +200,8 @@ export const veilleE4: Veille = {
     {
       name: "ANSSI",
       kind: "Guides et publications",
-      detail: "Référentiels et recommandations de durcissement.",
+      detail:
+        "Référentiels et recommandations de durcissement, consultés directement : pas de flux RSS. Ses alertes arrivent via le CERT-FR, qui en dépend.",
       url: "https://cyber.gouv.fr/",
     },
     {

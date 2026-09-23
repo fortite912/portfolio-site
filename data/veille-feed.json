@@ -1,0 +1,139 @@
+{
+  "collectedAt": "2026-09-23T06:32:39+00:00",
+  "windowDays": 120,
+  "sources": [
+    {
+      "name": "CERT-FR",
+      "kind": "Alertes",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/feed/",
+      "ok": true,
+      "retained": 5
+    },
+    {
+      "name": "CERT-FR",
+      "kind": "Avis",
+      "url": "https://www.cert.ssi.gouv.fr/avis/feed/",
+      "ok": true,
+      "retained": 0
+    },
+    {
+      "name": "CERT-FR",
+      "kind": "Actualite",
+      "url": "https://www.cert.ssi.gouv.fr/actualite/feed/",
+      "ok": true,
+      "retained": 0
+    },
+    {
+      "name": "IT Connect",
+      "kind": "Blog technique",
+      "url": "https://www.it-connect.fr/feed/",
+      "ok": true,
+      "retained": 2
+    },
+    {
+      "name": "Zataz",
+      "kind": "Actualite cyber",
+      "url": "https://www.zataz.com/feed/",
+      "ok": true,
+      "retained": 1
+    }
+  ],
+  "items": [
+    {
+      "id": "fb54318184ad",
+      "title": "Ransomware PAYLOAD : les pirates ont paralysé une entreprise avec deux GPO, sans chiffrer un seul fichier",
+      "link": "https://www.it-connect.fr/ransomware-payload-gpo-active-directory-sans-chiffrement/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-22T19:28:07+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Le ransomware PAYLOAD a paralysé une entreprise sans chiffrer un fichier : deux GPO liées à la racine du domaine ont suffi. Voici ce qu'il faut retenir. Le post Ransomware PAYLOAD : les pirates ont paralysé une…"
+    },
+    {
+      "id": "0290fe3c3cdf",
+      "title": "Le faux badge Google qui piège les entreprises",
+      "link": "https://www.zataz.com/le-faux-badge-google-qui-piege-les-entreprises/",
+      "source": "Zataz",
+      "kind": "Actualite cyber",
+      "date": "2026-09-22T14:12:05+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Faux conseiller Google, badge payant et site cloné : une tentative de phishing cible les entreprises."
+    },
+    {
+      "id": "e217b565a420",
+      "title": "Proxmox VE : configurer l’accès SSH avec une authentification par clé",
+      "link": "https://www.it-connect.fr/tuto-proxmox-ve-ssh-authentification-cle-hardening/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-21T16:00:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Apprenez à sécuriser l'accès SSH de Proxmox VE avec une clé, à désactiver le mot de passe root et à éviter les pièges courant dont l'authorized_keys partagé. Le post Proxmox VE : configurer l’accès SSH avec une…"
+    },
+    {
+      "id": "2b895a65a3fe",
+      "title": "Vulnérabilité dans Metabase (10 septembre 2026)",
+      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-010/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-09-10T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 06 août 2026, Metabase a publié un avis de sécurité concernant une vulnérabilité critique permettant à un attaquant non authentifié de provoquer une injection SQL (SQLi) dans la base de donnée de l'application…"
+    },
+    {
+      "id": "8f2123c5fce7",
+      "title": "Multiples vulnérabilités dans SonicWall Secure Mobile Access (02 septembre 2026)",
+      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-009/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-09-02T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 01 septembre 2026, SonicWall a publié un avis de sécurité concernant deux vulnérabilités affectant les Secure Mobile Access (SMA) 1000. La vulnérabilité critique CVE-2026-83548 permet une falsification de requêtes…"
+    },
+    {
+      "id": "b30e7701d168",
+      "title": "Multiples vulnérabilités dans Microsoft Sharepoint (22 juillet 2026)",
+      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-008/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-07-22T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 14 juillet 2026, à l'occasion de sa mise à jour mensuelle, Microsoft a publié, entre autres, des correctifs pour deux vulnérabilités critiques affectant SharePoint. Les vulnérabilités CVE-2026-50522 et…"
+    },
+    {
+      "id": "74d0ec943d25",
+      "title": "Multiples vulnérabilités dans WordPress (20 juillet 2026)",
+      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-007/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-07-20T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 17 juillet 2026, WordPress a publié un correctif pour deux vulnérabilités : CVE-2026-60137 : une injection SQL (SQLi) ; CVE-2026-63030 : celle-ci permet un contournement de la politique de sécurité. Un attaquant…"
+    },
+    {
+      "id": "18e9caabdef7",
+      "title": "Multiples vulnérabilités dans Sonicwall Secure Mobile Access (15 juillet 2026)",
+      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-006/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-07-15T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 14 juillet 2026, Sonicwall a publié un avis de sécurité concernant deux vulnérabilités affectant les Secure Mobile Access (SMA) 1000. La vulnérabilité critique CVE-2026-15409 permet une falsification de requêtes…"
+    }
+  ]
+}
