@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-23T06:32:39+00:00",
+  "collectedAt": "2026-09-24T10:18:57+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,17 +28,41 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 2
+      "retained": 4
     },
     {
       "name": "Zataz",
       "kind": "Actualite cyber",
       "url": "https://www.zataz.com/feed/",
-      "ok": true,
-      "retained": 1
+      "ok": false,
+      "error": "HTTPError"
     }
   ],
   "items": [
+    {
+      "id": "dec271c410a7",
+      "title": "97 % des victimes de ransomware avaient le MFA : où sont les angles morts ?",
+      "link": "https://www.it-connect.fr/97-des-victimes-de-ransomware-avaient-le-mfa-ou-sont-les-angles-morts/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-24T06:30:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "97 % des victimes de ransomware par vol d'identifiants avaient activé le MFA. Voici comment repérer les accès restés en mot de passe seul et les combler. Le post 97 % des victimes de ransomware avaient le MFA : où sont…"
+    },
+    {
+      "id": "725843546340",
+      "title": "J’ai raté 3 fois le CCNA en formation intensive : l’histoire de Damien Soulages, fondateur de Formip",
+      "link": "https://www.it-connect.fr/jai-rate-3-fois-le-ccna-en-formation-intensive-lhistoire-de-damien-soulages-fondateur-de-formip/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-23T11:55:00+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Comment sortir de l’échec CCNA ? Découvrez l’itinéraire de Damien Formip: méthode pratique, apprentissage actif et IA au service de la réussite. Le post J’ai raté 3 fois le CCNA en formation intensive : l’histoire de…"
+    },
     {
       "id": "fb54318184ad",
       "title": "Ransomware PAYLOAD : les pirates ont paralysé une entreprise avec deux GPO, sans chiffrer un seul fichier",
