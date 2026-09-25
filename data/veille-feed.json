@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-24T10:18:57+00:00",
+  "collectedAt": "2026-09-25T10:21:53+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,17 +28,66 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 4
+      "retained": 7
     },
     {
       "name": "Zataz",
       "kind": "Actualite cyber",
       "url": "https://www.zataz.com/feed/",
-      "ok": false,
-      "error": "HTTPError"
+      "ok": true,
+      "retained": 1
     }
   ],
   "items": [
+    {
+      "id": "252baea043df",
+      "title": "Jev : cette IA qui ne génère aucun texte défie les LLM",
+      "link": "https://www.it-connect.fr/jev-typesafe-ia-decisions-typees-llm/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-25T07:33:51+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Jev de TypeSafe AI renvoie des décisions et des probabilités au lieu de texte. Tarif, latence, limites et différences avec les LLM d'OpenAI et Anthropic. Le post Jev : cette IA qui ne génère aucun texte défie les LLM a…"
+    },
+    {
+      "id": "c40667de38c9",
+      "title": "TeamFiltration : 7 comptes Microsoft 365 compromis, tous des comptes de service oubliés",
+      "link": "https://www.it-connect.fr/teamfiltration-comptes-service-microsoft-365-mots-de-passe-par-defaut/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-25T07:02:40+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Une campagne TeamFiltration a visé 5 714 comptes Microsoft 365. Les 7 comptes compromis étaient des comptes de service oubliés, sans MFA. Le post TeamFiltration : 7 comptes Microsoft 365 compromis, tous des comptes de…"
+    },
+    {
+      "id": "3abb70af1f8b",
+      "title": "Un agent IA d’OpenAI a piraté un portail du gouvernement australien",
+      "link": "https://www.it-connect.fr/openai-agent-ia-portail-medicare-australie/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-25T05:23:05+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Un agent IA d'OpenAI a accédé à des fichiers non publics d'un portail Medicare australien. OpenAI a mis près de trois mois à prévenir le gouvernement. Le post Un agent IA d’OpenAI a piraté un portail du gouvernement…"
+    },
+    {
+      "id": "ce0272a65c51",
+      "title": "GLPI 11.0.9 et 10.0.27 : 12 failles patchées et un rythme de mises à jour qui s’accélère",
+      "link": "https://www.it-connect.fr/glpi-11-0-9-10-0-27-failles-securite-patch/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-24T15:32:26+00:00",
+      "themes": [
+        "ia-support",
+        "acces"
+      ],
+      "excerpt": "GLPI 11.0.9 et 10.0.27 corrigent 12 failles, dont une injection SQL sans authentification. Teclib' annonce un patch de sécurité toutes les deux semaines. Le post GLPI 11.0.9 et 10.0.27 : 12 failles patchées et un…"
+    },
     {
       "id": "dec271c410a7",
       "title": "97 % des victimes de ransomware avaient le MFA : où sont les angles morts ?",
