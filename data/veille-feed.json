@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-25T10:21:53+00:00",
+  "collectedAt": "2026-09-26T10:02:50+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -39,6 +39,18 @@
     }
   ],
   "items": [
+    {
+      "id": "5b29e6d4d665",
+      "title": "Microsoft dévoile le nouveau Copilot avec Home, Code et Autopilot : l’essentiel à savoir",
+      "link": "https://www.it-connect.fr/nouveau-copilot-home-code-autopilot/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-25T14:41:40+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Microsoft réorganise Copilot autour de Home, Code et Autopilot. Cowork, Code, Autopilot et les modèles Astra et Fable passent en facturation à l'usage. Le post Microsoft dévoile le nouveau Copilot avec Home, Code et…"
+    },
     {
       "id": "252baea043df",
       "title": "Jev : cette IA qui ne génère aucun texte défie les LLM",
