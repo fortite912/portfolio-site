@@ -1,6 +1,6 @@
 # Veille technologique automatisee — epreuve E4 du BTS SIO.
 #
-# Chaque matin, lit les flux RSS des sources suivies (CERT-FR, IT Connect,
+# Chaque jour, lit les flux RSS des sources suivies (CERT-FR, IT Connect,
 # Zataz), retient les articles qui touchent les deux themes de veille et
 # les accumule dans data/veille-feed.json. Le portfolio relit ce fichier
 # toutes les heures : aucun redeploiement n'est necessaire.

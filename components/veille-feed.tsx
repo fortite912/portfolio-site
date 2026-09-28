@@ -73,7 +73,7 @@ export async function VeilleFeed() {
         {feed.items.length} article{feed.items.length > 1 ? "s" : ""} retenu
         {feed.items.length > 1 ? "s" : ""} sur {feed.windowDays} jours · {activeSources} sources ·
         dernière collecte le {stamp.format(new Date(feed.collectedAt))} · GitHub Actions, chaque
-        matin
+        jour
       </p>
 
       {items.length === 0 ? (

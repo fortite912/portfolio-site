@@ -26,7 +26,7 @@ export const THEME_LABELS: Record<VeilleTheme, string> = {
   alerte: "Alerte CERT-FR",
 };
 
-/** Fichier ecrit chaque matin par .github/workflows/veille.yml. */
+/** Fichier ecrit chaque jour par .github/workflows/veille.yml. */
 const FEED_URL =
   "https://raw.githubusercontent.com/fortite912/portfolio-site/main/data/veille-feed.json";
 

@@ -5,7 +5,7 @@ Veille technologique automatisee — epreuve E4 du BTS SIO.
 
 Lit les flux RSS des sources suivies, retient les articles qui touchent
 les deux themes de veille, et les accumule dans data/veille-feed.json.
-Execute chaque matin par .github/workflows/veille.yml.
+Execute chaque jour par .github/workflows/veille.yml.
 
 Ce script collecte et trie. Il n'ecrit pas de syntheses : celles-ci sont
 redigees a la main apres lecture (voir veilleE4.syntheses dans
@@ -76,6 +76,14 @@ _COMPILED = {
     for theme, spec in THEMES.items()
 }
 
+# Motifs trop ambigus pour suffire seuls : ils ne comptent que dans le
+# titre, ou s'ils accompagnent un autre motif du meme theme.
+# Mesure du 28/09 : "IA" cite en passant dans un temoignage de formation
+# CCNA le classait a tort en "IA & support". Une regle "titre ou deux
+# motifs" appliquee a TOUS les motifs aurait ecarte ce faux positif, mais
+# aussi trois articles pertinents (MFA, phishing) : on ne cible que "IA".
+WEAK = {r"\bIA\b"}
+
 _TAG = re.compile(r"<[^>]+>")
 _SPACES = re.compile(r"\s+")
 
@@ -99,8 +107,17 @@ def parse_date(raw):
         return None
 
 
-def classify(text):
-    return [t for t, pats in _COMPILED.items() if any(p.search(text) for p in pats)]
+def classify(title, body):
+    """Themes touches par l'article. Un motif faible ne suffit pas seul."""
+    text = f"{title} {body}"
+    themes = []
+    for theme, pats in _COMPILED.items():
+        found = [p for p in pats if p.search(text)]
+        strong = any(p.pattern not in WEAK for p in found)
+        weak_in_title = any(p.pattern in WEAK and p.search(title) for p in found)
+        if strong or weak_in_title:
+            themes.append(theme)
+    return themes
 
 
 def fetch(url):
@@ -110,8 +127,9 @@ def fetch(url):
 
 
 def collect_source(src, cutoff):
+    """Retourne (articles retenus, liens vus mais ecartes)."""
     root = ET.fromstring(fetch(src["url"]))
-    items = []
+    items, rejected = [], set()
     for it in root.iter("item"):
         title = clean(it.findtext("title"))
         link = (it.findtext("link") or "").strip()
@@ -122,10 +140,11 @@ def collect_source(src, cutoff):
         # compte. Seul l'extrait affiche est tronque.
         full = clean(it.findtext("description"))
         excerpt = clean(it.findtext("description"), limit=220)
-        themes = classify(f"{title} {full}")
+        themes = classify(title, full)
         if src.get("always") and src["always"] not in themes:
             themes.insert(0, src["always"])
         if not themes:
+            rejected.add(link)
             continue
         items.append(
             {
@@ -139,7 +158,7 @@ def collect_source(src, cutoff):
                 "excerpt": excerpt,
             }
         )
-    return items
+    return items, rejected
 
 
 def main():
@@ -155,9 +174,14 @@ def main():
     for src in SOURCES:
         entry = {"name": src["name"], "kind": src["kind"], "url": src["url"]}
         try:
-            found = collect_source(src, cutoff)
+            found, rejected = collect_source(src, cutoff)
             for item in found:
                 merged[item["link"]] = item
+            # Un article encore present dans le flux mais desormais ecarte
+            # (filtre ameliore) quitte la memoire : les corrections de
+            # filtre s'appliquent aussi a l'historique.
+            for link in rejected:
+                merged.pop(link, None)
             entry.update(ok=True, retained=len(found))
             print(f"  ok     {src['name']:<11} {src['kind']:<16} {len(found):>3} retenu(s)")
         except Exception as exc:  # une source en panne ne bloque pas les autres
@@ -174,7 +198,10 @@ def main():
 
     # Ne reecrit le fichier que s'il y a du nouveau : le workflow ne
     # commite ainsi que les jours ou la collecte apporte quelque chose.
-    if [i["link"] for i in items] == [i["link"] for i in previous.get("items", [])]:
+    def signature(lst):
+        return [(i["link"], tuple(i["themes"])) for i in lst]
+
+    if signature(items) == signature(previous.get("items", [])):
         print(f"Aucun nouvel article ({len(items)} en memoire).")
         return 0
 

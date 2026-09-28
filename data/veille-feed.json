@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-26T10:02:50+00:00",
+  "collectedAt": "2026-09-28T07:17:45+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 7
+      "retained": 6
     },
     {
       "name": "Zataz",
@@ -111,18 +111,6 @@
         "acces"
       ],
       "excerpt": "97 % des victimes de ransomware par vol d'identifiants avaient activé le MFA. Voici comment repérer les accès restés en mot de passe seul et les combler. Le post 97 % des victimes de ransomware avaient le MFA : où sont…"
-    },
-    {
-      "id": "725843546340",
-      "title": "J’ai raté 3 fois le CCNA en formation intensive : l’histoire de Damien Soulages, fondateur de Formip",
-      "link": "https://www.it-connect.fr/jai-rate-3-fois-le-ccna-en-formation-intensive-lhistoire-de-damien-soulages-fondateur-de-formip/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-09-23T11:55:00+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Comment sortir de l’échec CCNA ? Découvrez l’itinéraire de Damien Formip: méthode pratique, apprentissage actif et IA au service de la réussite. Le post J’ai raté 3 fois le CCNA en formation intensive : l’histoire de…"
     },
     {
       "id": "fb54318184ad",
