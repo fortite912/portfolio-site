@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-28T07:17:45+00:00",
+  "collectedAt": "2026-09-28T11:51:54+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -7,7 +7,7 @@
       "kind": "Alertes",
       "url": "https://www.cert.ssi.gouv.fr/alerte/feed/",
       "ok": true,
-      "retained": 5
+      "retained": 6
     },
     {
       "name": "CERT-FR",
@@ -39,6 +39,30 @@
     }
   ],
   "items": [
+    {
+      "id": "8078d52a09ff",
+      "title": "OVHcloud confirme OVHai Workspace, son alternative à Microsoft 365 dopée à l’IA",
+      "link": "https://www.it-connect.fr/ovhcloud-ovhai-workspace-alternative-microsoft-365/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-28T07:50:37+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Mail, drive, visio, chat et IA : Octave Klaba confirme l'arrivée d'OVHai Workspace, l'alternative d'OVHcloud à Microsoft 365. Voici ce que l'on sait. Le post OVHcloud confirme OVHai Workspace, son alternative à…"
+    },
+    {
+      "id": "36f38701aa0f",
+      "title": "Multiples vulnérabilités dans Citrix NetScaler ADC et Gateway (28 septembre 2026)",
+      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-011/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-09-28T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 27 septembre 2026, Citrix a publié un avis de sécurité concernant plusieurs vulnérabilités qui affectent NetScaler ADC et Gateway. Parmi celles-ci, les vulnérabilités CVE-2026-88771 et CVE-2026-88772 permettent une…"
+    },
     {
       "id": "5b29e6d4d665",
       "title": "Microsoft dévoile le nouveau Copilot avec Home, Code et Autopilot : l’essentiel à savoir",
