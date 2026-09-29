@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-28T11:51:54+00:00",
+  "collectedAt": "2026-09-29T11:28:16+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 6
+      "retained": 4
     },
     {
       "name": "Zataz",
@@ -39,6 +39,30 @@
     }
   ],
   "items": [
+    {
+      "id": "dc2b0a6eb6cf",
+      "title": "ZaWoo : le groupe cybercriminel qui a automatisé ses cyberattaques jusqu’à son site de fuite",
+      "link": "https://www.zataz.com/zawoo-le-groupe-cybercriminel-qui-a-automatise-ses-cyberattaques-jusqua-son-site-de-fuite/",
+      "source": "Zataz",
+      "kind": "Actualite cyber",
+      "date": "2026-09-28T17:09:27+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Un site de fuite largement automatisé, des entreprises cachées derrière de simples identifiants, des dizaines de gigaoctets annoncés et un code source qui conserve les traces de multiples corrections ressemblant…"
+    },
+    {
+      "id": "382d0b4bf4d2",
+      "title": "Claude Marketplace : Anthropic réunit plus de 2 000 connecteurs et plugins au même endroit",
+      "link": "https://www.it-connect.fr/claude-marketplace-connecteurs-plugins-agents/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-28T12:47:25+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Plus de 2 000 connecteurs et plugins, des agents IA et des intégrateurs réunis au même endroit : Anthropic lance la Claude Marketplace. Pour qui ? Pourquoi ? Le post Claude Marketplace : Anthropic réunit plus de 2 000…"
+    },
     {
       "id": "8078d52a09ff",
       "title": "OVHcloud confirme OVHai Workspace, son alternative à Microsoft 365 dopée à l’IA",
