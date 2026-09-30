@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-29T11:28:16+00:00",
+  "collectedAt": "2026-09-30T11:16:21+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -39,6 +39,30 @@
     }
   ],
   "items": [
+    {
+      "id": "552a75789147",
+      "title": "5 minutes pour voler le hash du mot de passe root sous Linux avec BTR, une variante de Spectre v2",
+      "link": "https://www.it-connect.fr/spectre-v2-btr-linux-hash-mot-de-passe-root/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-30T06:53:34+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Nouvelle variante de Spectre v2, l'attaque BTR vise les moteurs JIT et vole le hash du mot de passe root sous Linux en 3 à 5 minutes. Comment se protéger ? Le post 5 minutes pour voler le hash du mot de passe root sous…"
+    },
+    {
+      "id": "bdbeae65512c",
+      "title": "Claude Code : Anthropic offre jusqu’à 250 dollars de crédit, mais seulement pour les sessions cloud",
+      "link": "https://www.it-connect.fr/claude-code-sessions-cloud-credit-offert/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-29T12:06:13+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Abonné à Claude Pro ou Max ? Anthropic vous offre jusqu'à 250 dollars de crédit pour tester les sessions cloud de Claude Code. Voici comment en profiter. Le post Claude Code : Anthropic offre jusqu’à 250 dollars de…"
+    },
     {
       "id": "dc2b0a6eb6cf",
       "title": "ZaWoo : le groupe cybercriminel qui a automatisé ses cyberattaques jusqu’à son site de fuite",
