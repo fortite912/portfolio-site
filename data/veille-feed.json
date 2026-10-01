@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-30T11:16:21+00:00",
+  "collectedAt": "2026-10-01T11:43:47+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -35,10 +35,46 @@
       "kind": "Actualite cyber",
       "url": "https://www.zataz.com/feed/",
       "ok": true,
-      "retained": 1
+      "retained": 2
     }
   ],
   "items": [
+    {
+      "id": "69193c2d0c8d",
+      "title": "Campus Cyber Summit 2026 : l’IA au cœur des choix cyber",
+      "link": "https://www.zataz.com/campus-cyber-summit-2026-lia-au-coeur-des-choix-cyber/",
+      "source": "Zataz",
+      "kind": "Actualite cyber",
+      "date": "2026-09-30T21:00:16+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Campus Cyber Summit 2026 à Lille : programme, IA, NIS 2, cyber assurance, OSINT et CTF."
+    },
+    {
+      "id": "1e23b7b2b755",
+      "title": "OpenAI lance dots, l’agent IA qui travaille même quand vous dormez",
+      "link": "https://www.it-connect.fr/openai-dots-agents-ia-toujours-actifs/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-30T15:24:46+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "OpenAI lance dots, des agents IA toujours actifs dotés de leur propre ordinateur dans le cloud. Disponibilité, garde-fous, Agent 365 : voici l'essentiel. Le post OpenAI lance dots, l’agent IA qui travaille même quand…"
+    },
+    {
+      "id": "751ac6f17d4b",
+      "title": "Cyberattaque DGFiP de l’été 2026 : ce que révèle le rapport de l’ANSSI",
+      "link": "https://www.it-connect.fr/rapport-anssi-cyberattaque-dgfip/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-09-30T11:27:59+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "L'ANSSI a publié son rapport sur la cyberattaque de la DGFiP, entre identifiants volés par des infostealers, absence de MFA et exfiltrations jamais détectées. Le post Cyberattaque DGFiP de l’été 2026 : ce que révèle le…"
+    },
     {
       "id": "552a75789147",
       "title": "5 minutes pour voler le hash du mot de passe root sous Linux avec BTR, une variante de Spectre v2",
@@ -109,7 +145,7 @@
       "themes": [
         "alerte"
       ],
-      "excerpt": "Le 27 septembre 2026, Citrix a publié un avis de sécurité concernant plusieurs vulnérabilités qui affectent NetScaler ADC et Gateway. Parmi celles-ci, les vulnérabilités CVE-2026-88771 et CVE-2026-88772 permettent une…"
+      "excerpt": "[Mise à jour du 30 septembre 2026] Dans un billet de blogue du 29 septembre 2026 (cf. section Documentation), Mandiant et Google Threat Intelligence Group (GTIG) fournissent des indicateurs de compromission ainsi que…"
     },
     {
       "id": "5b29e6d4d665",
