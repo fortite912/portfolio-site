@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-01T11:43:47+00:00",
+  "collectedAt": "2026-10-02T11:13:31+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,17 +28,41 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 4
+      "retained": 5
     },
     {
       "name": "Zataz",
       "kind": "Actualite cyber",
       "url": "https://www.zataz.com/feed/",
       "ok": true,
-      "retained": 2
+      "retained": 1
     }
   ],
   "items": [
+    {
+      "id": "99526003cbec",
+      "title": "Installation et utilisation de Claude Code : premiers pas",
+      "link": "https://www.it-connect.fr/tuto-installation-et-utilisation-de-claude-code/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-02T07:45:00+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Apprenez à installer et à utiliser Claude Code sur Windows ou Linux, en GUI ou CLI, pour commencer à lire, écrire et exécuter du code sur votre machine. Le post Installation et utilisation de Claude Code : premiers pas…"
+    },
+    {
+      "id": "1f0da2e5d91c",
+      "title": "GLPI 11.0.11 et GLPI 10.0.28 : 8 failles patchées et la fin annoncée de GLPI 10",
+      "link": "https://www.it-connect.fr/glpi-11-0-10-10-0-28-failles-fin-glpi-10/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-02T05:16:56+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "GLPI 11.0.11 et GLPI 10.0.28 corrigent 8 failles, dont une injection SQL. Teclib' annonce aussi que GLPI 10.0.28 sera la dernière version de la branche 10. Le post GLPI 11.0.11 et GLPI 10.0.28 : 8 failles patchées et…"
+    },
     {
       "id": "69193c2d0c8d",
       "title": "Campus Cyber Summit 2026 : l’IA au cœur des choix cyber",
