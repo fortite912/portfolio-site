@@ -1,14 +1,14 @@
 import type { Ccf, PriorRole, TimelineEntry, Veille, Venture } from "./types";
-import { STAGE, stageConfirmed } from "./stage";
+import { STAGE, stageHasHost, stageOrgNote } from "./stage";
 
 /** Entree du stage de 2e annee, derivee de lib/stage.ts. */
-const stageEntry: TimelineEntry = stageConfirmed()
+const stageEntry: TimelineEntry = stageHasHost()
   ? {
       slug: "stage-nov-dec-2026",
       kind: "Expérience",
       title: "Stage de 2e année — BTS SIO SISR",
       org: STAGE.org as string,
-      orgNote: STAGE.orgNote ?? undefined,
+      orgNote: stageOrgNote(),
       period: `${STAGE.periodShort} · ${STAGE.duration}`,
       upcoming: true,
       summary: `Deuxième période de stage du BTS, ${STAGE.periodLong}. Elle alimentera les réalisations professionnelles présentées à l'épreuve E5.`,
@@ -179,7 +179,7 @@ export const ccfE5: Ccf = {
   ],
   notes: [
     "Les labs déjà publiés dans la section Projets (VLAN, AD/DNS/DHCP, PKI, SSH) constituent la base méthodologique de ces réalisations.",
-    `Le stage ${STAGE.periodLong}${stageConfirmed() ? ` chez ${STAGE.org}` : ""} fournira les situations professionnelles en environnement réel.`,
+    `Le stage ${STAGE.periodLong}${stageHasHost() ? ` ${STAGE.orgAt ?? `chez ${STAGE.org}`}` : ""} fournira les situations professionnelles en environnement réel.`,
   ],
 };
 

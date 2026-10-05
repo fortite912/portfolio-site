@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { SITE } from "@/lib/site";
-import { STAGE, stageConfirmed, stageSentence } from "@/lib/stage";
+import { STAGE, stageHasHost, stageSentence } from "@/lib/stage";
 
-const TEMPLATE = stageConfirmed()
+const TEMPLATE = stageHasHost()
   ? `Objet : Sean Fritsch — BTS SIO SISR, prise de contact
 
 Bonjour,
