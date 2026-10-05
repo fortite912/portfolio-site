@@ -1,53 +1,56 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { useIsEmbed } from "@/components/site-chrome";
+import { markObserverAlive, onRevealAll } from "@/lib/reveal";
 
 interface CountUpProps {
   value: string;
   duration?: number;
 }
 
+/**
+ * Compteur animé au scroll ("92%" compte de 0 à 92).
+ * Actif partout, y compris dans le Google Sites via /embed/*.
+ * Filet de sécurité partagé avec AnimateOnScroll (lib/reveal.ts) ; en
+ * mouvement réduit, la valeur finale s'affiche dès la première frame.
+ */
 export function CountUp({ value, duration = 1800 }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const [display, setDisplay] = useState("0");
-  const isEmbed = useIsEmbed();
   const [trigger, setTrigger] = useState(0);
 
-  // Extract numeric part and suffix (e.g. "15+" -> 15, "+")
+  // Partie numérique et suffixe ("15+" -> 15, "+")
   const match = value.match(/^(\d+)(.*)$/);
   const target = match ? parseInt(match[1], 10) : 0;
   const suffix = match ? match[2] : "";
 
   const animate = useCallback(() => {
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    const total = reduce ? 0 : duration;
     const startTime = performance.now();
     let raf: number;
 
     const step = (now: number) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
+      const progress = total > 0 ? Math.min((now - startTime) / total, 1) : 1;
       const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(eased * target);
-      setDisplay(String(current));
-
-      if (progress < 1) {
-        raf = requestAnimationFrame(step);
-      }
+      setDisplay(String(Math.round(eased * target)));
+      if (progress < 1) raf = requestAnimationFrame(step);
     };
 
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
   }, [target, duration]);
 
-  // Initial trigger on scroll into view
+  // Déclenchement à l'entrée dans la fenêtre
   useEffect(() => {
-    if (isEmbed) return;
-
     const el = ref.current;
     if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
+        markObserverAlive();
         if (entry.isIntersecting && trigger === 0) {
           setTrigger(1);
           observer.unobserve(el);
@@ -55,18 +58,21 @@ export function CountUp({ value, duration = 1800 }: CountUpProps) {
       },
       { threshold: 0.3 }
     );
-
     observer.observe(el);
-    return () => observer.disconnect();
-  }, [trigger, isEmbed]);
 
-  // Run animation whenever trigger changes
+    const unsubscribe = onRevealAll(() => setTrigger((t) => (t === 0 ? 1 : t)));
+    return () => {
+      observer.disconnect();
+      unsubscribe();
+    };
+  }, [trigger]);
+
   useEffect(() => {
     if (trigger === 0) return;
     return animate();
   }, [trigger, animate]);
 
-  // Re-animate on hover
+  // Rejoue l'animation au survol
   const handleHover = () => {
     if (trigger > 0) {
       setDisplay("0");
@@ -75,12 +81,9 @@ export function CountUp({ value, duration = 1800 }: CountUpProps) {
   };
 
   return (
-    <span
-      ref={ref}
-      onMouseEnter={isEmbed ? undefined : handleHover}
-      className={isEmbed ? undefined : "cursor-default"}
-    >
-      {isEmbed ? value : `${display}${suffix}`}
+    <span ref={ref} onMouseEnter={handleHover} className="cursor-default">
+      {display}
+      {suffix}
     </span>
   );
 }

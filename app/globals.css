@@ -930,3 +930,15 @@ img {
 .doc-toc-link:hover {
   color: var(--color-text) !important;
 }
+
+/* ===== Mouvement réduit : apparitions au scroll désactivées =====
+   Les styles d'AnimateOnScroll sont en ligne : !important pour les
+   surclasser. Le contenu est visible d'emblée, sans transition. */
+@media (prefers-reduced-motion: reduce) {
+  .aos {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
