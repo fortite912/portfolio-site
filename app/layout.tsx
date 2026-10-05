@@ -7,6 +7,7 @@ import { SITE } from "@/lib/site";
 import { CursorGlow } from "@/components/cursor-glow";
 import { BackToTop } from "@/components/back-to-top";
 import { SiteChrome } from "@/components/site-chrome";
+import { EmbedLinks } from "@/components/embed-links";
 
 const plexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default function RootLayout({
         <main className="relative z-10 mx-auto w-full max-w-[1120px] px-5 py-10 md:py-16 flex-1 page-enter">
           {children}
         </main>
+        <EmbedLinks />
         <SiteChrome>
           <Footer />
           <BackToTop />
