@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { ParcoursContent } from "@/components/parcours-content";
+import { EmbedIntro } from "@/components/embed-intro";
 
 /**
- * Route d'integration, destinee a etre affichee en iframe (Google Sites).
- * Meme contenu que /parcours, mais sans le decor de site : ni barre de
- * navigation, ni pied de page, ni animations. Le rendu est entierement
- * fait cote serveur, ce qui garde l'editeur Google Sites fluide.
+ * Route d'intégration, affichée en iframe dans le Google Site.
+ * Même contenu que /parcours, sans décor de site (navigation, pied de
+ * page, fonds), précédé de la présentation : celle-ci était un bloc natif
+ * de Google Sites qui ne suivait pas le code.
  */
 export const metadata: Metadata = {
   title: "Parcours — Sean Fritsch",
@@ -13,5 +14,11 @@ export const metadata: Metadata = {
 };
 
 export default function EmbedParcoursPage() {
-  return <ParcoursContent />;
+  return (
+    <div className="space-y-14">
+      <EmbedIntro />
+      <div className="section-divider" />
+      <ParcoursContent />
+    </div>
+  );
 }
