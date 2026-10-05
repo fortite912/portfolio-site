@@ -1,4 +1,5 @@
 import type { Site } from "./types";
+import { stageBadge } from "./stage";
 
 export const SITE: Site = {
   name: "Sean Fritsch",
@@ -8,8 +9,7 @@ export const SITE: Site = {
   tagline: "Syst\u00e8mes \u2022 R\u00e9seaux \u2022 Cybers\u00e9curit\u00e9 \u2014 preuves \u00e0 l\u2019appui.",
   location: "\u00cele-de-France",
   availability: {
-    label: "Recherche stage",
-    dateRange: "16 nov. → 18 déc. 2026",
+    ...stageBadge(),
     location: "Île-de-France",
   },
   links: {

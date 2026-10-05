@@ -2,16 +2,28 @@
 
 import { useState } from "react";
 import { SITE } from "@/lib/site";
+import { STAGE, stageConfirmed, stageSentence } from "@/lib/stage";
 
-const TEMPLATE = `Objet : Candidature stage BTS SIO SISR (16/11 — 18/12/2026) — [Votre entreprise]
+const TEMPLATE = stageConfirmed()
+  ? `Objet : Sean Fritsch — BTS SIO SISR, prise de contact
 
 Bonjour,
 
-Je suis en 2e année de BTS SIO option SISR et je recherche un stage conventionné du 16 novembre au 18 décembre 2026, en infrastructure, support IT ou cybersécurité.
+Je suis en 2e année de BTS SIO option SISR. ${stageSentence()}
+
+Mon portfolio avec preuves vérifiables : ${SITE.url}
+
+Cordialement,
+Sean Fritsch`
+  : `Objet : Candidature stage BTS SIO SISR (${STAGE.periodShort}) — [Votre entreprise]
+
+Bonjour,
+
+Je suis en 2e année de BTS SIO option SISR. ${stageSentence()}
 
 - Stack / environnement : [Windows Server / Cisco / Azure / ...]
 - Mission visée : [Support / Infra / Réseau / Cybersécurité]
-- Période : 16 novembre — 18 décembre 2026
+- Période : ${STAGE.periodLong}
 
 Mon portfolio avec preuves vérifiables : ${SITE.url}
 

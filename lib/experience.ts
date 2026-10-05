@@ -1,4 +1,37 @@
 import type { Ccf, PriorRole, TimelineEntry, Veille, Venture } from "./types";
+import { STAGE, stageConfirmed } from "./stage";
+
+/** Entree du stage de 2e annee, derivee de lib/stage.ts. */
+const stageEntry: TimelineEntry = stageConfirmed()
+  ? {
+      slug: "stage-nov-dec-2026",
+      kind: "Expérience",
+      title: "Stage de 2e année — BTS SIO SISR",
+      org: STAGE.org as string,
+      orgNote: STAGE.orgNote ?? undefined,
+      period: `${STAGE.periodShort} · ${STAGE.duration}`,
+      upcoming: true,
+      summary: `Deuxième période de stage du BTS, ${STAGE.periodLong}. Elle alimentera les réalisations professionnelles présentées à l'épreuve E5.`,
+      highlights: [
+        `Période : ${STAGE.periodLong}`,
+        "Objectif : produire des réalisations d'administration systèmes et réseaux documentées",
+        "Chaque intervention sera documentée selon la même méthode que les labs du portfolio",
+      ],
+    }
+  : {
+      slug: "stage-nov-dec-2026",
+      kind: "Expérience",
+      title: "Recherche de stage — 2e année",
+      org: "Stage conventionné à pourvoir",
+      period: `${STAGE.periodShort} · ${STAGE.duration}`,
+      upcoming: true,
+      summary: `Deuxième période de stage du BTS, en ${STAGE.domains}. Recherche en cours — elle alimentera les réalisations professionnelles présentées à l'épreuve E5.`,
+      highlights: [
+        `Période recherchée : ${STAGE.periodLong}`,
+        "Objectif : produire des réalisations d'administration systèmes et réseaux documentées",
+        "Chaque intervention sera documentée selon la même méthode que les labs du portfolio",
+      ],
+    };
 
 /**
  * Parcours affiché sur /parcours.
@@ -6,21 +39,7 @@ import type { Ccf, PriorRole, TimelineEntry, Veille, Venture } from "./types";
  * généraux : le rapport de stage est confidentiel.
  */
 export const timeline: TimelineEntry[] = [
-  {
-    slug: "stage-nov-dec-2026",
-    kind: "Expérience",
-    title: "Recherche de stage — 2e année",
-    org: "Stage conventionné à pourvoir",
-    period: "16 nov. → 18 déc. 2026 · 5 semaines",
-    upcoming: true,
-    summary:
-      "Deuxième période de stage du BTS, en infrastructure, support IT ou cybersécurité. Recherche en cours — elle alimentera les réalisations professionnelles présentées à l'épreuve E5.",
-    highlights: [
-      "Période recherchée : du 16 novembre au 18 décembre 2026",
-      "Objectif : produire des réalisations d'administration systèmes et réseaux documentées",
-      "Chaque intervention sera documentée selon la même méthode que les labs du portfolio",
-    ],
-  },
+  stageEntry,
   {
     slug: "etudiant-entrepreneur-snee",
     kind: "Statut",
@@ -160,7 +179,7 @@ export const ccfE5: Ccf = {
   ],
   notes: [
     "Les labs déjà publiés dans la section Projets (VLAN, AD/DNS/DHCP, PKI, SSH) constituent la base méthodologique de ces réalisations.",
-    "Le stage du 16 novembre au 18 décembre 2026 fournira les situations professionnelles en environnement réel.",
+    `Le stage ${STAGE.periodLong}${stageConfirmed() ? ` chez ${STAGE.org}` : ""} fournira les situations professionnelles en environnement réel.`,
   ],
 };
 

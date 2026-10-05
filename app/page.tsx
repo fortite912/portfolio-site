@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site";
+import { stageSentence } from "@/lib/stage";
 import { getFeaturedProjects } from "@/lib/projects";
 import { ProjectCard } from "@/components/project-card";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
@@ -399,9 +400,7 @@ export default function HomePage() {
           <div className="relative space-y-6">
             <h2 className="heading-lg text-gradient">Intéressé par mon profil ?</h2>
             <p className="max-w-lg mx-auto text-sm leading-relaxed" style={{ color: "var(--color-muted)" }}>
-              Je recherche un stage conventionné du 16 novembre au 18 décembre 2026,
-              en infrastructure, support IT ou cybersécurité. Chaque lab est documenté
-              avec des preuves vérifiables.
+              {stageSentence()} Chaque lab est documenté avec des preuves vérifiables.
             </p>
             <div className="flex flex-wrap justify-center gap-3 pt-2">
               <Link className="btn btn-primary btn-lg" href="/contact">
