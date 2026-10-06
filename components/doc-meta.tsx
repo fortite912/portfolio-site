@@ -70,7 +70,9 @@ export function DocMeta({
 /**
  * Numéro de section, façon plan de document : « 02 — Veille technologique ».
  */
-export function SectionNum({ n, children }: { n: number; children: React.ReactNode }) {
+export function SectionNum({ n, children }: { n?: number; children: React.ReactNode }) {
+  // Sans numero : section affichee seule, hors du plan du parcours
+  if (n === undefined) return <>{children}</>;
   return (
     <span className="inline-flex items-baseline gap-2.5">
       <span

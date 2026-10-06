@@ -12,7 +12,8 @@ const IconRadar = () => (
   </svg>
 );
 
-export function VeilleSection() {
+/** standalone : page E4 seule, sans le numero de section du parcours. */
+export function VeilleSection({ standalone = false }: { standalone?: boolean } = {}) {
   const {
     epreuve,
     competence,
@@ -39,7 +40,7 @@ export function VeilleSection() {
           </div>
 
           <h2 className="heading-lg">
-            <SectionNum n={4}>
+            <SectionNum n={standalone ? undefined : 4}>
               <span style={{ color: "var(--color-green)" }}>{epreuve}</span>
               {" — "}
               Veille technologique

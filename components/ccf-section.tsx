@@ -10,7 +10,8 @@ const IconClipboard = () => (
   </svg>
 );
 
-export function CcfSection() {
+/** standalone : page E5 seule, sans le numero de section du parcours. */
+export function CcfSection({ standalone = false }: { standalone?: boolean } = {}) {
   const { code, title, option, coefficient, evaluation, status, intro, competences, deliverables, notes } = ccfE5;
 
   return (
@@ -45,7 +46,7 @@ export function CcfSection() {
 
           <div className="flex flex-wrap items-baseline gap-3">
             <h2 className="heading-lg">
-              <SectionNum n={3}>
+              <SectionNum n={standalone ? undefined : 3}>
                 <span style={{ color: "var(--color-accent)" }}>{code}</span>
                 {" — "}
                 {title}
