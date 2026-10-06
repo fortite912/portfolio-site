@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-02T11:13:31+00:00",
+  "collectedAt": "2026-10-06T12:08:39+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -39,6 +39,42 @@
     }
   ],
   "items": [
+    {
+      "id": "649ed1eccc5c",
+      "title": "OpenAI va ajouter un filigrane invisible aux textes de ChatGPT et Codex dans l’UE",
+      "link": "https://www.it-connect.fr/openai-filigrane-invisible-textes-chatgpt-codex-ue/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-06T05:15:53+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "AI Act oblige, OpenAI va glisser un filigrane invisible dans les textes de ChatGPT et Codex en Europe. Une méthode qui a ses limites, selon OpenAI. Le post OpenAI va ajouter un filigrane invisible aux textes de ChatGPT…"
+    },
+    {
+      "id": "6db5dbf9dd2a",
+      "title": "UPDF : un logiciel PDF complet qui mise sur l’intelligence artificielle",
+      "link": "https://www.it-connect.fr/updf-un-logiciel-pdf-complet-qui-mise-sur-lintelligence-artificielle/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-06T05:00:00+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "UPDF réunit édition, OCR et IA pour transformer vos PDFs : édition, organisation, traduction et sécurité en une seule solution. À découvrir maintenant. Le post UPDF : un logiciel PDF complet qui mise sur l’intelligence…"
+    },
+    {
+      "id": "4afc4fdeec57",
+      "title": "Avec les mods, Claude Code devient personnalisable : interface, commandes, etc.",
+      "link": "https://www.it-connect.fr/claude-code-mods-plugins/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-05T16:56:39+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Anthropic lance les mods dans Claude Code : des plugins qui modifient l'interface et le comportement de l'outil, et qui tournent avec vos droits, sans sandbox. Le post Avec les mods, Claude Code devient personnalisable…"
+    },
     {
       "id": "99526003cbec",
       "title": "Installation et utilisation de Claude Code : premiers pas",
@@ -169,7 +205,7 @@
       "themes": [
         "alerte"
       ],
-      "excerpt": "[Mise à jour du 30 septembre 2026] Dans un billet de blogue du 29 septembre 2026 (cf. section Documentation), Mandiant et Google Threat Intelligence Group (GTIG) fournissent des indicateurs de compromission ainsi que…"
+      "excerpt": "**[Mise à jour du 05 octobre 2026]** Le 4 octobre 2026, Citrix a publié un avis concernant une nouvelle vulnérabilité (CVE-2026-88779) permettant un déni de service à distance. La CISA indique que cette vulnérabilité…"
     },
     {
       "id": "5b29e6d4d665",
