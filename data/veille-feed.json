@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-06T12:08:39+00:00",
+  "collectedAt": "2026-10-07T11:54:08+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,17 +28,29 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 5
+      "retained": 4
     },
     {
       "name": "Zataz",
       "kind": "Actualite cyber",
       "url": "https://www.zataz.com/feed/",
       "ok": true,
-      "retained": 1
+      "retained": 0
     }
   ],
   "items": [
+    {
+      "id": "1cc68b80228c",
+      "title": "BYOD, prestataires : comment faire confiance à un appareil que vous ne gérez pas ?",
+      "link": "https://www.it-connect.fr/securiser-byod-sans-mdm/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-06T14:30:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "BYOD, prestataires : la MFA protège l'identité, pas l'appareil. Comment vérifier la posture d'un appareil non géré sans l'enrôler dans un MDM ? Le post BYOD, prestataires : comment faire confiance à un appareil que…"
+    },
     {
       "id": "649ed1eccc5c",
       "title": "OpenAI va ajouter un filigrane invisible aux textes de ChatGPT et Codex dans l’UE",
