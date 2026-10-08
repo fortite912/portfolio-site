@@ -21,6 +21,11 @@ export function EmbedLinks() {
   useEffect(() => {
     if (!isEmbed) return;
 
+    // Marqueur pour le CSS (sommaire collant sans barre de navigation).
+    // Posé après l'hydratation : un attribut ajouté avant casserait le
+    // rendu en flux de React.
+    document.documentElement.dataset.embed = "1";
+
     const onClick = (e: MouseEvent) => {
       if (e.defaultPrevented || e.button !== 0) return;
       const a = (e.target as Element | null)?.closest?.("a");
@@ -37,7 +42,10 @@ export function EmbedLinks() {
     };
 
     document.addEventListener("click", onClick, true);
-    return () => document.removeEventListener("click", onClick, true);
+    return () => {
+      document.removeEventListener("click", onClick, true);
+      delete document.documentElement.dataset.embed;
+    };
   }, [isEmbed]);
 
   return null;

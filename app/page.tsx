@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { stageSentence } from "@/lib/stage";
-import { getFeaturedProjects } from "@/lib/projects";
+import { getFeaturedProjects, getProjects } from "@/lib/projects";
+import { oralE5 } from "@/lib/experience";
+import { certifications } from "@/lib/certifications";
+import type { Project } from "@/lib/types";
 import { ProjectCard } from "@/components/project-card";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { CountUp } from "@/components/count-up";
@@ -57,44 +60,51 @@ const IconCloud = () => (
   </svg>
 );
 
-/* ===== Data ===== */
-const STATS = [
-  { value: "6", label: "Labs documentés", sublabel: "avec preuves", Icon: IconFolder },
-  { value: "20+", label: "Validations", sublabel: "100% taux de réussite", Icon: IconCheck },
-  { value: "4", label: "Technos clés", sublabel: "sys / réseau / cloud / cyber", Icon: IconZap },
-  { value: "2", label: "Certifs visées", sublabel: "AZ-900 acquis", Icon: IconAward },
-];
+/* ===== Data =====
+   Les chiffres de l'accueil sont dérivés des données (labs, épreuves,
+   certifications) : rien n'est saisi à la main, rien ne peut se périmer.
+   Pas de « niveau » auto-déclaré par domaine : chaque domaine renvoie
+   aux labs qui le prouvent. */
+type Category = NonNullable<Project["category"]>;
 
-const SKILLS = [
+const SKILLS: Array<{
+  Icon: () => React.ReactElement;
+  title: string;
+  items: string[];
+  color: string;
+  categories: Category[];
+}> = [
   {
     Icon: IconMonitor,
     title: "Systèmes",
     items: ["Windows Server", "AD DS", "DNS", "DHCP", "GPO", "PowerShell"],
     color: "accent",
-    level: 85,
+    categories: ["Systèmes"],
   },
   {
     Icon: IconGlobe,
     title: "Réseau",
     items: ["Cisco IOS", "VLAN", "STP", "LACP", "OSPF", "Wireshark"],
     color: "purple",
-    level: 75,
+    categories: ["Réseau", "Preuves"],
   },
   {
     Icon: IconShield,
     title: "Cybersécurité",
     items: ["SSH hardening", "PKI / TLS", "ARP analysis", "Capture réseau", "Firewall / NSG"],
     color: "green",
-    level: 65,
+    categories: ["Cybersécurité"],
   },
   {
     Icon: IconCloud,
     title: "Cloud",
     items: ["Azure VNet", "NSG", "VMs", "CLI", "Portal"],
     color: "cyan",
-    level: 55,
+    categories: ["Cloud"],
   },
 ];
+
+const plural = (n: number, word: string) => `${n} ${word}${n > 1 ? "s" : ""}`;
 
 const colorMap: Record<string, string> = {
   accent: "rgba(226,105,60,0.08)",
@@ -119,6 +129,40 @@ const accentColors: Record<string, string> = {
 
 export default function HomePage() {
   const featured = getFeaturedProjects();
+  const projects = getProjects();
+  const done = projects.filter((p) => p.status === "Done").length;
+  const validations = projects.reduce((n, p) => n + p.validation.length, 0);
+  const covered = oralE5.competences.filter((c) => c.coverage === "couverte").length;
+  const acquired = certifications.filter((c) => c.status === "Acquis").length;
+
+  const stats = [
+    {
+      value: String(projects.length),
+      label: "Labs documentés",
+      sublabel: `${done} terminés · ${projects.length - done} en cours`,
+      Icon: IconFolder,
+    },
+    {
+      value: String(validations),
+      label: "Points de validation",
+      sublabel: "attendu / observé",
+      Icon: IconCheck,
+    },
+    {
+      value: `${covered}/${oralE5.competences.length}`,
+      label: "Compétences E5",
+      sublabel: "avec réalisations identifiées",
+      Icon: IconZap,
+    },
+    {
+      value: `${acquired}/${certifications.length}`,
+      label: "Certifications",
+      sublabel: certifications
+        .map((c) => `${c.title.split(" ")[0]} ${c.status === "Acquis" ? "acquise" : "visée"}`)
+        .join(" · "),
+      Icon: IconAward,
+    },
+  ];
 
   return (
     <div className="space-y-24">
@@ -138,7 +182,7 @@ export default function HomePage() {
           }}
         />
 
-        <div className="relative grid md:grid-cols-[1fr,auto] gap-12 items-center pt-6 md:pt-10">
+        <div className="relative grid md:grid-cols-[1fr_auto] gap-12 items-center pt-6 md:pt-10">
           {/* Left: Text content */}
           <div className="space-y-7">
             <div className="animate-in">
@@ -218,8 +262,8 @@ export default function HomePage() {
                 <p className="output">cloud=Azure,VNet,NSG</p>
                 <p className="output">cyber=SSH,PKI,TLS</p>
                 <p className="mt-2"><span className="prompt">$</span> <span className="cmd">verify</span> <span className="flag">--proofs</span></p>
-                <p className="success">6/6 labs validated</p>
-                <p className="success">20+ checks passed</p>
+                <p className="success">{projects.length} labs · {done} completed</p>
+                <p className="success">{validations} validation points</p>
                 <p className="mt-2 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--prod</span></p>
               </div>
             </div>
@@ -241,7 +285,7 @@ export default function HomePage() {
               <p><span className="prompt">$</span> <span className="cmd">whoami</span></p>
               <p className="output">Sean Fritsch — BTS SIO SISR (2e année)</p>
               <p className="mt-1.5"><span className="prompt">$</span> <span className="cmd">verify</span> <span className="flag">--proofs</span></p>
-              <p className="success">6/6 labs validated ✓</p>
+              <p className="success">{projects.length} labs · {validations} checks ✓</p>
               <p className="mt-1.5 typing-cursor"><span className="prompt">$</span> <span className="cmd">deploy</span> <span className="flag">--prod</span></p>
             </div>
           </div>
@@ -251,7 +295,7 @@ export default function HomePage() {
       {/* ===== Stats ===== */}
       <section>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {STATS.map((s, i) => (
+          {stats.map((s, i) => (
             <AnimateOnScroll key={s.label} delay={i * 80}>
               <div className="card card-hover p-5 text-center space-y-1">
                 <div className="flex justify-center mb-2">
@@ -275,44 +319,66 @@ export default function HomePage() {
             <p className="heading-section">Compétences</p>
             <h2 className="heading-lg">Stack technique</h2>
             <p className="text-sm leading-relaxed" style={{ color: "var(--color-muted)" }}>
-              Compétences développées à travers des labs pratiques et des projets concrets.
+              Pour chaque domaine : les labs qui le prouvent et leurs points de validation.
             </p>
           </div>
         </AnimateOnScroll>
         <div className="grid gap-4 sm:grid-cols-2">
-          {SKILLS.map((skill, i) => (
-            <AnimateOnScroll key={skill.title} delay={i * 100}>
-              <div
-                className="card card-hover p-5 space-y-4"
-                style={{ borderColor: borderMap[skill.color] }}
-              >
-                <div className="flex items-center gap-3">
-                  <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background: colorMap[skill.color], border: `1px solid ${borderMap[skill.color]}` }}
-                  >
-                    <skill.Icon />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold">{skill.title}</h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      <div className="skill-bar flex-1">
-                        <div className="skill-bar-fill" style={{ width: `${skill.level}%` }} />
-                      </div>
-                      <span className="text-[11px] font-medium" style={{ color: accentColors[skill.color], fontFamily: "var(--font-mono)" }}>
-                        {skill.level}%
-                      </span>
+          {SKILLS.map((skill, i) => {
+            const labs = projects.filter(
+              (p) => p.category && skill.categories.includes(p.category)
+            );
+            const checks = labs.reduce((n, p) => n + p.validation.length, 0);
+            return (
+              <AnimateOnScroll key={skill.title} delay={i * 100}>
+                <div
+                  className="card card-hover p-5 space-y-4 h-full"
+                  style={{ borderColor: borderMap[skill.color] }}
+                >
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                      style={{ background: colorMap[skill.color], border: `1px solid ${borderMap[skill.color]}` }}
+                    >
+                      <skill.Icon />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-semibold">{skill.title}</h3>
+                      <p
+                        className="text-[11px] mt-0.5"
+                        style={{ color: accentColors[skill.color], fontFamily: "var(--font-mono)" }}
+                      >
+                        {plural(labs.length, "lab")} · {plural(checks, "point")} de validation
+                      </p>
                     </div>
                   </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {skill.items.map((item) => (
+                      <span key={item} className="tag-code">{item}</span>
+                    ))}
+                  </div>
+                  {labs.length > 0 && (
+                    <ul
+                      className="flex flex-wrap gap-x-4 gap-y-1.5 text-xs"
+                      style={{ borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: 10 }}
+                    >
+                      {labs.map((p) => (
+                        <li key={p.slug}>
+                          <Link
+                            href={`/projects/${p.slug}`}
+                            className="link-underline"
+                            style={{ color: "rgba(255,255,255,0.65)" }}
+                          >
+                            {p.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {skill.items.map((item) => (
-                    <span key={item} className="tag-code">{item}</span>
-                  ))}
-                </div>
-              </div>
-            </AnimateOnScroll>
-          ))}
+              </AnimateOnScroll>
+            );
+          })}
         </div>
       </section>
 

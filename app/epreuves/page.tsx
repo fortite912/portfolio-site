@@ -36,9 +36,9 @@ export default function EpreuvesPage() {
             { label: "option", value: "SISR — Solutions d'infrastructure, systèmes et réseaux" },
           ]}
         />
-
-        <DocToc sections={EPREUVES_TOC} />
       </header>
+
+      <DocToc sections={EPREUVES_TOC} />
 
       <OralSection n={1} />
 

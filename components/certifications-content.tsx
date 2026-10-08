@@ -46,7 +46,7 @@ export function CertificationsContent() {
           </div>
           {/* Roadmap steps */}
           <div className="overflow-x-auto -mx-5 px-5 pb-2">
-            <div className="flex items-center gap-0 min-w-[400px]">
+            <div className="flex items-center gap-0">
               {certifications
                 .sort((a, b) => statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status))
                 .map((c, i) => {

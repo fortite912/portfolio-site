@@ -114,8 +114,6 @@ export function ParcoursContent() {
               { label: "période", value: "2025 — 2027" },
             ]}
           />
-
-          <DocToc sections={PARCOURS_TOC} />
         </div>
 
         <div className="relative grid grid-cols-3 gap-3 sm:gap-4">
@@ -138,8 +136,10 @@ export function ParcoursContent() {
         </div>
       </header>
 
+      <DocToc sections={PARCOURS_TOC} />
+
       {/* ===== Timeline ===== */}
-      <section id="timeline" className="space-y-5 scroll-mt-24">
+      <section id="timeline" className="space-y-5 scroll-mt-32">
         {timeline.map((entry, i) => {
           const st = kindStyle[entry.kind] ?? kindStyle["Expérience"];
           const isLast = i === timeline.length - 1;
@@ -283,7 +283,7 @@ export function ParcoursContent() {
 
       {/* ===== Soveris ===== */}
       <AnimateOnScroll>
-        <section id="soveris" className="card-gradient-border p-6 md:p-10 space-y-7 relative overflow-hidden noise scroll-mt-24">
+        <section id="soveris" className="card-gradient-border p-6 md:p-10 space-y-7 relative overflow-hidden noise scroll-mt-32">
           <div
             className="absolute inset-0 pointer-events-none"
             style={{

@@ -13,6 +13,13 @@ const quickLinks = [
 const techStack = ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"];
 
 export function Footer() {
+  // Date du dernier rendu : celle du déploiement pour les pages statiques
+  const updated = new Intl.DateTimeFormat("fr-FR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date());
+
   return (
     <footer className="relative z-10" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
       <div className="mx-auto max-w-[1120px] px-5 py-10 space-y-8">
@@ -123,6 +130,8 @@ export function Footer() {
             >
               Mentions légales
             </Link>
+            <span className="mx-2" style={{ opacity: 0.4 }}>·</span>
+            <span style={{ fontFamily: "var(--font-mono)" }}>Mis à jour le {updated}</span>
           </p>
           <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}>
             <span>Built with</span>

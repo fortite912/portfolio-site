@@ -27,7 +27,7 @@ export function VeilleSection({ n }: { n?: number } = {}) {
 
   return (
     <AnimateOnScroll>
-      <section id="veille" className="space-y-7 scroll-mt-24">
+      <section id="veille" className="space-y-7 scroll-mt-32">
         {/* En-tête */}
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-2">

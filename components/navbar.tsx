@@ -47,7 +47,7 @@ export function Navbar() {
   return (
     <>
       <header
-        className="sticky top-0 z-40 relative"
+        className="sticky top-0 z-40"
         style={{
           borderBottom: "1px solid rgba(255,255,255,0.05)",
           background: scrolled
@@ -56,6 +56,8 @@ export function Navbar() {
           boxShadow: scrolled
             ? "0 4px 30px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.03)"
             : "none",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
           transition: "background 0.3s ease, box-shadow 0.3s ease",
         }}
       >
@@ -76,7 +78,7 @@ export function Navbar() {
             <div className="flex flex-col">
               <span className="text-sm font-bold tracking-tight">{SITE.name}</span>
               <span
-                className="text-[10px] font-medium tracking-wider uppercase transition-colors duration-300 group-hover:text-[var(--color-accent)]"
+                className="hidden lg:block whitespace-nowrap text-[10px] font-medium tracking-wider uppercase transition-colors duration-300 group-hover:text-[var(--color-accent)]"
                 style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
               >
                 {SITE.role}
@@ -90,7 +92,7 @@ export function Navbar() {
               <Link
                 key={i.href}
                 href={i.href}
-                className="relative text-sm font-medium h-9 px-4 rounded-lg flex items-center transition-all duration-200 hover:text-[var(--color-text)]"
+                className="relative text-sm font-medium h-9 px-3 lg:px-4 rounded-lg flex items-center transition-all duration-200 hover:text-[var(--color-text)]"
                 style={{
                   color: isActive(i.href)
                     ? "var(--color-text)"

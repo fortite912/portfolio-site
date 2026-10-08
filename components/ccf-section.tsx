@@ -16,7 +16,7 @@ export function CcfSection({ n }: { n?: number } = {}) {
 
   return (
     <AnimateOnScroll>
-      <section id="ccf" className="relative space-y-7 scroll-mt-24">
+      <section id="ccf" className="relative space-y-7 scroll-mt-32">
         {/* Fond décoratif : grille isométrique */}
         <div
           className="absolute inset-x-0 -top-8 h-[420px] pointer-events-none hidden md:block"

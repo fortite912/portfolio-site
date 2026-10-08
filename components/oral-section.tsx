@@ -79,7 +79,7 @@ export function OralSection({ n }: { n?: number } = {}) {
 
   return (
     <AnimateOnScroll>
-      <section id="oral" className="space-y-8 scroll-mt-24">
+      <section id="oral" className="space-y-8 scroll-mt-32">
         {/* En-tête */}
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-2">
@@ -174,7 +174,8 @@ export function OralSection({ n }: { n?: number } = {}) {
               return (
                 <article
                   key={c.code}
-                  className="card card-hover p-5 space-y-3"
+                  id={c.code.toLowerCase()}
+                  className="card card-hover p-5 space-y-3 scroll-mt-32"
                   style={{ borderColor: cov.border }}
                 >
                   <div className="flex items-center justify-between gap-2">

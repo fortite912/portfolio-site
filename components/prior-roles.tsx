@@ -12,7 +12,7 @@ export function PriorRoles() {
 
   return (
     <AnimateOnScroll>
-      <section id="anterieur" className="space-y-6 scroll-mt-24">
+      <section id="anterieur" className="space-y-6 scroll-mt-32">
         <div className="space-y-3">
           <p className="heading-section">Avant le BTS</p>
           <h2 className="heading-lg">

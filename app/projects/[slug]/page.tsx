@@ -54,25 +54,25 @@ export default async function ProjectDetailPage({
 
       {/* Cover */}
       {project.cover && (
-        <div className="relative h-56 md:h-80 rounded-2xl overflow-hidden">
+        <div className="relative h-44 md:h-64 rounded-2xl overflow-hidden">
           <Image
             src={project.cover}
-            alt={project.title}
+            alt=""
             fill
             className="object-cover"
             sizes="1120px"
             priority
           />
+          {/* Fondu vers le bas : l'image reste lisible, le titre vient juste après */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to top, rgba(12,11,10,0.98) 0%, rgba(12,11,10,0.4) 40%, rgba(12,11,10,0.15) 100%)",
+                "linear-gradient(to top, rgba(12,11,10,0.85) 0%, rgba(12,11,10,0.15) 45%, rgba(12,11,10,0) 100%)",
             }}
           />
-          {/* Floating badges on cover */}
-          <div className="absolute bottom-5 left-6 right-6 flex items-end justify-between">
-            <h1 className="heading-lg text-white drop-shadow-lg">{project.title}</h1>
+          <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between gap-3">
+            {project.category && <span className="pill pill-accent">{project.category}</span>}
             <span className={`pill ${st.pill}`}>{st.label}</span>
           </div>
         </div>
@@ -85,10 +85,12 @@ export default async function ProjectDetailPage({
           <p className="max-w-2xl leading-relaxed" style={{ color: "var(--color-muted)" }}>
             {project.subtitle}
           </p>
-          <div className="flex flex-wrap items-center gap-2">
-            {project.category && <span className="pill pill-accent">{project.category}</span>}
-            <span className={`pill ${st.pill}`}>{st.label}</span>
-          </div>
+          {!project.cover && (
+            <div className="flex flex-wrap items-center gap-2">
+              {project.category && <span className="pill pill-accent">{project.category}</span>}
+              <span className={`pill ${st.pill}`}>{st.label}</span>
+            </div>
+          )}
         </div>
         <div className="flex flex-wrap gap-2 shrink-0">
           <Link className="btn btn-primary" href={`/projects/${project.slug}/report`}>
