@@ -931,6 +931,30 @@ img {
   color: var(--color-text) !important;
 }
 
+/* ===== Lien d'évitement : premier élément focalisable au clavier =====
+   Invisible tant qu'il n'a pas le focus ; amène directement au contenu
+   sans traverser la barre de navigation. */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: #0c0b0a;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 12px;
+}
+#contenu:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /* ===== Mouvement réduit : apparitions au scroll désactivées =====
    Les styles d'AnimateOnScroll sont en ligne : !important pour les
    surclasser. Le contenu est visible d'emblée, sans transition. */

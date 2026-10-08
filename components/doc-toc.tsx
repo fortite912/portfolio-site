@@ -1,18 +1,25 @@
 /**
  * Sommaire de document.
- * La page Parcours depasse 6 000 px et porte cinq sections numerotees :
- * un jury doit pouvoir atteindre une epreuve precise sans derouler.
- * Rendu statiquement, donc utilisable aussi en mode integration.
+ * Les pages Parcours et Épreuves dépassent plusieurs milliers de pixels
+ * et portent des sections numérotées : un jury doit pouvoir atteindre
+ * une épreuve précise sans dérouler. Rendu statiquement, donc utilisable
+ * aussi en mode intégration.
  */
-const SECTIONS = [
+export type TocSection = { n: number; id: string; label: string };
+
+export const PARCOURS_TOC: TocSection[] = [
   { n: 1, id: "timeline", label: "Expérience & entrepreneuriat" },
   { n: 2, id: "anterieur", label: "Expériences antérieures" },
-  { n: 3, id: "ccf", label: "E5 — Administration systèmes et réseaux" },
-  { n: 4, id: "veille", label: "E4 — Veille technologique" },
-  { n: 5, id: "soveris", label: "Soveris" },
+  { n: 3, id: "soveris", label: "Soveris" },
 ];
 
-export function DocToc() {
+export const EPREUVES_TOC: TocSection[] = [
+  { n: 1, id: "oral", label: "E5 — Oral sur portfolio" },
+  { n: 2, id: "veille", label: "E5 — Veille technologique" },
+  { n: 3, id: "ccf", label: "E6 — Administration systèmes et réseaux" },
+];
+
+export function DocToc({ sections }: { sections: TocSection[] }) {
   return (
     <nav aria-label="Sommaire" className="doc-toc">
       <p
@@ -26,7 +33,7 @@ export function DocToc() {
         Sommaire
       </p>
       <ol className="flex flex-wrap gap-x-5 gap-y-2 m-0 p-0 list-none">
-        {SECTIONS.map((s) => (
+        {sections.map((s) => (
           <li key={s.id}>
             <a
               href={`#${s.id}`}

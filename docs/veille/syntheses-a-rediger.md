@@ -1,4 +1,4 @@
-# Synthèses de veille à rédiger — E4
+# Synthèses de veille à rédiger — E5 (compétence C6)
 
 Deux articles repérés par la collecte automatique, choisis parce qu'ils
 touchent **tes deux thèmes** et **ton stage à la DISI**.
@@ -101,5 +101,5 @@ cet article ? Reste général — voir l'avertissement en haut.)*
 ## Quand c'est rédigé
 
 Envoie tes réponses. Elles seront mises en forme dans
-`veilleE4.syntheses` (`lib/experience.ts`) et apparaîtront sur le
+`veilleE5.syntheses` (`lib/experience.ts`) et apparaîtront sur le
 portfolio et le Google Site.

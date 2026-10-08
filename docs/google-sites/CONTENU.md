@@ -1,5 +1,11 @@
 # Portfolio CCF — Pack de contenu Google Sites
 
+> **Obsolète depuis octobre 2026.** Le Google Site n'a plus de contenu natif :
+> chaque page est une intégration pleine page du site Vercel
+> (`/embed/accueil`, `/embed/projects`, `/embed/e5`, `/embed/e6`,
+> `/embed/certifications`). Modifier le code suffit. Ce document est conservé
+> pour mémoire ; ses textes ne sont plus à jour (stage, numéros d'épreuves).
+
 Sean Fritsch — BTS SIO option SISR, 2e année (2026/2027)
 Destinataire : `ccf2027.monta@gmail.com`
 

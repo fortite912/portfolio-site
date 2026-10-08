@@ -4,6 +4,7 @@ import { SITE } from "@/lib/site";
 const quickLinks = [
   { href: "/", label: "Accueil" },
   { href: "/parcours", label: "Parcours" },
+  { href: "/epreuves", label: "Épreuves" },
   { href: "/projects", label: "Projets" },
   { href: "/certifications", label: "Certifications" },
   { href: "/contact", label: "Contact" },
@@ -115,6 +116,13 @@ export function Footer() {
         >
           <p className="text-xs" style={{ color: "var(--color-muted)" }}>
             &copy; {new Date().getFullYear()} {SITE.name}
+            <span className="mx-2" style={{ opacity: 0.4 }}>·</span>
+            <Link
+              href="/mentions-legales"
+              className="transition-colors duration-200 hover:text-[var(--color-accent)]"
+            >
+              Mentions légales
+            </Link>
           </p>
           <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}>
             <span>Built with</span>

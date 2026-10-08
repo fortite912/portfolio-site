@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { CcfSection } from "@/components/ccf-section";
+import { OralSection } from "@/components/oral-section";
+import { VeilleSection } from "@/components/veille-section";
 
-/** Sous-page E5 du Google Site (menu Projets) : administration systemes et reseaux. */
+/**
+ * Sous-page E5 du Google Site (menu Projets) : l'oral sur portfolio,
+ * avec la veille technologique qui en fait partie (compétence C6).
+ */
 export const metadata: Metadata = {
-  title: "E5 — Administration des systèmes et des réseaux — Sean Fritsch",
+  title: "E5 — Support et mise à disposition de services informatiques — Sean Fritsch",
   robots: { index: false, follow: false },
 };
 
 export default function EmbedE5Page() {
-  return <CcfSection standalone />;
+  return (
+    <div className="space-y-14">
+      <OralSection />
+      <div className="section-divider" />
+      <VeilleSection />
+    </div>
+  );
 }

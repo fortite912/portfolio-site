@@ -1,4 +1,4 @@
-import type { Ccf, PriorRole, TimelineEntry, Veille, Venture } from "./types";
+import type { Ccf, Oral, PriorRole, TimelineEntry, Veille, Venture } from "./types";
 import { STAGE, stageHasHost, stageOrgNote } from "./stage";
 
 /** Entree du stage de 2e annee, derivee de lib/stage.ts. */
@@ -11,7 +11,7 @@ const stageEntry: TimelineEntry = stageHasHost()
       orgNote: stageOrgNote(),
       period: `${STAGE.periodShort} · ${STAGE.duration}`,
       upcoming: true,
-      summary: `Deuxième période de stage du BTS, ${STAGE.periodLong}. Elle alimentera les réalisations professionnelles présentées à l'épreuve E5.`,
+      summary: `Deuxième période de stage du BTS, ${STAGE.periodLong}. Elle alimentera les réalisations professionnelles présentées aux épreuves E5 et E6.`,
       highlights: [
         `Période : ${STAGE.periodLong}`,
         "Objectif : produire des réalisations d'administration systèmes et réseaux documentées",
@@ -25,7 +25,7 @@ const stageEntry: TimelineEntry = stageHasHost()
       org: "Stage conventionné à pourvoir",
       period: `${STAGE.periodShort} · ${STAGE.duration}`,
       upcoming: true,
-      summary: `Deuxième période de stage du BTS, en ${STAGE.domains}. Recherche en cours — elle alimentera les réalisations professionnelles présentées à l'épreuve E5.`,
+      summary: `Deuxième période de stage du BTS, en ${STAGE.domains}. Recherche en cours — elle alimentera les réalisations professionnelles présentées aux épreuves E5 et E6.`,
       highlights: [
         `Période recherchée : ${STAGE.periodLong}`,
         "Objectif : produire des réalisations d'administration systèmes et réseaux documentées",
@@ -125,19 +125,21 @@ export const soveris: Venture = {
 };
 
 /**
- * Épreuve E5 du BTS SIO option SISR.
+ * Épreuve E6 du BTS SIO option SISR (bloc 2).
+ * Numérotation du référentiel en vigueur (arrêté du 8 juillet 2024) :
+ * E5 = oral sur portfolio, E6 = administration des systèmes et des réseaux.
  * Section marquée « À venir » : les réalisations seront produites pendant
  * le stage de novembre — décembre 2026.
  */
-export const ccfE5: Ccf = {
-  code: "E5",
+export const ccfE6: Ccf = {
+  code: "E6",
   title: "Administration des systèmes et des réseaux",
   option: "Option SISR",
   coefficient: 4,
-  evaluation: "Contrôle en cours de formation (CCF)",
+  evaluation: "Épreuve pratique et orale — CCF",
   status: "À venir",
   intro:
-    "L'épreuve E5 évalue le bloc « Administration des systèmes et des réseaux ». Elle s'appuie sur un portfolio de réalisations professionnelles menées en formation et en stage. Cette section sera complétée au fur et à mesure de leur production.",
+    "L'épreuve E6 évalue le bloc « Administration des systèmes et des réseaux ». Elle s'appuie sur deux réalisations professionnelles construites en formation : le jury en retient une, rédige une expression de besoins et je la traite devant lui. Cette section sera complétée au fur et à mesure.",
   competences: [
     {
       title: "Concevoir une solution d'infrastructure réseau",
@@ -157,8 +159,9 @@ export const ccfE5: Ccf = {
   ],
   deliverables: [
     {
-      label: "Fiches descriptives de réalisations professionnelles",
-      detail: "Une fiche par réalisation : contexte, besoin, solution retenue, mise en œuvre.",
+      label: "Fiches descriptives des deux réalisations professionnelles",
+      detail:
+        "Modèle de la circulaire nationale : contexte, besoin, solution retenue, modalités d'accès aux éléments techniques.",
     },
     {
       label: "Schémas réseau",
@@ -178,19 +181,20 @@ export const ccfE5: Ccf = {
     },
   ],
   notes: [
+    "Les deux réalisations doivent, ensemble, mobiliser les trois compétences du bloc.",
     "Les labs déjà publiés dans la section Projets (VLAN, AD/DNS/DHCP, PKI, SSH) constituent la base méthodologique de ces réalisations.",
     `Le stage ${STAGE.periodLong}${stageHasHost() ? ` ${STAGE.orgAt ?? `chez ${STAGE.org}`}` : ""} fournira les situations professionnelles en environnement réel.`,
   ],
 };
 
 /**
- * Veille technologique — épreuve E4, compétence "Organiser son
+ * Veille technologique — épreuve E5, compétence "Organiser son
  * développement professionnel". Le jury évalue la méthode et l'impact
  * concret, pas un exposé. Pour changer de thème, il suffit d'éditer
  * themePrincipal ci-dessous.
  */
-export const veilleE4: Veille = {
-  epreuve: "E4",
+export const veilleE5: Veille = {
+  epreuve: "E5",
   competence: "Organiser son développement professionnel",
   status: "En cours",
   themePrincipal: {
@@ -237,6 +241,196 @@ export const veilleE4: Veille = {
     },
   ],
   syntheses: [],
+};
+
+/**
+ * Épreuve E5 — oral sur portfolio (bloc 1, six compétences).
+ * Référentiel : annexe II.D, épreuve E5. Les réalisations présentées
+ * doivent, ensemble, mobiliser toutes les compétences du bloc.
+ *
+ * Le rattachement des réalisations aux compétences est une proposition
+ * à valider avec l'équipe pédagogique : seules des activités réellement
+ * vécues y figurent. Les sous-compétences (detail) reprennent le
+ * référentiel en abrégé.
+ */
+export const oralE5: Oral = {
+  code: "E5",
+  title: "Support et mise à disposition de services informatiques",
+  coefficient: 4,
+  evaluation: "Oral de 40 min — CCF",
+  status: "En cours",
+  intro:
+    "L'épreuve E5 évalue le bloc 1 à partir d'un dossier numérique : ce portfolio, un tableau de synthèse des réalisations et les attestations de stage. Les réalisations présentées doivent, ensemble, mobiliser les six compétences du bloc ; pour chacune, les compétences mobilisées sont précisées.",
+  phases: [
+    {
+      duration: "10 min",
+      label: "Présentation",
+      detail:
+        "Parcours de professionnalisation et justification de l'acquisition des compétences du bloc.",
+    },
+    {
+      duration: "30 min",
+      label: "Entretien",
+      detail:
+        "Échange avec le jury : explicitation du parcours, puis approfondissement d'une ou plusieurs réalisations du dossier.",
+    },
+  ],
+  jury: "Une personne enseignante des enseignements professionnels en STS SIO et une personne professionnelle du secteur des prestations informatiques.",
+  competences: [
+    {
+      code: "C1",
+      title: "Gérer le patrimoine informatique",
+      detail:
+        "Recenser et identifier les ressources numériques ; exploiter les référentiels et standards du prestataire ; gérer les habilitations, la continuité de service et les sauvegardes.",
+      coverage: "partielle",
+      realisations: [
+        {
+          label: "Masterisation de 122 postes pour les concours d'entrée — inventaire, relevé des numéros de série",
+          context: "Stage",
+          href: "/parcours#timeline",
+        },
+        {
+          label: "Lab AD DS + DNS + DHCP — domaine, habilitations, GPO",
+          context: "Formation",
+          href: "/projects/ad-dns-dhcp",
+        },
+      ],
+      note: "Sauvegardes et continuité de service : pas encore de réalisation documentée.",
+    },
+    {
+      code: "C2",
+      title: "Répondre aux incidents et aux demandes d'assistance et d'évolution",
+      detail:
+        "Collecter, suivre et orienter les demandes ; traiter les demandes concernant les services réseau, système et applicatifs.",
+      coverage: "couverte",
+      realisations: [
+        {
+          label: "Support utilisateur sur Request Tracker — collecte, qualification et suivi des tickets",
+          context: "Stage",
+          href: "/parcours#timeline",
+        },
+        {
+          label: "Diagnostic du réseau filaire et des VLAN, en autonomie",
+          context: "Stage",
+          href: "/parcours#timeline",
+        },
+        {
+          label: "Soveris — prototype de tri automatique des demandes de support de niveau 1",
+          context: "Entrepreneuriat",
+          href: "/parcours#soveris",
+        },
+      ],
+    },
+    {
+      code: "C3",
+      title: "Développer la présence en ligne de l'organisation",
+      detail:
+        "Valoriser l'image de l'organisation sur les médias numériques dans le respect du cadre juridique ; référencer les services en ligne et mesurer leur visibilité ; faire évoluer un site web.",
+      coverage: "a-couvrir",
+      realisations: [
+        {
+          label: "Ce portfolio — site Next.js déployé sur Vercel, mentions légales, référencement (sitemap, robots, Open Graph)",
+          context: "Formation",
+          href: "/mentions-legales",
+        },
+      ],
+      note: "Aucune période de stage ne couvre cette compétence : la réalisation se construit en formation, à valider avec l'équipe pédagogique.",
+    },
+    {
+      code: "C4",
+      title: "Travailler en mode projet",
+      detail:
+        "Analyser les objectifs et l'organisation d'un projet ; planifier les activités ; suivre les indicateurs et analyser les écarts.",
+      coverage: "couverte",
+      realisations: [
+        {
+          label: "Préparation des concours d'entrée — 122 postes à livrer avant une date fixe",
+          context: "Stage",
+          href: "/parcours#timeline",
+        },
+        {
+          label: "Soveris — jalons, banc de test de 50 cas, limites documentées",
+          context: "Entrepreneuriat",
+          href: "/parcours#soveris",
+        },
+      ],
+    },
+    {
+      code: "C5",
+      title: "Mettre à disposition des utilisateurs un service informatique",
+      detail:
+        "Réaliser les tests d'intégration et d'acceptation d'un service ; déployer un service ; accompagner les utilisateurs.",
+      coverage: "couverte",
+      realisations: [
+        {
+          label: "Déploiement de la double authentification (MFA) auprès d'un groupe d'utilisateurs, avec fichier de suivi",
+          context: "Stage",
+          href: "/parcours#timeline",
+        },
+        {
+          label: "Sensibilisation des utilisateurs : hameçonnage, faux support technique",
+          context: "Stage",
+          href: "/parcours#timeline",
+        },
+        {
+          label: "Labs SSH durci et PKI — plan de tests attendu / observé",
+          context: "Formation",
+          href: "/projects/ssh-configuration",
+        },
+      ],
+    },
+    {
+      code: "C6",
+      title: "Organiser son développement professionnel",
+      detail:
+        "Mettre en place son environnement d'apprentissage ; mener une veille informationnelle ; gérer son identité professionnelle ; développer son projet professionnel.",
+      coverage: "couverte",
+      realisations: [
+        {
+          label: "Veille technologique automatisée sur deux thèmes",
+          context: "Formation",
+          href: "#veille",
+        },
+        {
+          label: "Certification AZ-900 acquise, AZ-104 visée",
+          context: "Formation",
+          href: "/certifications",
+        },
+        {
+          label: "Statut national d'étudiant-entrepreneur — projet Soveris",
+          context: "Entrepreneuriat",
+          href: "/parcours#timeline",
+        },
+        {
+          label: "Identité professionnelle : GitHub, LinkedIn et ce portfolio",
+          context: "Formation",
+          href: "/contact",
+        },
+      ],
+    },
+  ],
+  dossier: [
+    {
+      label: "Portfolio en ligne",
+      detail:
+        "Ce site, présenté sur mon propre matériel avec ma propre connexion ; il peut aussi être lancé en local, sans réseau, en secours.",
+      done: true,
+    },
+    {
+      label: "Tableau de synthèse",
+      detail:
+        "Modèle fourni par la circulaire nationale : une ligne par réalisation, période, productions, une croix par compétence mobilisée.",
+    },
+    {
+      label: "Attestations de stage",
+      detail:
+        "DISI de CentraleSupélec (mai — juin 2026) et Cigref (novembre — décembre 2026), jointes au dossier numérique.",
+    },
+  ],
+  notes: [
+    "Le dossier numérique est déposé avant l'épreuve, selon le calendrier fixé par l'académie ; sa conformité est contrôlée avant l'interrogation.",
+    "Chaque réalisation est présentée avec les compétences qu'elle mobilise : c'est le fil conducteur de l'entretien.",
+  ],
 };
 
 /**

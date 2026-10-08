@@ -1,4 +1,4 @@
-import { veilleE4 } from "@/lib/experience";
+import { veilleE5 } from "@/lib/experience";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { SectionNum } from "@/components/doc-meta";
 import { VeilleFeed } from "@/components/veille-feed";
@@ -12,8 +12,8 @@ const IconRadar = () => (
   </svg>
 );
 
-/** standalone : page E4 seule, sans le numero de section du parcours. */
-export function VeilleSection({ standalone = false }: { standalone?: boolean } = {}) {
+/** n : numero dans le sommaire de la page ; absent sur une page seule. */
+export function VeilleSection({ n }: { n?: number } = {}) {
   const {
     epreuve,
     competence,
@@ -23,7 +23,7 @@ export function VeilleSection({ standalone = false }: { standalone?: boolean } =
     method,
     sources,
     syntheses,
-  } = veilleE4;
+  } = veilleE5;
 
   return (
     <AnimateOnScroll>
@@ -40,7 +40,7 @@ export function VeilleSection({ standalone = false }: { standalone?: boolean } =
           </div>
 
           <h2 className="heading-lg">
-            <SectionNum n={standalone ? undefined : 4}>
+            <SectionNum n={n}>
               <span style={{ color: "var(--color-green)" }}>{epreuve}</span>
               {" — "}
               Veille technologique
@@ -48,7 +48,7 @@ export function VeilleSection({ standalone = false }: { standalone?: boolean } =
           </h2>
 
           <div className="flex flex-wrap gap-1.5">
-            <span className="tag-code">{competence}</span>
+            <span className="tag-code">Compétence C6 — {competence}</span>
           </div>
 
           <p className="text-sm leading-relaxed max-w-2xl" style={{ color: "var(--color-muted)" }}>

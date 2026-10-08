@@ -5,12 +5,10 @@
 import Link from "next/link";
 import { timeline, soveris } from "@/lib/experience";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
-import { CcfSection } from "@/components/ccf-section";
-import { VeilleSection } from "@/components/veille-section";
 import { PriorRoles } from "@/components/prior-roles";
 import { CountUp } from "@/components/count-up";
 import { DocMeta, SectionNum } from "@/components/doc-meta";
-import { DocToc } from "@/components/doc-toc";
+import { DocToc, PARCOURS_TOC } from "@/components/doc-toc";
 
 /* ===== Icons ===== */
 const IconBriefcase = () => (
@@ -112,12 +110,12 @@ export function ParcoursContent() {
             doc="parcours-professionnel"
             statut="En cours de constitution — BTS SIO SISR 2e année"
             extra={[
-              { label: "épreuves", value: "E4 (veille) · E5 (administration SR)" },
+              { label: "épreuves", value: "E5 (oral sur portfolio) · E6 (administration SR)" },
               { label: "période", value: "2025 — 2027" },
             ]}
           />
 
-          <DocToc />
+          <DocToc sections={PARCOURS_TOC} />
         </div>
 
         <div className="relative grid grid-cols-3 gap-3 sm:gap-4">
@@ -283,14 +281,6 @@ export function ParcoursContent() {
 
       <div className="section-divider" />
 
-      <CcfSection />
-
-      <div className="section-divider" />
-
-      <VeilleSection />
-
-      <div className="section-divider" />
-
       {/* ===== Soveris ===== */}
       <AnimateOnScroll>
         <section id="soveris" className="card-gradient-border p-6 md:p-10 space-y-7 relative overflow-hidden noise scroll-mt-24">
@@ -312,7 +302,7 @@ export function ParcoursContent() {
               </span>
             </div>
             <h2 className="heading-lg">
-              <SectionNum n={5}>{soveris.name}</SectionNum>
+              <SectionNum n={3}>{soveris.name}</SectionNum>
             </h2>
             <p className="text-[15px] font-medium" style={{ color: "var(--color-accent2)" }}>
               {soveris.tagline}
@@ -408,11 +398,14 @@ export function ParcoursContent() {
             validation.
           </p>
           <div className="flex flex-wrap justify-center gap-3 pt-1">
-            <Link className="btn btn-primary" href="/contact">
-              Me contacter
+            <Link className="btn btn-primary" href="/epreuves">
+              Épreuves E5 · E6
             </Link>
             <Link className="btn" href="/projects">
               Voir les projets
+            </Link>
+            <Link className="btn" href="/contact">
+              Me contacter
             </Link>
           </div>
         </section>

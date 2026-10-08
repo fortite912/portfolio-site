@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Veille technologique automatisee — epreuve E4 du BTS SIO.
+Veille technologique automatisee — epreuve E5 du BTS SIO (competence C6).
 
 Lit les flux RSS des sources suivies, retient les articles qui touchent
 les deux themes de veille, et les accumule dans data/veille-feed.json.
 Execute chaque jour par .github/workflows/veille.yml.
 
 Ce script collecte et trie. Il n'ecrit pas de syntheses : celles-ci sont
-redigees a la main apres lecture (voir veilleE4.syntheses dans
+redigees a la main apres lecture (voir veilleE5.syntheses dans
 lib/experience.ts).
 
 Bibliotheque standard uniquement : aucune dependance a installer.

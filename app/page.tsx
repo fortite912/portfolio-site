@@ -6,6 +6,7 @@ import { ProjectCard } from "@/components/project-card";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { CountUp } from "@/components/count-up";
 import { ParcoursTeaser } from "@/components/parcours-teaser";
+import { EpreuvesTeaser } from "@/components/epreuves-teaser";
 
 /* ===== SVG icon components ===== */
 const IconFolder = () => (
@@ -318,6 +319,10 @@ export default function HomePage() {
       <div className="section-divider" />
 
       <ParcoursTeaser />
+
+      <div className="section-divider" />
+
+      <EpreuvesTeaser />
 
       <div className="section-divider" />
 

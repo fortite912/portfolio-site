@@ -113,6 +113,47 @@ export type Ccf = {
   notes: string[];
 };
 
+export type RealisationContext = "Stage" | "Formation" | "Entrepreneuriat";
+
+/** Réalisation professionnelle rattachée à une compétence du bloc 1. */
+export type Realisation = {
+  label: string;
+  context: RealisationContext;
+  /** Lien interne (lab, section de page) ou externe. */
+  href?: string;
+};
+
+/** État de couverture d'une compétence par les réalisations recensées. */
+export type Coverage = "couverte" | "partielle" | "a-couvrir";
+
+export type OralCompetence = {
+  /** C1 … C6, dans l'ordre du référentiel. */
+  code: string;
+  title: string;
+  /** Sous-compétences du référentiel, abrégées. */
+  detail: string;
+  coverage: Coverage;
+  realisations: Realisation[];
+  note?: string;
+};
+
+export type OralPhase = { duration: string; label: string; detail: string };
+
+/** Épreuve E5 : oral sur portfolio (bloc 1). */
+export type Oral = {
+  code: string;
+  title: string;
+  coefficient: number;
+  evaluation: string;
+  status: "À venir" | "En cours" | "Prêt";
+  intro: string;
+  phases: OralPhase[];
+  jury: string;
+  competences: OralCompetence[];
+  dossier: CcfDeliverable[];
+  notes: string[];
+};
+
 export type VeilleSource = {
   name: string;
   kind: string;

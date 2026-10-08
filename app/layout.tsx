@@ -68,12 +68,19 @@ export default function RootLayout({
     <html lang="fr" className={`${plexSans.variable} ${plexMono.variable}`}>
       <body className="min-h-screen flex flex-col">
         <SiteChrome>
+          <a href="#contenu" className="skip-link">
+            Aller au contenu
+          </a>
           <div className="dot-grid" />
           <div className="ambient-glow" />
           <CursorGlow />
           <Navbar />
         </SiteChrome>
-        <main className="relative z-10 mx-auto w-full max-w-[1120px] px-5 py-10 md:py-16 flex-1 page-enter">
+        <main
+          id="contenu"
+          tabIndex={-1}
+          className="relative z-10 mx-auto w-full max-w-[1120px] px-5 py-10 md:py-16 flex-1 page-enter"
+        >
           {children}
         </main>
         <EmbedLinks />

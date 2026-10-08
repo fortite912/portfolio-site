@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ccfE5 } from "@/lib/experience";
+import { ccfE6 } from "@/lib/experience";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { SectionNum } from "@/components/doc-meta";
 
@@ -10,9 +10,9 @@ const IconClipboard = () => (
   </svg>
 );
 
-/** standalone : page E5 seule, sans le numero de section du parcours. */
-export function CcfSection({ standalone = false }: { standalone?: boolean } = {}) {
-  const { code, title, option, coefficient, evaluation, status, intro, competences, deliverables, notes } = ccfE5;
+/** n : numero dans le sommaire de la page ; absent sur la page E6 seule. */
+export function CcfSection({ n }: { n?: number } = {}) {
+  const { code, title, option, coefficient, evaluation, status, intro, competences, deliverables, notes } = ccfE6;
 
   return (
     <AnimateOnScroll>
@@ -46,7 +46,7 @@ export function CcfSection({ standalone = false }: { standalone?: boolean } = {}
 
           <div className="flex flex-wrap items-baseline gap-3">
             <h2 className="heading-lg">
-              <SectionNum n={standalone ? undefined : 3}>
+              <SectionNum n={n}>
                 <span style={{ color: "var(--color-accent)" }}>{code}</span>
                 {" — "}
                 {title}

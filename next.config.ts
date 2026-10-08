@@ -25,6 +25,12 @@ const nextConfig: NextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  async redirects() {
+    return [
+      // La veille relève de E5, pas de E4 : ancienne sous-page du Google Site.
+      { source: "/embed/e4", destination: "/embed/e5", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
