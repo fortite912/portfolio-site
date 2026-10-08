@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-07T11:54:08+00:00",
+  "collectedAt": "2026-10-08T12:09:12+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -14,7 +14,7 @@
       "kind": "Avis",
       "url": "https://www.cert.ssi.gouv.fr/avis/feed/",
       "ok": true,
-      "retained": 0
+      "retained": 1
     },
     {
       "name": "CERT-FR",
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 4
+      "retained": 5
     },
     {
       "name": "Zataz",
@@ -39,6 +39,66 @@
     }
   ],
   "items": [
+    {
+      "id": "11c022fedeb9",
+      "title": "PhotoCraft, FilmCraft, LightCraft : la suite Adobe réécrite en Rust par des agents Claude Opus 5.5",
+      "link": "https://www.it-connect.fr/suite-adobe-rust-claude-opus-artcraft-crafting-apps/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-08T09:39:28+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Sept clones open source de Photoshop, Premiere ou Lightroom écrits en Rust par des agents Claude Opus 5.5 : voici les Crafting Apps. Le post PhotoCraft, FilmCraft, LightCraft : la suite Adobe réécrite en Rust par des…"
+    },
+    {
+      "id": "16471bd2e802",
+      "title": "Windows devient une plateforme pour agents IA : Microsoft lance MXC, des modèles en local et les PC RTX Spark",
+      "link": "https://www.it-connect.fr/windows-hybrid-intelligence-mxc-agents-rtx-spark/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-08T07:16:47+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Microsoft lance MXC pour confiner les agents IA sous Windows 11, fait tourner des modèles IA en local et ouvre les précommandes des PC NVIDIA RTX Spark. Le post Windows devient une plateforme pour agents IA : Microsoft…"
+    },
+    {
+      "id": "b621ac7a80d6",
+      "title": "Atlassian : une faille critique permet de lire des fichiers sur Jira, Confluence et Bitbucket",
+      "link": "https://www.it-connect.fr/atlassian-cve-2026-21589-faille-critique-jira-confluence-bitbucket/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-08T05:11:17+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "CVE-2026-21589 : une faille critique (9,3/10) permet de lire des fichiers sans authentification sur Jira, Confluence et Bitbucket Data Center. Patchez. Le post Atlassian : une faille critique permet de lire des…"
+    },
+    {
+      "id": "45715a1760ef",
+      "title": "SynthID Detector : Google ouvre à tous son outil pour repérer les contenus générés par IA",
+      "link": "https://www.it-connect.fr/google-synthid-detector-grand-public/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-07T16:13:51+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Google ouvre SynthID Detector à tous : l'outil vérifie si une image, une vidéo ou un audio vient de l'IA de Google, OpenAI, NVIDIA ou Kakao. Pas des autres. Le post SynthID Detector : Google ouvre à tous son outil pour…"
+    },
+    {
+      "id": "ac71c23d375e",
+      "title": "Multiples vulnérabilités dans GLPI (07 octobre 2026)",
+      "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1269/",
+      "source": "CERT-FR",
+      "kind": "Avis",
+      "date": "2026-10-07T00:00:00+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "De multiples vulnérabilités ont été découvertes dans GLPI. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données, une injection de code indirecte à distance (XSS) et un contournement de…"
+    },
     {
       "id": "1cc68b80228c",
       "title": "BYOD, prestataires : comment faire confiance à un appareil que vous ne gérez pas ?",
