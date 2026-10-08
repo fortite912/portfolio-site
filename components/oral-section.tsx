@@ -168,6 +168,16 @@ export function OralSection({ n }: { n?: number } = {}) {
             </p>
           </div>
 
+          {/* Accès direct à une compétence pendant l'entretien */}
+          <div className="flex flex-wrap gap-1.5" aria-label="Aller à une compétence">
+            {competences.map((c) => (
+              <a key={c.code} href={`#${c.code.toLowerCase()}`} className="tag-code">
+                {c.code} · {c.title.split(" ").slice(0, 3).join(" ")}
+                {c.title.split(" ").length > 3 ? "…" : ""}
+              </a>
+            ))}
+          </div>
+
           <div className="grid gap-4 md:grid-cols-2">
             {competences.map((c) => {
               const cov = COVERAGE[c.coverage];
