@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-08T12:09:12+00:00",
+  "collectedAt": "2026-10-10T11:17:22+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -39,6 +39,18 @@
     }
   ],
   "items": [
+    {
+      "id": "ba590d102ec5",
+      "title": "247 failles patchées d’un coup dans Chrome 155 : l’IA est passée par là",
+      "link": "https://www.it-connect.fr/google-chrome-155-247-failles-securite-corrigees/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-09T14:05:38+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Chrome 155 corrige 247 failles de sécurité, dont 4 critiques. Douze ont été trouvées avec l'aide de l'IA Claude. Voici les versions à installer. Le post 247 failles patchées d’un coup dans Chrome 155 : l’IA est passée…"
+    },
     {
       "id": "11c022fedeb9",
       "title": "PhotoCraft, FilmCraft, LightCraft : la suite Adobe réécrite en Rust par des agents Claude Opus 5.5",
