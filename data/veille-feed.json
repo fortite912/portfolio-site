@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-10T11:17:22+00:00",
+  "collectedAt": "2026-10-12T13:22:36+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 5
+      "retained": 4
     },
     {
       "name": "Zataz",
@@ -39,6 +39,18 @@
     }
   ],
   "items": [
+    {
+      "id": "2e213a4722e5",
+      "title": "Windows Update : certains PC et serveurs seront privés de mises à jour en 2027 à cause de certificats expirés",
+      "link": "https://www.it-connect.fr/windows-update-certificats-expiration-2027/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-12T07:25:42+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Les certificats de Windows Update expirent en mai et juin 2027. Les PC pas suffisamment à jour perdront l'accès aux mises à jour. Qui est concerné ? Le post Windows Update : certains PC et serveurs seront privés de…"
+    },
     {
       "id": "ba590d102ec5",
       "title": "247 failles patchées d’un coup dans Chrome 155 : l’IA est passée par là",
