@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-13T12:50:54+00:00",
+  "collectedAt": "2026-10-14T10:24:38+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -39,6 +39,31 @@
     }
   ],
   "items": [
+    {
+      "id": "a238a39a15a5",
+      "title": "Windows Server – RDS : comment lancer automatiquement un programme à la connexion ?",
+      "link": "https://www.it-connect.fr/rds-lancer-programme-ouverture-session/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-14T06:45:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Le RDS Windows Server ignore l'onglet Environnement de l'AD ? Voici comment lancer un programme à la connexion RDS par GPO ou via fQueryUserConfigFromDC. Le post Windows Server – RDS : comment lancer automatiquement un…"
+    },
+    {
+      "id": "7a0ea78e4c21",
+      "title": "Claude for Intune : déployer et sécuriser Claude sur iPhone et iPad en entreprise",
+      "link": "https://www.it-connect.fr/claude-for-intune-deployer-et-securiser-claude-sur-iphone-et-ipad-en-entreprise/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-13T14:45:00+00:00",
+      "themes": [
+        "ia-support",
+        "acces"
+      ],
+      "excerpt": "Claude for Intune permet de gérer l'app Claude sur iOS avec Intune : prérequis, consentement Entra ID, déploiement, stratégie APP et accès conditionnel. Le post Claude for Intune : déployer et sécuriser Claude sur…"
+    },
     {
       "id": "0b227f4c697a",
       "title": "Agent Standup : vos agents Claude Code et Codex réunis dans un appel visio pour suivre vos sessions",
