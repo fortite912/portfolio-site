@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-14T10:24:38+00:00",
+  "collectedAt": "2026-10-15T10:09:35+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -7,14 +7,14 @@
       "kind": "Alertes",
       "url": "https://www.cert.ssi.gouv.fr/alerte/feed/",
       "ok": true,
-      "retained": 7
+      "retained": 8
     },
     {
       "name": "CERT-FR",
       "kind": "Avis",
       "url": "https://www.cert.ssi.gouv.fr/avis/feed/",
       "ok": true,
-      "retained": 1
+      "retained": 0
     },
     {
       "name": "CERT-FR",
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 6
+      "retained": 5
     },
     {
       "name": "Zataz",
@@ -40,6 +40,18 @@
   ],
   "items": [
     {
+      "id": "abb5551adb2e",
+      "title": "GitLab corrige une faille critique qui permet d’exécuter du code sans authentification (CVE-2026-97229)",
+      "link": "https://www.it-connect.fr/gitlab-cve-2026-97229-faille-critique-regex-ci-cd/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-14T11:00:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "GitLab a corrigé la CVE-2026-97229, une faille critique qui permet d'exécuter du code sans authentification via une regex piégée dans une configuration CI/CD. Le post GitLab corrige une faille critique qui permet…"
+    },
+    {
       "id": "a238a39a15a5",
       "title": "Windows Server – RDS : comment lancer automatiquement un programme à la connexion ?",
       "link": "https://www.it-connect.fr/rds-lancer-programme-ouverture-session/",
@@ -50,6 +62,18 @@
         "acces"
       ],
       "excerpt": "Le RDS Windows Server ignore l'onglet Environnement de l'AD ? Voici comment lancer un programme à la connexion RDS par GPO ou via fQueryUserConfigFromDC. Le post Windows Server – RDS : comment lancer automatiquement un…"
+    },
+    {
+      "id": "29ff9e0df030",
+      "title": "Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
+      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-10-14T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique…"
     },
     {
       "id": "7a0ea78e4c21",
