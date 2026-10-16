@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-15T10:09:35+00:00",
+  "collectedAt": "2026-10-16T10:01:05+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 5
+      "retained": 3
     },
     {
       "name": "Zataz",
@@ -39,6 +39,18 @@
     }
   ],
   "items": [
+    {
+      "id": "9616430eb377",
+      "title": "Pire que la France : 8,8 millions de Danois exposés à cause du mot de passe 123456",
+      "link": "https://www.it-connect.fr/danemark-fuite-cpr-mot-de-passe-123456/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-16T09:58:24+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Un mot de passe 123456 aurait ouvert le registre CPR danois : les noms, adresses et numéros d'identité de 8,8 millions de personnes sont dans la nature. Le post Pire que la France : 8,8 millions de Danois exposés à…"
+    },
     {
       "id": "abb5551adb2e",
       "title": "GitLab corrige une faille critique qui permet d’exécuter du code sans authentification (CVE-2026-97229)",
