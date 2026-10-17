@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-16T10:01:05+00:00",
+  "collectedAt": "2026-10-17T09:33:42+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -39,6 +39,18 @@
     }
   ],
   "items": [
+    {
+      "id": "bf4139fe8ea8",
+      "title": "Windows 11 KB5127648 : la mise à jour d’octobre 2026 perturbe Smart App Control",
+      "link": "https://www.it-connect.fr/windows-11-kb5127648-smart-app-control-grise/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-16T13:59:57+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Depuis la KB5127648, Smart App Control peut rester grisé sur Windows 11. Microsoft confirme le bug et propose deux contournements, via le Registre ou une GPO. Le post Windows 11 KB5127648 : la mise à jour d’octobre…"
+    },
     {
       "id": "9616430eb377",
       "title": "Pire que la France : 8,8 millions de Danois exposés à cause du mot de passe 123456",
