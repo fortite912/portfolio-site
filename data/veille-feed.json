@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-17T09:33:42+00:00",
+  "collectedAt": "2026-10-18T09:46:09+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -35,10 +35,46 @@
       "kind": "Actualite cyber",
       "url": "https://www.zataz.com/feed/",
       "ok": true,
-      "retained": 0
+      "retained": 3
     }
   ],
   "items": [
+    {
+      "id": "a8a9e70812bb",
+      "title": "Fuite de données : la FFTir de nouveau ciblée",
+      "link": "https://www.zataz.com/fuite-de-donnees-la-fftir-de-nouveau-ciblee/",
+      "source": "Zataz",
+      "kind": "Actualite cyber",
+      "date": "2026-10-18T09:43:48+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "FFTir : un pirate vend 40 Go de données, dont des photos et certificats médicaux de licenciés sportifs."
+    },
+    {
+      "id": "45c2142607c8",
+      "title": "Phishing : une opération frappe trois kits pirate",
+      "link": "https://www.zataz.com/phishing-une-operation-frappe-trois-kits-pirate/",
+      "source": "Zataz",
+      "kind": "Actualite cyber",
+      "date": "2026-10-17T11:36:53+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Une opération vise CoGUI et deux kits de phishing, avec saisies de domaines et action judiciaire."
+    },
+    {
+      "id": "04072669b97a",
+      "title": "Doctolib : mon opposition à l’IA reste sans réponse claire",
+      "link": "https://www.zataz.com/doctolib-mon-opposition-a-lia-reste-sans-reponse-claire/",
+      "source": "Zataz",
+      "kind": "Actualite cyber",
+      "date": "2026-10-17T10:33:58+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Doctolib répond sur le marketing à une opposition à l’IA : récit, délais RGPD et droits rappelés par la CNIL."
+    },
     {
       "id": "bf4139fe8ea8",
       "title": "Windows 11 KB5127648 : la mise à jour d’octobre 2026 perturbe Smart App Control",
