@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-18T09:46:09+00:00",
+  "collectedAt": "2026-10-19T11:02:45+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,20 +28,56 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 3
+      "retained": 4
     },
     {
       "name": "Zataz",
       "kind": "Actualite cyber",
       "url": "https://www.zataz.com/feed/",
       "ok": true,
-      "retained": 3
+      "retained": 4
     }
   ],
   "items": [
     {
+      "id": "d06aaf15bd97",
+      "title": "Nouveautés Proton Pass : dossiers, contrôle du remplissage automatique, mots de passe compromis…",
+      "link": "https://www.it-connect.fr/proton-pass-dossiers-correspondance-url-mots-de-passe-compromis/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-19T08:05:11+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Proton Pass lance les dossiers, la correspondance d'URL pour le remplissage automatique et la détection locale des mots de passe compromis. Le post Nouveautés Proton Pass : dossiers, contrôle du remplissage…"
+    },
+    {
+      "id": "80c15f9c269d",
+      "title": "Ni mot de passe, ni MFA : comment des centaines de tenants Microsoft 365 ont été ouverts via ConnectWise",
+      "link": "https://www.it-connect.fr/connectwise-cloud-backup-skykick-tenants-microsoft-365-compromis/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-19T05:06:44+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Un identifiant volé chez ConnectWise a ouvert des centaines de tenants Microsoft 365, sans aucun MFA à contourner. Voici ce que les admins doivent vérifier. Le post Ni mot de passe, ni MFA : comment des centaines de…"
+    },
+    {
+      "id": "ea0ee5c4f7cb",
+      "title": "La Chine veut contrôler ses exportations d’IA",
+      "link": "https://www.zataz.com/la-chine-veut-controler-ses-exportations-dia/",
+      "source": "Zataz",
+      "kind": "Actualite cyber",
+      "date": "2026-10-18T10:29:36+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "La Chine veut encadrer les exportations de 23 technologies d’IA, sur fond de rivalité stratégique avec Washington."
+    },
+    {
       "id": "a8a9e70812bb",
-      "title": "Fuite de données : la FFTir de nouveau ciblée",
+      "title": "Fuite de données : la FFTir de nouveau ciblée ?",
       "link": "https://www.zataz.com/fuite-de-donnees-la-fftir-de-nouveau-ciblee/",
       "source": "Zataz",
       "kind": "Actualite cyber",
