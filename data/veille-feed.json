@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-19T11:02:45+00:00",
+  "collectedAt": "2026-10-20T10:15:23+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -39,6 +39,18 @@
     }
   ],
   "items": [
+    {
+      "id": "f8bf2f6e0d6a",
+      "title": "SSPR et Entra Connect Sync : Microsoft modifie le calendrier, les nouvelles dates à retenir",
+      "link": "https://www.it-connect.fr/sspr-et-entra-connect-sync-microsoft-modifie-le-calendrier-les-nouvelles-dates-a-retenir/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-19T14:20:26+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Microsoft modifie le calendrier du SSPR et d’Entra Connect Sync : méthodes d’authentification exigées en novembre 2026, arrêt de la synchro en avril 2027. Le post SSPR et Entra Connect Sync : Microsoft modifie le…"
+    },
     {
       "id": "d06aaf15bd97",
       "title": "Nouveautés Proton Pass : dossiers, contrôle du remplissage automatique, mots de passe compromis…",
