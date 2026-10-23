@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-22T10:23:26+00:00",
+  "collectedAt": "2026-10-23T10:21:10+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 3
+      "retained": 5
     },
     {
       "name": "Zataz",
@@ -39,6 +39,42 @@
     }
   ],
   "items": [
+    {
+      "id": "cd8d4959c479",
+      "title": "Réseau Tor : 333 relais de sortie compromis interceptaient les connexions SSH pour diffuser Ebury",
+      "link": "https://www.it-connect.fr/tor-relais-sortie-compromis-interception-ssh-ebury/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-23T05:26:42+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "333 relais de sortie Tor compromis redirigeaient les connexions SSH vers des serveurs pirates pour voler les mots de passe et installer le malware Ebury. Le post Réseau Tor : 333 relais de sortie compromis…"
+    },
+    {
+      "id": "f49b798e4cac",
+      "title": "Capcom piraté : 11,7 millions de comptes exposés et des mots de passe changés par l’attaquant",
+      "link": "https://www.it-connect.fr/capcom-fuite-donnees-capcom-id-11-millions-comptes/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-23T05:03:18+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Plus de 11,7 millions de comptes CAPCOM ID exposés et 196 mots de passe modifiés par un attaquant : Capcom confirme une fuite de données massive. Le post Capcom piraté : 11,7 millions de comptes exposés et des mots de…"
+    },
+    {
+      "id": "7c9a98acbc64",
+      "title": "GitLab corrige la CVE-2026-110264, une faille critique qui touche toutes les versions depuis 2014",
+      "link": "https://www.it-connect.fr/gitlab-cve-2026-110264-faille-critique-regex-onigmo/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-22T11:33:22+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "GitLab a corrigé la CVE-2026-110264, une faille critique exploitable sans authentification qui touche toutes les versions depuis la 7.0, sortie en 2014. Le post GitLab corrige la CVE-2026-110264, une faille critique…"
+    },
     {
       "id": "2a64d06c8742",
       "title": "eMudhra : des clés privées triviales forcent Mozilla, Google, Apple et Microsoft à bloquer 8 certificats",
@@ -109,7 +145,7 @@
       "themes": [
         "alerte"
       ],
-      "excerpt": "**[Mise à jours du 21 octobre 2026]** Les correctifs de sécurité sont disponibles sur le site de l'éditeur. PHP indique que les vulnérabilités CVE-2026-109618 et CVE-2026-109619 permettent à un attaquant de provoquer…"
+      "excerpt": "**[Mise à jour du 22 octobre 2026]** Le CERT-FR a connaissance de preuves de concept pour les vulnérabilités CVE-2026-109618 et CVE-2026-109619 pour des déploiements spécifique de PHP. **[Mise à jour du 21 octobre…"
     },
     {
       "id": "f8bf2f6e0d6a",
