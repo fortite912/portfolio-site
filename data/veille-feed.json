@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-23T10:21:10+00:00",
+  "collectedAt": "2026-10-24T09:42:20+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 5
+      "retained": 6
     },
     {
       "name": "Zataz",
@@ -39,6 +39,30 @@
     }
   ],
   "items": [
+    {
+      "id": "bc5763eb5bb9",
+      "title": "Pulse : les journaux d’événements de Windows facilement lisibles, avec de l’IA locale",
+      "link": "https://www.it-connect.fr/pulse-journaux-evenements-de-windows-facilement-lisibles-avec-ia-locale/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-24T05:00:00+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Pulse est un outil gratuit et open source qui traduit les journaux d'événements de Windows 10 et 11 en langage clair, avec une IA locale (Ollama, LM Studio). Le post Pulse : les journaux d’événements de Windows…"
+    },
+    {
+      "id": "80d2cb978f4e",
+      "title": "Windows 11 : avec Project Pantheon, Microsoft teste une mémoire IA qui ne retient que ce que vous choisissez",
+      "link": "https://www.it-connect.fr/windows-11-project-pantheon-context-vault-memoire-ia/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-23T13:40:12+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Microsoft teste Project Pantheon, une mémoire IA pour Windows 11 qui ne retient que ce que vous sauvegardez, avec un serveur MCP ouvert à Claude et Cursor. Le post Windows 11 : avec Project Pantheon, Microsoft teste…"
+    },
     {
       "id": "cd8d4959c479",
       "title": "Réseau Tor : 333 relais de sortie compromis interceptaient les connexions SSH pour diffuser Ebury",
