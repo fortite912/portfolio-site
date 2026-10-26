@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-24T09:42:20+00:00",
+  "collectedAt": "2026-10-26T11:21:38+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -35,10 +35,22 @@
       "kind": "Actualite cyber",
       "url": "https://www.zataz.com/feed/",
       "ok": true,
-      "retained": 3
+      "retained": 2
     }
   ],
   "items": [
+    {
+      "id": "25a8cbe6471a",
+      "title": "Tailworm : 11 failles non corrigées dans Tailscale, dont un accès root via Tailscale SSH",
+      "link": "https://www.it-connect.fr/tailworm-failles-tailscale-ssh-root-non-corrigees/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-26T10:09:21+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Avec Tailworm, Erica Windisch a publié 11 failles non corrigées dans Tailscale et Headscale, dont un accès root via Tailscale SSH. Voici comment vous protéger. Le post Tailworm : 11 failles non corrigées dans…"
+    },
     {
       "id": "bc5763eb5bb9",
       "title": "Pulse : les journaux d’événements de Windows facilement lisibles, avec de l’IA locale",
