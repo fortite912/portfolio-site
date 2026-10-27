@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-26T11:21:38+00:00",
+  "collectedAt": "2026-10-27T10:45:54+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 6
+      "retained": 8
     },
     {
       "name": "Zataz",
@@ -39,6 +39,54 @@
     }
   ],
   "items": [
+    {
+      "id": "0ec715805a83",
+      "title": "Claude Code : comprendre les modes de permission et choisir le bon",
+      "link": "https://www.it-connect.fr/claude-code-comprendre-les-modes-de-permission-et-choisir-le-bon/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-27T09:53:39+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Maîtrisez Claude Code: découvrez les 5 modes de permission, leurs cas d'usage et les risques pour faire le bon choix selon le type de projets ou tâches. Le post Claude Code : comprendre les modes de permission et…"
+    },
+    {
+      "id": "096df14b8266",
+      "title": "Photos d’identité, certificats : la Fédération française de tir piratée pour la deuxième fois en un an",
+      "link": "https://www.it-connect.fr/federation-francaise-de-tir-nouvelle-fuite-de-donnees-octobre-2026/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-27T06:16:08+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Un an après une première fuite, la Fédération française de tir a de nouveau été piratée : 64 000 photos d'identité et près de 19 000 documents dérobés. Le post Photos d’identité, certificats : la Fédération française…"
+    },
+    {
+      "id": "922b93f72f6c",
+      "title": "WPAD sous Windows : comprendre le protocole, ses risques de sécurité et le désactiver par GPO",
+      "link": "https://www.it-connect.fr/wpad-windows-securite-gpo/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-26T16:00:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "WPAD est activé par défaut sous Windows et peut servir de vecteur d'attaque. Comprenez le protocole, ses risques réels en 2026 et désactivez-le par GPO. Le post WPAD sous Windows : comprendre le protocole, ses risques…"
+    },
+    {
+      "id": "b70ddb867978",
+      "title": "WordCraft, GridCraft, DeckCraft : après Adobe, Word, Excel et PowerPoint réécrits en Rust avec l’IA",
+      "link": "https://www.it-connect.fr/wordcraft-gridcraft-deckcraft-suite-office-rust-claude/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-26T12:04:51+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "WordCraft, GridCraft et DeckCraft : trois clones open source de Word, Excel et PowerPoint écrits en Rust avec Claude Opus 5.5. Sont-ils opérationnels ? Le post WordCraft, GridCraft, DeckCraft : après Adobe, Word, Excel…"
+    },
     {
       "id": "25a8cbe6471a",
       "title": "Tailworm : 11 failles non corrigées dans Tailscale, dont un accès root via Tailscale SSH",
@@ -182,6 +230,18 @@
         "alerte"
       ],
       "excerpt": "**[Mise à jour du 22 octobre 2026]** Le CERT-FR a connaissance de preuves de concept pour les vulnérabilités CVE-2026-109618 et CVE-2026-109619 pour des déploiements spécifique de PHP. **[Mise à jour du 21 octobre…"
+    },
+    {
+      "id": "544d81cf5323",
+      "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-014/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-10-21T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "**[Mise à jour du 26 octobre 2026]** Le 23 octobre 2026, PHP a publié un avis de sécurité concernant la vulnérabilité CVE-2026-115560. Celle-ci permet une exécution de code arbitraire à distance. L'éditeur estime que…"
     },
     {
       "id": "f8bf2f6e0d6a",
@@ -328,6 +388,18 @@
       "excerpt": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique…"
     },
     {
+      "id": "1bade495e8fb",
+      "title": "Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-013/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-10-14T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique…"
+    },
+    {
       "id": "7a0ea78e4c21",
       "title": "Claude for Intune : déployer et sécuriser Claude sur iPhone et iPad en entreprise",
       "link": "https://www.it-connect.fr/claude-for-intune-deployer-et-securiser-claude-sur-iphone-et-ipad-en-entreprise/",
@@ -405,6 +477,18 @@
       "id": "bd044ee07154",
       "title": "Incident de sécurité ciblant les contrôleurs à distance des installations de réfrigération (12 octobre 2026)",
       "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-012/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-10-12T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le CERT-FR a connaissance de nombreuses compromissions des controleurs à distance d'installation de réfrigération Danfoss série AK-SM, AK-SC ainsi que Copeland xweb et Dixell xweb. De manière générale l'exposition…"
+    },
+    {
+      "id": "22c3a84151d5",
+      "title": "Incident de sécurité ciblant les contrôleurs à distance des installations de réfrigération (12 octobre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-012/",
       "source": "CERT-FR",
       "kind": "Alertes",
       "date": "2026-10-12T00:00:00+00:00",
@@ -666,6 +750,18 @@
       "excerpt": "**[Mise à jour du 05 octobre 2026]** Le 4 octobre 2026, Citrix a publié un avis concernant une nouvelle vulnérabilité (CVE-2026-88779) permettant un déni de service à distance. La CISA indique que cette vulnérabilité…"
     },
     {
+      "id": "e60719187517",
+      "title": "Multiples vulnérabilités dans Citrix NetScaler ADC et Gateway (28 septembre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-011/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-09-28T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "**[Mise à jour du 05 octobre 2026]** Le 4 octobre 2026, Citrix a publié un avis concernant une nouvelle vulnérabilité (CVE-2026-88779) permettant un déni de service à distance. La CISA indique que cette vulnérabilité…"
+    },
+    {
       "id": "5b29e6d4d665",
       "title": "Microsoft dévoile le nouveau Copilot avec Home, Code et Autopilot : l’essentiel à savoir",
       "link": "https://www.it-connect.fr/nouveau-copilot-home-code-autopilot/",
@@ -787,9 +883,33 @@
       "excerpt": "Le 06 août 2026, Metabase a publié un avis de sécurité concernant une vulnérabilité critique permettant à un attaquant non authentifié de provoquer une injection SQL (SQLi) dans la base de donnée de l'application…"
     },
     {
+      "id": "7cc8f724ca36",
+      "title": "Vulnérabilité dans Metabase (10 septembre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-010/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-09-10T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 06 août 2026, Metabase a publié un avis de sécurité concernant une vulnérabilité critique permettant à un attaquant non authentifié de provoquer une injection SQL (SQLi) dans la base de donnée de l'application…"
+    },
+    {
       "id": "8f2123c5fce7",
       "title": "Multiples vulnérabilités dans SonicWall Secure Mobile Access (02 septembre 2026)",
       "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-009/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-09-02T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 01 septembre 2026, SonicWall a publié un avis de sécurité concernant deux vulnérabilités affectant les Secure Mobile Access (SMA) 1000. La vulnérabilité critique CVE-2026-83548 permet une falsification de requêtes…"
+    },
+    {
+      "id": "4f5d5a7b54a6",
+      "title": "Multiples vulnérabilités dans SonicWall Secure Mobile Access (02 septembre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-009/",
       "source": "CERT-FR",
       "kind": "Alertes",
       "date": "2026-09-02T00:00:00+00:00",
@@ -811,6 +931,18 @@
       "excerpt": "Le 14 juillet 2026, à l'occasion de sa mise à jour mensuelle, Microsoft a publié, entre autres, des correctifs pour deux vulnérabilités critiques affectant SharePoint. Les vulnérabilités CVE-2026-50522 et…"
     },
     {
+      "id": "a5f1858b0130",
+      "title": "Multiples vulnérabilités dans Microsoft Sharepoint (22 juillet 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-008/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-07-22T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 14 juillet 2026, à l'occasion de sa mise à jour mensuelle, Microsoft a publié, entre autres, des correctifs pour deux vulnérabilités critiques affectant SharePoint. Les vulnérabilités CVE-2026-50522 et…"
+    },
+    {
       "id": "74d0ec943d25",
       "title": "Multiples vulnérabilités dans WordPress (20 juillet 2026)",
       "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-007/",
@@ -823,9 +955,33 @@
       "excerpt": "Le 17 juillet 2026, WordPress a publié un correctif pour deux vulnérabilités : CVE-2026-60137 : une injection SQL (SQLi) ; CVE-2026-63030 : celle-ci permet un contournement de la politique de sécurité. Un attaquant…"
     },
     {
+      "id": "0df251cc6d99",
+      "title": "Multiples vulnérabilités dans WordPress (20 juillet 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-007/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-07-20T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 17 juillet 2026, WordPress a publié un correctif pour deux vulnérabilités : CVE-2026-60137 : une injection SQL (SQLi) ; CVE-2026-63030 : celle-ci permet un contournement de la politique de sécurité. Un attaquant…"
+    },
+    {
       "id": "18e9caabdef7",
       "title": "Multiples vulnérabilités dans Sonicwall Secure Mobile Access (15 juillet 2026)",
       "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-006/",
+      "source": "CERT-FR",
+      "kind": "Alertes",
+      "date": "2026-07-15T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 14 juillet 2026, Sonicwall a publié un avis de sécurité concernant deux vulnérabilités affectant les Secure Mobile Access (SMA) 1000. La vulnérabilité critique CVE-2026-15409 permet une falsification de requêtes…"
+    },
+    {
+      "id": "1855bd2143d4",
+      "title": "Multiples vulnérabilités dans Sonicwall Secure Mobile Access (15 juillet 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-006/",
       "source": "CERT-FR",
       "kind": "Alertes",
       "date": "2026-07-15T00:00:00+00:00",
