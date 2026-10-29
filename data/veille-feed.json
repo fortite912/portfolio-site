@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-28T11:28:37+00:00",
+  "collectedAt": "2026-10-29T11:38:52+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 8
+      "retained": 6
     },
     {
       "name": "Zataz",
@@ -39,6 +39,18 @@
     }
   ],
   "items": [
+    {
+      "id": "0beaf773fecb",
+      "title": "Ginux : avec l’IA, le fondateur de CentOS crée en 11 jours un noyau Rust compatible Linux",
+      "link": "https://www.it-connect.fr/ginux-noyau-rust-ia-fondateur-centos-rocky-linux/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-29T06:33:41+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Le fondateur de CentOS et Rocky Linux dévoile Ginux, un noyau en Rust compatible Linux (mais qui n'est pas Linux), développé avec l'aide de l'IA en 11 jours. Le post Ginux : avec l’IA, le fondateur de CentOS crée en 11…"
+    },
     {
       "id": "b69d696349ee",
       "title": "Veeam Backup & Replication 13 (CVE-2026-108142) : une faille critique exploitable sans authentification",
@@ -982,18 +994,6 @@
       "id": "74d0ec943d25",
       "title": "Multiples vulnérabilités dans WordPress (20 juillet 2026)",
       "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-007/",
-      "source": "CERT-FR",
-      "kind": "Alertes",
-      "date": "2026-07-20T00:00:00+00:00",
-      "themes": [
-        "alerte"
-      ],
-      "excerpt": "Le 17 juillet 2026, WordPress a publié un correctif pour deux vulnérabilités : CVE-2026-60137 : une injection SQL (SQLi) ; CVE-2026-63030 : celle-ci permet un contournement de la politique de sécurité. Un attaquant…"
-    },
-    {
-      "id": "0df251cc6d99",
-      "title": "Multiples vulnérabilités dans WordPress (20 juillet 2026)",
-      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-007/",
       "source": "CERT-FR",
       "kind": "Alertes",
       "date": "2026-07-20T00:00:00+00:00",
