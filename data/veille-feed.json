@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-10-30T11:30:07+00:00",
+  "collectedAt": "2026-10-31T11:01:45+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -14,7 +14,7 @@
       "kind": "Avis",
       "url": "https://www.cert.ssi.gouv.fr/avis/feed/",
       "ok": true,
-      "retained": 1
+      "retained": 0
     },
     {
       "name": "CERT-FR",
@@ -28,7 +28,7 @@
       "kind": "Blog technique",
       "url": "https://www.it-connect.fr/feed/",
       "ok": true,
-      "retained": 4
+      "retained": 5
     },
     {
       "name": "Zataz",
@@ -39,6 +39,31 @@
     }
   ],
   "items": [
+    {
+      "id": "d578a1aba5f2",
+      "title": "Claude Code : une version piégée de l’extension a ouvert une porte dérobée SSH chez des utilisateurs de Cursor",
+      "link": "https://www.it-connect.fr/claude-code-extension-cursor-porte-derobee-ssh/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-30T16:43:42+00:00",
+      "themes": [
+        "ia-support",
+        "acces"
+      ],
+      "excerpt": "Diffusée via Cursor, la version 2.1.313 de Claude Code installait la clé SSH d’un attaquant et un tunnel persistant. Voici comment vérifier si vous êtes touché. Le post Claude Code : une version piégée de l’extension a…"
+    },
+    {
+      "id": "80ac56d2f7a8",
+      "title": "Le PAM face au défi des identités non humaines",
+      "link": "https://www.it-connect.fr/le-pam-face-au-defi-des-identites-non-humaines/",
+      "source": "IT Connect",
+      "kind": "Blog technique",
+      "date": "2026-10-30T16:15:00+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Le PAM face aux identités non humaines : comment limiter les droits des agents IA et des comptes de service, et tracer leurs actions. Le post Le PAM face au défi des identités non humaines a été publié sur IT-Connect ."
+    },
     {
       "id": "3ffab2b424af",
       "title": "Claude Code : à quoi sert la commande /compact et quand l’utiliser à la main",
@@ -977,30 +1002,6 @@
         "alerte"
       ],
       "excerpt": "Le 06 août 2026, Metabase a publié un avis de sécurité concernant une vulnérabilité critique permettant à un attaquant non authentifié de provoquer une injection SQL (SQLi) dans la base de donnée de l'application…"
-    },
-    {
-      "id": "8f2123c5fce7",
-      "title": "Multiples vulnérabilités dans SonicWall Secure Mobile Access (02 septembre 2026)",
-      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-009/",
-      "source": "CERT-FR",
-      "kind": "Alertes",
-      "date": "2026-09-02T00:00:00+00:00",
-      "themes": [
-        "alerte"
-      ],
-      "excerpt": "Le 01 septembre 2026, SonicWall a publié un avis de sécurité concernant deux vulnérabilités affectant les Secure Mobile Access (SMA) 1000. La vulnérabilité critique CVE-2026-83548 permet une falsification de requêtes…"
-    },
-    {
-      "id": "4f5d5a7b54a6",
-      "title": "Multiples vulnérabilités dans SonicWall Secure Mobile Access (02 septembre 2026)",
-      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-009/",
-      "source": "CERT-FR",
-      "kind": "Alertes",
-      "date": "2026-09-02T00:00:00+00:00",
-      "themes": [
-        "alerte"
-      ],
-      "excerpt": "Le 01 septembre 2026, SonicWall a publié un avis de sécurité concernant deux vulnérabilités affectant les Secure Mobile Access (SMA) 1000. La vulnérabilité critique CVE-2026-83548 permet une falsification de requêtes…"
     }
   ]
 }
