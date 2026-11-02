@@ -225,6 +225,46 @@ export const veilleE5: Veille = {
     ],
     exclu: "les piratages et les failles sans lien avec la connexion des utilisateurs.",
   },
+  choix: {
+    ecartes: [
+      {
+        sujet: "La cybersécurité en général",
+        raison:
+          "Trop large : des centaines d'articles par mois. Impossible de tout suivre sérieusement chaque semaine.",
+      },
+      {
+        sujet: "L'intelligence artificielle en général",
+        raison:
+          "Trop d'actualité sans rapport avec le support : avant de préciser le sujet, 41 des 80 articles relevés étaient classés « IA » ; avec le sujet précis, il en reste 3.",
+      },
+      {
+        sujet: "Le cloud ou les réseaux",
+        raison:
+          "Pas de lien direct avec mon stage ni avec mon projet : je ne pourrais pas confronter ce que je lis à ce que je fais.",
+      },
+    ],
+    raisons: [
+      {
+        titre: "Mon stage à la DISI de CentraleSupélec",
+        detail:
+          "J'y ai mis en place la double authentification et utilisé GLPI et Request Tracker. Je suis ces outils dans ma veille.",
+      },
+      {
+        titre: "Mon projet Soveris",
+        detail:
+          "Il trie déjà les demandes d'aide informatique : ce que j'apprends sur l'IA au support, je peux le tester dessus.",
+      },
+      {
+        titre: "Mon option SISR",
+        detail:
+          "Le sujet 2 sert aussi l'épreuve E7 (cybersécurité), où le référentiel demande d'identifier les failles « grâce à une activité de veille sur les vulnérabilités ».",
+      },
+      {
+        titre: "Un sujet que je peux suivre chaque semaine",
+        detail: "Assez précis pour lire vraiment ce qui sort, au lieu de survoler une avalanche d'articles.",
+      },
+    ],
+  },
   syntheses: [],
   bilans: [],
 };

@@ -196,12 +196,19 @@ export type VeilleBilan = {
   changements: string;
 };
 
+/** Justification du choix des sujets, face aux sujets écartés. */
+export type VeilleChoix = {
+  ecartes: Array<{ sujet: string; raison: string }>;
+  raisons: Array<{ titre: string; detail: string }>;
+};
+
 export type Veille = {
   epreuve: string;
   competence: string;
   status: "À venir" | "En cours" | "Prêt";
   themePrincipal: VeilleThemeSpec;
   themeSecondaire: VeilleThemeSpec;
+  choix: VeilleChoix;
   syntheses: VeilleSynthese[];
   bilans: VeilleBilan[];
 };

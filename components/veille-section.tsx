@@ -5,6 +5,8 @@ import type { VeilleThemeSpec } from "@/lib/types";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { SectionNum } from "@/components/doc-meta";
 import { VeilleSteps } from "@/components/veille-steps";
+import { VeilleChoix } from "@/components/veille-choix";
+import { VeillePlanning } from "@/components/veille-planning";
 import { VeilleRecent } from "@/components/veille-recent";
 import { VeilleJournal } from "@/components/veille-journal";
 import { VeilleSources } from "@/components/veille-sources";
@@ -70,11 +72,13 @@ function SubjectCard({
  * lisible sans connaissance technique :
  *   1. ce qu'est cette veille, où elle en est, avec les chiffres ;
  *   2. mes deux sujets, ce que j'inclus et ce que je laisse de côté ;
- *   3. ma méthode en 10 étapes, regroupées en trois temps ;
- *   4. ce que le programme a trouvé récemment, par sujet ;
- *   5. ce que j'en retiens (revues, résumés, bilans) ;
- *   6. mes sources, par sujet ;
- *   7. les détails techniques, fermés par défaut.
+ *   3. pourquoi ces sujets plutôt que d'autres ;
+ *   4. ma méthode en 10 étapes, regroupées en trois temps ;
+ *   5. mon planning jusqu'à l'épreuve ;
+ *   6. ce que le programme a trouvé récemment, par sujet ;
+ *   7. ce que j'en retiens (revues, résumés, bilans) ;
+ *   8. mes sources, par sujet ;
+ *   9. les détails techniques, fermés par défaut.
  * n : numéro dans le sommaire de la page ; absent sur une page seule.
  */
 export async function VeilleSection({ n }: { n?: number } = {}) {
@@ -129,7 +133,11 @@ export async function VeilleSection({ n }: { n?: number } = {}) {
           </div>
         </div>
 
+        <VeilleChoix />
+
         <VeilleSteps steps={steps} />
+
+        <VeillePlanning />
 
         <VeilleRecent feed={feed} />
 
