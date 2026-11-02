@@ -1,131 +1,537 @@
 {
-  "collectedAt": "2026-10-31T11:01:45+00:00",
+  "collectedAt": "2026-11-02T08:39:27+00:00",
+  "lastAddedAt": "2026-11-02T08:39:27+00:00",
   "windowDays": 120,
   "sources": [
     {
+      "id": "certfr-alertes",
       "name": "CERT-FR",
       "kind": "Alertes",
-      "url": "https://www.cert.ssi.gouv.fr/alerte/feed/",
+      "type": "Institutionnel",
+      "lang": "fr",
+      "url": "https://www.cert.cyber.gouv.fr/alerte/feed/",
+      "site": "https://www.cert.cyber.gouv.fr/",
+      "since": "2026-09-23",
+      "why": "Alertes officielles de l'ANSSI : une alerte concerne toujours un administrateur, elle est gardée d'office.",
+      "always": [
+        "alerte"
+      ],
       "ok": true,
-      "retained": 9
+      "lastItem": "2026-10-21T00:00:00+00:00"
     },
     {
+      "id": "certfr-avis",
       "name": "CERT-FR",
       "kind": "Avis",
-      "url": "https://www.cert.ssi.gouv.fr/avis/feed/",
+      "type": "Institutionnel",
+      "lang": "fr",
+      "url": "https://www.cert.cyber.gouv.fr/avis/feed/",
+      "site": "https://www.cert.cyber.gouv.fr/",
+      "since": "2026-09-23",
+      "why": "Avis de vulnérabilité : seuls ceux qui touchent les thèmes suivis sont retenus.",
       "ok": true,
-      "retained": 0
+      "lastItem": "2026-10-30T00:00:00+00:00"
     },
     {
-      "name": "CERT-FR",
-      "kind": "Actualite",
-      "url": "https://www.cert.ssi.gouv.fr/actualite/feed/",
-      "ok": true,
-      "retained": 0
-    },
-    {
+      "id": "itconnect",
       "name": "IT Connect",
       "kind": "Blog technique",
+      "type": "Presse spécialisée",
+      "lang": "fr",
       "url": "https://www.it-connect.fr/feed/",
+      "site": "https://www.it-connect.fr/",
+      "since": "2026-09-23",
+      "why": "Actualité et tutoriels d'administration systèmes et réseaux, en français.",
       "ok": true,
-      "retained": 5
+      "lastItem": "2026-11-02T08:29:17+00:00"
     },
     {
+      "id": "zataz",
       "name": "Zataz",
-      "kind": "Actualite cyber",
+      "kind": "Actualité cyber",
+      "type": "Presse spécialisée",
+      "lang": "fr",
       "url": "https://www.zataz.com/feed/",
+      "site": "https://www.zataz.com/",
+      "since": "2026-09-23",
+      "why": "Incidents et fuites de données : hameçonnage, vols d'identifiants.",
       "ok": true,
-      "retained": 2
+      "lastItem": "2026-10-24T23:00:29+00:00"
+    },
+    {
+      "id": "cybermalveillance",
+      "name": "Cybermalveillance.gouv.fr",
+      "kind": "Actualités",
+      "type": "Institutionnel",
+      "lang": "fr",
+      "url": "https://www.cybermalveillance.gouv.fr/feed/atom-flux-actualites",
+      "site": "https://www.cybermalveillance.gouv.fr/",
+      "since": "2026-11-02",
+      "why": "Arnaques et hameçonnage côté utilisateurs : matière pour la sensibilisation faite en support.",
+      "ok": true,
+      "lastItem": "2026-10-27T17:11:57+00:00"
+    },
+    {
+      "id": "ms-entra",
+      "name": "Microsoft Entra",
+      "kind": "Blog éditeur",
+      "type": "Éditeur",
+      "lang": "en",
+      "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=microsoft-entra-blog",
+      "site": "https://techcommunity.microsoft.com/category/microsoft-security/blog/microsoft-entra-blog",
+      "since": "2026-11-02",
+      "why": "Identité, MFA et accès conditionnel chez Microsoft : prolonge le déploiement MFA du stage.",
+      "ok": true,
+      "lastItem": "2026-10-30T19:54:24+00:00"
+    },
+    {
+      "id": "ms-security",
+      "name": "Microsoft Security",
+      "kind": "Blog éditeur",
+      "type": "Éditeur",
+      "lang": "en",
+      "url": "https://www.microsoft.com/en-us/security/blog/feed/",
+      "site": "https://www.microsoft.com/en-us/security/blog/",
+      "since": "2026-11-02",
+      "why": "Analyses d'attaques sur les identités, l'Active Directory et les certificats.",
+      "ok": true,
+      "lastItem": "2026-10-31T01:02:57+00:00"
+    },
+    {
+      "id": "itsm-tools",
+      "name": "ITSM.tools",
+      "kind": "Blog spécialisé",
+      "type": "Presse spécialisée",
+      "lang": "en",
+      "url": "https://itsm.tools/feed/",
+      "site": "https://itsm.tools/",
+      "since": "2026-11-02",
+      "why": "Seul média testé qui traite régulièrement de l'IA au service desk et dans l'ITSM : le cœur du thème principal.",
+      "ok": true,
+      "lastItem": "2026-10-29T09:41:25+00:00"
+    },
+    {
+      "id": "spiceworks-ia",
+      "name": "Spiceworks",
+      "kind": "Communauté — IA",
+      "type": "Communauté",
+      "lang": "en",
+      "url": "https://community.spiceworks.com/tag/artificial-intelligence.rss",
+      "site": "https://community.spiceworks.com/tag/artificial-intelligence",
+      "since": "2026-11-02",
+      "why": "Retours de techniciens et d'administrateurs sur l'IA dans leur travail quotidien : le terrain, pas les annonces.",
+      "ok": true,
+      "lastItem": "2026-10-30T12:37:49+00:00"
+    },
+    {
+      "id": "glpi",
+      "name": "GLPI",
+      "kind": "Versions",
+      "type": "Outil",
+      "lang": "en",
+      "url": "https://github.com/glpi-project/glpi/releases.atom",
+      "site": "https://github.com/glpi-project/glpi/releases",
+      "since": "2026-11-02",
+      "why": "Outil de gestion de parc et de tickets utilisé en stage : chaque version, surtout de sécurité, est à connaître.",
+      "always": [
+        "outils"
+      ],
+      "ok": true,
+      "lastItem": "2026-10-28T11:08:24+00:00"
+    },
+    {
+      "id": "request-tracker",
+      "name": "Request Tracker",
+      "kind": "Versions",
+      "type": "Outil",
+      "lang": "en",
+      "url": "https://github.com/bestpractical/rt/releases.atom",
+      "site": "https://github.com/bestpractical/rt/releases",
+      "since": "2026-11-02",
+      "why": "Outil de ticketing utilisé en stage à la DISI : versions et correctifs de sécurité.",
+      "always": [
+        "outils"
+      ],
+      "ok": true,
+      "lastItem": "2026-10-29T21:09:41+00:00"
     }
   ],
+  "manualSources": [
+    {
+      "name": "ANSSI",
+      "kind": "Guides et recommandations",
+      "site": "https://cyber.gouv.fr/",
+      "since": "2026-09-23",
+      "why": "Guides de durcissement (authentification, Active Directory, SSH). Pas de flux exploitable : consulté directement ; ses alertes arrivent par le CERT-FR."
+    },
+    {
+      "name": "CNIL",
+      "kind": "Réglementation",
+      "site": "https://www.cnil.fr/",
+      "since": "2026-11-02",
+      "why": "Cadre légal des données personnelles traitées par un outil de support ou une IA. Lu à la main : son flux, généraliste (agenda, droits des personnes, sanctions), touche rarement mes thèmes."
+    }
+  ],
+  "rules": {
+    "ia-support": {
+      "label": "IA & support N1",
+      "rule": "Un signal IA ET un contexte support ou exploitation. « IA », « AI » ou « Claude » ne comptent que dans le titre.",
+      "patterns": {
+        "Signal IA": [
+          "\\bIA\\b",
+          "\\bAI\\b",
+          "\\bLLMs?\\b",
+          "\\bGPT",
+          "\\bAIOps\\b",
+          "\\bgenAI\\b",
+          "\\bAI-(?:assisted|powered|driven)\\b",
+          "intelligence artificielle",
+          "artificial intelligence",
+          "chatgpt",
+          "copilot",
+          "\\bclaude\\b",
+          "\\bmistral\\b",
+          "\\bollama\\b",
+          "\\bgemini\\b",
+          "chatbots?",
+          "\\bagents? (?:ia|autonomes?|conversationnels?)\\b",
+          "\\b(?:ai|autonomous) agents?\\b",
+          "\\bagenti(?:que|c)\\b",
+          "assistants? (?:virtuels?|ia)\\b",
+          "virtual assistants?",
+          "apprentissage automatique",
+          "machine learning",
+          "agents? (?:virtuels?|conversationnels?)",
+          "virtual agents?",
+          "now assist"
+        ],
+        "Contexte support / exploitation": [
+          "\\bITSM\\b",
+          "\\bGLPI\\b",
+          "\\bN1\\b",
+          "\\bMDM\\b",
+          "\\bIT support\\b",
+          "\\bITOps\\b",
+          "help ?desk",
+          "service ?desk",
+          "centre de services",
+          "servicenow",
+          "\\bzendesk\\b",
+          "freshservice",
+          "jira service management",
+          "\\bzammad\\b",
+          "support (?:informatique|utilisateurs?|aux utilisateurs|technique|de niveau|N[12]|IT)",
+          "assistance (?:aux )?utilisateurs",
+          "niveau 1",
+          "\\b(?:tier|level)[ -]?1\\b",
+          "first[- ]line support",
+          "\\btickets?\\b",
+          "ticketing",
+          "(?:gestion|tri|traitement|r[ée]solution) des (?:incidents|demandes|tickets)",
+          "incident management",
+          "service management",
+          "gestion des services (?:informatiques|IT)",
+          "IT operations",
+          "exploitation (?:IT|informatique)",
+          "auto-?rem[ée]diation",
+          "base de connaissances?",
+          "knowledge base",
+          "journaux d.[ée]v[ée]nements",
+          "journaux syst[eè]me",
+          "event logs?",
+          "\\blogs\\b",
+          "supervision",
+          "\\bmonitoring\\b",
+          "observabilit[ée]",
+          "\\bobservability\\b",
+          "(?<![a-zé])surveill(?:er|ance)\\b(?! de masse)",
+          "d[ée]pannage",
+          "troubleshooting",
+          "\\bintune\\b",
+          "administrateurs? syst[eè]mes?",
+          "sysadmins?",
+          "postes? de travail",
+          "\\bendpoints?\\b",
+          "\\bGPO\\b",
+          "strat[ée]gies? de groupe",
+          "group polic(?:y|ies)"
+        ]
+      }
+    },
+    "acces": {
+      "label": "Accès & authentification",
+      "rule": "Un motif fort, ou un motif faible (GPO, TLS, certificats, hameçonnage) dans le titre ou avec un autre motif. Les formules qui décrivent une faille (« sans authentification », « contournement de l'authentification »…) et les faux amis (« certificats médicaux », « photo d'identité ») sont retirées avant la recherche.",
+      "patterns": {
+        "Motifs": [
+          "\\bMFA\\b",
+          "\\b2FA\\b",
+          "\\bSSH\\b",
+          "\\bPKI\\b",
+          "\\bTLS\\b",
+          "\\bLDAP\\b",
+          "\\bAD DS\\b",
+          "\\bAD CS\\b",
+          "\\bGPO\\b",
+          "\\bNTLM\\b",
+          "\\bPAM\\b",
+          "\\bIAM\\b",
+          "\\bSSO\\b",
+          "\\bFIDO2?\\b",
+          "\\bTOTP\\b",
+          "multifacteurs?",
+          "multi-?factor",
+          "double authentification",
+          "authentification",
+          "\\bauthentication\\b",
+          "certificat(?:s|e|es)?\\b",
+          "active directory",
+          "\\bentra\\b",
+          "kerberos",
+          "mots? de passe",
+          "hame[cç]onnage",
+          "phishing",
+          "passkeys?",
+          "cl[ée]s? d.acc[eè]s",
+          "acc[eè]s conditionnel",
+          "conditional access",
+          "gestion des identit[ée]s",
+          "identity (?:and access|management|protection)",
+          "identit[ée]s? (?:non humaines?|num[ée]riques?)",
+          "identifiants? (?:vol[ée]s|de connexion)",
+          "infostealers?",
+          "comptes? de service",
+          "comptes? (?:à|a) privil[eè]ges",
+          "identit[ée]s? de service",
+          "vol (?:de )?(?:leurs |ses |des )?identifiants"
+        ],
+        "Formules retirées": [
+          "(?:sans|avant|pr[ée]-?)\\s*authentification",
+          "non[- ]authentifi\\w*",
+          "contournement de (?:l.)?authentification",
+          "\\bunauthenticated\\b",
+          "\\bpre-?auth(?:entication)?\\b",
+          "without authentication",
+          "authentication bypass",
+          "certificats? m[ée]dicaux?",
+          "photos? d.identit[ée]"
+        ]
+      }
+    },
+    "outils": {
+      "label": "Outils du support",
+      "rule": "Article qui cite GLPI ou Request Tracker, outils de support utilisés en stage, ou nouvelle version de ces outils (préversions ignorées).",
+      "patterns": {
+        "Motifs": [
+          "\\bGLPI\\b",
+          "request tracker"
+        ]
+      }
+    },
+    "alerte": {
+      "label": "Alerte CERT-FR",
+      "rule": "Toute alerte du CERT-FR est gardée, même hors des deux thèmes : une alerte concerne toujours un administrateur.",
+      "patterns": {}
+    }
+  },
   "items": [
     {
-      "id": "d578a1aba5f2",
+      "id": "f9278250a658",
+      "title": "Création, connexion, session, récupération : où sont les failles de votre gestion des identités ?",
+      "link": "https://www.it-connect.fr/creation-connexion-session-recuperation-ou-sont-les-failles-de-votre-gestion-des-identites/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-02T06:00:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Création, connexion, session, récupération : les 4 moments clés où une identité se fait compromettre, avec des cas réels et les réponses possibles. Le post Création, connexion, session, récupération : où sont les…",
+      "text": "Création, connexion, session, récupération : les 4 moments clés où une identité se fait compromettre, avec des cas réels et les réponses possibles. Le post Création, connexion, session, récupération : où sont les failles de votre gestion des identités ? a été publié sur IT-Connect ."
+    },
+    {
+      "id": "d2cad99ead04",
+      "title": "Inside a malicious Claude Code-branded extension and its persistent SSH backdoor",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/",
+      "source": "Microsoft Security",
+      "sourceId": "ms-security",
+      "kind": "Blog éditeur",
+      "date": "2026-10-31T01:02:57+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Microsoft analyzes a malicious Claude Code–branded extension, its persistent SSH backdoor, and guidance to detect and remediate it. The post Inside a malicious Claude Code-branded extension and its persistent SSH…",
+      "text": "Microsoft analyzes a malicious Claude Code–branded extension, its persistent SSH backdoor, and guidance to detect and remediate it. The post Inside a malicious Claude Code-branded extension and its persistent SSH backdoor appeared first on Microsoft Security Blog .",
+      "backfill": true
+    },
+    {
+      "id": "cd8e19c60c2b",
+      "title": "AI agents are coming—are your identity controls prepared?",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-agents-are-coming-are-your-identity-controls-prepared/ba-p/4515964",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-10-30T19:54:24+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "AI is reshaping identity risk. Attackers now use AI to automate phishing, social engineering, and privilege escalation, making credential theft faster and more convincing than ever. SMS codes and push approvals can be…",
+      "text": "AI is reshaping identity risk. Attackers now use AI to automate phishing, social engineering, and privilege escalation, making credential theft faster and more convincing than ever. SMS codes and push approvals can be intercepted, while standing privileges give attackers reach far beyond a single account. On the other hand, as organizations adopt AI agents, identity risk grows exponentially. Securing agent identities is critical to maintaining trust and control. The same principles that protect user identities must now extend to every agent identity. Reinforcing the principles Microsoft’s recently published guidance, Secure identity to get ready for AI , reinforces key principles for securing identities: move users and administrators to phishing-resistant multifactor authentication (MFA), eliminate standing privileges with Microsoft Entra Privileged Identity Management (PIM), and extend a unified policy engine to govern every identity. Putting the principles into practice Implement these principles in sequence to strengthen your Zero Trust foundation and secure every identity, starting with the accounts and controls you already manage: Move users and admins to phishing-resistant MFA. Protect privileged accounts first by requiring MFA for every administrator and moving them to device-bound passkeys or FIDO2 security keys. Plan a phishing-resistant, passwordless authentication rollout across your workforce using methods such as Windows Hello for Business, device-bound…",
+      "backfill": true
+    },
+    {
+      "id": "6c2caffc6654",
       "title": "Claude Code : une version piégée de l’extension a ouvert une porte dérobée SSH chez des utilisateurs de Cursor",
       "link": "https://www.it-connect.fr/claude-code-extension-cursor-porte-derobee-ssh/",
       "source": "IT Connect",
+      "sourceId": "itconnect",
       "kind": "Blog technique",
       "date": "2026-10-30T16:43:42+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Diffusée via Cursor, la version 2.1.313 de Claude Code installait la clé SSH d’un attaquant et un tunnel persistant. Voici comment vérifier si vous êtes touché. Le post Claude Code : une version piégée de l’extension a…",
+      "text": "Diffusée via Cursor, la version 2.1.313 de Claude Code installait la clé SSH d’un attaquant et un tunnel persistant. Voici comment vérifier si vous êtes touché. Le post Claude Code : une version piégée de l’extension a ouvert une porte dérobée SSH chez des utilisateurs de Cursor a été publié sur IT-Connect ."
+    },
+    {
+      "id": "db741a65717d",
+      "title": "Le PAM face au défi des identités non humaines",
+      "link": "https://www.it-connect.fr/le-pam-face-au-defi-des-identites-non-humaines/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-10-30T16:15:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Le PAM face aux identités non humaines : comment limiter les droits des agents IA et des comptes de service, et tracer leurs actions. Le post Le PAM face au défi des identités non humaines a été publié sur IT-Connect .",
+      "text": "Le PAM face aux identités non humaines : comment limiter les droits des agents IA et des comptes de service, et tracer leurs actions. Le post Le PAM face au défi des identités non humaines a été publié sur IT-Connect ."
+    },
+    {
+      "id": "09258de2e665",
+      "title": "From help desk impersonation to AD CS abuse: Investigating ESC1 and ESC8 intrusion paths",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/",
+      "source": "Microsoft Security",
+      "sourceId": "ms-security",
+      "kind": "Blog éditeur",
+      "date": "2026-10-30T16:11:44+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Teams support impersonation led to remote access, malicious runtime execution, and Certificate Services abuse through authentication relay and Kerberos. The post From help desk impersonation to AD CS abuse:…",
+      "text": "Teams support impersonation led to remote access, malicious runtime execution, and Certificate Services abuse through authentication relay and Kerberos. The post From help desk impersonation to AD CS abuse: Investigating ESC1 and ESC8 intrusion paths appeared first on Microsoft Security Blog .",
+      "backfill": true
+    },
+    {
+      "id": "35223ac666a2",
+      "title": "Request Tracker 6.0.4",
+      "link": "https://github.com/bestpractical/rt/releases/tag/rt-6.0.4",
+      "source": "Request Tracker",
+      "sourceId": "request-tracker",
+      "kind": "Versions",
+      "date": "2026-10-29T21:09:41+00:00",
+      "themes": [
+        "outils",
+        "acces"
+      ],
+      "excerpt": "RT 6.0.4 -- 2026-10-29 RT 6.0.4 is now available for general use. This release addresses many security issues and it is recommended that all users upgrade as soon as possible. See below for details. In addition to the…",
+      "text": "RT 6.0.4 -- 2026-10-29 RT 6.0.4 is now available for general use. This release addresses many security issues and it is recommended that all users upgrade as soon as possible. See below for details. In addition to the security updates, this release includes many new features and updates. The ticket Attachments widget and the ticket and asset Links widgets are rebuilt with search, filtering, and new ways to manage attachments and links. The lifecycle editor is updated, and a new lifecycle viewer widget shows the available statuses and lets users change status by clicking the graph. New authentication features include TOTP multi-factor authentication, configurable password policies, and self-service password reset. And there are many more updates, improvements, and fixes. https://download.bestpractical.com/pub/rt/release/rt-6.0.4.tar.gz https://download.bestpractical.com/pub/rt/release/rt-6.0.4.tar.gz.asc SHA-256 sums 0db34899b0462e63c15d0cb23308deac1fe0b84104c65c1e528fedeb52fc33e3 rt-6.0.4.tar.gz e178d015a3cb9fdb52dccdc82fa258efb9189a5119412f04ad272b6a52fbea47 rt-6.0.4.tar.gz.asc Security The following security issues are fixed in this release. Thanks to CERT Polska for reporting the following findings. RT 6.0 is vulnerable to an authorization bypass in ticket forwarding. A user with the ForwardMessage right on any ticket can email the content and attachments of any transaction in RT, including on tickets they cannot see, to an address of their choosing. This vulnerability…",
+      "backfill": true
+    },
+    {
+      "id": "3a498a9f7cd2",
+      "title": "Request Tracker 5.0.11",
+      "link": "https://github.com/bestpractical/rt/releases/tag/rt-5.0.11",
+      "source": "Request Tracker",
+      "sourceId": "request-tracker",
+      "kind": "Versions",
+      "date": "2026-10-29T21:06:40+00:00",
+      "themes": [
+        "outils",
+        "acces"
+      ],
+      "excerpt": "RT 5.0.11 -- 2026-10-29 RT 5.0.11 is now available for general use. This release addresses many security issues and it is recommended that all users upgrade as soon as possible. See below for details. In addition to…",
+      "text": "RT 5.0.11 -- 2026-10-29 RT 5.0.11 is now available for general use. This release addresses many security issues and it is recommended that all users upgrade as soon as possible. See below for details. In addition to the security updates, this release adds new authentication features: TOTP multi-factor authentication, configurable password policies, and self-service password reset. https://download.bestpractical.com/pub/rt/release/rt-5.0.11.tar.gz https://download.bestpractical.com/pub/rt/release/rt-5.0.11.tar.gz.asc SHA-256 sums f8e9e631938acb37f9cb0189ae63c22009ddd1519041eae79cc55ac337273476 rt-5.0.11.tar.gz d4d0003d012c2733bc54aaa2108ba30477e2022290e026603fc7803670fbae1e rt-5.0.11.tar.gz.asc Security The following security issues are fixed in this release. Thanks to CERT Polska for reporting the following findings. RT 5.0 is vulnerable to an authorization bypass in ticket forwarding. A user with the ForwardMessage right on any ticket can email the content and attachments of any transaction in RT, including on tickets they cannot see, to an address of their choosing. This vulnerability is assigned CVE-2026-108270. RT 5.0.4 and later are vulnerable to cross-site request forgery via the URL shortener. A crafted short link followed by an administrator can make rights changes as that administrator, including granting SuperUser. This vulnerability is assigned CVE-2026-108279. RT 5.0 is vulnerable to information disclosure via RSS feed URLs. The authentication string in a feed…",
+      "backfill": true
+    },
+    {
+      "id": "451972465444",
+      "title": "How are you using ChatGPT for everyday IT tasks? Sharing my prompt structure",
+      "link": "https://community.spiceworks.com/t/how-are-you-using-chatgpt-for-everyday-it-tasks-sharing-my-prompt-structure/1259225",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-10-28T18:33:21+00:00",
       "themes": [
         "ia-support",
         "acces"
       ],
-      "excerpt": "Diffusée via Cursor, la version 2.1.313 de Claude Code installait la clé SSH d’un attaquant et un tunnel persistant. Voici comment vérifier si vous êtes touché. Le post Claude Code : une version piégée de l’extension a…"
+      "excerpt": "Hi everyone, I’m new to the community. I’ve been experimenting with using ChatGPT to speed up routine IT work, and I’ve found that the quality of the answer depends almost entirely on how the prompt is written. A…",
+      "text": "Hi everyone, I’m new to the community. I’ve been experimenting with using ChatGPT to speed up routine IT work, and I’ve found that the quality of the answer depends almost entirely on how the prompt is written. A structure that works well for me: Role: “Act as a Windows sysadmin with 10 years of experience.” Task: “Write a PowerShell script to list all users who haven’t logged in for 90 days.” Context: “Active Directory environment, Windows Server 2019.” Format: “Give the script, then a short explanation of each section.” Limits: “Don’t make changes, read-only output only.” Where it has saved me time: Drafting helpdesk replies and user instructions Writing first-draft documentation and SOPs Explaining error messages in plain language Generating script outlines (always tested in a lab first) A caution: never paste passwords, internal IPs, or customer data into public AI tools, and always review anything before running it in production. Curious how others here are using AI at work: What tasks do you trust it with, and which ones do you avoid? Does your company have a policy on AI tools? 10 posts - 10 participants Read full topic",
+      "backfill": true
     },
     {
-      "id": "80ac56d2f7a8",
-      "title": "Le PAM face au défi des identités non humaines",
-      "link": "https://www.it-connect.fr/le-pam-face-au-defi-des-identites-non-humaines/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-30T16:15:00+00:00",
+      "id": "7370131e2bda",
+      "title": "Today's articles: Who pays for AI cuts and an AI pilot checklist",
+      "link": "https://community.spiceworks.com/t/todays-articles-who-pays-for-ai-cuts-and-an-ai-pilot-checklist/1259210",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-10-28T12:52:56+00:00",
       "themes": [
         "ia-support"
       ],
-      "excerpt": "Le PAM face aux identités non humaines : comment limiter les droits des agents IA et des comptes de service, et tracer leurs actions. Le post Le PAM face au défi des identités non humaines a été publié sur IT-Connect ."
+      "excerpt": "Today’s articles cover some important topics in the AI space. Mastufa Ahmed dives into the question of funding for AI initiatives , highlighting that the money isn’t coming from new sources but rather from cuts in…",
+      "text": "Today’s articles cover some important topics in the AI space. Mastufa Ahmed dives into the question of funding for AI initiatives , highlighting that the money isn’t coming from new sources but rather from cuts in areas like software, contractors, and help desks. It’s crucial to ensure that any AI implementation is genuinely beneficial before making those budget cuts. On the other hand, Rose de Fremery provides an essential AI pilot exit checklist . She emphasizes the importance of conducting a thorough post-mortem before scaling any AI pilot. Key factors to assess include data readiness, token costs, security measures, and governance, all of which are vital for transitioning a successful demo into a full-scale production. That’s a wrap for today! We’ll be back tomorrow with more insights, so keep an eye out for what’s coming next. 1 post - 1 participant Read full topic",
+      "backfill": true
     },
     {
-      "id": "3ffab2b424af",
-      "title": "Claude Code : à quoi sert la commande /compact et quand l’utiliser à la main",
-      "link": "https://www.it-connect.fr/claude-code-a-quoi-sert-la-commande-compact-et-quand-lutiliser-a-la-main/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-30T09:01:42+00:00",
+      "id": "8ba067ff7474",
+      "title": "GLPI 12.0.1",
+      "link": "https://github.com/glpi-project/glpi/releases/tag/12.0.1",
+      "source": "GLPI",
+      "sourceId": "glpi",
+      "kind": "Versions",
+      "date": "2026-10-28T11:08:24+00:00",
       "themes": [
-        "ia-support"
+        "outils"
       ],
-      "excerpt": "Découvrez comment /compact dépoussière les sessions Claude Code quand la fenêtre de contexte est saturée : mode automatique ou action manuelle, que choisir ? Le post Claude Code : à quoi sert la commande /compact et…"
+      "excerpt": "This is a security release, upgrading is recommended You will find below the list of security issues fixed in this bugfixes version: [SECURITY - Critical] External authentication bypass [SECURITY - High] Ticket…",
+      "text": "This is a security release, upgrading is recommended You will find below the list of security issues fixed in this bugfixes version: [SECURITY - Critical] External authentication bypass [SECURITY - High] Ticket category reflected XSS [SECURITY - High] Reflected XSS in users authorization list [SECURITY - High] Privilege escalation by entity administrator [SECURITY - High] Stored XSS on VLAN [SECURITY - High] Reflected XSS in form header [SECURITY - High] Stored XSS in dashboards [SECURITY - Medium] Administrator account deactivation by unauthorized user The full changelog is available for more details. We would like to thank all people who contributed to this new version and all those who contributes regularly to the GLPI project! Regards.",
+      "backfill": true
     },
     {
-      "id": "f3da25db67da",
-      "title": "Proton : 90 % du code écrit par l’IA, et pour le CEO, vouloir tester la sécurité est une mentalité de losers",
-      "link": "https://www.it-connect.fr/proton-andy-yen-ia-code/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-30T06:47:34+00:00",
+      "id": "f06223ae8f1c",
+      "title": "GLPI 11.0.12",
+      "link": "https://github.com/glpi-project/glpi/releases/tag/11.0.12",
+      "source": "GLPI",
+      "sourceId": "glpi",
+      "kind": "Versions",
+      "date": "2026-10-28T11:08:12+00:00",
       "themes": [
-        "ia-support"
+        "outils"
       ],
-      "excerpt": "90 % du code de Proton serait écrit par l’IA, et son CEO, Andy Yen, balaie une demande de tests de sécurité en parlant d'une mentalité de losers. Le post Proton : 90 % du code écrit par l’IA, et pour le CEO, vouloir…"
+      "excerpt": "This is a security release, upgrading is recommended You will find below the list of security issues fixed in this bugfixes version: [SECURITY - Critical] External authentication bypass [SECURITY - High] Ticket…",
+      "text": "This is a security release, upgrading is recommended You will find below the list of security issues fixed in this bugfixes version: [SECURITY - Critical] External authentication bypass [SECURITY - High] Ticket category reflected XSS [SECURITY - High] Reflected XSS in users authorization list [SECURITY - High] Privilege escalation by entity administrator [SECURITY - High] Stored XSS on VLAN [SECURITY - High] Reflected XSS in form header [SECURITY - High] Stored XSS in dashboards [SECURITY - Medium] Administrator account deactivation by unauthorized user The full changelog is available for more details. We would like to thank all people who contributed to this new version and all those who contributes regularly to the GLPI project! Regards.",
+      "backfill": true
     },
     {
-      "id": "626892f35a97",
-      "title": "REA : j’ai testé la rétro-ingénierie pilotée par l’IA avec Claude Code",
-      "link": "https://www.it-connect.fr/rea-retro-ingenierie-ia-ghidra/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-29T17:00:00+00:00",
+      "id": "b9fa9386ee5f",
+      "title": "GLPI 11.0.11",
+      "link": "https://github.com/glpi-project/glpi/releases/tag/11.0.11",
+      "source": "GLPI",
+      "sourceId": "glpi",
+      "kind": "Versions",
+      "date": "2026-10-28T10:18:16+00:00",
       "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Découvrez REA, le serveur MCP qui permet à Claude Code ou Codex de piloter Ghidra et d'autres outils : installation, cadre légal et démo de rétro-ingénierie. Le post REA : j’ai testé la rétro-ingénierie pilotée par…"
-    },
-    {
-      "id": "0beaf773fecb",
-      "title": "Ginux : avec l’IA, le fondateur de CentOS crée en 11 jours un noyau Rust compatible Linux",
-      "link": "https://www.it-connect.fr/ginux-noyau-rust-ia-fondateur-centos-rocky-linux/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-29T06:33:41+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Le fondateur de CentOS et Rocky Linux dévoile Ginux, un noyau en Rust compatible Linux (mais qui n'est pas Linux), développé avec l'aide de l'IA en 11 jours. Le post Ginux : avec l’IA, le fondateur de CentOS crée en 11…"
-    },
-    {
-      "id": "b69d696349ee",
-      "title": "Veeam Backup & Replication 13 (CVE-2026-108142) : une faille critique exploitable sans authentification",
-      "link": "https://www.it-connect.fr/veeam-backup-replication-13-faille-critique-cve-2026-108142/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-28T07:11:02+00:00",
-      "themes": [
+        "outils",
         "acces"
       ],
-      "excerpt": "Une faille de sécurité critique située dans le composant CDP Coordinator a été patchée dans Veeam Backup & Replication 13 : CVE-2026-108142. Voici les patchs. Le post Veeam Backup & Replication 13 (CVE-2026-108142) :…"
+      "excerpt": "This is a security release, upgrading is recommended Important This release replaces version 11.0.10 that introduced a regression in plugins system. You will find below the list of security issues fixed in this…",
+      "text": "This is a security release, upgrading is recommended Important This release replaces version 11.0.10 that introduced a regression in plugins system. You will find below the list of security issues fixed in this bugfixes version: [SECURITY - High] Authorization bypass in massive actions [SECURITY - High] Privilege escalation via user cloning [SECURITY - High] Improper rights checks in users deletion [SECURITY - High] SQL Injection through form actors dropdown [SECURITY - High] 2FA deactivation/modification on users with higher privileges [SECURITY - High] Reflected XSS in the dashboard search result widget [SECURITY - Medium] Users names enumaration via the planning feature [SECURITY - Medium] Missing authorization checks in the planning feature The full changelog is available for more details. We would like to thank all people who contributed to this new version and all those who contributes regularly to the GLPI project! Regards.",
+      "backfill": true
     },
     {
-      "id": "ba0409e6234c",
+      "id": "c17713b3de6e",
       "title": "Windows : ces mises à jour hors bande éliminent les certificats de l’autorité eMudhra",
       "link": "https://www.it-connect.fr/emudhra-microsoft-mises-a-jour-hors-bande-windows-certificats/",
       "source": "IT Connect",
@@ -134,22 +540,71 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Microsoft a publié des mises à jour hors bande pour Windows 11 afin de retirer 7 certificats eMudhra sur les postes Windows coupés d'Internet, mais pas que. Le post Windows : ces mises à jour hors bande éliminent les…"
+      "excerpt": "Microsoft a publié des mises à jour hors bande pour Windows 11 afin de retirer 7 certificats eMudhra sur les postes Windows coupés d'Internet, mais pas que. Le post Windows : ces mises à jour hors bande éliminent les…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "0ec715805a83",
-      "title": "Claude Code : comprendre les modes de permission et choisir le bon",
-      "link": "https://www.it-connect.fr/claude-code-comprendre-les-modes-de-permission-et-choisir-le-bon/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-27T09:53:39+00:00",
+      "id": "9f11582b52ac",
+      "title": "Hameçonnage aux faux votes pour des concours sur WhatsApp",
+      "link": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/vigilance-faux-vote-whatsapp",
+      "source": "Cybermalveillance.gouv.fr",
+      "sourceId": "cybermalveillance",
+      "kind": "Actualités",
+      "date": "2026-10-27T17:11:57+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Vous avez reçu un message WhatsApp d’une connaissances vous incitant à voter pour un concours ? Il peut s’agir d’une arnaque. De quoi s’agit-il ? Nos conseils.",
+      "text": "Vous avez reçu un message WhatsApp d’une connaissances vous incitant à voter pour un concours ? Il peut s’agir d’une arnaque. De quoi s’agit-il ? Nos conseils.",
+      "backfill": true
+    },
+    {
+      "id": "f34cde2da7bd",
+      "title": "Why identity needs network insight to make Zero Trust work",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/why-identity-needs-network-insight-to-make-zero-trust-work/ba-p/4566630",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-10-27T15:00:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Your users sign in successfully—and then what? The session can be hijacked, device posture can degrade, and traffic to non-federated SaaS and AI apps can slip past the identity controls you trust to protect them.…",
+      "text": "Your users sign in successfully—and then what? The session can be hijacked, device posture can degrade, and traffic to non-federated SaaS and AI apps can slip past the identity controls you trust to protect them. That’s the gap admins see every day: identity tells you who, but not what’s happening across the network during the session—and it’s why identity alone can’t carry Zero Trust on its own. Most Zero Trust strategies start with identity—and for good reason. Identity is the control point for authenticating users and granting access. But identity by itself can’t address every evolving risk. Today, users connect from anywhere, on any device, and interact with thousands of apps across cloud, AI, internet, and private networks. The gap between identity and network security creates blind spots that attackers can exploit. Microsoft’s approach is clear: identity is most effective when it operates with full awareness of the network. That’s why Microsoft Entra brings identity and network protections together in a unified architecture designed for modern Zero Trust security. Why identity alone is not enough Traditional access decisions often stop at sign-in and rely on credentials plus multifactor authentication. This works for many scenarios—but not all. In practice, a session that looks low-risk at sign-in can turn risky minutes later, and unmanaged traffic to AI tools and non-federated SaaS apps creates blind spots your identity policies weren’t designed to cover Why? Because…",
+      "backfill": true
+    },
+    {
+      "id": "9b1b020e07e0",
+      "title": "Today's articles: Microsoft Office clones and help desk password resets",
+      "link": "https://community.spiceworks.com/t/todays-articles-microsoft-office-clones-and-help-desk-password-resets/1259172",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-10-27T12:34:56+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Today’s highlights include an intriguing piece by Denis Tom on AI Office clones , where he dives into the gap between the hype and the actual capabilities of tools like WordCraft. While these AI alternatives won’t be…",
+      "text": "Today’s highlights include an intriguing piece by Denis Tom on AI Office clones , where he dives into the gap between the hype and the actual capabilities of tools like WordCraft. While these AI alternatives won’t be taking over Microsoft 365 anytime soon due to their lack of features and high maintenance costs, they do spark some creative ideas for developing tailored in-house solutions. In another noteworthy article, Rose de Fremery sheds light on a rising trend in help desk scams . Fraudsters are posing as employees to trick IT support into granting password and MFA resets. To stay safe, always return calls to staff using verified numbers and implement additional verification steps for any sensitive changes. That wraps up today’s updates, we’ll be back tomorrow with more insights! 1 post - 1 participant Read full topic",
+      "backfill": true
+    },
+    {
+      "id": "af07597ef95b",
+      "title": "AI and the Data “Trapped” in ITSM Tools",
+      "link": "https://itsm.tools/ai-and-the-data-trapped-in-itsm-tools/",
+      "source": "ITSM.tools",
+      "sourceId": "itsm-tools",
+      "kind": "Blog spécialisé",
+      "date": "2026-10-27T09:39:26+00:00",
       "themes": [
         "ia-support"
       ],
-      "excerpt": "Maîtrisez Claude Code: découvrez les 5 modes de permission, leurs cas d'usage et les risques pour faire le bon choix selon le type de projets ou tâches. Le post Claude Code : comprendre les modes de permission et…"
+      "excerpt": "Our industry has talked about the data trapped in ITSM tools for years, but the real issue isn’t collection; it’s collecting without a purpose. This piece looks at unused and underutilized ITSM data, why CMDBs are the…",
+      "text": "Our industry has talked about the data trapped in ITSM tools for years, but the real issue isn’t collection; it’s collecting without a purpose. This piece looks at unused and underutilized ITSM data, why CMDBs are the classic example, and how AI is finally positioned to spot what's wasted, what's underused, and what should be collected next.",
+      "backfill": true
     },
     {
-      "id": "096df14b8266",
+      "id": "579e9afd5fcc",
       "title": "Photos d’identité, certificats : la Fédération française de tir piratée pour la deuxième fois en un an",
       "link": "https://www.it-connect.fr/federation-francaise-de-tir-nouvelle-fuite-de-donnees-octobre-2026/",
       "source": "IT Connect",
@@ -158,22 +613,24 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Un an après une première fuite, la Fédération française de tir a de nouveau été piratée : 64 000 photos d'identité et près de 19 000 documents dérobés. Le post Photos d’identité, certificats : la Fédération française…"
+      "excerpt": "Un an après une première fuite, la Fédération française de tir a de nouveau été piratée : 64 000 photos d'identité et près de 19 000 documents dérobés. Le post Photos d’identité, certificats : la Fédération française…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "de2988f612bb",
+      "id": "185b31692da4",
       "title": "Multiples vulnérabilités dans GLPI (27 octobre 2026)",
       "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1389/",
       "source": "CERT-FR",
       "kind": "Avis",
       "date": "2026-10-27T00:00:00+00:00",
       "themes": [
-        "ia-support"
+        "outils"
       ],
-      "excerpt": "De multiples vulnérabilités ont été découvertes dans GLPI. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à l'intégrité des données, une injection SQL (SQLi) et une injection de code…"
+      "excerpt": "De multiples vulnérabilités ont été découvertes dans GLPI. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à l'intégrité des données, une injection SQL (SQLi) et une injection de code…",
+      "sourceId": "certfr-avis"
     },
     {
-      "id": "922b93f72f6c",
+      "id": "54a140e6d289",
       "title": "WPAD sous Windows : comprendre le protocole, ses risques de sécurité et le désactiver par GPO",
       "link": "https://www.it-connect.fr/wpad-windows-securite-gpo/",
       "source": "IT Connect",
@@ -182,22 +639,11 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "WPAD est activé par défaut sous Windows et peut servir de vecteur d'attaque. Comprenez le protocole, ses risques réels en 2026 et désactivez-le par GPO. Le post WPAD sous Windows : comprendre le protocole, ses risques…"
+      "excerpt": "WPAD est activé par défaut sous Windows et peut servir de vecteur d'attaque. Comprenez le protocole, ses risques réels en 2026 et désactivez-le par GPO. Le post WPAD sous Windows : comprendre le protocole, ses risques…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "b70ddb867978",
-      "title": "WordCraft, GridCraft, DeckCraft : après Adobe, Word, Excel et PowerPoint réécrits en Rust avec l’IA",
-      "link": "https://www.it-connect.fr/wordcraft-gridcraft-deckcraft-suite-office-rust-claude/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-26T12:04:51+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "WordCraft, GridCraft et DeckCraft : trois clones open source de Word, Excel et PowerPoint écrits en Rust avec Claude Opus 5.5. Sont-ils opérationnels ? Le post WordCraft, GridCraft, DeckCraft : après Adobe, Word, Excel…"
-    },
-    {
-      "id": "25a8cbe6471a",
+      "id": "9bd24cb97980",
       "title": "Tailworm : 11 failles non corrigées dans Tailscale, dont un accès root via Tailscale SSH",
       "link": "https://www.it-connect.fr/tailworm-failles-tailscale-ssh-root-non-corrigees/",
       "source": "IT Connect",
@@ -206,10 +652,11 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Avec Tailworm, Erica Windisch a publié 11 failles non corrigées dans Tailscale et Headscale, dont un accès root via Tailscale SSH. Voici comment vous protéger. Le post Tailworm : 11 failles non corrigées dans…"
+      "excerpt": "Avec Tailworm, Erica Windisch a publié 11 failles non corrigées dans Tailscale et Headscale, dont un accès root via Tailscale SSH. Voici comment vous protéger. Le post Tailworm : 11 failles non corrigées dans…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "bc5763eb5bb9",
+      "id": "edf46208ef9a",
       "title": "Pulse : les journaux d’événements de Windows facilement lisibles, avec de l’IA locale",
       "link": "https://www.it-connect.fr/pulse-journaux-evenements-de-windows-facilement-lisibles-avec-ia-locale/",
       "source": "IT Connect",
@@ -218,22 +665,11 @@
       "themes": [
         "ia-support"
       ],
-      "excerpt": "Pulse est un outil gratuit et open source qui traduit les journaux d'événements de Windows 10 et 11 en langage clair, avec une IA locale (Ollama, LM Studio). Le post Pulse : les journaux d’événements de Windows…"
+      "excerpt": "Pulse est un outil gratuit et open source qui traduit les journaux d'événements de Windows 10 et 11 en langage clair, avec une IA locale (Ollama, LM Studio). Le post Pulse : les journaux d’événements de Windows…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "80d2cb978f4e",
-      "title": "Windows 11 : avec Project Pantheon, Microsoft teste une mémoire IA qui ne retient que ce que vous choisissez",
-      "link": "https://www.it-connect.fr/windows-11-project-pantheon-context-vault-memoire-ia/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-23T13:40:12+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Microsoft teste Project Pantheon, une mémoire IA pour Windows 11 qui ne retient que ce que vous sauvegardez, avec un serveur MCP ouvert à Claude et Cursor. Le post Windows 11 : avec Project Pantheon, Microsoft teste…"
-    },
-    {
-      "id": "cd8d4959c479",
+      "id": "0be4676b22c7",
       "title": "Réseau Tor : 333 relais de sortie compromis interceptaient les connexions SSH pour diffuser Ebury",
       "link": "https://www.it-connect.fr/tor-relais-sortie-compromis-interception-ssh-ebury/",
       "source": "IT Connect",
@@ -242,10 +678,11 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "333 relais de sortie Tor compromis redirigeaient les connexions SSH vers des serveurs pirates pour voler les mots de passe et installer le malware Ebury. Le post Réseau Tor : 333 relais de sortie compromis…"
+      "excerpt": "333 relais de sortie Tor compromis redirigeaient les connexions SSH vers des serveurs pirates pour voler les mots de passe et installer le malware Ebury. Le post Réseau Tor : 333 relais de sortie compromis…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "f49b798e4cac",
+      "id": "47fcd408c7f9",
       "title": "Capcom piraté : 11,7 millions de comptes exposés et des mots de passe changés par l’attaquant",
       "link": "https://www.it-connect.fr/capcom-fuite-donnees-capcom-id-11-millions-comptes/",
       "source": "IT Connect",
@@ -254,22 +691,56 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Plus de 11,7 millions de comptes CAPCOM ID exposés et 196 mots de passe modifiés par un attaquant : Capcom confirme une fuite de données massive. Le post Capcom piraté : 11,7 millions de comptes exposés et des mots de…"
+      "excerpt": "Plus de 11,7 millions de comptes CAPCOM ID exposés et 196 mots de passe modifiés par un attaquant : Capcom confirme une fuite de données massive. Le post Capcom piraté : 11,7 millions de comptes exposés et des mots de…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "7c9a98acbc64",
-      "title": "GitLab corrige la CVE-2026-110264, une faille critique qui touche toutes les versions depuis 2014",
-      "link": "https://www.it-connect.fr/gitlab-cve-2026-110264-faille-critique-regex-onigmo/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-22T11:33:22+00:00",
+      "id": "dacc43cc1e2a",
+      "title": "Designing smarter access policies for hybrid enterprises",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/designing-smarter-access-policies-for-hybrid-enterprises/ba-p/4529308",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-10-22T15:00:00+00:00",
       "themes": [
         "acces"
       ],
-      "excerpt": "GitLab a corrigé la CVE-2026-110264, une faille critique exploitable sans authentification qui touche toutes les versions depuis la 7.0, sortie en 2014. Le post GitLab corrige la CVE-2026-110264, une faille critique…"
+      "excerpt": "Every hybrid enterprise eventually reaches the same point: the security model that worked when everyone was inside the corporate network no longer holds up when people, apps, and data are distributed across clouds,…",
+      "text": "Every hybrid enterprise eventually reaches the same point: the security model that worked when everyone was inside the corporate network no longer holds up when people, apps, and data are distributed across clouds, data centers, and unmanaged devices. Add AI agents acting on users’ behalf, and the idea of a trusted perimeter loses even more relevance. The answer is not more controls for their own sake, but better-designed policies: deliberate rules that determine who and what can access specific resources, under which conditions, and how access adapts as risk changes. Get the design right, and security becomes an enabler rather than a burden. Get it wrong, and you either leave gaps attackers can exploit or frustrate the users you are trying to protect. This article explains how to get it right. TL;DR In a hybrid enterprise, users, apps, and data no longer sit behind a single perimeter, and AI agents also make access requests. This article explains how to design Microsoft Entra Conditional Access policies and policy governance for that reality, protecting what matters without slowing people down. The goal is a Zero Trust posture you can operate, not merely deploy. Why this matters Hybrid work is no longer a transition state; it is the operating model. Most organizations now run apps across multiple clouds, maintain legacy systems on-premises, and support a distributed workforce that expects access to feel immediate and seamless. That combination creates real tension in…",
+      "backfill": true
     },
     {
-      "id": "2a64d06c8742",
+      "id": "5f0908833baf",
+      "title": "Today's articles: OAuth consent phishing and Microsoft Teams deepfake threat",
+      "link": "https://community.spiceworks.com/t/todays-articles-oauth-consent-phishing-and-microsoft-teams-deepfake-threat/1258999",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-10-22T12:25:48+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Today’s highlights cover two pressing issues: Shelby Green discusses Microsoft Teams and the threat of deepfakes , noting that while Microsoft is implementing detection tools to combat AI impersonation in meetings, IT…",
+      "text": "Today’s highlights cover two pressing issues: Shelby Green discusses Microsoft Teams and the threat of deepfakes , noting that while Microsoft is implementing detection tools to combat AI impersonation in meetings, IT departments must still enforce strong verification protocols for sensitive requests since technology can have its flaws. Meanwhile, Rose de Fremery sheds light on OAuth phishing , where attackers are cleverly circumventing multi-factor authentication by deceiving users into allowing harmful apps access to their email. It’s crucial to regularly audit app permissions and educate teams on recognizing fraudulent consent screens. That wraps up today’s articles! We’ll be back tomorrow with more fresh insights and updates. insights and pieces. 2 posts - 2 participants Read full topic",
+      "backfill": true
+    },
+    {
+      "id": "01d0e77172fa",
+      "title": "Five challenges. One AI helpdesk assistant. Your job is to break it",
+      "link": "https://community.spiceworks.com/t/five-challenges-one-ai-helpdesk-assistant-your-job-is-to-break-it/1258987",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-10-22T08:11:56+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Sign up: Join our 2026 CTF | Netwrix Join us for HelpdeskGPT, the Netwrix Innovation Week capture the flag. You’ll attack an AI assistant to find hidden flags and see firsthand how AI systems get compromised and why…",
+      "text": "Sign up: Join our 2026 CTF | Netwrix Join us for HelpdeskGPT, the Netwrix Innovation Week capture the flag. You’ll attack an AI assistant to find hidden flags and see firsthand how AI systems get compromised and why the defenses around them matter. The winner takes home a pass to Black Hat USA 2027 in Las Vegas, with swag for runners-up. The CTF runs for 24 hours, with 12 hours of uptime to complete the challenges. Watch the live kickoff on YouTube: https://www.youtube.com/watch?v=1--0Iny4ZJo Friday, October 23 | 2:00 p.m. ET / 11:00 a.m. PT 1 post - 1 participant Read full topic",
+      "backfill": true
+    },
+    {
+      "id": "70e22ca2bc68",
       "title": "eMudhra : des clés privées triviales forcent Mozilla, Google, Apple et Microsoft à bloquer 8 certificats",
       "link": "https://www.it-connect.fr/emudhra-certificats-intermediaires-cles-privees-compromises/",
       "source": "IT Connect",
@@ -278,82 +749,56 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Huit certificats intermédiaires d’eMudhra reposaient sur des clés privées devinables en quelques secondes. Mozilla, Google, Apple et Microsoft les bloquent. Le post eMudhra : des clés privées triviales forcent Mozilla,…"
+      "excerpt": "Huit certificats intermédiaires d’eMudhra reposaient sur des clés privées devinables en quelques secondes. Mozilla, Google, Apple et Microsoft les bloquent. Le post eMudhra : des clés privées triviales forcent Mozilla,…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "a5356f42a77a",
-      "title": "Arrêtée pour avoir bloqué un robot de livraison Uber",
-      "link": "https://www.zataz.com/arretee-pour-avoir-bloque-un-robot-de-livraison-uber/",
-      "source": "Zataz",
-      "kind": "Actualite cyber",
-      "date": "2026-10-21T18:04:11+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Une manifestante arrêtée pour avoir bloqué un robot Uber et dénoncé l'automatisation des emplois."
-    },
-    {
-      "id": "ff62103985b5",
-      "title": "PHP2Shell : les correctifs de sécurité sont là, les attaques aussi !",
-      "link": "https://www.it-connect.fr/php2shell-correctifs-urgence-cve-2026-109618-cve-2026-109619/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-21T15:44:02+00:00",
-      "themes": [
-        "acces"
-      ],
-      "excerpt": "PHP 8.5.12, 8.4.27, 8.3.36 et 8.2.35 corrigent PHP2Shell, deux failles RCE exploitables sans authentification. À traiter en urgence pour protéger votre serveur. Le post PHP2Shell : les correctifs de sécurité sont là,…"
-    },
-    {
-      "id": "5aef8b0f33ed",
-      "title": "Musique IA et faux streams : 18 mois de prison",
-      "link": "https://www.zataz.com/musique-ia-et-faux-streams-18-mois-de-prison/",
-      "source": "Zataz",
-      "kind": "Actualite cyber",
-      "date": "2026-10-21T14:42:22+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Musique IA, faux comptes et royalties détournées : 18 mois de prison pour un fraudeur."
-    },
-    {
-      "id": "31d93fb7e34f",
-      "title": "Claude transmet une fausse piste à la police",
-      "link": "https://www.zataz.com/claude-transmet-une-fausse-piste-a-la-police/",
-      "source": "Zataz",
-      "kind": "Actualite cyber",
-      "date": "2026-10-21T14:20:12+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Claude a envoyé une fausse piste à la police de Philadelphie pendant un test interne mené par Anthropic."
-    },
-    {
-      "id": "8c2a72f1b403",
-      "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
-      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-014/",
-      "source": "CERT-FR",
-      "kind": "Alertes",
-      "date": "2026-10-21T00:00:00+00:00",
-      "themes": [
-        "alerte"
-      ],
-      "excerpt": "**[Mise à jour du 22 octobre 2026]** Le CERT-FR a connaissance de preuves de concept pour les vulnérabilités CVE-2026-109618 et CVE-2026-109619 pour des déploiements spécifique de PHP. **[Mise à jour du 21 octobre…"
-    },
-    {
-      "id": "544d81cf5323",
+      "id": "b029465f4aa8",
       "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
       "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-014/",
       "source": "CERT-FR",
+      "sourceId": "certfr-alertes",
       "kind": "Alertes",
       "date": "2026-10-21T00:00:00+00:00",
       "themes": [
         "alerte"
       ],
-      "excerpt": "**[Mise à jour du 26 octobre 2026]** Le 23 octobre 2026, PHP a publié un avis de sécurité concernant la vulnérabilité CVE-2026-115560. Celle-ci permet une exécution de code arbitraire à distance. L'éditeur estime que…"
+      "excerpt": "**[Mise à jour du 26 octobre 2026]** Le 23 octobre 2026, PHP a publié un avis de sécurité concernant la vulnérabilité CVE-2026-115560. Celle-ci permet une exécution de code arbitraire à distance. L'éditeur estime que…",
+      "text": "**[Mise à jour du 26 octobre 2026]** Le 23 octobre 2026, PHP a publié un avis de sécurité concernant la vulnérabilité CVE-2026-115560. Celle-ci permet une exécution de code arbitraire à distance. L'éditeur estime que les conditions d'exploitation exigent une combinaison d'options de configuration..."
     },
     {
-      "id": "f8bf2f6e0d6a",
+      "id": "aaaf20c19587",
+      "title": "GLPI 10.0.28",
+      "link": "https://github.com/glpi-project/glpi/releases/tag/10.0.28",
+      "source": "GLPI",
+      "sourceId": "glpi",
+      "kind": "Versions",
+      "date": "2026-10-20T12:18:56+00:00",
+      "themes": [
+        "outils"
+      ],
+      "excerpt": "This is a security release, upgrading is recommended Warning Important note: with the upcoming release of GLPI 12.0.0, version 10.0.28 will be the final release of the 10.0 branch, which will no longer receive…",
+      "text": "This is a security release, upgrading is recommended Warning Important note: with the upcoming release of GLPI 12.0.0, version 10.0.28 will be the final release of the 10.0 branch, which will no longer receive bugfixes. This release fixes a few security issues that have been recently discovered. Update is recommended! You will find below the list of security issues fixed in this bugfixes version: [SECURITY - High] Authorization bypass in massive actions [SECURITY - High] Privilege escalation via user cloning [SECURITY - High] Improper rights checks in users deletion [SECURITY - High] SQL Injection through form actors dropdown [SECURITY - Medium] Users names enumaration via the planning feature [SECURITY - Medium] Missing authorization checks in the planning feature Many bug fixes have also been made, read the full changelog is available for more details. We would like to thank all people who contributed to this new version and all those who contributes regularly to the GLPI project! Regards.",
+      "backfill": true
+    },
+    {
+      "id": "e206feeda78b",
+      "title": "GLPI 12.0.0",
+      "link": "https://github.com/glpi-project/glpi/releases/tag/12.0.0",
+      "source": "GLPI",
+      "sourceId": "glpi",
+      "kind": "Versions",
+      "date": "2026-10-20T12:17:20+00:00",
+      "themes": [
+        "outils",
+        "acces"
+      ],
+      "excerpt": "We are proud to announce the official release of GLPI 12 , the latest major version of our open-source software. After months of development and community testing, GLPI 12 is now stable and ready for production. What’s…",
+      "text": "We are proud to announce the official release of GLPI 12 , the latest major version of our open-source software. After months of development and community testing, GLPI 12 is now stable and ready for production. What’s new ? While the full list of changes can be found in the detailed changelog , here are some of the most important highlights: 📖 Knowledge base - full rewrite : An overhaul for pretty dated feature in GLPI, the whole frontend of the integrated knowledge system has been rewritten from scratch to give you a modern experience. 🛡️ Session Management : GLPI records every session opened on the instance. As an administrator you can now see who is currently signed in and revoke any session. 🔓 Step-Up Authentication : Some administrative actions now ask you to prove it is still you. ⏱️ Group-managed OLAs : They are now mutliple and are tied to a group. 🧑‍🦯 Accessibility : GLPI makes a first pass on accessibility, following RGAA and RAWeb criteria. The work will continue over the coming releases. Get Started with GLPI 12 Today You can download the new stable release here: 📦 GLPI 12 Archive 🐳 Official Docker Image Documentation , To match the GLPI 12.0 release, the user documentation has been fully rewritten. What’s Next? In the coming months, we’ll continue to: Monitor feedback and release patches when needed. Expand integrations and plugins to enrich the ecosystem. Explore new innovations to keep GLPI a modern, reliable ITSM platform. A huge thank you to our community…",
+      "backfill": true
+    },
+    {
+      "id": "f5012162713b",
       "title": "SSPR et Entra Connect Sync : Microsoft modifie le calendrier, les nouvelles dates à retenir",
       "link": "https://www.it-connect.fr/sspr-et-entra-connect-sync-microsoft-modifie-le-calendrier-les-nouvelles-dates-a-retenir/",
       "source": "IT Connect",
@@ -362,10 +807,11 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Microsoft modifie le calendrier du SSPR et d’Entra Connect Sync : méthodes d’authentification exigées en novembre 2026, arrêt de la synchro en avril 2027. Le post SSPR et Entra Connect Sync : Microsoft modifie le…"
+      "excerpt": "Microsoft modifie le calendrier du SSPR et d’Entra Connect Sync : méthodes d’authentification exigées en novembre 2026, arrêt de la synchro en avril 2027. Le post SSPR et Entra Connect Sync : Microsoft modifie le…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "d06aaf15bd97",
+      "id": "cdee142eec9f",
       "title": "Nouveautés Proton Pass : dossiers, contrôle du remplissage automatique, mots de passe compromis…",
       "link": "https://www.it-connect.fr/proton-pass-dossiers-correspondance-url-mots-de-passe-compromis/",
       "source": "IT Connect",
@@ -374,10 +820,11 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Proton Pass lance les dossiers, la correspondance d'URL pour le remplissage automatique et la détection locale des mots de passe compromis. Le post Nouveautés Proton Pass : dossiers, contrôle du remplissage…"
+      "excerpt": "Proton Pass lance les dossiers, la correspondance d'URL pour le remplissage automatique et la détection locale des mots de passe compromis. Le post Nouveautés Proton Pass : dossiers, contrôle du remplissage…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "80c15f9c269d",
+      "id": "5b4958a26ab5",
       "title": "Ni mot de passe, ni MFA : comment des centaines de tenants Microsoft 365 ont été ouverts via ConnectWise",
       "link": "https://www.it-connect.fr/connectwise-cloud-backup-skykick-tenants-microsoft-365-compromis/",
       "source": "IT Connect",
@@ -386,70 +833,54 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Un identifiant volé chez ConnectWise a ouvert des centaines de tenants Microsoft 365, sans aucun MFA à contourner. Voici ce que les admins doivent vérifier. Le post Ni mot de passe, ni MFA : comment des centaines de…"
+      "excerpt": "Un identifiant volé chez ConnectWise a ouvert des centaines de tenants Microsoft 365, sans aucun MFA à contourner. Voici ce que les admins doivent vérifier. Le post Ni mot de passe, ni MFA : comment des centaines de…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "ea0ee5c4f7cb",
-      "title": "La Chine veut contrôler ses exportations d’IA",
-      "link": "https://www.zataz.com/la-chine-veut-controler-ses-exportations-dia/",
-      "source": "Zataz",
-      "kind": "Actualite cyber",
-      "date": "2026-10-18T10:29:36+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "La Chine veut encadrer les exportations de 23 technologies d’IA, sur fond de rivalité stratégique avec Washington."
-    },
-    {
-      "id": "a8a9e70812bb",
-      "title": "Fuite de données : la FFTir de nouveau ciblée ?",
-      "link": "https://www.zataz.com/fuite-de-donnees-la-fftir-de-nouveau-ciblee/",
-      "source": "Zataz",
-      "kind": "Actualite cyber",
-      "date": "2026-10-18T09:43:48+00:00",
-      "themes": [
-        "acces"
-      ],
-      "excerpt": "FFTir : un pirate vend 40 Go de données, dont des photos et certificats médicaux de licenciés sportifs."
-    },
-    {
-      "id": "45c2142607c8",
+      "id": "2bb6ffd6139a",
       "title": "Phishing : une opération frappe trois kits pirate",
       "link": "https://www.zataz.com/phishing-une-operation-frappe-trois-kits-pirate/",
       "source": "Zataz",
-      "kind": "Actualite cyber",
+      "kind": "Actualité cyber",
       "date": "2026-10-17T11:36:53+00:00",
       "themes": [
         "acces"
       ],
-      "excerpt": "Une opération vise CoGUI et deux kits de phishing, avec saisies de domaines et action judiciaire."
+      "excerpt": "Une opération vise CoGUI et deux kits de phishing, avec saisies de domaines et action judiciaire.",
+      "sourceId": "zataz"
     },
     {
-      "id": "04072669b97a",
-      "title": "Doctolib : mon opposition à l’IA reste sans réponse claire",
-      "link": "https://www.zataz.com/doctolib-mon-opposition-a-lia-reste-sans-reponse-claire/",
-      "source": "Zataz",
-      "kind": "Actualite cyber",
-      "date": "2026-10-17T10:33:58+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Doctolib répond sur le marketing à une opposition à l’IA : récit, délais RGPD et droits rappelés par la CNIL."
-    },
-    {
-      "id": "bf4139fe8ea8",
-      "title": "Windows 11 KB5127648 : la mise à jour d’octobre 2026 perturbe Smart App Control",
-      "link": "https://www.it-connect.fr/windows-11-kb5127648-smart-app-control-grise/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-16T13:59:57+00:00",
+      "id": "1c91cb0a45a2",
+      "title": "Master Microsoft Entra with live webinars, AMAs, and on-demand videos",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/master-microsoft-entra-with-live-webinars-amas-and-on-demand/ba-p/4502147",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-10-16T21:53:24+00:00",
       "themes": [
         "acces"
       ],
-      "excerpt": "Depuis la KB5127648, Smart App Control peut rester grisé sur Windows 11. Microsoft confirme le bug et propose deux contournements, via le Registre ou une GPO. Le post Windows 11 KB5127648 : la mise à jour d’octobre…"
+      "excerpt": "The identity security landscape never stands still, and neither should your knowledge. With evolving scenarios such as Zero Trust adoption, AI-driven automation, and hybrid security strategies, staying informed is…",
+      "text": "The identity security landscape never stands still, and neither should your knowledge. With evolving scenarios such as Zero Trust adoption, AI-driven automation, and hybrid security strategies, staying informed is essential. That’s exactly what we want to do together with you – stay ahead and be prepared for whatever comes next! So we’re delivering a number of opportunities to learn more and get the most of Microsoft Entra solutions - interactive webinars, Ask Me Anything (AMA) sessions, and a comprehensive video repository—your way, on your schedule. This guide shows you where to start, what’s available, and how to access these resources in one place. Why live learning matters Documentation and blogs provide foundational knowledge, but real-time access to product experts delivers unique value. With Microsoft Entra webinars and AMAs, you can: Get insider perspectives on new features See best practices demonstrated live Ask product engineers and PMs questions directly Connect with the global identity community for shared insights Your engagement options Microsoft Entra learning opportunities are designed for flexibility: join live or watch on-demand. 1. Webinars for technical deep dives Webinars help you explore deployment strategies, optimize configurations, and strengthen identity security with practical examples. 2. AMAs: Ask Me Anything sessions Our AMAs provide direct access to product experts. Whether you have a configuration question, are considering new capabilities,…",
+      "backfill": true
     },
     {
-      "id": "9616430eb377",
+      "id": "69eaf565bed0",
+      "title": "What’s new in Microsoft Entra: October 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/what-s-new-in-microsoft-entra-october-2026/ba-p/4556460",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-10-16T16:25:24+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Over the last few months, I've spent a lot of time with customers and our teams on one of the biggest security shifts ahead of us: securing an enterprise where people and AI agents are both acting on behalf of the…",
+      "text": "Over the last few months, I've spent a lot of time with customers and our teams on one of the biggest security shifts ahead of us: securing an enterprise where people and AI agents are both acting on behalf of the business. It’s a challenge shaping Microsoft's approach to Secure AI. And while AI makes the challenge urgent, the underlying problem is broader. Organizations need to give more people, applications, workloads, and agents access to more resources, while maintaining control without adding more friction and complexity. Identity and network access are at the center of the transition. Customers are clear about what they need. Across my conversations with identity and network access leaders and practitioners, and through our ongoing customer research, four outcomes consistently rise to the top: Keep my organization trusted and resilient Give users and agents secure access without friction Reduce the cost and complexity of access management Adopt AI safely at enterprise scale So, we're making a change to this blog. Starting this month, we’re organizing “What’s New” around the outcomes you're trying to achieve, rather than around our product architecture. Our goal is to make the connection between what we're shipping, the challenges you’re having, and where we're headed much clearer. I welcome your feedback on this new approach in the comments. What I'd pay attention to this month We’re acting on your feedback with new capabilities that: Continue to make access more…",
+      "backfill": true
+    },
+    {
+      "id": "53fe572d34dc",
       "title": "Pire que la France : 8,8 millions de Danois exposés à cause du mot de passe 123456",
       "link": "https://www.it-connect.fr/danemark-fuite-cpr-mot-de-passe-123456/",
       "source": "IT Connect",
@@ -458,58 +889,55 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Un mot de passe 123456 aurait ouvert le registre CPR danois : les noms, adresses et numéros d'identité de 8,8 millions de personnes sont dans la nature. Le post Pire que la France : 8,8 millions de Danois exposés à…"
+      "excerpt": "Un mot de passe 123456 aurait ouvert le registre CPR danois : les noms, adresses et numéros d'identité de 8,8 millions de personnes sont dans la nature. Le post Pire que la France : 8,8 millions de Danois exposés à…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "abb5551adb2e",
-      "title": "GitLab corrige une faille critique qui permet d’exécuter du code sans authentification (CVE-2026-97229)",
-      "link": "https://www.it-connect.fr/gitlab-cve-2026-97229-faille-critique-regex-ci-cd/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-14T11:00:00+00:00",
+      "id": "0128fc8b2345",
+      "title": "AI Agents: How to Add Conversational AI Without Replacing Your ITSM Platform",
+      "link": "https://itsm.tools/conversational-itsm/",
+      "source": "ITSM.tools",
+      "sourceId": "itsm-tools",
+      "kind": "Blog spécialisé",
+      "date": "2026-10-15T07:53:02+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Many IT service desks are buried in password resets and status requests, and the usual response is a full ITSM platform migration. Aditya Santhanam argues for a cheaper route: wrap conversational AI around the ITSM…",
+      "text": "Many IT service desks are buried in password resets and status requests, and the usual response is a full ITSM platform migration. Aditya Santhanam argues for a cheaper route: wrap conversational AI around the ITSM tool you already run, so AI agents work inside existing records, SLAs, and rules. The article covers seven use cases, a six-step rollout, what to keep humans on, and the metrics that show it works.",
+      "backfill": true
+    },
+    {
+      "id": "ced7e2513f57",
+      "title": "The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/",
+      "source": "Microsoft Security",
+      "sourceId": "ms-security",
+      "kind": "Blog éditeur",
+      "date": "2026-10-14T13:00:00+00:00",
       "themes": [
         "acces"
       ],
-      "excerpt": "GitLab a corrigé la CVE-2026-97229, une faille critique qui permet d'exécuter du code sans authentification via une regex piégée dans une configuration CI/CD. Le post GitLab corrige une faille critique qui permet…"
+      "excerpt": "Microsoft uncovered a Chinese-language cybercriminal ecosystem, an interconnected network of phishing kit operators (tracked as Storm-2990), and an illicit marketplace (tracked as Storm-3119) selling tools and…",
+      "text": "Microsoft uncovered a Chinese-language cybercriminal ecosystem, an interconnected network of phishing kit operators (tracked as Storm-2990), and an illicit marketplace (tracked as Storm-3119) selling tools and infrastructure for large-scale phishing. In collaboration with law enforcement agencies and other partners worldwide, Microsoft’s Digital Crimes Unit (DCU) facilitated a disruption of the ecosystem. The post The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime appeared first on Microsoft Security Blog .",
+      "backfill": true
     },
     {
-      "id": "a238a39a15a5",
-      "title": "Windows Server – RDS : comment lancer automatiquement un programme à la connexion ?",
-      "link": "https://www.it-connect.fr/rds-lancer-programme-ouverture-session/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-14T06:45:00+00:00",
-      "themes": [
-        "acces"
-      ],
-      "excerpt": "Le RDS Windows Server ignore l'onglet Environnement de l'AD ? Voici comment lancer un programme à la connexion RDS par GPO ou via fQueryUserConfigFromDC. Le post Windows Server – RDS : comment lancer automatiquement un…"
-    },
-    {
-      "id": "29ff9e0df030",
-      "title": "Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
-      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-013/",
-      "source": "CERT-FR",
-      "kind": "Alertes",
-      "date": "2026-10-14T00:00:00+00:00",
-      "themes": [
-        "alerte"
-      ],
-      "excerpt": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique…"
-    },
-    {
-      "id": "1bade495e8fb",
+      "id": "d184268cb1d8",
       "title": "Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
       "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-013/",
       "source": "CERT-FR",
+      "sourceId": "certfr-alertes",
       "kind": "Alertes",
       "date": "2026-10-14T00:00:00+00:00",
       "themes": [
         "alerte"
       ],
-      "excerpt": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique…"
+      "excerpt": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique…",
+      "text": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique de sécurité. Ivanti indique que cette vulnérabilité CVE-2026-104935 est..."
     },
     {
-      "id": "7a0ea78e4c21",
+      "id": "080ed8a3ae9c",
       "title": "Claude for Intune : déployer et sécuriser Claude sur iPhone et iPad en entreprise",
       "link": "https://www.it-connect.fr/claude-for-intune-deployer-et-securiser-claude-sur-iphone-et-ipad-en-entreprise/",
       "source": "IT Connect",
@@ -519,46 +947,11 @@
         "ia-support",
         "acces"
       ],
-      "excerpt": "Claude for Intune permet de gérer l'app Claude sur iOS avec Intune : prérequis, consentement Entra ID, déploiement, stratégie APP et accès conditionnel. Le post Claude for Intune : déployer et sécuriser Claude sur…"
+      "excerpt": "Claude for Intune permet de gérer l'app Claude sur iOS avec Intune : prérequis, consentement Entra ID, déploiement, stratégie APP et accès conditionnel. Le post Claude for Intune : déployer et sécuriser Claude sur…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "0b227f4c697a",
-      "title": "Agent Standup : vos agents Claude Code et Codex réunis dans un appel visio pour suivre vos sessions",
-      "link": "https://www.it-connect.fr/agent-standup-agents-ia-appel-visio/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-13T08:02:15+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Agent Standup transforme vos sessions Claude Code, Codex et Mistral Vibe en appel visio animé, avec partage d'écran et replay. Gratuit, open source et local. Le post Agent Standup : vos agents Claude Code et Codex…"
-    },
-    {
-      "id": "04eadc08d4fb",
-      "title": "CyberXero : ce pirate a utilisé 51 agents Claude Code pour attaquer WordPress et l’Ukraine",
-      "link": "https://www.it-connect.fr/cyberxero-claude-code-wordpress-energie-ukraine/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-13T06:47:02+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Un pirate russophone a compromis 429 sites WordPress en 61 secondes et volé 628 000 fiches ukrainiennes avec l'aide de 51 agents Claude Code. Le post CyberXero : ce pirate a utilisé 51 agents Claude Code pour attaquer…"
-    },
-    {
-      "id": "963ec1f7036f",
-      "title": "Maia 300 : Microsoft fera de ses puces maison le moteur d’inférence de Copilot",
-      "link": "https://www.it-connect.fr/microsoft-maia-300-inference-multi-gigawatt/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-13T06:08:34+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Microsoft dévoile Maia 300 et fera de ses puces Maia le système d'inférence principal de Copilot et de ses services dès 2027, à l'échelle du gigawatt. Le post Maia 300 : Microsoft fera de ses puces maison le moteur…"
-    },
-    {
-      "id": "86201c94a5f8",
+      "id": "179e4f52395d",
       "title": "Windows 11 26H2 : quels sont les nouveaux paramètres de GPO ?",
       "link": "https://www.it-connect.fr/windows-11-26h2-quels-sont-les-nouveaux-parametres-de-gpo/",
       "source": "IT Connect",
@@ -568,10 +961,11 @@
         "ia-support",
         "acces"
       ],
-      "excerpt": "Windows 11 26H2 ajoute 32 paramètres de GPO : agents IA et MCP, blocage du NTLM, barre des tâches, BitLocker, Defender. Voici le récapitulatif complet. Le post Windows 11 26H2 : quels sont les nouveaux paramètres de…"
+      "excerpt": "Windows 11 26H2 ajoute 32 paramètres de GPO : agents IA et MCP, blocage du NTLM, barre des tâches, BitLocker, Defender. Voici le récapitulatif complet. Le post Windows 11 26H2 : quels sont les nouveaux paramètres de…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "2e213a4722e5",
+      "id": "4702caa16e01",
       "title": "Windows Update : certains PC et serveurs seront privés de mises à jour en 2027 à cause de certificats expirés",
       "link": "https://www.it-connect.fr/windows-update-certificats-expiration-2027/",
       "source": "IT Connect",
@@ -580,106 +974,38 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Les certificats de Windows Update expirent en mai et juin 2027. Les PC pas suffisamment à jour perdront l'accès aux mises à jour. Qui est concerné ? Le post Windows Update : certains PC et serveurs seront privés de…"
+      "excerpt": "Les certificats de Windows Update expirent en mai et juin 2027. Les PC pas suffisamment à jour perdront l'accès aux mises à jour. Qui est concerné ? Le post Windows Update : certains PC et serveurs seront privés de…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "bd044ee07154",
-      "title": "Incident de sécurité ciblant les contrôleurs à distance des installations de réfrigération (12 octobre 2026)",
-      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-012/",
-      "source": "CERT-FR",
-      "kind": "Alertes",
-      "date": "2026-10-12T00:00:00+00:00",
-      "themes": [
-        "alerte"
-      ],
-      "excerpt": "Le CERT-FR a connaissance de nombreuses compromissions des controleurs à distance d'installation de réfrigération Danfoss série AK-SM, AK-SC ainsi que Copeland xweb et Dixell xweb. De manière générale l'exposition…"
-    },
-    {
-      "id": "22c3a84151d5",
+      "id": "be347e074102",
       "title": "Incident de sécurité ciblant les contrôleurs à distance des installations de réfrigération (12 octobre 2026)",
       "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-012/",
       "source": "CERT-FR",
+      "sourceId": "certfr-alertes",
       "kind": "Alertes",
       "date": "2026-10-12T00:00:00+00:00",
       "themes": [
         "alerte"
       ],
-      "excerpt": "Le CERT-FR a connaissance de nombreuses compromissions des controleurs à distance d'installation de réfrigération Danfoss série AK-SM, AK-SC ainsi que Copeland xweb et Dixell xweb. De manière générale l'exposition…"
+      "excerpt": "Le CERT-FR a connaissance de nombreuses compromissions des controleurs à distance d'installation de réfrigération Danfoss série AK-SM, AK-SC ainsi que Copeland xweb et Dixell xweb. De manière générale l'exposition…",
+      "text": "Le CERT-FR a connaissance de nombreuses compromissions des controleurs à distance d'installation de réfrigération Danfoss série AK-SM, AK-SC ainsi que Copeland xweb et Dixell xweb. De manière générale l'exposition d'une interface de gestion sur Internet est contraire aux bonnes pratiques."
     },
     {
-      "id": "ba590d102ec5",
-      "title": "247 failles patchées d’un coup dans Chrome 155 : l’IA est passée par là",
-      "link": "https://www.it-connect.fr/google-chrome-155-247-failles-securite-corrigees/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-09T14:05:38+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Chrome 155 corrige 247 failles de sécurité, dont 4 critiques. Douze ont été trouvées avec l'aide de l'IA Claude. Voici les versions à installer. Le post 247 failles patchées d’un coup dans Chrome 155 : l’IA est passée…"
-    },
-    {
-      "id": "11c022fedeb9",
-      "title": "PhotoCraft, FilmCraft, LightCraft : la suite Adobe réécrite en Rust par des agents Claude Opus 5.5",
-      "link": "https://www.it-connect.fr/suite-adobe-rust-claude-opus-artcraft-crafting-apps/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-08T09:39:28+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Sept clones open source de Photoshop, Premiere ou Lightroom écrits en Rust par des agents Claude Opus 5.5 : voici les Crafting Apps. Le post PhotoCraft, FilmCraft, LightCraft : la suite Adobe réécrite en Rust par des…"
-    },
-    {
-      "id": "16471bd2e802",
-      "title": "Windows devient une plateforme pour agents IA : Microsoft lance MXC, des modèles en local et les PC RTX Spark",
-      "link": "https://www.it-connect.fr/windows-hybrid-intelligence-mxc-agents-rtx-spark/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-08T07:16:47+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Microsoft lance MXC pour confiner les agents IA sous Windows 11, fait tourner des modèles IA en local et ouvre les précommandes des PC NVIDIA RTX Spark. Le post Windows devient une plateforme pour agents IA : Microsoft…"
-    },
-    {
-      "id": "b621ac7a80d6",
-      "title": "Atlassian : une faille critique permet de lire des fichiers sur Jira, Confluence et Bitbucket",
-      "link": "https://www.it-connect.fr/atlassian-cve-2026-21589-faille-critique-jira-confluence-bitbucket/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-08T05:11:17+00:00",
-      "themes": [
-        "acces"
-      ],
-      "excerpt": "CVE-2026-21589 : une faille critique (9,3/10) permet de lire des fichiers sans authentification sur Jira, Confluence et Bitbucket Data Center. Patchez. Le post Atlassian : une faille critique permet de lire des…"
-    },
-    {
-      "id": "45715a1760ef",
-      "title": "SynthID Detector : Google ouvre à tous son outil pour repérer les contenus générés par IA",
-      "link": "https://www.it-connect.fr/google-synthid-detector-grand-public/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-07T16:13:51+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Google ouvre SynthID Detector à tous : l'outil vérifie si une image, une vidéo ou un audio vient de l'IA de Google, OpenAI, NVIDIA ou Kakao. Pas des autres. Le post SynthID Detector : Google ouvre à tous son outil pour…"
-    },
-    {
-      "id": "ac71c23d375e",
+      "id": "7994ac38ead8",
       "title": "Multiples vulnérabilités dans GLPI (07 octobre 2026)",
       "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1269/",
       "source": "CERT-FR",
       "kind": "Avis",
       "date": "2026-10-07T00:00:00+00:00",
       "themes": [
-        "ia-support"
+        "outils"
       ],
-      "excerpt": "De multiples vulnérabilités ont été découvertes dans GLPI. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données, une injection de code indirecte à distance (XSS) et un contournement de…"
+      "excerpt": "De multiples vulnérabilités ont été découvertes dans GLPI. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données, une injection de code indirecte à distance (XSS) et un contournement de…",
+      "sourceId": "certfr-avis"
     },
     {
-      "id": "1cc68b80228c",
+      "id": "07c29a776354",
       "title": "BYOD, prestataires : comment faire confiance à un appareil que vous ne gérez pas ?",
       "link": "https://www.it-connect.fr/securiser-byod-sans-mdm/",
       "source": "IT Connect",
@@ -688,94 +1014,24 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "BYOD, prestataires : la MFA protège l'identité, pas l'appareil. Comment vérifier la posture d'un appareil non géré sans l'enrôler dans un MDM ? Le post BYOD, prestataires : comment faire confiance à un appareil que…"
+      "excerpt": "BYOD, prestataires : la MFA protège l'identité, pas l'appareil. Comment vérifier la posture d'un appareil non géré sans l'enrôler dans un MDM ? Le post BYOD, prestataires : comment faire confiance à un appareil que…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "649ed1eccc5c",
-      "title": "OpenAI va ajouter un filigrane invisible aux textes de ChatGPT et Codex dans l’UE",
-      "link": "https://www.it-connect.fr/openai-filigrane-invisible-textes-chatgpt-codex-ue/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-06T05:15:53+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "AI Act oblige, OpenAI va glisser un filigrane invisible dans les textes de ChatGPT et Codex en Europe. Une méthode qui a ses limites, selon OpenAI. Le post OpenAI va ajouter un filigrane invisible aux textes de ChatGPT…"
-    },
-    {
-      "id": "6db5dbf9dd2a",
-      "title": "UPDF : un logiciel PDF complet qui mise sur l’intelligence artificielle",
-      "link": "https://www.it-connect.fr/updf-un-logiciel-pdf-complet-qui-mise-sur-lintelligence-artificielle/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-06T05:00:00+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "UPDF réunit édition, OCR et IA pour transformer vos PDFs : édition, organisation, traduction et sécurité en une seule solution. À découvrir maintenant. Le post UPDF : un logiciel PDF complet qui mise sur l’intelligence…"
-    },
-    {
-      "id": "4afc4fdeec57",
-      "title": "Avec les mods, Claude Code devient personnalisable : interface, commandes, etc.",
-      "link": "https://www.it-connect.fr/claude-code-mods-plugins/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-05T16:56:39+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Anthropic lance les mods dans Claude Code : des plugins qui modifient l'interface et le comportement de l'outil, et qui tournent avec vos droits, sans sandbox. Le post Avec les mods, Claude Code devient personnalisable…"
-    },
-    {
-      "id": "99526003cbec",
-      "title": "Installation et utilisation de Claude Code : premiers pas",
-      "link": "https://www.it-connect.fr/tuto-installation-et-utilisation-de-claude-code/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-10-02T07:45:00+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Apprenez à installer et à utiliser Claude Code sur Windows ou Linux, en GUI ou CLI, pour commencer à lire, écrire et exécuter du code sur votre machine. Le post Installation et utilisation de Claude Code : premiers pas…"
-    },
-    {
-      "id": "1f0da2e5d91c",
+      "id": "8f39549b3653",
       "title": "GLPI 11.0.11 et GLPI 10.0.28 : 8 failles patchées et la fin annoncée de GLPI 10",
       "link": "https://www.it-connect.fr/glpi-11-0-10-10-0-28-failles-fin-glpi-10/",
       "source": "IT Connect",
       "kind": "Blog technique",
       "date": "2026-10-02T05:16:56+00:00",
       "themes": [
-        "ia-support"
+        "outils"
       ],
-      "excerpt": "GLPI 11.0.11 et GLPI 10.0.28 corrigent 8 failles, dont une injection SQL. Teclib' annonce aussi que GLPI 10.0.28 sera la dernière version de la branche 10. Le post GLPI 11.0.11 et GLPI 10.0.28 : 8 failles patchées et…"
+      "excerpt": "GLPI 11.0.11 et GLPI 10.0.28 corrigent 8 failles, dont une injection SQL. Teclib' annonce aussi que GLPI 10.0.28 sera la dernière version de la branche 10. Le post GLPI 11.0.11 et GLPI 10.0.28 : 8 failles patchées et…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "69193c2d0c8d",
-      "title": "Campus Cyber Summit 2026 : l’IA au cœur des choix cyber",
-      "link": "https://www.zataz.com/campus-cyber-summit-2026-lia-au-coeur-des-choix-cyber/",
-      "source": "Zataz",
-      "kind": "Actualite cyber",
-      "date": "2026-09-30T21:00:16+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Campus Cyber Summit 2026 à Lille : programme, IA, NIS 2, cyber assurance, OSINT et CTF."
-    },
-    {
-      "id": "1e23b7b2b755",
-      "title": "OpenAI lance dots, l’agent IA qui travaille même quand vous dormez",
-      "link": "https://www.it-connect.fr/openai-dots-agents-ia-toujours-actifs/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-09-30T15:24:46+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "OpenAI lance dots, des agents IA toujours actifs dotés de leur propre ordinateur dans le cloud. Disponibilité, garde-fous, Agent 365 : voici l'essentiel. Le post OpenAI lance dots, l’agent IA qui travaille même quand…"
-    },
-    {
-      "id": "751ac6f17d4b",
+      "id": "a8036ba49aec",
       "title": "Cyberattaque DGFiP de l’été 2026 : ce que révèle le rapport de l’ANSSI",
       "link": "https://www.it-connect.fr/rapport-anssi-cyberattaque-dgfip/",
       "source": "IT Connect",
@@ -784,10 +1040,11 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "L'ANSSI a publié son rapport sur la cyberattaque de la DGFiP, entre identifiants volés par des infostealers, absence de MFA et exfiltrations jamais détectées. Le post Cyberattaque DGFiP de l’été 2026 : ce que révèle le…"
+      "excerpt": "L'ANSSI a publié son rapport sur la cyberattaque de la DGFiP, entre identifiants volés par des infostealers, absence de MFA et exfiltrations jamais détectées. Le post Cyberattaque DGFiP de l’été 2026 : ce que révèle le…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "552a75789147",
+      "id": "da0b955d1e9f",
       "title": "5 minutes pour voler le hash du mot de passe root sous Linux avec BTR, une variante de Spectre v2",
       "link": "https://www.it-connect.fr/spectre-v2-btr-linux-hash-mot-de-passe-root/",
       "source": "IT Connect",
@@ -796,106 +1053,25 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Nouvelle variante de Spectre v2, l'attaque BTR vise les moteurs JIT et vole le hash du mot de passe root sous Linux en 3 à 5 minutes. Comment se protéger ? Le post 5 minutes pour voler le hash du mot de passe root sous…"
+      "excerpt": "Nouvelle variante de Spectre v2, l'attaque BTR vise les moteurs JIT et vole le hash du mot de passe root sous Linux en 3 à 5 minutes. Comment se protéger ? Le post 5 minutes pour voler le hash du mot de passe root sous…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "bdbeae65512c",
-      "title": "Claude Code : Anthropic offre jusqu’à 250 dollars de crédit, mais seulement pour les sessions cloud",
-      "link": "https://www.it-connect.fr/claude-code-sessions-cloud-credit-offert/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-09-29T12:06:13+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Abonné à Claude Pro ou Max ? Anthropic vous offre jusqu'à 250 dollars de crédit pour tester les sessions cloud de Claude Code. Voici comment en profiter. Le post Claude Code : Anthropic offre jusqu’à 250 dollars de…"
-    },
-    {
-      "id": "dc2b0a6eb6cf",
-      "title": "ZaWoo : le groupe cybercriminel qui a automatisé ses cyberattaques jusqu’à son site de fuite",
-      "link": "https://www.zataz.com/zawoo-le-groupe-cybercriminel-qui-a-automatise-ses-cyberattaques-jusqua-son-site-de-fuite/",
-      "source": "Zataz",
-      "kind": "Actualite cyber",
-      "date": "2026-09-28T17:09:27+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Un site de fuite largement automatisé, des entreprises cachées derrière de simples identifiants, des dizaines de gigaoctets annoncés et un code source qui conserve les traces de multiples corrections ressemblant…"
-    },
-    {
-      "id": "382d0b4bf4d2",
-      "title": "Claude Marketplace : Anthropic réunit plus de 2 000 connecteurs et plugins au même endroit",
-      "link": "https://www.it-connect.fr/claude-marketplace-connecteurs-plugins-agents/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-09-28T12:47:25+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Plus de 2 000 connecteurs et plugins, des agents IA et des intégrateurs réunis au même endroit : Anthropic lance la Claude Marketplace. Pour qui ? Pourquoi ? Le post Claude Marketplace : Anthropic réunit plus de 2 000…"
-    },
-    {
-      "id": "8078d52a09ff",
-      "title": "OVHcloud confirme OVHai Workspace, son alternative à Microsoft 365 dopée à l’IA",
-      "link": "https://www.it-connect.fr/ovhcloud-ovhai-workspace-alternative-microsoft-365/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-09-28T07:50:37+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Mail, drive, visio, chat et IA : Octave Klaba confirme l'arrivée d'OVHai Workspace, l'alternative d'OVHcloud à Microsoft 365. Voici ce que l'on sait. Le post OVHcloud confirme OVHai Workspace, son alternative à…"
-    },
-    {
-      "id": "36f38701aa0f",
-      "title": "Multiples vulnérabilités dans Citrix NetScaler ADC et Gateway (28 septembre 2026)",
-      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-011/",
-      "source": "CERT-FR",
-      "kind": "Alertes",
-      "date": "2026-09-28T00:00:00+00:00",
-      "themes": [
-        "alerte"
-      ],
-      "excerpt": "**[Mise à jour du 05 octobre 2026]** Le 4 octobre 2026, Citrix a publié un avis concernant une nouvelle vulnérabilité (CVE-2026-88779) permettant un déni de service à distance. La CISA indique que cette vulnérabilité…"
-    },
-    {
-      "id": "e60719187517",
+      "id": "fd2125611eea",
       "title": "Multiples vulnérabilités dans Citrix NetScaler ADC et Gateway (28 septembre 2026)",
       "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-011/",
       "source": "CERT-FR",
+      "sourceId": "certfr-alertes",
       "kind": "Alertes",
       "date": "2026-09-28T00:00:00+00:00",
       "themes": [
         "alerte"
       ],
-      "excerpt": "**[Mise à jour du 05 octobre 2026]** Le 4 octobre 2026, Citrix a publié un avis concernant une nouvelle vulnérabilité (CVE-2026-88779) permettant un déni de service à distance. La CISA indique que cette vulnérabilité…"
+      "excerpt": "**[Mise à jour du 05 octobre 2026]** Le 4 octobre 2026, Citrix a publié un avis concernant une nouvelle vulnérabilité (CVE-2026-88779) permettant un déni de service à distance. La CISA indique que cette vulnérabilité…",
+      "text": "**[Mise à jour du 05 octobre 2026]** Le 4 octobre 2026, Citrix a publié un avis concernant une nouvelle vulnérabilité (CVE-2026-88779) permettant un déni de service à distance. La CISA indique que cette vulnérabilité est activement exploitée. **[Mise à jour du 30 septembre 2026]** Dans un billet..."
     },
     {
-      "id": "5b29e6d4d665",
-      "title": "Microsoft dévoile le nouveau Copilot avec Home, Code et Autopilot : l’essentiel à savoir",
-      "link": "https://www.it-connect.fr/nouveau-copilot-home-code-autopilot/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-09-25T14:41:40+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Microsoft réorganise Copilot autour de Home, Code et Autopilot. Cowork, Code, Autopilot et les modèles Astra et Fable passent en facturation à l'usage. Le post Microsoft dévoile le nouveau Copilot avec Home, Code et…"
-    },
-    {
-      "id": "252baea043df",
-      "title": "Jev : cette IA qui ne génère aucun texte défie les LLM",
-      "link": "https://www.it-connect.fr/jev-typesafe-ia-decisions-typees-llm/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-09-25T07:33:51+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Jev de TypeSafe AI renvoie des décisions et des probabilités au lieu de texte. Tarif, latence, limites et différences avec les LLM d'OpenAI et Anthropic. Le post Jev : cette IA qui ne génère aucun texte défie les LLM a…"
-    },
-    {
-      "id": "c40667de38c9",
+      "id": "79260a7f7991",
       "title": "TeamFiltration : 7 comptes Microsoft 365 compromis, tous des comptes de service oubliés",
       "link": "https://www.it-connect.fr/teamfiltration-comptes-service-microsoft-365-mots-de-passe-par-defaut/",
       "source": "IT Connect",
@@ -904,35 +1080,24 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Une campagne TeamFiltration a visé 5 714 comptes Microsoft 365. Les 7 comptes compromis étaient des comptes de service oubliés, sans MFA. Le post TeamFiltration : 7 comptes Microsoft 365 compromis, tous des comptes de…"
+      "excerpt": "Une campagne TeamFiltration a visé 5 714 comptes Microsoft 365. Les 7 comptes compromis étaient des comptes de service oubliés, sans MFA. Le post TeamFiltration : 7 comptes Microsoft 365 compromis, tous des comptes de…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "3abb70af1f8b",
-      "title": "Un agent IA d’OpenAI a piraté un portail du gouvernement australien",
-      "link": "https://www.it-connect.fr/openai-agent-ia-portail-medicare-australie/",
-      "source": "IT Connect",
-      "kind": "Blog technique",
-      "date": "2026-09-25T05:23:05+00:00",
-      "themes": [
-        "ia-support"
-      ],
-      "excerpt": "Un agent IA d'OpenAI a accédé à des fichiers non publics d'un portail Medicare australien. OpenAI a mis près de trois mois à prévenir le gouvernement. Le post Un agent IA d’OpenAI a piraté un portail du gouvernement…"
-    },
-    {
-      "id": "ce0272a65c51",
+      "id": "7c03b2c5b64a",
       "title": "GLPI 11.0.9 et 10.0.27 : 12 failles patchées et un rythme de mises à jour qui s’accélère",
       "link": "https://www.it-connect.fr/glpi-11-0-9-10-0-27-failles-securite-patch/",
       "source": "IT Connect",
       "kind": "Blog technique",
       "date": "2026-09-24T15:32:26+00:00",
       "themes": [
-        "ia-support",
-        "acces"
+        "outils"
       ],
-      "excerpt": "GLPI 11.0.9 et 10.0.27 corrigent 12 failles, dont une injection SQL sans authentification. Teclib' annonce un patch de sécurité toutes les deux semaines. Le post GLPI 11.0.9 et 10.0.27 : 12 failles patchées et un…"
+      "excerpt": "GLPI 11.0.9 et 10.0.27 corrigent 12 failles, dont une injection SQL sans authentification. Teclib' annonce un patch de sécurité toutes les deux semaines. Le post GLPI 11.0.9 et 10.0.27 : 12 failles patchées et un…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "dec271c410a7",
+      "id": "a333de89a0e6",
       "title": "97 % des victimes de ransomware avaient le MFA : où sont les angles morts ?",
       "link": "https://www.it-connect.fr/97-des-victimes-de-ransomware-avaient-le-mfa-ou-sont-les-angles-morts/",
       "source": "IT Connect",
@@ -941,10 +1106,11 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "97 % des victimes de ransomware par vol d'identifiants avaient activé le MFA. Voici comment repérer les accès restés en mot de passe seul et les combler. Le post 97 % des victimes de ransomware avaient le MFA : où sont…"
+      "excerpt": "97 % des victimes de ransomware par vol d'identifiants avaient activé le MFA. Voici comment repérer les accès restés en mot de passe seul et les combler. Le post 97 % des victimes de ransomware avaient le MFA : où sont…",
+      "sourceId": "itconnect"
     },
     {
-      "id": "fb54318184ad",
+      "id": "6f1e4451b9c1",
       "title": "Ransomware PAYLOAD : les pirates ont paralysé une entreprise avec deux GPO, sans chiffrer un seul fichier",
       "link": "https://www.it-connect.fr/ransomware-payload-gpo-active-directory-sans-chiffrement/",
       "source": "IT Connect",
@@ -953,22 +1119,12 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Le ransomware PAYLOAD a paralysé une entreprise sans chiffrer un fichier : deux GPO liées à la racine du domaine ont suffi. Voici ce qu'il faut retenir. Le post Ransomware PAYLOAD : les pirates ont paralysé une…"
+      "excerpt": "Le ransomware PAYLOAD a paralysé une entreprise sans chiffrer un fichier : deux GPO liées à la racine du domaine ont suffi. Voici ce qu'il faut retenir. Le post Ransomware PAYLOAD : les pirates ont paralysé une…",
+      "sourceId": "itconnect",
+      "backfill": true
     },
     {
-      "id": "0290fe3c3cdf",
-      "title": "Le faux badge Google qui piège les entreprises",
-      "link": "https://www.zataz.com/le-faux-badge-google-qui-piege-les-entreprises/",
-      "source": "Zataz",
-      "kind": "Actualite cyber",
-      "date": "2026-09-22T14:12:05+00:00",
-      "themes": [
-        "acces"
-      ],
-      "excerpt": "Faux conseiller Google, badge payant et site cloné : une tentative de phishing cible les entreprises."
-    },
-    {
-      "id": "e217b565a420",
+      "id": "81cff7c45f71",
       "title": "Proxmox VE : configurer l’accès SSH avec une authentification par clé",
       "link": "https://www.it-connect.fr/tuto-proxmox-ve-ssh-authentification-cle-hardening/",
       "source": "IT Connect",
@@ -977,31 +1133,39 @@
       "themes": [
         "acces"
       ],
-      "excerpt": "Apprenez à sécuriser l'accès SSH de Proxmox VE avec une clé, à désactiver le mot de passe root et à éviter les pièges courant dont l'authorized_keys partagé. Le post Proxmox VE : configurer l’accès SSH avec une…"
+      "excerpt": "Apprenez à sécuriser l'accès SSH de Proxmox VE avec une clé, à désactiver le mot de passe root et à éviter les pièges courant dont l'authorized_keys partagé. Le post Proxmox VE : configurer l’accès SSH avec une…",
+      "sourceId": "itconnect",
+      "backfill": true
     },
     {
-      "id": "2b895a65a3fe",
-      "title": "Vulnérabilité dans Metabase (10 septembre 2026)",
-      "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-010/",
-      "source": "CERT-FR",
-      "kind": "Alertes",
-      "date": "2026-09-10T00:00:00+00:00",
-      "themes": [
-        "alerte"
-      ],
-      "excerpt": "Le 06 août 2026, Metabase a publié un avis de sécurité concernant une vulnérabilité critique permettant à un attaquant non authentifié de provoquer une injection SQL (SQLi) dans la base de donnée de l'application…"
-    },
-    {
-      "id": "7cc8f724ca36",
+      "id": "85e1352970bf",
       "title": "Vulnérabilité dans Metabase (10 septembre 2026)",
       "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-010/",
       "source": "CERT-FR",
+      "sourceId": "certfr-alertes",
       "kind": "Alertes",
       "date": "2026-09-10T00:00:00+00:00",
       "themes": [
         "alerte"
       ],
-      "excerpt": "Le 06 août 2026, Metabase a publié un avis de sécurité concernant une vulnérabilité critique permettant à un attaquant non authentifié de provoquer une injection SQL (SQLi) dans la base de donnée de l'application…"
+      "excerpt": "Le 06 août 2026, Metabase a publié un avis de sécurité concernant une vulnérabilité critique permettant à un attaquant non authentifié de provoquer une injection SQL (SQLi) dans la base de donnée de l'application…",
+      "text": "Le 06 août 2026, Metabase a publié un avis de sécurité concernant une vulnérabilité critique permettant à un attaquant non authentifié de provoquer une injection SQL (SQLi) dans la base de donnée de l'application Metabase. Cette injection SQL permet d’obtenir les droits administrateur de...",
+      "backfill": true
+    },
+    {
+      "id": "849fc14a1ece",
+      "title": "Multiples vulnérabilités dans SonicWall Secure Mobile Access (02 septembre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-009/",
+      "source": "CERT-FR",
+      "sourceId": "certfr-alertes",
+      "kind": "Alertes",
+      "date": "2026-09-02T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 01 septembre 2026, SonicWall a publié un avis de sécurité concernant deux vulnérabilités affectant les Secure Mobile Access (SMA) 1000. La vulnérabilité critique CVE-2026-83548 permet une falsification de requêtes…",
+      "text": "Le 01 septembre 2026, SonicWall a publié un avis de sécurité concernant deux vulnérabilités affectant les Secure Mobile Access (SMA) 1000. La vulnérabilité critique CVE-2026-83548 permet une falsification de requêtes côté serveur (SSRF) de la part d'un attaquant non authentifié. La vulnérabilité...",
+      "backfill": true
     }
   ]
 }
