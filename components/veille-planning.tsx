@@ -53,7 +53,7 @@ export function VeillePlanning() {
                   </span>
                   <span className="text-[11px]" style={{ color: st.color }}>
                     {st.label}
-                    {j.officiel ? " · date fixée par l’école" : ""}
+                    {j.officiel ? " · date fixée par l’école ou l’académie" : ""}
                   </span>
                 </div>
                 <p className="text-sm font-semibold leading-snug">{j.titre}</p>

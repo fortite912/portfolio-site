@@ -85,15 +85,23 @@ export function veillePlanning(today = new Date()): Jalon[] {
       status: compte(syntheses.length, RESUMES_PREVUS),
     },
     {
-      quand: "Fin décembre 2026",
+      quand: "Vacances de Noël (19 déc. 2026 → 3 janv. 2027)",
       fin: "2027-01-03",
       titre: "Premier bilan",
       detail: "Après le stage : ce qui marche, les sources à changer, les mots-clés à corriger.",
       status: bilans.length >= 1 ? "fait" : "a-venir",
     },
     {
-      quand: "Février 2027",
-      fin: "2027-02-28",
+      quand: "Fin janvier 2027 (attendu)",
+      fin: "2027-01-31",
+      titre: "Calendrier officiel de la session 2027",
+      detail: "L'académie publie les dates exactes de dépôt et d'épreuves : je mets ce planning à jour.",
+      status: passe("2027-01-31"),
+      officiel: true,
+    },
+    {
+      quand: "Vacances d'hiver (6 → 21 février 2027)",
+      fin: "2027-02-21",
       titre: "Deuxième bilan et préparation du dossier",
       detail:
         "Archiver les articles cités, remplir la ligne « Organiser son développement professionnel » du tableau de synthèse.",
