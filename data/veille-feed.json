@@ -1,18 +1,19 @@
 {
-  "collectedAt": "2026-11-02T08:39:27+00:00",
+  "collectedAt": "2026-11-02T09:24:18+00:00",
   "lastAddedAt": "2026-11-02T08:39:27+00:00",
   "windowDays": 120,
   "sources": [
     {
       "id": "certfr-alertes",
       "name": "CERT-FR",
+      "topic": "sujet2",
       "kind": "Alertes",
       "type": "Institutionnel",
       "lang": "fr",
       "url": "https://www.cert.cyber.gouv.fr/alerte/feed/",
       "site": "https://www.cert.cyber.gouv.fr/",
       "since": "2026-09-23",
-      "why": "Alertes officielles de l'ANSSI : une alerte concerne toujours un administrateur, elle est gardée d'office.",
+      "why": "Les alertes officielles de l'État quand un logiciel a une faille grave. Je les garde toutes, même hors de mes sujets.",
       "always": [
         "alerte"
       ],
@@ -22,117 +23,126 @@
     {
       "id": "certfr-avis",
       "name": "CERT-FR",
+      "topic": "sujet2",
       "kind": "Avis",
       "type": "Institutionnel",
       "lang": "fr",
       "url": "https://www.cert.cyber.gouv.fr/avis/feed/",
       "site": "https://www.cert.cyber.gouv.fr/",
       "since": "2026-09-23",
-      "why": "Avis de vulnérabilité : seuls ceux qui touchent les thèmes suivis sont retenus.",
+      "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
       "lastItem": "2026-10-30T00:00:00+00:00"
     },
     {
       "id": "itconnect",
       "name": "IT Connect",
+      "topic": "deux",
       "kind": "Blog technique",
       "type": "Presse spécialisée",
       "lang": "fr",
       "url": "https://www.it-connect.fr/feed/",
       "site": "https://www.it-connect.fr/",
       "since": "2026-09-23",
-      "why": "Actualité et tutoriels d'administration systèmes et réseaux, en français.",
+      "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
       "lastItem": "2026-11-02T08:29:17+00:00"
     },
     {
       "id": "zataz",
       "name": "Zataz",
+      "topic": "sujet2",
       "kind": "Actualité cyber",
       "type": "Presse spécialisée",
       "lang": "fr",
       "url": "https://www.zataz.com/feed/",
       "site": "https://www.zataz.com/",
       "since": "2026-09-23",
-      "why": "Incidents et fuites de données : hameçonnage, vols d'identifiants.",
+      "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
       "lastItem": "2026-10-24T23:00:29+00:00"
     },
     {
       "id": "cybermalveillance",
       "name": "Cybermalveillance.gouv.fr",
+      "topic": "sujet2",
       "kind": "Actualités",
       "type": "Institutionnel",
       "lang": "fr",
       "url": "https://www.cybermalveillance.gouv.fr/feed/atom-flux-actualites",
       "site": "https://www.cybermalveillance.gouv.fr/",
       "since": "2026-11-02",
-      "why": "Arnaques et hameçonnage côté utilisateurs : matière pour la sensibilisation faite en support.",
+      "why": "Site officiel d'aide aux victimes : les arnaques du moment, utiles pour prévenir les utilisateurs.",
       "ok": true,
       "lastItem": "2026-10-27T17:11:57+00:00"
     },
     {
       "id": "ms-entra",
       "name": "Microsoft Entra",
+      "topic": "sujet2",
       "kind": "Blog éditeur",
       "type": "Éditeur",
       "lang": "en",
       "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=microsoft-entra-blog",
       "site": "https://techcommunity.microsoft.com/category/microsoft-security/blog/microsoft-entra-blog",
       "since": "2026-11-02",
-      "why": "Identité, MFA et accès conditionnel chez Microsoft : prolonge le déploiement MFA du stage.",
+      "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
       "lastItem": "2026-10-30T19:54:24+00:00"
     },
     {
       "id": "ms-security",
       "name": "Microsoft Security",
+      "topic": "sujet2",
       "kind": "Blog éditeur",
       "type": "Éditeur",
       "lang": "en",
       "url": "https://www.microsoft.com/en-us/security/blog/feed/",
       "site": "https://www.microsoft.com/en-us/security/blog/",
       "since": "2026-11-02",
-      "why": "Analyses d'attaques sur les identités, l'Active Directory et les certificats.",
+      "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
       "lastItem": "2026-10-31T01:02:57+00:00"
     },
     {
       "id": "itsm-tools",
       "name": "ITSM.tools",
+      "topic": "sujet1",
       "kind": "Blog spécialisé",
       "type": "Presse spécialisée",
       "lang": "en",
       "url": "https://itsm.tools/feed/",
       "site": "https://itsm.tools/",
       "since": "2026-11-02",
-      "why": "Seul média testé qui traite régulièrement de l'IA au service desk et dans l'ITSM : le cœur du thème principal.",
+      "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
       "lastItem": "2026-10-29T09:41:25+00:00"
     },
     {
       "id": "spiceworks-ia",
       "name": "Spiceworks",
+      "topic": "sujet1",
       "kind": "Communauté — IA",
       "type": "Communauté",
       "lang": "en",
       "url": "https://community.spiceworks.com/tag/artificial-intelligence.rss",
       "site": "https://community.spiceworks.com/tag/artificial-intelligence",
       "since": "2026-11-02",
-      "why": "Retours de techniciens et d'administrateurs sur l'IA dans leur travail quotidien : le terrain, pas les annonces.",
+      "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
       "lastItem": "2026-10-30T12:37:49+00:00"
     },
     {
       "id": "glpi",
       "name": "GLPI",
+      "topic": "outils",
       "kind": "Versions",
       "type": "Outil",
       "lang": "en",
       "url": "https://github.com/glpi-project/glpi/releases.atom",
       "site": "https://github.com/glpi-project/glpi/releases",
       "since": "2026-11-02",
-      "why": "Outil de gestion de parc et de tickets utilisé en stage : chaque version, surtout de sécurité, est à connaître.",
+      "why": "Logiciel utilisé en stage pour suivre le matériel et les demandes d'aide : ses nouvelles versions.",
       "always": [
         "outils"
       ],
@@ -142,13 +152,14 @@
     {
       "id": "request-tracker",
       "name": "Request Tracker",
+      "topic": "outils",
       "kind": "Versions",
       "type": "Outil",
       "lang": "en",
       "url": "https://github.com/bestpractical/rt/releases.atom",
       "site": "https://github.com/bestpractical/rt/releases",
       "since": "2026-11-02",
-      "why": "Outil de ticketing utilisé en stage à la DISI : versions et correctifs de sécurité.",
+      "why": "Logiciel utilisé en stage pour gérer les demandes d'aide : ses nouvelles versions.",
       "always": [
         "outils"
       ],
@@ -159,17 +170,19 @@
   "manualSources": [
     {
       "name": "ANSSI",
+      "topic": "sujet2",
       "kind": "Guides et recommandations",
       "site": "https://cyber.gouv.fr/",
       "since": "2026-09-23",
-      "why": "Guides de durcissement (authentification, Active Directory, SSH). Pas de flux exploitable : consulté directement ; ses alertes arrivent par le CERT-FR."
+      "why": "L'agence nationale de la sécurité informatique : ses guides pour sécuriser les connexions et les serveurs."
     },
     {
       "name": "CNIL",
+      "topic": "legal",
       "kind": "Réglementation",
       "site": "https://www.cnil.fr/",
       "since": "2026-11-02",
-      "why": "Cadre légal des données personnelles traitées par un outil de support ou une IA. Lu à la main : son flux, généraliste (agenda, droits des personnes, sanctions), touche rarement mes thèmes."
+      "why": "Les règles sur les données personnelles, par exemple quand une IA traite les demandes des utilisateurs."
     }
   ],
   "rules": {
