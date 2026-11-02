@@ -19,6 +19,7 @@ export type VeilleItem = {
 export type VeilleSourceStatus = {
   id?: string;
   name: string;
+  topic?: VeilleTopic;
   kind: string;
   type?: string;
   lang?: string;
@@ -36,6 +37,7 @@ export type VeilleSourceStatus = {
 
 export type VeilleManualSource = {
   name: string;
+  topic?: VeilleTopic;
   kind: string;
   site: string;
   why: string;
@@ -60,11 +62,23 @@ export type VeilleFeed = {
   items: VeilleItem[];
 };
 
+/** Libellés affichés au visiteur : en clair, reliés aux deux sujets. */
 export const THEME_LABELS: Record<VeilleTheme, string> = {
-  "ia-support": "IA & support N1",
-  acces: "Accès & authentification",
-  outils: "Outils du support",
-  alerte: "Alerte CERT-FR",
+  "ia-support": "Sujet 1 · IA et support",
+  acces: "Sujet 2 · Protéger les connexions",
+  outils: "Outils de mon stage",
+  alerte: "Alerte de sécurité officielle",
+};
+
+/** Sujet auquel une source contribue (champ topic du collecteur). */
+export type VeilleTopic = "sujet1" | "sujet2" | "deux" | "outils" | "legal";
+
+export const TOPIC_LABELS: Record<VeilleTopic, string> = {
+  sujet1: "Pour le sujet 1 : l’IA et le support",
+  sujet2: "Pour le sujet 2 : protéger les connexions",
+  deux: "Pour les deux sujets",
+  outils: "Les logiciels de mon stage",
+  legal: "Le cadre légal",
 };
 
 const REPO = "fortite912/portfolio-site";

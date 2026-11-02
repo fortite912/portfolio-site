@@ -202,26 +202,28 @@ export const veilleE5: Veille = {
   status: "En cours",
   themePrincipal: {
     title: "L'intégration de l'IA dans le support informatique de niveau 1",
+    plain:
+      "Comment l'intelligence artificielle peut aider à répondre aux premières demandes d'aide des utilisateurs (le « niveau 1 » du support).",
     why:
-      "Thème choisi parce qu'il est adossé à un projet mené : Soveris, un prototype de tri automatique des demandes de support. Ce que la veille fait émerger peut être éprouvé sur son banc de test.",
+      "Je développe Soveris, mon projet d'étudiant-entrepreneur : un outil qui trie automatiquement les demandes d'aide informatique. Ce que j'apprends en veille, je peux le tester dessus.",
     axes: [
-      "IA appliquée au helpdesk et à l'ITSM : tri des tickets, assistants de support, base de connaissances",
-      "IA en exploitation : lecture des journaux, supervision, agents IA administrés sur les postes",
-      "Risques et cadre : données personnelles, sécurité et gouvernance de ces outils",
+      "les outils d'IA qui trient les demandes d'aide ou y répondent",
+      "l'IA qui aide à surveiller et dépanner les ordinateurs et les serveurs",
+      "les risques : données personnelles, sécurité de ces outils",
     ],
-    exclu: "L'actualité générale de l'IA (modèles, puces, outils de développement).",
+    exclu: "l'actualité générale de l'IA (nouveaux modèles, puces, logiciels de programmation).",
   },
   themeSecondaire: {
     title: "Durcissement des accès : MFA, SSH et PKI",
-    why:
-      "Prolonge le déploiement MFA conduit en stage à la DISI et les labs SSH et PKI du portfolio.",
+    plain: "Comment mieux protéger les connexions aux comptes et aux serveurs.",
+    why: "J'ai mis en place la double authentification pendant mon stage, et je travaille la connexion sécurisée aux serveurs et les certificats dans mes labs.",
     axes: [
-      "MFA et hameçonnage d'identifiants",
-      "Authentification SSH par clés",
-      "PKI et certificats",
-      "Active Directory et Entra ID",
+      "la double authentification (MFA) et le vol de mots de passe",
+      "la connexion sécurisée aux serveurs (SSH)",
+      "les certificats numériques (PKI), la carte d'identité d'un site ou d'un serveur",
+      "les annuaires de comptes d'entreprise (Active Directory, Entra ID)",
     ],
-    exclu: "Les fuites de données et les failles sans lien avec l'authentification.",
+    exclu: "les piratages et les failles sans lien avec la connexion des utilisateurs.",
   },
   syntheses: [],
   bilans: [],

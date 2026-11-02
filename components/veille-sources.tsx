@@ -1,127 +1,67 @@
-import { daysSince, type VeilleFeed } from "@/lib/veille-feed";
+import { TOPIC_LABELS, type VeilleFeed, type VeilleTopic } from "@/lib/veille-feed";
 
-const STALE_DAYS = 14;
+const ORDER: VeilleTopic[] = ["sujet1", "sujet2", "deux", "outils", "legal"];
 
-const day = new Intl.DateTimeFormat("fr-FR", {
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-  timeZone: "Europe/Paris",
-});
+type Row = { key: string; name: string; href: string; why: string; note?: string; topic?: VeilleTopic };
 
 /**
- * Sources suivies, lues dans la collecte publiée : la liste affichée est
- * exactement celle que le collecteur utilise, avec l'état de chaque flux.
+ * Mes sources, rangées par sujet, avec la raison de chaque choix. L'état
+ * technique de chaque flux est dans les détails techniques.
  */
 export function VeilleSources({ feed }: { feed: VeilleFeed }) {
-  const manual = feed.manualSources ?? [];
+  const rows: Row[] = [
+    ...feed.sources.map((s) => ({
+      key: s.id ?? s.url,
+      name: s.name,
+      href: s.site ?? s.url,
+      why: s.why ?? s.kind,
+      topic: s.topic,
+      note: s.type === "Outil" ? undefined : s.lang === "en" ? "en anglais" : undefined,
+    })),
+    ...(feed.manualSources ?? []).map((s) => ({
+      key: s.name,
+      name: s.name,
+      href: s.site,
+      why: s.why,
+      topic: s.topic,
+      note: "je la consulte moi-même",
+    })),
+  ];
+  // Une source suivie par plusieurs flux (CERT-FR) n'apparaît qu'une fois
+  const unique = rows.filter((s, i) => rows.findIndex((x) => x.name === s.name) === i);
+  const groups = ORDER.map((t) => ({ t, list: unique.filter((s) => s.topic === t) }))
+    .filter((g) => g.list.length > 0);
+  const sansSujet = unique.filter((s) => !s.topic);
 
   return (
-    <div id="veille-sources" className="space-y-4 scroll-mt-32">
-      <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h3
-          className="text-sm font-semibold uppercase tracking-wider"
-          style={{ color: "var(--color-muted)" }}
-        >
-          Sources suivies
-        </h3>
-        <a
-          href="/veille/sources.opml"
-          className="text-[11px] doc-toc-link"
-          style={{ color: "var(--color-accent)", fontFamily: "var(--font-mono)" }}
-        >
-          export OPML →
-        </a>
-      </div>
-
-      <div className="grid gap-3 sm:grid-cols-2">
-        {feed.sources.map((s) => {
-          const age = s.lastItem ? daysSince(s.lastItem) : null;
-          const stale = age !== null && age > STALE_DAYS;
-          const health = !s.ok
-            ? { text: `flux en échec${s.error ? ` (${s.error})` : ""}`, color: "var(--color-red)" }
-            : !s.lastItem
-              ? { text: "aucun article lu dans le flux", color: "var(--color-yellow)" }
-              : stale
-                ? { text: `sans nouvel article depuis ${age} jours`, color: "var(--color-yellow)" }
-                : { text: `dernier article le ${day.format(new Date(s.lastItem))}`, color: "var(--color-green)" };
-          return (
-            <a
-              key={s.id ?? s.url}
-              href={s.site ?? s.url}
-              target="_blank"
-              rel="noreferrer"
-              className="card card-hover p-4 space-y-1.5 block"
-            >
-              <div className="flex items-center justify-between gap-2">
-                <p className="text-sm font-semibold">
-                  {s.name}
-                  <span className="font-normal" style={{ color: "var(--color-muted)" }}>
-                    {" "}· {s.kind}
-                  </span>
-                </p>
-                <span
-                  className="text-[10px] shrink-0"
-                  style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
-                >
-                  {[s.type, s.lang?.toUpperCase()].filter(Boolean).join(" · ")}
-                </span>
-              </div>
-              {s.why && (
-                <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>
-                  {s.why}
-                </p>
-              )}
-              <p
-                className="text-[10.5px] flex flex-wrap gap-x-3"
-                style={{ fontFamily: "var(--font-mono)" }}
-              >
-                <span style={{ color: health.color }}>● {health.text}</span>
-                {s.since && (
-                  <span style={{ color: "var(--color-muted)" }}>
-                    suivie depuis le {day.format(new Date(s.since))}
-                  </span>
-                )}
-              </p>
-            </a>
-          );
-        })}
-
-        {manual.map((s) => (
-          <a
-            key={s.name}
-            href={s.site}
-            target="_blank"
-            rel="noreferrer"
-            className="card card-hover p-4 space-y-1.5 block"
-            style={{ borderStyle: "dashed" }}
-          >
-            <div className="flex items-center justify-between gap-2">
-              <p className="text-sm font-semibold">
-                {s.name}
-                <span className="font-normal" style={{ color: "var(--color-muted)" }}>
-                  {" "}· {s.kind}
-                </span>
-              </p>
-              <span
-                className="text-[10px] shrink-0"
-                style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
-              >
-                lue à la main
-              </span>
-            </div>
-            <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>
-              {s.why}
+    <div id="veille-sources" className="space-y-3 scroll-mt-32">
+      <h3 className="text-base font-semibold">Mes sources ({unique.length})</h3>
+      <div className="md:columns-2 gap-x-8">
+        {[...groups, ...(sansSujet.length ? [{ t: undefined, list: sansSujet }] : [])].map((g) => (
+          <div key={g.t ?? "autres"} className="space-y-2 mb-5 break-inside-avoid">
+            <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: "var(--color-muted)" }}>
+              {g.t ? TOPIC_LABELS[g.t] : "Autres sources"}
             </p>
-            {s.since && (
-              <p
-                className="text-[10.5px]"
-                style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
-              >
-                suivie depuis le {day.format(new Date(s.since))}
-              </p>
-            )}
-          </a>
+            <ul className="space-y-2">
+              {g.list.map((s) => (
+                <li key={s.key} className="text-xs leading-relaxed">
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link-underline text-sm font-semibold"
+                    style={{ color: "rgba(236,232,225,0.92)" }}
+                  >
+                    {s.name}
+                  </a>
+                  {s.note && <span style={{ color: "var(--color-muted)" }}> ({s.note})</span>}
+                  <span className="block" style={{ color: "var(--color-muted)" }}>
+                    {s.why}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
     </div>

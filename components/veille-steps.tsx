@@ -1,100 +1,60 @@
-import type { Step, StepStatus } from "@/lib/veille-method";
+import { GROUP_LABELS, type Step, type StepGroup, type StepStatus } from "@/lib/veille-method";
 
-const STATUS: Record<StepStatus, { label: string; pill: string }> = {
-  "en-place": { label: "En place", pill: "pill-green" },
-  automatique: { label: "Automatique", pill: "pill-purple" },
-  "en-cours": { label: "En cours", pill: "pill-yellow" },
-  "a-mener": { label: "À mener", pill: "pill-accent" },
+const STATUS: Record<StepStatus, { label: string; color: string; mark: string }> = {
+  fait: { label: "Fait", color: "var(--color-green)", mark: "✓" },
+  automatique: { label: "En place", color: "var(--color-green)", mark: "✓" },
+  "a-faire": { label: "Pas encore commencé", color: "var(--color-yellow)", mark: "○" },
 };
 
-function ProofLink({ label, href }: { label: string; href: string }) {
-  const external = href.startsWith("http");
-  return (
-    <a
-      href={href}
-      className="tag-code"
-      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-    >
-      {label}
-      {external ? " ↗" : ""}
-    </a>
-  );
-}
+const GROUPS: StepGroup[] = ["preparation", "semaine", "trimestre"];
 
 /**
- * La veille en 10 étapes : ce que fait chaque étape, son état réel et
- * la preuve correspondante. L'état est calculé (lib/veille-method.ts).
+ * Les 10 étapes, regroupées en trois temps : la mise en place (faite une
+ * fois), le travail de chaque semaine, le point tous les trois mois.
  */
 export function VeilleSteps({ steps }: { steps: Step[] }) {
-  const done = steps.filter((s) => s.status !== "a-mener").length;
-
   return (
-    <div id="veille-methode" className="space-y-4 scroll-mt-32">
-      <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h3
-          className="text-sm font-semibold uppercase tracking-wider"
-          style={{ color: "var(--color-muted)" }}
-        >
-          La veille en 10 étapes
-        </h3>
-        <span
-          className="text-[11px]"
-          style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
-        >
-          {done} / {steps.length} engagées
-        </span>
-      </div>
+    <div id="veille-methode" className="space-y-3 scroll-mt-32">
+      <h3 className="text-base font-semibold">Ma méthode, en 10 étapes</h3>
 
-      <ol className="grid gap-3 md:grid-cols-2 list-none m-0 p-0">
-        {steps.map((s) => {
-          const st = STATUS[s.status];
+      <div className="card overflow-hidden">
+        {GROUPS.map((g, gi) => {
+          const list = steps.filter((s) => s.group === g);
           return (
-            <li
-              key={s.n}
-              className="card p-4 space-y-2.5"
-              style={
-                s.status === "a-mener"
-                  ? { borderStyle: "dashed", borderColor: "rgba(226,105,60,0.22)" }
-                  : undefined
-              }
+            <div
+              key={g}
+              className="px-4 py-3 space-y-2"
+              style={{ borderTop: gi === 0 ? "none" : "1px solid rgba(255,255,255,0.06)" }}
             >
-              <div className="flex items-center gap-3">
-                <span
-                  className="text-base font-bold shrink-0 w-7"
-                  style={{ color: "var(--color-accent)", fontFamily: "var(--font-mono)" }}
-                >
-                  {String(s.n).padStart(2, "0")}
-                </span>
-                <p className="text-sm font-semibold leading-snug flex-1">{s.title}</p>
-                <span className={`pill ${st.pill} shrink-0`} style={{ fontSize: 10 }}>
-                  {st.label}
-                </span>
-              </div>
-              <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>
-                {s.body}
+              <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: "var(--color-muted)" }}>
+                {GROUP_LABELS[g]}
               </p>
-              {s.next && (
-                <p className="text-xs leading-relaxed" style={{ color: "var(--color-yellow)" }}>
-                  Prochaine action : {s.next}
-                </p>
-              )}
-              <div className="flex flex-wrap gap-1.5 pt-0.5">
-                {s.proofs.map((p) => (
-                  <ProofLink key={p.label} {...p} />
-                ))}
-              </div>
-            </li>
+              <ol className="space-y-2 list-none m-0 p-0">
+                {list.map((s) => {
+                  const st = STATUS[s.status];
+                  return (
+                    <li key={s.n} className="flex gap-3 items-baseline">
+                      <span
+                        className="text-sm font-bold w-6 shrink-0"
+                        style={{ color: "var(--color-accent)", fontFamily: "var(--font-mono)" }}
+                      >
+                        {s.n}
+                      </span>
+                      <span className="min-w-0 flex-1 text-sm leading-relaxed">
+                        <span className="font-semibold">{s.title}</span>
+                        <span style={{ color: "var(--color-muted)" }}> — {s.body}</span>
+                      </span>
+                      <span className="text-[11px] shrink-0 whitespace-nowrap" style={{ color: st.color }}>
+                        {st.mark} <span className="hidden sm:inline">{st.label}</span>
+                      </span>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
           );
         })}
-      </ol>
-
-      <p className="text-xs leading-relaxed pt-1" style={{ color: "var(--color-muted)" }}>
-        Méthode inspirée du cycle de la veille (ancienne norme expérimentale AFNOR XP X50-053,
-        1998, guides des URFIST). Le référentiel n’impose ni nombre d’étapes ni outil : il demande
-        que « la veille [soit] régulière ». Les étapes 1 à 4 renvoient aux choix documentés sur
-        cette page ; l’état des étapes 5 à 10 est tiré des données publiées (exécutions, revues,
-        synthèses, bilans).
-      </p>
+      </div>
     </div>
   );
 }

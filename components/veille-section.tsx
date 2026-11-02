@@ -1,162 +1,143 @@
 import { veilleE5 } from "@/lib/experience";
-import { getLastRun, getVeilleFeed, COLLECTOR_URL } from "@/lib/veille-feed";
-import { veilleSteps } from "@/lib/veille-method";
+import { getLastRun, getVeilleFeed } from "@/lib/veille-feed";
+import { revues, sourceCount, veilleSteps } from "@/lib/veille-method";
 import type { VeilleThemeSpec } from "@/lib/types";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { SectionNum } from "@/components/doc-meta";
 import { VeilleSteps } from "@/components/veille-steps";
-import { VeilleSources } from "@/components/veille-sources";
-import { VeilleCollecte } from "@/components/veille-collecte";
+import { VeilleRecent } from "@/components/veille-recent";
 import { VeilleJournal } from "@/components/veille-journal";
+import { VeilleSources } from "@/components/veille-sources";
+import { VeilleTechnique } from "@/components/veille-collecte";
 
-const IconRadar = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="9" />
-    <circle cx="12" cy="12" r="5" />
-    <circle cx="12" cy="12" r="1.2" fill="currentColor" />
-    <path d="M12 12l6-5" />
-  </svg>
-);
+const longDate = new Intl.DateTimeFormat("fr-FR", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "Europe/Paris",
+});
 
-function ThemeCard({
+function SubjectCard({
+  n,
   theme,
-  label,
   color,
-  rgb,
-  pill,
 }: {
+  n: number;
   theme: VeilleThemeSpec;
-  label: string;
   color: string;
-  rgb: string;
-  pill: string;
 }) {
   return (
-    <div className="card card-hover p-5 space-y-3" style={{ borderColor: `rgba(${rgb},0.2)` }}>
-      <div className="flex items-center gap-2">
-        <span
-          className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-          style={{ background: `rgba(${rgb},0.1)`, border: `1px solid rgba(${rgb},0.22)`, color }}
-          aria-hidden
-        >
-          <IconRadar />
-        </span>
-        <span className={`pill ${pill}`} style={{ fontSize: 10 }}>
-          {label}
-        </span>
+    <div className="card p-5 space-y-3">
+      <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color }}>
+        Sujet {n}
+      </p>
+      <div className="space-y-1">
+        <p className="text-[15px] font-semibold leading-snug">{theme.title}</p>
+        <p className="text-[13px] leading-relaxed" style={{ color: "rgba(236,232,225,0.85)" }}>
+          En clair : {theme.plain.charAt(0).toLowerCase() + theme.plain.slice(1)}
+        </p>
       </div>
-      <p className="text-sm font-semibold leading-snug">{theme.title}</p>
-      <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>
+      <p className="text-[13px] leading-relaxed" style={{ color: "var(--color-muted)" }}>
+        <span className="font-semibold" style={{ color: "rgba(236,232,225,0.8)" }}>
+          Pourquoi :{" "}
+        </span>
         {theme.why}
       </p>
-      <ul className="space-y-1.5 pt-1" style={{ borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: 10 }}>
-        {theme.axes.map((a) => (
-          <li key={a} className="flex gap-2 text-xs leading-relaxed">
-            <span
-              className="mt-[6px] w-1 h-1 rounded-full shrink-0"
-              style={{ background: color }}
-              aria-hidden
-            />
-            <span style={{ color: "rgba(236,232,225,0.75)" }}>{a}</span>
-          </li>
-        ))}
-      </ul>
-      {theme.exclu && (
-        <p className="text-[11px] leading-relaxed" style={{ color: "var(--color-muted)" }}>
-          Hors périmètre : {theme.exclu}
+      <div className="text-[13px] leading-relaxed" style={{ color: "var(--color-muted)" }}>
+        <p className="font-semibold" style={{ color: "rgba(236,232,225,0.8)" }}>
+          J’inclus :
         </p>
-      )}
+        <ul className="list-disc pl-5">
+          {theme.axes.map((a) => (
+            <li key={a}>{a}</li>
+          ))}
+        </ul>
+        {theme.exclu && (
+          <p className="mt-1">
+            <span className="font-semibold" style={{ color: "rgba(236,232,225,0.8)" }}>
+              Je laisse de côté :{" "}
+            </span>
+            {theme.exclu}
+          </p>
+        )}
+      </div>
     </div>
   );
 }
 
 /**
- * Veille technologique (E5, compétence « Organiser son développement
- * professionnel »). Ordre : thèmes, méthode en 10 étapes, sources,
- * collecte automatique, puis le travail personnel (revues, synthèses).
+ * Veille technologique (fait partie de l'épreuve E5, compétence C6),
+ * lisible sans connaissance technique :
+ *   1. ce qu'est cette veille, où elle en est, avec les chiffres ;
+ *   2. mes deux sujets, ce que j'inclus et ce que je laisse de côté ;
+ *   3. ma méthode en 10 étapes, regroupées en trois temps ;
+ *   4. ce que le programme a trouvé récemment, par sujet ;
+ *   5. ce que j'en retiens (revues, résumés, bilans) ;
+ *   6. mes sources, par sujet ;
+ *   7. les détails techniques, fermés par défaut.
  * n : numéro dans le sommaire de la page ; absent sur une page seule.
  */
 export async function VeilleSection({ n }: { n?: number } = {}) {
-  const { epreuve, competence, status, themePrincipal, themeSecondaire } = veilleE5;
+  const { epreuve, competence, themePrincipal, themeSecondaire } = veilleE5;
   const [feed, lastRun] = await Promise.all([getVeilleFeed(), getLastRun()]);
   const steps = veilleSteps(feed, lastRun);
 
+  const debut = feed.sources
+    .map((s) => s.since)
+    .filter((d): d is string => Boolean(d))
+    .sort()[0];
+  const derniereRevue = revues.at(-1)?.date;
+
   return (
     <AnimateOnScroll>
-      <section id="veille" className="space-y-9 scroll-mt-32">
-        {/* En-tête */}
+      <section id="veille" className="space-y-10 scroll-mt-32">
         <div className="space-y-3">
-          <div className="flex flex-wrap items-center gap-2">
-            <p className="heading-section" style={{ margin: 0 }}>
-              Épreuve du BTS
-            </p>
-            <span className="pill pill-yellow" style={{ fontSize: 11 }}>
-              ◉ {status}
-            </span>
-          </div>
-
+          <p className="heading-section" style={{ margin: 0 }}>
+            Fait partie de l’épreuve {epreuve}
+          </p>
           <h2 className="heading-lg">
-            <SectionNum n={n}>
-              <span style={{ color: "var(--color-green)" }}>{epreuve}</span>
-              {" — "}
-              Veille technologique
-            </SectionNum>
+            <SectionNum n={n}>Ma veille technologique</SectionNum>
           </h2>
-
-          <div className="flex flex-wrap gap-1.5">
-            <span className="tag-code">Compétence C6 — {competence}</span>
-          </div>
-
-          <p className="text-sm leading-relaxed max-w-2xl" style={{ color: "var(--color-muted)" }}>
-            Une veille n’est pas un exposé : c’est une méthode de travail tenue dans la durée. Voici
-            les thèmes suivis, la méthode, les sources, ce que la collecte repère et ce que j’en
-            retiens.
+          <p className="text-xs" style={{ color: "var(--color-muted)" }}>
+            Compétence évaluée : {competence} (C6)
+          </p>
+          <p className="text-[15px] leading-relaxed max-w-2xl" style={{ color: "rgba(236,232,225,0.88)" }}>
+            Je suis l’actualité de deux sujets liés à mon futur métier. Un programme relève chaque
+            jour les articles qui en parlent dans mes sources. Mon travail : les trier chaque
+            semaine et écrire ce que j’en retiens.
+          </p>
+          <p
+            className="text-xs flex flex-wrap gap-x-4 gap-y-1"
+            style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
+          >
+            {debut && <span>Collecte depuis le {longDate.format(new Date(debut))}</span>}
+            <span>{feed.items.length} articles relevés</span>
+            <span>{sourceCount(feed)} sources</span>
+            <span>
+              {derniereRevue
+                ? `Dernière revue : ${longDate.format(new Date(`${derniereRevue}T12:00:00Z`))}`
+                : "Tri et résumés : pas encore commencés"}
+            </span>
           </p>
         </div>
 
-        {/* Thèmes et périmètre */}
-        <div id="veille-themes" className="grid gap-4 md:grid-cols-2 scroll-mt-32">
-          <ThemeCard
-            theme={themePrincipal}
-            label="Thème principal"
-            color="var(--color-green)"
-            rgb="127,163,127"
-            pill="pill-green"
-          />
-          <ThemeCard
-            theme={themeSecondaire}
-            label="Thème secondaire"
-            color="var(--color-accent)"
-            rgb="226,105,60"
-            pill="pill-accent"
-          />
+        <div id="veille-themes" className="space-y-3 scroll-mt-32">
+          <h3 className="text-base font-semibold">Mes deux sujets</h3>
+          <div className="grid gap-4 md:grid-cols-2">
+            <SubjectCard n={1} theme={themePrincipal} color="var(--color-green)" />
+            <SubjectCard n={2} theme={themeSecondaire} color="var(--color-accent)" />
+          </div>
         </div>
 
         <VeilleSteps steps={steps} />
 
-        <VeilleSources feed={feed} />
-
-        <VeilleCollecte feed={feed} lastRun={lastRun} />
+        <VeilleRecent feed={feed} />
 
         <VeilleJournal />
 
-        {/* Suivre et vérifier */}
-        <div className="flex flex-wrap gap-2">
-          <a className="btn text-sm" href="/veille/rss.xml">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M4 11a9 9 0 0 1 9 9" />
-              <path d="M4 4a16 16 0 0 1 16 16" />
-              <circle cx="5" cy="19" r="1" />
-            </svg>
-            Flux RSS de ma veille
-          </a>
-          <a className="btn text-sm" href="/veille/sources.opml">
-            Sources (OPML)
-          </a>
-          <a className="btn text-sm" href={COLLECTOR_URL} target="_blank" rel="noreferrer">
-            Code du collecteur ↗
-          </a>
-        </div>
+        <VeilleSources feed={feed} />
+
+        <VeilleTechnique feed={feed} lastRun={lastRun} />
       </section>
     </AnimateOnScroll>
   );

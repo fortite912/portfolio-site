@@ -22,7 +22,7 @@ export const PARCOURS_TOC: TocSection[] = [
 
 export const EPREUVES_TOC: TocSection[] = [
   { n: 1, id: "oral", label: "E5 — Oral sur portfolio" },
-  { n: 2, id: "veille", label: "E5 — Veille technologique" },
+  { n: 2, id: "veille", label: "Ma veille technologique (E5)" },
   { n: 3, id: "ccf", label: "E6 — Administration systèmes et réseaux" },
 ];
 

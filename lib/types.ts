@@ -156,6 +156,8 @@ export type Oral = {
 
 export type VeilleThemeSpec = {
   title: string;
+  /** Le sujet en une phrase, sans sigle. */
+  plain: string;
   why: string;
   /** Axes suivis : le périmètre du thème (étape 2 de la méthode). */
   axes: string[];
