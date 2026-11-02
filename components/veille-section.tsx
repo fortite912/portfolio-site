@@ -1,7 +1,13 @@
 import { veilleE5 } from "@/lib/experience";
+import { getLastRun, getVeilleFeed, COLLECTOR_URL } from "@/lib/veille-feed";
+import { veilleSteps } from "@/lib/veille-method";
+import type { VeilleThemeSpec } from "@/lib/types";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { SectionNum } from "@/components/doc-meta";
-import { VeilleFeed } from "@/components/veille-feed";
+import { VeilleSteps } from "@/components/veille-steps";
+import { VeilleSources } from "@/components/veille-sources";
+import { VeilleCollecte } from "@/components/veille-collecte";
+import { VeilleJournal } from "@/components/veille-journal";
 
 const IconRadar = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -12,22 +18,72 @@ const IconRadar = () => (
   </svg>
 );
 
-/** n : numero dans le sommaire de la page ; absent sur une page seule. */
-export function VeilleSection({ n }: { n?: number } = {}) {
-  const {
-    epreuve,
-    competence,
-    status,
-    themePrincipal,
-    themeSecondaire,
-    method,
-    sources,
-    syntheses,
-  } = veilleE5;
+function ThemeCard({
+  theme,
+  label,
+  color,
+  rgb,
+  pill,
+}: {
+  theme: VeilleThemeSpec;
+  label: string;
+  color: string;
+  rgb: string;
+  pill: string;
+}) {
+  return (
+    <div className="card card-hover p-5 space-y-3" style={{ borderColor: `rgba(${rgb},0.2)` }}>
+      <div className="flex items-center gap-2">
+        <span
+          className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
+          style={{ background: `rgba(${rgb},0.1)`, border: `1px solid rgba(${rgb},0.22)`, color }}
+          aria-hidden
+        >
+          <IconRadar />
+        </span>
+        <span className={`pill ${pill}`} style={{ fontSize: 10 }}>
+          {label}
+        </span>
+      </div>
+      <p className="text-sm font-semibold leading-snug">{theme.title}</p>
+      <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>
+        {theme.why}
+      </p>
+      <ul className="space-y-1.5 pt-1" style={{ borderTop: "1px solid rgba(255,255,255,0.05)", paddingTop: 10 }}>
+        {theme.axes.map((a) => (
+          <li key={a} className="flex gap-2 text-xs leading-relaxed">
+            <span
+              className="mt-[6px] w-1 h-1 rounded-full shrink-0"
+              style={{ background: color }}
+              aria-hidden
+            />
+            <span style={{ color: "rgba(236,232,225,0.75)" }}>{a}</span>
+          </li>
+        ))}
+      </ul>
+      {theme.exclu && (
+        <p className="text-[11px] leading-relaxed" style={{ color: "var(--color-muted)" }}>
+          Hors périmètre : {theme.exclu}
+        </p>
+      )}
+    </div>
+  );
+}
+
+/**
+ * Veille technologique (E5, compétence « Organiser son développement
+ * professionnel »). Ordre : thèmes, méthode en 10 étapes, sources,
+ * collecte automatique, puis le travail personnel (revues, synthèses).
+ * n : numéro dans le sommaire de la page ; absent sur une page seule.
+ */
+export async function VeilleSection({ n }: { n?: number } = {}) {
+  const { epreuve, competence, status, themePrincipal, themeSecondaire } = veilleE5;
+  const [feed, lastRun] = await Promise.all([getVeilleFeed(), getLastRun()]);
+  const steps = veilleSteps(feed, lastRun);
 
   return (
     <AnimateOnScroll>
-      <section id="veille" className="space-y-7 scroll-mt-32">
+      <section id="veille" className="space-y-9 scroll-mt-32">
         {/* En-tête */}
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-2">
@@ -52,181 +108,54 @@ export function VeilleSection({ n }: { n?: number } = {}) {
           </div>
 
           <p className="text-sm leading-relaxed max-w-2xl" style={{ color: "var(--color-muted)" }}>
-            Une veille n’est pas un exposé : c’est une méthode de travail et son impact concret.
-            Voici les thèmes suivis, les sources, et ce qui en ressort.
+            Une veille n’est pas un exposé : c’est une méthode de travail tenue dans la durée. Voici
+            les thèmes suivis, la méthode, les sources, ce que la collecte repère et ce que j’en
+            retiens.
           </p>
         </div>
 
-        {/* Thèmes */}
-        <div className="grid gap-4 md:grid-cols-2">
-          <div
-            className="card card-hover p-5 space-y-3"
-            style={{ borderColor: "rgba(127,163,127,0.2)" }}
-          >
-            <div className="flex items-center gap-2">
-              <span
-                className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-                style={{
-                  background: "rgba(127,163,127,0.1)",
-                  border: "1px solid rgba(127,163,127,0.22)",
-                  color: "var(--color-green)",
-                }}
-                aria-hidden
-              >
-                <IconRadar />
-              </span>
-              <span className="pill pill-green" style={{ fontSize: 10 }}>
-                Thème principal
-              </span>
-            </div>
-            <p className="text-sm font-semibold leading-snug">{themePrincipal.title}</p>
-            <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>
-              {themePrincipal.why}
-            </p>
-          </div>
-
-          <div className="card card-hover p-5 space-y-3">
-            <div className="flex items-center gap-2">
-              <span
-                className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-                style={{
-                  background: "rgba(226,105,60,0.08)",
-                  border: "1px solid rgba(226,105,60,0.18)",
-                  color: "var(--color-accent)",
-                }}
-                aria-hidden
-              >
-                <IconRadar />
-              </span>
-              <span className="pill pill-accent" style={{ fontSize: 10 }}>
-                Thème secondaire
-              </span>
-            </div>
-            <p className="text-sm font-semibold leading-snug">{themeSecondaire.title}</p>
-            <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>
-              {themeSecondaire.why}
-            </p>
-          </div>
+        {/* Thèmes et périmètre */}
+        <div id="veille-themes" className="grid gap-4 md:grid-cols-2 scroll-mt-32">
+          <ThemeCard
+            theme={themePrincipal}
+            label="Thème principal"
+            color="var(--color-green)"
+            rgb="127,163,127"
+            pill="pill-green"
+          />
+          <ThemeCard
+            theme={themeSecondaire}
+            label="Thème secondaire"
+            color="var(--color-accent)"
+            rgb="226,105,60"
+            pill="pill-accent"
+          />
         </div>
 
-        {/* Méthode */}
-        <div className="space-y-4">
-          <h3
-            className="text-sm font-semibold uppercase tracking-wider"
-            style={{ color: "var(--color-muted)" }}
-          >
-            Méthode
-          </h3>
-          <ul className="space-y-2">
-            {method.map((m) => (
-              <li key={m} className="flex gap-2.5 text-sm leading-relaxed">
-                <span
-                  className="mt-[7px] w-1.5 h-1.5 rounded-full shrink-0"
-                  style={{ background: "var(--color-green)", opacity: 0.7 }}
-                  aria-hidden
-                />
-                <span style={{ color: "rgba(255,255,255,0.75)" }}>{m}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <VeilleSteps steps={steps} />
 
-        {/* Sources */}
-        <div className="space-y-4">
-          <h3
-            className="text-sm font-semibold uppercase tracking-wider"
-            style={{ color: "var(--color-muted)" }}
-          >
-            Sources suivies
-          </h3>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {sources.map((s) => (
-              <a
-                key={s.name}
-                href={s.url}
-                target="_blank"
-                rel="noreferrer"
-                className="card card-hover p-4 space-y-1.5 block"
-              >
-                <div className="flex items-center justify-between gap-2">
-                  <p className="text-sm font-semibold">{s.name}</p>
-                  <span
-                    className="text-[10px] shrink-0"
-                    style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
-                  >
-                    {s.kind}
-                  </span>
-                </div>
-                <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>
-                  {s.detail}
-                </p>
-              </a>
-            ))}
-          </div>
-        </div>
+        <VeilleSources feed={feed} />
 
-        {/* Collecte automatique (GitHub Actions) */}
-        <VeilleFeed />
+        <VeilleCollecte feed={feed} lastRun={lastRun} />
 
-        {/* Synthèses */}
-        <div className="space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <h3
-              className="text-sm font-semibold uppercase tracking-wider"
-              style={{ color: "var(--color-muted)" }}
-            >
-              Synthèses
-            </h3>
-            <span
-              className="text-[11px]"
-              style={{ color: "var(--color-yellow)", fontFamily: "var(--font-mono)" }}
-            >
-              {syntheses.length} publiée{syntheses.length > 1 ? "s" : ""}
-            </span>
-          </div>
+        <VeilleJournal />
 
-          {syntheses.length === 0 ? (
-            <div
-              className="rounded-xl p-5"
-              style={{
-                background: "rgba(217,164,65,0.04)",
-                border: "1px dashed rgba(217,164,65,0.22)",
-              }}
-            >
-              <p className="text-[13px] leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
-                <span className="font-semibold" style={{ color: "var(--color-yellow)" }}>
-                  Premières synthèses à venir.
-                </span>{" "}
-                Chacune suivra le même format : la source et sa date, ce qui est retenu, et
-                surtout ce que cela change concrètement sur une infrastructure.
-              </p>
-            </div>
-          ) : (
-            <div className="card overflow-hidden">
-              <ul>
-                {syntheses.map((s, i) => (
-                  <li
-                    key={`${s.date}-${s.sujet}`}
-                    className="p-4 sm:p-5 space-y-1"
-                    style={{ borderTop: i === 0 ? "none" : "1px solid rgba(255,255,255,0.04)" }}
-                  >
-                    <div className="flex flex-wrap items-baseline gap-2">
-                      <span
-                        className="text-[11px]"
-                        style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
-                      >
-                        {s.date}
-                      </span>
-                      <p className="text-sm font-medium">{s.sujet}</p>
-                    </div>
-                    <p className="text-xs leading-relaxed" style={{ color: "var(--color-muted)" }}>
-                      {s.impact}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+        {/* Suivre et vérifier */}
+        <div className="flex flex-wrap gap-2">
+          <a className="btn text-sm" href="/veille/rss.xml">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M4 11a9 9 0 0 1 9 9" />
+              <path d="M4 4a16 16 0 0 1 16 16" />
+              <circle cx="5" cy="19" r="1" />
+            </svg>
+            Flux RSS de ma veille
+          </a>
+          <a className="btn text-sm" href="/veille/sources.opml">
+            Sources (OPML)
+          </a>
+          <a className="btn text-sm" href={COLLECTOR_URL} target="_blank" rel="noreferrer">
+            Code du collecteur ↗
+          </a>
         </div>
       </section>
     </AnimateOnScroll>

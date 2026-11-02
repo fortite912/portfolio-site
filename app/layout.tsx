@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "Systèmes • Réseaux • Cybersécurité — labs documentés avec preuves vérifiables.",
   keywords: ["SISR", "BTS SIO", "portfolio", "systèmes", "réseaux", "cybersécurité", "Azure", "Cisco", "stage", "CentraleSupélec", "étudiant-entrepreneur", "Soveris", "Sean Fritsch"],
   authors: [{ name: "Sean Fritsch" }],
+  alternates: {
+    types: { "application/rss+xml": [{ url: "/veille/rss.xml", title: "Veille technologique" }] },
+  },
   openGraph: {
     title: "Sean Fritsch — Portfolio SISR",
     description: "Systèmes • Réseaux • Cybersécurité — labs documentés avec preuves vérifiables.",

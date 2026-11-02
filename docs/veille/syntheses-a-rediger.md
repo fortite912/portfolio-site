@@ -7,6 +7,15 @@ touchent **tes deux thèmes** et **ton stage à la DISI**.
 analyse » doit venir de toi — le jury te demandera de la justifier à
 l'oral. Deux ou trois phrases par question suffisent.
 
+> **Attention aux « Faits ».** Ces puces ont été préparées par Claude à
+> partir des articles. Relis l'article, vérifie chaque chiffre et
+> reformule avec tes mots avant de les reprendre : sur le site, la
+> synthèse entière doit être la tienne.
+>
+> Pour l'étape « Analyser et vérifier », ajoute une **seconde source**
+> à chaque synthèse (avis CERT-FR, note de version de l'éditeur…).
+> Méthode complète : [methode-10-etapes.md](methode-10-etapes.md).
+
 > ⚠️ **Confidentialité du stage.** Ton rapport est confidentiel. Tu peux
 > dire *ce que tu as fait* (« j'ai déployé le MFA sur les téléphones d'un
 > groupe d'utilisateurs »), jamais *comment l'infrastructure de la DISI
@@ -18,7 +27,7 @@ l'oral. Deux ou trois phrases par question suffisent.
 
 **Source :** IT Connect, 24/09/2026
 **Lien :** https://www.it-connect.fr/glpi-11-0-9-10-0-27-failles-securite-patch/
-**Thèmes :** IA & support N1 · Accès & authentification
+**Thèmes :** Outils du support (classement du collecteur depuis le 02/11/2026 ; l'article touche aussi l'IA par le rythme des correctifs, et le MFA)
 
 ### Faits (d'après l'article)
 

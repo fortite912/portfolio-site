@@ -154,22 +154,54 @@ export type Oral = {
   notes: string[];
 };
 
-export type VeilleSource = {
-  name: string;
-  kind: string;
-  detail: string;
-  url?: string;
+export type VeilleThemeSpec = {
+  title: string;
+  why: string;
+  /** Axes suivis : le périmètre du thème (étape 2 de la méthode). */
+  axes: string[];
+  exclu?: string;
+};
+
+/**
+ * Synthèse de veille, rédigée par moi : faits sourcés, ce que je retiens,
+ * ce que cela change. Jamais générée automatiquement.
+ */
+export type VeilleSynthese = {
+  /** AAAA-MM-JJ, date de rédaction. */
+  date: string;
+  sujet: string;
+  sources: Array<{ titre: string; url: string; media: string; date?: string }>;
+  retenu: string;
+  impact: string;
+  lien?: { label: string; href: string };
+};
+
+/** Entrée écrite par scripts/veille/revue.py après chaque revue. */
+export type VeilleRevue = {
+  date: string;
+  vus: number;
+  lus: number;
+  retenus: Array<{ id: string; title: string; link: string; source: string; date: string }>;
+  ids?: string[];
+  note?: string;
+};
+
+/** Bilan périodique de la veille (étape 10), rédigé par moi. */
+export type VeilleBilan = {
+  /** AAAA-MM-JJ */
+  date: string;
+  constat: string;
+  changements: string;
 };
 
 export type Veille = {
   epreuve: string;
   competence: string;
   status: "À venir" | "En cours" | "Prêt";
-  themePrincipal: { title: string; why: string };
-  themeSecondaire: { title: string; why: string };
-  method: string[];
-  sources: VeilleSource[];
-  syntheses: Array<{ date: string; sujet: string; impact: string }>;
+  themePrincipal: VeilleThemeSpec;
+  themeSecondaire: VeilleThemeSpec;
+  syntheses: VeilleSynthese[];
+  bilans: VeilleBilan[];
 };
 
 export type PriorRole = {

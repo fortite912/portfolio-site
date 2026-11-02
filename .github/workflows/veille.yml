@@ -1,18 +1,21 @@
-# Veille technologique automatisee — epreuve E5 du BTS SIO (competence C6, organiser son developpement professionnel).
+# Veille technologique automatisee — epreuve E5 du BTS SIO (competence
+# « Organiser son developpement professionnel »), etape 5 de la methode.
 #
-# Chaque jour, lit les flux RSS des sources suivies (CERT-FR, IT Connect,
-# Zataz), retient les articles qui touchent les deux themes de veille et
-# les accumule dans data/veille-feed.json. Le portfolio relit ce fichier
-# toutes les heures : aucun redeploiement n'est necessaire.
+# Chaque jour, lit les flux RSS et Atom des sources suivies, retient les
+# articles qui touchent les themes de veille et les accumule dans
+# data/veille-feed.json. Le portfolio relit ce fichier toutes les heures.
 #
-# Le workflow ne commite que les jours ou la collecte apporte du nouveau.
-# L'historique des executions sert de preuve d'automatisation.
+# Le workflow ne commite que les jours ou la collecte change quelque chose ;
+# Vercel ne reconstruit pas le site pour ces commits (scripts/vercel-ignore.sh).
+# Une source en panne laisse un avertissement ; la panne de toutes les
+# sources fait echouer l'execution, visible dans l'historique.
 
 name: Veille automatique
 
 on:
   schedule:
-    # 05:30 UTC = 07:30 a Paris l'ete, 06:30 l'hiver
+    # Planifie a 05:30 UTC. GitHub demarre souvent ces taches plusieurs
+    # heures plus tard (observe en octobre 2026 : entre 09:30 et 13:30 UTC).
     - cron: "30 5 * * *"
   workflow_dispatch:
 
@@ -29,9 +32,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -41,11 +44,22 @@ jobs:
       - name: Enregistrer les nouveaux articles
         run: |
           if git diff --quiet -- data/veille-feed.json; then
-            echo "Aucun nouvel article aujourd'hui."
+            echo "Aucun changement aujourd'hui."
             exit 0
           fi
-          git config user.name "veille-bot"
+          git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/veille-feed.json
           git commit -m "veille: collecte du $(date -u +%Y-%m-%d)"
+          # Un commit pousse entre-temps sur main : on se replace dessus.
+          # S'il touche aussi le fichier de collecte (conflit), on refait
+          # la collecte a partir de sa version plutot que de fusionner un
+          # JSON ligne a ligne.
+          if ! git pull --rebase origin main; then
+            git rebase --abort
+            git reset --hard origin/main
+            python scripts/veille/collect.py
+            git add data/veille-feed.json
+            git commit -m "veille: collecte du $(date -u +%Y-%m-%d)" || exit 0
+          fi
           git push

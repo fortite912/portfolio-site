@@ -190,8 +190,11 @@ export const ccfE6: Ccf = {
 /**
  * Veille technologique — épreuve E5, compétence "Organiser son
  * développement professionnel". Le jury évalue la méthode et l'impact
- * concret, pas un exposé. Pour changer de thème, il suffit d'éditer
- * themePrincipal ci-dessous.
+ * concret, pas un exposé.
+ *
+ * Les sources et les règles de tri vivent dans scripts/veille/collect.py
+ * (publiées avec la collecte) ; les revues dans data/veille-revues.json.
+ * Les synthèses ci-dessous sont rédigées à la main, jamais générées.
  */
 export const veilleE5: Veille = {
   epreuve: "E5",
@@ -200,47 +203,28 @@ export const veilleE5: Veille = {
   themePrincipal: {
     title: "L'intégration de l'IA dans le support informatique de niveau 1",
     why:
-      "Thème choisi parce qu'il est directement adossé à un projet mené : Soveris, un prototype de tri automatique des demandes de support. La veille ne reste donc pas théorique — chaque lecture est confrontée à un banc de test réel.",
+      "Thème choisi parce qu'il est adossé à un projet mené : Soveris, un prototype de tri automatique des demandes de support. Ce que la veille fait émerger peut être éprouvé sur son banc de test.",
+    axes: [
+      "IA appliquée au helpdesk et à l'ITSM : tri des tickets, assistants de support, base de connaissances",
+      "IA en exploitation : lecture des journaux, supervision, agents IA administrés sur les postes",
+      "Risques et cadre : données personnelles, sécurité et gouvernance de ces outils",
+    ],
+    exclu: "L'actualité générale de l'IA (modèles, puces, outils de développement).",
   },
   themeSecondaire: {
     title: "Durcissement des accès : MFA, SSH et PKI",
     why:
       "Prolonge le déploiement MFA conduit en stage à la DISI et les labs SSH et PKI du portfolio.",
+    axes: [
+      "MFA et hameçonnage d'identifiants",
+      "Authentification SSH par clés",
+      "PKI et certificats",
+      "Active Directory et Entra ID",
+    ],
+    exclu: "Les fuites de données et les failles sans lien avec l'authentification.",
   },
-  method: [
-    "Réception automatisée : un workflow GitHub Actions lit chaque jour les flux RSS des sources, retient les articles liés aux deux thèmes et les publie sur ce portfolio",
-    "Revue hebdomadaire d'environ 30 minutes, le même jour chaque semaine",
-    "Pour chaque élément retenu : une fiche courte — source, date, ce que ça change concrètement sur une infrastructure",
-    "Les éléments qui concernent un lab du portfolio sont reportés dans le lab correspondant",
-  ],
-  sources: [
-    {
-      name: "CERT-FR",
-      kind: "Alertes et avis",
-      detail: "Alertes de sécurité officielles et bulletins d'actualité du centre gouvernemental de veille.",
-      url: "https://www.cert.ssi.gouv.fr/",
-    },
-    {
-      name: "ANSSI",
-      kind: "Guides et publications",
-      detail:
-        "Référentiels et recommandations de durcissement, consultés directement : pas de flux RSS. Ses alertes arrivent via le CERT-FR, qui en dépend.",
-      url: "https://cyber.gouv.fr/",
-    },
-    {
-      name: "IT Connect",
-      kind: "Blog technique FR",
-      detail: "Tutoriels et actualité administration systèmes et réseaux.",
-      url: "https://www.it-connect.fr/",
-    },
-    {
-      name: "Zataz",
-      kind: "Actualité cybersécurité FR",
-      detail: "Suivi des incidents et des fuites de données.",
-      url: "https://www.zataz.com/",
-    },
-  ],
   syntheses: [],
+  bilans: [],
 };
 
 /**
