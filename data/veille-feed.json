@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-02T09:24:18+00:00",
-  "lastAddedAt": "2026-11-02T08:39:27+00:00",
+  "collectedAt": "2026-11-03T12:55:20+00:00",
+  "lastAddedAt": "2026-11-03T12:55:20+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-10-30T00:00:00+00:00"
+      "lastItem": "2026-11-02T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-02T08:29:17+00:00"
+      "lastItem": "2026-11-03T08:45:00+00:00"
     },
     {
       "id": "zataz",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-10-30T19:54:24+00:00"
+      "lastItem": "2026-11-02T22:05:34+00:00"
     },
     {
       "id": "ms-security",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-10-31T01:02:57+00:00"
+      "lastItem": "2026-10-08T20:44:28+00:00"
     },
     {
       "id": "itsm-tools",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-10-29T09:41:25+00:00"
+      "lastItem": "2026-11-03T09:00:58+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-10-30T12:37:49+00:00"
+      "lastItem": "2026-11-02T11:30:16+00:00"
     },
     {
       "id": "glpi",
@@ -347,6 +347,20 @@
     }
   },
   "items": [
+    {
+      "id": "f894edd96529",
+      "title": "Global Secure Access: Private Access and Internet Access in one offering",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/global-secure-access-private-access-and-internet-access-in-one/ba-p/4569098",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-02T22:05:34+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Employees, and now AI agents, need secure access to resources wherever they live: the internet, Microsoft 365 and SaaS, cloud and datacenter workloads, on-premises apps, and AI services. Zero Trust means evaluating…",
+      "text": "Employees, and now AI agents, need secure access to resources wherever they live: the internet, Microsoft 365 and SaaS, cloud and datacenter workloads, on-premises apps, and AI services. Zero Trust means evaluating every one of those connections against full context, including identity, risk, device, app and data, location, and network, and enforcing the decision continuously, not only at sign-in. Organizations need to do that without stitching together separate tools and policies. Today, we’re taking the next step in our Secure Access Service Edge (SASE) journey: customers can now purchase Microsoft Entra Private Access and Microsoft Entra Internet Access together as a single Microsoft Entra Glo bal Secure Access offering. This is not a new product; it’s a simpler way to purchase these capabilities together. Microsoft Entra Private Access and Microsoft Entra Internet Access will also continue to be available individually. How Microsoft Entra Glo bal Secure Access fits Microsoft Entra Glo bal Secure Access offering , available starting November 2, 2026, is for organizations that want identity-aware network access for private and internet traffic as a unified offering. Microsoft Entra Suite includes Microsoft Entra Glo bal Secure Access alongside Microsoft Entra ID Governance, Microsoft Entra ID Protection, and Microsoft Entra Verified ID for organizations that want a broader identity and access offering. Microsoft 365 E7 includes Microsoft Entra Suite and its Glo bal Secure…"
+    },
     {
       "id": "f9278250a658",
       "title": "Création, connexion, session, récupération : où sont les failles de votre gestion des identités ?",
@@ -937,7 +951,7 @@
     },
     {
       "id": "d184268cb1d8",
-      "title": "Vulnérabilité dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
+      "title": "[MàJ] Multiples vulnérabilités dans Ivanti Connect Secure (ICS) (14 octobre 2026)",
       "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-013/",
       "source": "CERT-FR",
       "sourceId": "certfr-alertes",
@@ -946,8 +960,8 @@
       "themes": [
         "alerte"
       ],
-      "excerpt": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique…",
-      "text": "Une vulnérabilité a été découverte dans Ivanti Connect Secure (ICS). Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un contournement de la politique de sécurité. Ivanti indique que cette vulnérabilité CVE-2026-104935 est..."
+      "excerpt": "[Mise à jour du 2 novembre 2026] Le 29 octobre 2026, Ivanti a mis à jour son avis de sécurité du 13 octobre 2026 pour ajouter deux vulnérabilités (CVE-2026-111357 et CVE-2026-118527). Celles-ci permettent à un…",
+      "text": "[Mise à jour du 2 novembre 2026] Le 29 octobre 2026, Ivanti a mis à jour son avis de sécurité du 13 octobre 2026 pour ajouter deux vulnérabilités (CVE-2026-111357 et CVE-2026-118527). Celles-ci permettent à un attaquant authentifié d'élever ses privilèges et de téléverser un fichier arbitraire..."
     },
     {
       "id": "080ed8a3ae9c",
@@ -1003,6 +1017,21 @@
       ],
       "excerpt": "Le CERT-FR a connaissance de nombreuses compromissions des controleurs à distance d'installation de réfrigération Danfoss série AK-SM, AK-SC ainsi que Copeland xweb et Dixell xweb. De manière générale l'exposition…",
       "text": "Le CERT-FR a connaissance de nombreuses compromissions des controleurs à distance d'installation de réfrigération Danfoss série AK-SM, AK-SC ainsi que Copeland xweb et Dixell xweb. De manière générale l'exposition d'une interface de gestion sur Internet est contraire aux bonnes pratiques."
+    },
+    {
+      "id": "19d487931360",
+      "title": "Post-quantum authentication: Why organizations should start testing certificate ecosystems now",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/10/08/post-quantum-authentication-why-organizations-should-start-testing-certificate-ecosystems-now/",
+      "source": "Microsoft Security",
+      "sourceId": "ms-security",
+      "kind": "Blog éditeur",
+      "date": "2026-10-08T20:44:28+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Prepare for post-quantum authentication by testing certificate ecosystems now. Learn how Microsoft’s PQC TLS Pilot Program helps advance future readiness. The post Post-quantum authentication: Why organizations should…",
+      "text": "Prepare for post-quantum authentication by testing certificate ecosystems now. Learn how Microsoft’s PQC TLS Pilot Program helps advance future readiness. The post Post-quantum authentication: Why organizations should start testing certificate ecosystems now appeared first on Microsoft Security Blog .",
+      "backfill": true
     },
     {
       "id": "7994ac38ead8",
