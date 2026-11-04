@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-03T12:55:20+00:00",
-  "lastAddedAt": "2026-11-03T12:55:20+00:00",
+  "collectedAt": "2026-11-04T13:09:57+00:00",
+  "lastAddedAt": "2026-11-04T13:09:57+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-02T00:00:00+00:00"
+      "lastItem": "2026-11-03T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-03T08:45:00+00:00"
+      "lastItem": "2026-11-04T09:32:03+00:00"
     },
     {
       "id": "zataz",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-02T22:05:34+00:00"
+      "lastItem": "2026-11-03T16:38:50+00:00"
     },
     {
       "id": "ms-security",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-10-08T20:44:28+00:00"
+      "lastItem": "2026-11-03T17:32:47+00:00"
     },
     {
       "id": "itsm-tools",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-11-02T11:30:16+00:00"
+      "lastItem": "2026-11-03T17:57:48+00:00"
     },
     {
       "id": "glpi",
@@ -354,12 +354,40 @@
       "source": "Microsoft Entra",
       "sourceId": "ms-entra",
       "kind": "Blog éditeur",
-      "date": "2026-11-02T22:05:34+00:00",
+      "date": "2026-11-03T16:38:50+00:00",
       "themes": [
         "acces"
       ],
       "excerpt": "Employees, and now AI agents, need secure access to resources wherever they live: the internet, Microsoft 365 and SaaS, cloud and datacenter workloads, on-premises apps, and AI services. Zero Trust means evaluating…",
       "text": "Employees, and now AI agents, need secure access to resources wherever they live: the internet, Microsoft 365 and SaaS, cloud and datacenter workloads, on-premises apps, and AI services. Zero Trust means evaluating every one of those connections against full context, including identity, risk, device, app and data, location, and network, and enforcing the decision continuously, not only at sign-in. Organizations need to do that without stitching together separate tools and policies. Today, we’re taking the next step in our Secure Access Service Edge (SASE) journey: customers can now purchase Microsoft Entra Private Access and Microsoft Entra Internet Access together as a single Microsoft Entra Glo bal Secure Access offering. This is not a new product; it’s a simpler way to purchase these capabilities together. Microsoft Entra Private Access and Microsoft Entra Internet Access will also continue to be available individually. How Microsoft Entra Glo bal Secure Access fits Microsoft Entra Glo bal Secure Access offering , available starting November 2, 2026, is for organizations that want identity-aware network access for private and internet traffic as a unified offering. Microsoft Entra Suite includes Microsoft Entra Glo bal Secure Access alongside Microsoft Entra ID Governance, Microsoft Entra ID Protection, and Microsoft Entra Verified ID for organizations that want a broader identity and access offering. Microsoft 365 E7 includes Microsoft Entra Suite and its Glo bal Secure…"
+    },
+    {
+      "id": "2bda0bf67341",
+      "title": "Today's articles: Measuring the success of an AI pilot and Microsoft's new AI co-worker",
+      "link": "https://community.spiceworks.com/t/todays-articles-measuring-the-success-of-an-ai-pilot-and-microsofts-new-ai-co-worker/1259388",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-11-03T11:58:47+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "In the first piece for the day, Rose de Fremery emphasizes the need for concrete data when assessing AI pilots , arguing that decisions shouldn’t be based on positive vibes or impressive demonstrations. Instead, she…",
+      "text": "In the first piece for the day, Rose de Fremery emphasizes the need for concrete data when assessing AI pilots , arguing that decisions shouldn’t be based on positive vibes or impressive demonstrations. Instead, she suggests establishing clear targets from the start, monitoring actual usage and expenses, and relying on solid data to demonstrate return on investment. In the second article, Priya Singh introduces us to Microsoft’s new AI coworker (and the bill it comes with). These Copilot agents are designed to work tirelessly, but they also pose challenges for IT departments, including complex offboarding processes and unexpected financial operations bills. To effectively manage these issues, teams must prioritize governance before unleashing autonomous AI into their workflows. That’s a wrap for today, we’ll be back with more insights tomorrow. 1 post - 1 participant Read full topic"
+    },
+    {
+      "id": "de7a59922543",
+      "title": "Multiples vulnérabilités dans GLPI (03 novembre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1444/",
+      "source": "CERT-FR",
+      "sourceId": "certfr-avis",
+      "kind": "Avis",
+      "date": "2026-11-03T00:00:00+00:00",
+      "themes": [
+        "outils"
+      ],
+      "excerpt": "De multiples vulnérabilités ont été découvertes dans GLPI. Elles permettent à un attaquant de provoquer une élévation de privilèges, une injection de code indirecte à distance (XSS) et un contournement de la politique…",
+      "text": "De multiples vulnérabilités ont été découvertes dans GLPI. Elles permettent à un attaquant de provoquer une élévation de privilèges, une injection de code indirecte à distance (XSS) et un contournement de la politique de sécurité."
     },
     {
       "id": "f9278250a658",
@@ -493,7 +521,7 @@
         "acces"
       ],
       "excerpt": "Hi everyone, I’m new to the community. I’ve been experimenting with using ChatGPT to speed up routine IT work, and I’ve found that the quality of the answer depends almost entirely on how the prompt is written. A…",
-      "text": "Hi everyone, I’m new to the community. I’ve been experimenting with using ChatGPT to speed up routine IT work, and I’ve found that the quality of the answer depends almost entirely on how the prompt is written. A structure that works well for me: Role: “Act as a Windows sysadmin with 10 years of experience.” Task: “Write a PowerShell script to list all users who haven’t logged in for 90 days.” Context: “Active Directory environment, Windows Server 2019.” Format: “Give the script, then a short explanation of each section.” Limits: “Don’t make changes, read-only output only.” Where it has saved me time: Drafting helpdesk replies and user instructions Writing first-draft documentation and SOPs Explaining error messages in plain language Generating script outlines (always tested in a lab first) A caution: never paste passwords, internal IPs, or customer data into public AI tools, and always review anything before running it in production. Curious how others here are using AI at work: What tasks do you trust it with, and which ones do you avoid? Does your company have a policy on AI tools? 10 posts - 10 participants Read full topic",
+      "text": "Hi everyone, I’m new to the community. I’ve been experimenting with using ChatGPT to speed up routine IT work, and I’ve found that the quality of the answer depends almost entirely on how the prompt is written. A structure that works well for me: Role: “Act as a Windows sysadmin with 10 years of experience.” Task: “Write a PowerShell script to list all users who haven’t logged in for 90 days.” Context: “Active Directory environment, Windows Server 2019.” Format: “Give the script, then a short explanation of each section.” Limits: “Don’t make changes, read-only output only.” Where it has saved me time: Drafting helpdesk replies and user instructions Writing first-draft documentation and SOPs Explaining error messages in plain language Generating script outlines (always tested in a lab first) A caution: never paste passwords, internal IPs, or customer data into public AI tools, and always review anything before running it in production. Curious how others here are using AI at work: What tasks do you trust it with, and which ones do you avoid? Does your company have a policy on AI tools? 11 posts - 11 participants Read full topic",
       "backfill": true
     },
     {
