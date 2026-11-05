@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-04T13:09:57+00:00",
-  "lastAddedAt": "2026-11-04T13:09:57+00:00",
+  "collectedAt": "2026-11-05T13:23:46+00:00",
+  "lastAddedAt": "2026-11-05T13:23:46+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-03T00:00:00+00:00"
+      "lastItem": "2026-11-04T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-04T09:32:03+00:00"
+      "lastItem": "2026-11-05T08:45:00+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-10-24T23:00:29+00:00"
+      "lastItem": "2026-11-04T17:35:25+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-03T16:38:50+00:00"
+      "lastItem": "2026-11-04T17:00:00+00:00"
     },
     {
       "id": "ms-security",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-11-03T17:57:48+00:00"
+      "lastItem": "2026-11-04T14:10:08+00:00"
     },
     {
       "id": "glpi",
@@ -347,6 +347,34 @@
     }
   },
   "items": [
+    {
+      "id": "a9b146a7e2ee",
+      "title": "Scale access controls with Microsoft Entra Conditional Access policy plans",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/scale-access-controls-with-microsoft-entra-conditional-access/ba-p/4569647",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-04T17:00:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Today we’re announcing the public preview of Microsoft Entra Conditional Access policy plans —a new framework for enterprise-scale access control. Instead of managing dozens of individual policies, policy plans let you…",
+      "text": "Today we’re announcing the public preview of Microsoft Entra Conditional Access policy plans —a new framework for enterprise-scale access control. Instead of managing dozens of individual policies, policy plans let you define your access intent once and enforce it consistently across every identity. Scale and control are now complementary, not mutually exclusive. This evolution moves Conditional Access from administrative configuration toward policy management without sacrificing granularity or manageability. It helps identity teams close coverage gaps faster, improve policy clarity, and bring emerging identity types, such as AI agents, into the same trusted model. Policy plans run side by side with your existing Conditional Access policies, so you can start with one plan and expand from there. Check out this Microsoft Mechanics video for a first look at Conditional Access policy plans in Microsoft Entra and see the latest features in action. How it works Let's start with what a policy plan is. A policy plan groups related Conditional Access policies around one security objective, such as requiring compliant devices or securing agent activity. Every plan has three parts: Part What it is What it enables Plan details Name, description, optional tags, and owners. Clear accountability. Identity admins can see what the plan is for, who owns it, and what a change could affect. Shared conditions Targeting you define once for the whole plan, such as users in scope and emergency…"
+    },
+    {
+      "id": "c946b596ebac",
+      "title": "Microsoft Entra deep dives: Join our December 15–17 webinar series",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/microsoft-entra-deep-dives-join-our-december-15-17-webinar/ba-p/4448760",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-04T16:19:58+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "At Microsoft Ignite, November 17–20, the Microsoft Entra team will explore innovative ways to secure access for people and AI agents. But Microsoft Ignite is just the beginning. Post Ignite from December 15–17, keep…",
+      "text": "At Microsoft Ignite, November 17–20, the Microsoft Entra team will explore innovative ways to secure access for people and AI agents. But Microsoft Ignite is just the beginning. Post Ignite from December 15–17, keep the momentum going with three days dedicated to what’s next for identity and network access security. Join the Microsoft Entra team online for a series of deep dives: Take a closer look at the latest announcements, explore what they mean in practice, and get the insights you need to put them to work for you and your organization. Explore the sessions below, add them to your calendar, then sign in to the Tech Community and select Attend to receive reminders. Scale secure, adaptive access without policy sprawl Tuesday, December 15, 2026, 9:00 AM Pacific Time Etan Basseri, Principal PM Manager; Itai Zauer, Principal PM Manager See how Microsoft Entra helps you manage Conditional Access policy plans and scale granular access controls for every identity without contributing to policy sprawl. Through practical scenarios, learn how high-assurance credentials and passkeys strengthen phishing resistance; how AI-driven identity posture identifies security gaps and posture drift; and how identity context and risk signals from Microsoft Entra and Microsoft Defender help your team investigate and disrupt threats faster. Add to calendar Strengthen governance, privileged access, and resilience across every identity and tenant Wednesday, December 16, 2026, 9:00 AM Pacific Time…"
+    },
     {
       "id": "f894edd96529",
       "title": "Global Secure Access: Private Access and Internet Access in one offering",
