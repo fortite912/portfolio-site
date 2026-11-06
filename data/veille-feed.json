@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-05T13:23:46+00:00",
-  "lastAddedAt": "2026-11-05T13:23:46+00:00",
+  "collectedAt": "2026-11-06T13:06:27+00:00",
+  "lastAddedAt": "2026-11-06T13:06:27+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -18,7 +18,7 @@
         "alerte"
       ],
       "ok": true,
-      "lastItem": "2026-10-21T00:00:00+00:00"
+      "lastItem": "2026-11-05T00:00:00+00:00"
     },
     {
       "id": "certfr-avis",
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-04T00:00:00+00:00"
+      "lastItem": "2026-11-05T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-05T08:45:00+00:00"
+      "lastItem": "2026-11-06T11:10:41+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-04T17:35:25+00:00"
+      "lastItem": "2026-11-05T16:36:51+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-03T17:32:47+00:00"
+      "lastItem": "2026-11-05T23:46:50+00:00"
     },
     {
       "id": "itsm-tools",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-11-04T14:10:08+00:00"
+      "lastItem": "2026-11-06T12:35:14+00:00"
     },
     {
       "id": "glpi",
@@ -347,6 +347,49 @@
     }
   },
   "items": [
+    {
+      "id": "6ac42662a8e0",
+      "title": "Faux événements OpenAI, SpaceX et Anthropic : ce phishing vole les comptes Microsoft et Google",
+      "link": "https://www.it-connect.fr/faux-evenements-openai-spacex-phishing-microsoft-google/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-06T11:10:41+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Trois mois de ChatGPT Pro offerts pour une simple inscription ? Cette fausse invitation OpenAI sert à pirater votre compte Microsoft ou Google, MFA compris. Le post Faux événements OpenAI, SpaceX et Anthropic : ce…",
+      "text": "Trois mois de ChatGPT Pro offerts pour une simple inscription ? Cette fausse invitation OpenAI sert à pirater votre compte Microsoft ou Google, MFA compris. Le post Faux événements OpenAI, SpaceX et Anthropic : ce phishing vole les comptes Microsoft et Google a été publié sur IT-Connect ."
+    },
+    {
+      "id": "4174e5a4a99c",
+      "title": "*sshole : sur Alpine Linux, un mot de passe trop long peut mener à un accès root via SSH",
+      "link": "https://www.it-connect.fr/faille-openssh-musl-sshhole-alpine-linux/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-06T08:35:46+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "La faille *sshole (CVE-2026-123158) ouvre en SSH, avec un mot de passe trop long, des comptes Linux sans mot de passe. Alpine Linux est le premier concerné. Le post *sshole : sur Alpine Linux, un mot de passe trop long…",
+      "text": "La faille *sshole (CVE-2026-123158) ouvre en SSH, avec un mot de passe trop long, des comptes Linux sans mot de passe. Alpine Linux est le premier concerné. Le post *sshole : sur Alpine Linux, un mot de passe trop long peut mener à un accès root via SSH a été publié sur IT-Connect ."
+    },
+    {
+      "id": "d99a1189ab0f",
+      "title": "Vulnérabilité dans OpenSSH (05 novembre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-015/",
+      "source": "CERT-FR",
+      "sourceId": "certfr-alertes",
+      "kind": "Alertes",
+      "date": "2026-11-05T00:00:00+00:00",
+      "themes": [
+        "alerte",
+        "acces"
+      ],
+      "excerpt": "Le 5 novembre 2026, OpenSSH a publié un avis de sécurité concernant une vulnérabilité qui permet à un attaquant de contourner l’authentification d'un service SSH. En effet, sur les systèmes Linux qui utilisent la…",
+      "text": "Le 5 novembre 2026, OpenSSH a publié un avis de sécurité concernant une vulnérabilité qui permet à un attaquant de contourner l’authentification d'un service SSH. En effet, sur les systèmes Linux qui utilisent la bibliothèque standard C musl, compilés sans support PAM ou avec PAM désactivé, un..."
+    },
     {
       "id": "a9b146a7e2ee",
       "title": "Scale access controls with Microsoft Entra Conditional Access policy plans",
