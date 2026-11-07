@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-06T13:06:27+00:00",
-  "lastAddedAt": "2026-11-06T13:06:27+00:00",
+  "collectedAt": "2026-11-07T11:50:52+00:00",
+  "lastAddedAt": "2026-11-07T11:50:52+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-05T00:00:00+00:00"
+      "lastItem": "2026-11-06T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-06T11:10:41+00:00"
+      "lastItem": "2026-11-07T10:00:00+00:00"
     },
     {
       "id": "zataz",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-04T17:00:00+00:00"
+      "lastItem": "2026-11-06T21:04:04+00:00"
     },
     {
       "id": "ms-security",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-05T23:46:50+00:00"
+      "lastItem": "2026-11-07T02:44:34+00:00"
     },
     {
       "id": "itsm-tools",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-11-03T09:00:58+00:00"
+      "lastItem": "2026-11-06T16:52:42+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -348,6 +348,34 @@
   },
   "items": [
     {
+      "id": "d33bbe86c914",
+      "title": "What’s new in Microsoft Entra: November 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/what-s-new-in-microsoft-entra-november-2026/ba-p/4556457",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-06T21:04:04+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Don't miss our Microsoft Ignite announcements. Tune in or join us in person for AI is changing access: See how Microsoft Entra helps you stay ahead on November 18, 2026, at 10:15 AM Pacific for secure access news and…",
+      "text": "Don't miss our Microsoft Ignite announcements. Tune in or join us in person for AI is changing access: See how Microsoft Entra helps you stay ahead on November 18, 2026, at 10:15 AM Pacific for secure access news and demos from our latest product roadmap. Access is never a one-time decision. Employees change roles, devices fall out of compliance, AI agents get created and forgotten, and guests outlast the projects they joined for. But it’s not just identities that change: risks shift in real time and attacks never let up. Customers tell us the hardest part is keeping access secure as users, devices, agents, and guests change over time while threats evolve by the minute. This month’s releases help you stay ahead of both: lifecycle policies for agent and guest identities, drift detection and group discovery for governed access, continuous access evaluation that responds to device and user risk signals within minutes, and phishing-resistant sign-in from the very first MFA method. Here’s everything new in Microsoft Entra from October 2026, organized around the outcomes you’re trying to achieve: Outcome: Keep my organization trusted and resilient Detect drift in access package entitlements | Public Preview Access package drift reports help you spot where real-world access diverges from policy intent. Flag over‑granted permissions or missing assignments and restore alignment with a click. Reports refresh daily and require Microsoft Entra ID Governance or Microsoft Entra Suite .…"
+    },
+    {
+      "id": "58cddb482da0",
+      "title": "Catch Microsoft Entra at Ignite 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/catch-microsoft-entra-at-ignite-2026/ba-p/4513159",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-06T20:56:39+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to…",
+      "text": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to simplifying access policies and securing agents, our sessions bring practical guidance and demos to your toughest access challenges. Use this guide to plan your sessions, connect with our team, and enter the Microsoft Entra prize draw! Enter the Microsoft Entra prize draw Registered for Ignite? Check in at any of the five eligible Microsoft Entra sessions in this post for a chance to win. These are the live-streamed breakouts, which you can join in person or online. How to enter Scan the QR code shown during an eligible session and complete the short entry form. Each session you check in to earns one entry. Entry period 12:00 AM PT on Tuesday, November 17, through 11:59 PM PT on Friday, November 20, 2026. Prizes One grand prize: an Xbox plus a 30-minute chat with a Microsoft Entra identity architect. Two Microsoft Entra swag bags: one for a decision-maker and one for a practitioner. Drawing Winners are selected by random drawing on December 1, 2026. Swag bag winners come from decision-maker and practitioner entries, and the grand prize winner from all entries. NO PURCHASE NECESSARY. Open to legal residents of the United States, including the District of Columbia and Puerto Rico, who are 18 or older and registered for Microsoft Ignite 2026. Entry period:…"
+    },
+    {
       "id": "6ac42662a8e0",
       "title": "Faux événements OpenAI, SpaceX et Anthropic : ce phishing vole les comptes Microsoft et Google",
       "link": "https://www.it-connect.fr/faux-evenements-openai-spacex-phishing-microsoft-google/",
@@ -377,18 +405,17 @@
     },
     {
       "id": "d99a1189ab0f",
-      "title": "Vulnérabilité dans OpenSSH (05 novembre 2026)",
+      "title": "[MàJ] Vulnérabilité dans OpenSSH (05 novembre 2026)",
       "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-015/",
       "source": "CERT-FR",
       "sourceId": "certfr-alertes",
       "kind": "Alertes",
       "date": "2026-11-05T00:00:00+00:00",
       "themes": [
-        "alerte",
-        "acces"
+        "alerte"
       ],
-      "excerpt": "Le 5 novembre 2026, OpenSSH a publié un avis de sécurité concernant une vulnérabilité qui permet à un attaquant de contourner l’authentification d'un service SSH. En effet, sur les systèmes Linux qui utilisent la…",
-      "text": "Le 5 novembre 2026, OpenSSH a publié un avis de sécurité concernant une vulnérabilité qui permet à un attaquant de contourner l’authentification d'un service SSH. En effet, sur les systèmes Linux qui utilisent la bibliothèque standard C musl, compilés sans support PAM ou avec PAM désactivé, un..."
+      "excerpt": "[Mise à jour du 6 novembre 2026] Cette vulnérabilité porte l'identifiant CVE-2026-123158. Alpine a publié un bulletin de sécurité (cf. section Documentation) concernant cette vulnérabilité. Le CERT-FR précise que toute…",
+      "text": "[Mise à jour du 6 novembre 2026] Cette vulnérabilité porte l'identifiant CVE-2026-123158. Alpine a publié un bulletin de sécurité (cf. section Documentation) concernant cette vulnérabilité. Le CERT-FR précise que toute installation de correctif ou modification de la configuration doit..."
     },
     {
       "id": "a9b146a7e2ee",
