@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-07T11:50:52+00:00",
-  "lastAddedAt": "2026-11-07T11:50:52+00:00",
+  "collectedAt": "2026-11-09T14:09:29+00:00",
+  "lastAddedAt": "2026-11-09T14:09:29+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-07T10:00:00+00:00"
+      "lastItem": "2026-11-09T10:45:00+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-05T16:36:51+00:00"
+      "lastItem": "2026-11-09T11:46:46+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -347,6 +347,20 @@
     }
   },
   "items": [
+    {
+      "id": "fe221c5cff31",
+      "title": "Phishing : 7,3 milliards de menaces par e-mail au troisième trimestre 2026, voici ce que révèle Microsoft",
+      "link": "https://www.it-connect.fr/microsoft-rapport-menaces-email-phishing-exceptions/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-09T06:29:48+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Microsoft a détecté 7,3 milliards e-mails de phishing au troisième trimestre 2026. Faux DocuSign, SVG, code d'appareil : voici ce qu'il faut retenir. Le post Phishing : 7,3 milliards de menaces par e-mail au troisième…",
+      "text": "Microsoft a détecté 7,3 milliards e-mails de phishing au troisième trimestre 2026. Faux DocuSign, SVG, code d'appareil : voici ce qu'il faut retenir. Le post Phishing : 7,3 milliards de menaces par e-mail au troisième trimestre 2026, voici ce que révèle Microsoft a été publié sur IT-Connect ."
+    },
     {
       "id": "d33bbe86c914",
       "title": "What’s new in Microsoft Entra: November 2026",
