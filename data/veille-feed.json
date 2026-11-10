@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-09T14:09:29+00:00",
-  "lastAddedAt": "2026-11-09T14:09:29+00:00",
+  "collectedAt": "2026-11-10T13:39:56+00:00",
+  "lastAddedAt": "2026-11-10T13:39:56+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-06T00:00:00+00:00"
+      "lastItem": "2026-11-09T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-09T10:45:00+00:00"
+      "lastItem": "2026-11-10T13:00:00+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-09T11:46:46+00:00"
+      "lastItem": "2026-11-09T21:50:33+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -74,7 +74,7 @@
       "since": "2026-11-02",
       "why": "Site officiel d'aide aux victimes : les arnaques du moment, utiles pour prévenir les utilisateurs.",
       "ok": true,
-      "lastItem": "2026-10-27T17:11:57+00:00"
+      "lastItem": "2026-11-09T15:00:00+00:00"
     },
     {
       "id": "ms-entra",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-07T02:44:34+00:00"
+      "lastItem": "2026-11-09T20:17:31+00:00"
     },
     {
       "id": "itsm-tools",
@@ -347,6 +347,20 @@
     }
   },
   "items": [
+    {
+      "id": "d406b5098bd7",
+      "title": "SonicWall : une faille dans le VPN SSL permet de contourner le MFA et elle est exploitée",
+      "link": "https://www.it-connect.fr/sonicwall-vpn-ssl-faille-saml-mfa-cve-2026-19868/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-09T16:49:22+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Une faille exploitée dans le VPN SSL des firewalls SonicWall peut permettre de contourner SAML et le MFA associé. Qui est affecté ? Comment se protoéger ? Le post SonicWall : une faille dans le VPN SSL permet de…",
+      "text": "Une faille exploitée dans le VPN SSL des firewalls SonicWall peut permettre de contourner SAML et le MFA associé. Qui est affecté ? Comment se protoéger ? Le post SonicWall : une faille dans le VPN SSL permet de contourner le MFA et elle est exploitée a été publié sur IT-Connect ."
+    },
     {
       "id": "fe221c5cff31",
       "title": "Phishing : 7,3 milliards de menaces par e-mail au troisième trimestre 2026, voici ce que révèle Microsoft",
