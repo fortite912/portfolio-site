@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-10T13:39:56+00:00",
-  "lastAddedAt": "2026-11-10T13:39:56+00:00",
+  "collectedAt": "2026-11-11T12:52:18+00:00",
+  "lastAddedAt": "2026-11-11T12:52:18+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-09T00:00:00+00:00"
+      "lastItem": "2026-11-10T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-10T13:00:00+00:00"
+      "lastItem": "2026-11-11T10:30:00+00:00"
     },
     {
       "id": "zataz",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-06T21:04:04+00:00"
+      "lastItem": "2026-11-09T21:38:24+00:00"
     },
     {
       "id": "ms-security",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-09T20:17:31+00:00"
+      "lastItem": "2026-11-10T23:00:00+00:00"
     },
     {
       "id": "itsm-tools",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-11-06T16:52:42+00:00"
+      "lastItem": "2026-11-11T11:16:37+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-11-06T12:35:14+00:00"
+      "lastItem": "2026-11-11T12:36:32+00:00"
     },
     {
       "id": "glpi",
@@ -348,6 +348,48 @@
   },
   "items": [
     {
+      "id": "aa7a98476bf2",
+      "title": "Windows 11 KB5132061 : voici l’essentiel à savoir sur la mise à jour de novembre 2026",
+      "link": "https://www.it-connect.fr/windows-11-kb5132061-kb5131087-nouveautes-correctifs/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-11T07:15:41+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "KB5132061 : menu contextuel personnalisable, signature NTLM par défaut, audio USB corrigé. Voici le récapitulatif de la mise à jour Windows 11 de novembre 2026. Le post Windows 11 KB5132061 : voici l’essentiel à savoir…",
+      "text": "KB5132061 : menu contextuel personnalisable, signature NTLM par défaut, audio USB corrigé. Voici le récapitulatif de la mise à jour Windows 11 de novembre 2026. Le post Windows 11 KB5132061 : voici l’essentiel à savoir sur la mise à jour de novembre 2026 a été publié sur IT-Connect ."
+    },
+    {
+      "id": "7a6a32766fb4",
+      "title": "Plugin or MCP server for AI agents",
+      "link": "https://community.spiceworks.com/t/plugin-or-mcp-server-for-ai-agents/1259629",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-11-10T18:43:26+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Is there any Plugin or Connector or an MCP server for Spiceworks help desk that we can connect with Claude or ChatGPT? 3 posts - 3 participants Read full topic",
+      "text": "Is there any Plugin or Connector or an MCP server for Spiceworks help desk that we can connect with Claude or ChatGPT? 3 posts - 3 participants Read full topic"
+    },
+    {
+      "id": "58cddb482da0",
+      "title": "Catch Microsoft Entra at Ignite 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/catch-microsoft-entra-at-ignite-2026/ba-p/4513159",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-09T21:38:24+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to…",
+      "text": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to simplifying access policies and securing agents, our sessions bring practical guidance and demos to your toughest access challenges. Use this guide to plan your sessions, connect with our team, and enter the Microsoft Entra prize draw! Enter the Microsoft Entra prize draw Registered for Ignite? Check in at any of the seven eligible Microsoft Entra sessions in this post for a chance to win. These are the live-streamed breakouts, which you can join in person or online. How to enter Scan the QR code shown during an eligible session and complete the short entry form. Each session you check in to earns one entry. Entry period 12:00 AM PT on Tuesday, November 17, through 11:59 PM PT on Friday, November 20, 2026. Prizes One grand prize: an Xbox plus a 30-minute chat with a Microsoft Entra identity architect. Two Microsoft Entra swag bags: one for a decision-maker and one for a practitioner. Drawing Winners are selected by random drawing on December 1, 2026. Swag bag winners come from decision-maker and practitioner entries, and the grand prize winner from all entries. NO PURCHASE NECESSARY. Open to legal residents of the United States, including the District of Columbia and Puerto Rico, who are 18 or older and registered for Microsoft Ignite 2026. Entry period:…"
+    },
+    {
       "id": "d406b5098bd7",
       "title": "SonicWall : une faille dans le VPN SSL permet de contourner le MFA et elle est exploitée",
       "link": "https://www.it-connect.fr/sonicwall-vpn-ssl-faille-saml-mfa-cve-2026-19868/",
@@ -388,20 +430,6 @@
       ],
       "excerpt": "Don't miss our Microsoft Ignite announcements. Tune in or join us in person for AI is changing access: See how Microsoft Entra helps you stay ahead on November 18, 2026, at 10:15 AM Pacific for secure access news and…",
       "text": "Don't miss our Microsoft Ignite announcements. Tune in or join us in person for AI is changing access: See how Microsoft Entra helps you stay ahead on November 18, 2026, at 10:15 AM Pacific for secure access news and demos from our latest product roadmap. Access is never a one-time decision. Employees change roles, devices fall out of compliance, AI agents get created and forgotten, and guests outlast the projects they joined for. But it’s not just identities that change: risks shift in real time and attacks never let up. Customers tell us the hardest part is keeping access secure as users, devices, agents, and guests change over time while threats evolve by the minute. This month’s releases help you stay ahead of both: lifecycle policies for agent and guest identities, drift detection and group discovery for governed access, continuous access evaluation that responds to device and user risk signals within minutes, and phishing-resistant sign-in from the very first MFA method. Here’s everything new in Microsoft Entra from October 2026, organized around the outcomes you’re trying to achieve: Outcome: Keep my organization trusted and resilient Detect drift in access package entitlements | Public Preview Access package drift reports help you spot where real-world access diverges from policy intent. Flag over‑granted permissions or missing assignments and restore alignment with a click. Reports refresh daily and require Microsoft Entra ID Governance or Microsoft Entra Suite .…"
-    },
-    {
-      "id": "58cddb482da0",
-      "title": "Catch Microsoft Entra at Ignite 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/catch-microsoft-entra-at-ignite-2026/ba-p/4513159",
-      "source": "Microsoft Entra",
-      "sourceId": "ms-entra",
-      "kind": "Blog éditeur",
-      "date": "2026-11-06T20:56:39+00:00",
-      "themes": [
-        "acces"
-      ],
-      "excerpt": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to…",
-      "text": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to simplifying access policies and securing agents, our sessions bring practical guidance and demos to your toughest access challenges. Use this guide to plan your sessions, connect with our team, and enter the Microsoft Entra prize draw! Enter the Microsoft Entra prize draw Registered for Ignite? Check in at any of the five eligible Microsoft Entra sessions in this post for a chance to win. These are the live-streamed breakouts, which you can join in person or online. How to enter Scan the QR code shown during an eligible session and complete the short entry form. Each session you check in to earns one entry. Entry period 12:00 AM PT on Tuesday, November 17, through 11:59 PM PT on Friday, November 20, 2026. Prizes One grand prize: an Xbox plus a 30-minute chat with a Microsoft Entra identity architect. Two Microsoft Entra swag bags: one for a decision-maker and one for a practitioner. Drawing Winners are selected by random drawing on December 1, 2026. Swag bag winners come from decision-maker and practitioner entries, and the grand prize winner from all entries. NO PURCHASE NECESSARY. Open to legal residents of the United States, including the District of Columbia and Puerto Rico, who are 18 or older and registered for Microsoft Ignite 2026. Entry period:…"
     },
     {
       "id": "6ac42662a8e0",
