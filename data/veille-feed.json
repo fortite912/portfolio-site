@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-11T12:52:18+00:00",
-  "lastAddedAt": "2026-11-11T12:52:18+00:00",
+  "collectedAt": "2026-11-12T13:54:32+00:00",
+  "lastAddedAt": "2026-11-12T13:54:32+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-11T10:30:00+00:00"
+      "lastItem": "2026-11-12T10:15:00+00:00"
     },
     {
       "id": "zataz",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-10T23:00:00+00:00"
+      "lastItem": "2026-11-11T19:49:57+00:00"
     },
     {
       "id": "itsm-tools",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-11-11T11:16:37+00:00"
+      "lastItem": "2026-11-12T10:22:39+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-11-11T12:36:32+00:00"
+      "lastItem": "2026-11-11T14:27:51+00:00"
     },
     {
       "id": "glpi",
@@ -147,7 +147,7 @@
         "outils"
       ],
       "ok": true,
-      "lastItem": "2026-10-28T11:08:24+00:00"
+      "lastItem": "2026-11-12T08:35:07+00:00"
     },
     {
       "id": "request-tracker",
@@ -347,6 +347,48 @@
     }
   },
   "items": [
+    {
+      "id": "ff88ce968f00",
+      "title": "GLPI 12.0.2",
+      "link": "https://github.com/glpi-project/glpi/releases/tag/12.0.2",
+      "source": "GLPI",
+      "sourceId": "glpi",
+      "kind": "Versions",
+      "date": "2026-11-12T08:35:07+00:00",
+      "themes": [
+        "outils"
+      ],
+      "excerpt": "This is a security release, upgrading is recommended You will find below the list of security issues fixed in this bugfixes version: [SECURITY - High] Privilege Escalation via the legacy API [SECURITY - High] OAuth…",
+      "text": "This is a security release, upgrading is recommended You will find below the list of security issues fixed in this bugfixes version: [SECURITY - High] Privilege Escalation via the legacy API [SECURITY - High] OAuth server consent bypass [SECURITY - High] Account takeover via an embed dashboard [SECURITY - High] Stored XSS in document downloads via API-written filenames [SECURITY - High] Account takeover via password-reset hijacking The full changelog is available for more details. We would like to thank all people who contributed to this new version and all those who contributes regularly to the GLPI project! Regards."
+    },
+    {
+      "id": "4796eee2aee3",
+      "title": "GLPI 11.0.13",
+      "link": "https://github.com/glpi-project/glpi/releases/tag/11.0.13",
+      "source": "GLPI",
+      "sourceId": "glpi",
+      "kind": "Versions",
+      "date": "2026-11-12T08:34:32+00:00",
+      "themes": [
+        "outils"
+      ],
+      "excerpt": "This is a security release, upgrading is recommended You will find below the list of security issues fixed in this bugfixes version: [SECURITY - High] Privilege Escalation via the legacy API [SECURITY - High] OAuth…",
+      "text": "This is a security release, upgrading is recommended You will find below the list of security issues fixed in this bugfixes version: [SECURITY - High] Privilege Escalation via the legacy API [SECURITY - High] OAuth server consent bypass [SECURITY - High] Account takeover via an embed dashboard [SECURITY - High] Stored XSS in document downloads via API-written filenames [SECURITY - High] Account takeover via password-reset hijacking The full changelog is available for more details. We would like to thank all people who contributed to this new version and all those who contributes regularly to the GLPI project! Regards."
+    },
+    {
+      "id": "40f02dca910d",
+      "title": "Any AI help tips or soultion",
+      "link": "https://community.spiceworks.com/t/any-ai-help-tips-or-soultion/1259664",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-11-11T14:27:51+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 4 posts - 4 participants Read full topic",
+      "text": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 4 posts - 4 participants Read full topic"
+    },
     {
       "id": "aa7a98476bf2",
       "title": "Windows 11 KB5132061 : voici l’essentiel à savoir sur la mise à jour de novembre 2026",
