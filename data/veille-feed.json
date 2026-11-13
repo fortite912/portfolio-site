@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-12T13:54:32+00:00",
-  "lastAddedAt": "2026-11-12T13:54:32+00:00",
+  "collectedAt": "2026-11-13T13:18:26+00:00",
+  "lastAddedAt": "2026-11-13T13:18:26+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-10T00:00:00+00:00"
+      "lastItem": "2026-11-12T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-12T10:15:00+00:00"
+      "lastItem": "2026-11-13T12:41:58+00:00"
     },
     {
       "id": "zataz",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-11T19:49:57+00:00"
+      "lastItem": "2026-11-12T17:00:00+00:00"
     },
     {
       "id": "itsm-tools",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-11-11T14:27:51+00:00"
+      "lastItem": "2026-11-12T13:10:35+00:00"
     },
     {
       "id": "glpi",
@@ -348,6 +348,34 @@
   },
   "items": [
     {
+      "id": "3246cc411dc9",
+      "title": "SignDrop : cette faille zero-day détourne la protection CLFS de Windows pour obtenir les droits SYSTEM",
+      "link": "https://www.it-connect.fr/signdrop-zero-day-windows-clfs-system/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-13T05:56:31+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "SignDrop, nouvelle zero-day publiée par Nightmare Eclipse, détourne l'authentification CLFS de Windows pour obtenir les droits SYSTEM. Voici ce que l'on sait. Le post SignDrop : cette faille zero-day détourne la…",
+      "text": "SignDrop, nouvelle zero-day publiée par Nightmare Eclipse, détourne l'authentification CLFS de Windows pour obtenir les droits SYSTEM. Voici ce que l'on sait. Le post SignDrop : cette faille zero-day détourne la protection CLFS de Windows pour obtenir les droits SYSTEM a été publié sur IT-Connect ."
+    },
+    {
+      "id": "4ecf6724be17",
+      "title": "Today's articles: What is Ollama and AI service desks",
+      "link": "https://community.spiceworks.com/t/todays-articles-what-is-ollama-and-ai-service-desks/1259694",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-11-12T13:10:35+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "First, Denis Tom explains the hidden risks of running AI locally. Ollama makes it easy to test AI on your laptop while keeping data private, but exposing it to a network without proper updates can leave the door open…",
+      "text": "First, Denis Tom explains the hidden risks of running AI locally. Ollama makes it easy to test AI on your laptop while keeping data private, but exposing it to a network without proper updates can leave the door open to hackers. Speed matters, but so does security. Next, Abhijit Ahaskar looks at AI’s hidden cost in IT. AI can resolve service desk tickets in seconds, but it may also increase workloads, add technical debt, and create hours of extra maintenance. That’s all for today. Join us tomorrow as we wrap up the week with more thoughtful insights. 1 post - 1 participant Read full topic"
+    },
+    {
       "id": "ff88ce968f00",
       "title": "GLPI 12.0.2",
       "link": "https://github.com/glpi-project/glpi/releases/tag/12.0.2",
@@ -386,8 +414,8 @@
       "themes": [
         "ia-support"
       ],
-      "excerpt": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 4 posts - 4 participants Read full topic",
-      "text": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 4 posts - 4 participants Read full topic"
+      "excerpt": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 5 posts - 5 participants Read full topic",
+      "text": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 5 posts - 5 participants Read full topic"
     },
     {
       "id": "aa7a98476bf2",
