@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-13T13:18:26+00:00",
+  "collectedAt": "2026-11-14T12:23:07+00:00",
   "lastAddedAt": "2026-11-13T13:18:26+00:00",
   "windowDays": 120,
   "sources": [
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-12T00:00:00+00:00"
+      "lastItem": "2026-11-13T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-13T12:41:58+00:00"
+      "lastItem": "2026-11-14T05:00:00+00:00"
     },
     {
       "id": "zataz",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-12T17:00:00+00:00"
+      "lastItem": "2026-11-13T21:31:44+00:00"
     },
     {
       "id": "itsm-tools",
