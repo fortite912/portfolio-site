@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-14T12:23:07+00:00",
-  "lastAddedAt": "2026-11-13T13:18:26+00:00",
+  "collectedAt": "2026-11-15T12:53:23+00:00",
+  "lastAddedAt": "2026-11-15T12:53:23+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-09T21:50:33+00:00"
+      "lastItem": "2026-11-15T12:42:32+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-09T21:38:24+00:00"
+      "lastItem": "2026-11-14T00:13:31+00:00"
     },
     {
       "id": "ms-security",
@@ -348,6 +348,20 @@
   },
   "items": [
     {
+      "id": "ec2e7166bce2",
+      "title": "AI is changing access: Catch Microsoft Entra at Ignite 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-catch-microsoft-entra-at-ignite-2026/ba-p/4513159",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-14T00:13:31+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to…",
+      "text": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to simplifying access policies and securing agents, our sessions bring practical guidance and demos to your toughest access challenges. Use this guide to plan your sessions, connect with our team, and enter the Microsoft Entra prize draw! Enter the Microsoft Entra prize draw Registered for Ignite? Check in at any of the seven eligible Microsoft Entra sessions in this post for a chance to win. These are the live-streamed breakouts, which you can join in person or online. How to enter Scan the QR code shown during an eligible session and complete the short entry form. Each session you check in to earns one entry. Entry period 12:00 AM PT on Tuesday, November 17, through 11:59 PM PT on Friday, November 20, 2026. Prizes One grand prize: an Xbox plus a 30-minute chat with a Microsoft Entra identity architect. Two Microsoft Entra swag bags: one for a decision-maker and one for a practitioner. Drawing Winners are selected by random drawing on December 1, 2026. Swag bag winners come from decision-maker and practitioner entries, and the grand prize winner from all entries. NO PURCHASE NECESSARY. Open to legal residents of the United States, including the District of Columbia and Puerto Rico, who are 18 or older and registered for Microsoft Ignite 2026. Entry period:…"
+    },
+    {
       "id": "3246cc411dc9",
       "title": "SignDrop : cette faille zero-day détourne la protection CLFS de Windows pour obtenir les droits SYSTEM",
       "link": "https://www.it-connect.fr/signdrop-zero-day-windows-clfs-system/",
@@ -414,8 +428,8 @@
       "themes": [
         "ia-support"
       ],
-      "excerpt": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 5 posts - 5 participants Read full topic",
-      "text": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 5 posts - 5 participants Read full topic"
+      "excerpt": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 6 posts - 6 participants Read full topic",
+      "text": "Would there be any AI that can help with any helpdesk solutions or tips before going to the destination room? 6 posts - 6 participants Read full topic"
     },
     {
       "id": "aa7a98476bf2",
@@ -1283,6 +1297,21 @@
       ],
       "excerpt": "Prepare for post-quantum authentication by testing certificate ecosystems now. Learn how Microsoft’s PQC TLS Pilot Program helps advance future readiness. The post Post-quantum authentication: Why organizations should…",
       "text": "Prepare for post-quantum authentication by testing certificate ecosystems now. Learn how Microsoft’s PQC TLS Pilot Program helps advance future readiness. The post Post-quantum authentication: Why organizations should start testing certificate ecosystems now appeared first on Microsoft Security Blog .",
+      "backfill": true
+    },
+    {
+      "id": "9db33f00ced0",
+      "title": "Today's articles: Token shock in AI consumption and network monitoring for modern infrastructure",
+      "link": "https://community.spiceworks.com/t/todays-articles-token-shock-in-ai-consumption-and-network-monitoring-for-modern-infrastructure/1258526",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-10-07T13:28:25+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "In her first piece for the day, Rose de Fremery addresses AI’s unexpected cost surge . AI billing has transitioned from fixed SaaS pricing to volatile token-based models. As agentic workflows consume tokens rapidly,…",
+      "text": "In her first piece for the day, Rose de Fremery addresses AI’s unexpected cost surge . AI billing has transitioned from fixed SaaS pricing to volatile token-based models. As agentic workflows consume tokens rapidly, company IT spending faces surprising overages. Monitor expenses by workflow rather than individual tokens! In her second piece of the day, she examines AI and network monitoring . AI is transforming network security through an influx of SIEM solutions and generating complex traffic patterns from enterprise applications. To maintain security, organizations should review AI deployment, establish performance baselines, and refresh SIEM configurations. That concludes today’s coverage. Tomorrow we’ll return with two articles focused on security and software. 5 posts - 4 participants Read full topic",
       "backfill": true
     },
     {
