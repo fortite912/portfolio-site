@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-15T12:53:23+00:00",
-  "lastAddedAt": "2026-11-15T12:53:23+00:00",
+  "collectedAt": "2026-11-16T13:53:11+00:00",
+  "lastAddedAt": "2026-11-16T13:53:11+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-14T05:00:00+00:00"
+      "lastItem": "2026-11-16T09:55:46+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-15T12:42:32+00:00"
+      "lastItem": "2026-11-15T19:44:34+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-14T00:13:31+00:00"
+      "lastItem": "2026-11-15T04:06:11+00:00"
     },
     {
       "id": "ms-security",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-11-12T10:22:39+00:00"
+      "lastItem": "2026-11-16T10:47:14+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -348,13 +348,27 @@
   },
   "items": [
     {
+      "id": "dfcb6267cc30",
+      "title": "ITSM26 Recap: AIOps, Toblerones, and Moments Of Joy",
+      "link": "https://itsm.tools/itsm26/",
+      "source": "ITSM.tools",
+      "sourceId": "itsm-tools",
+      "kind": "Blog spécialisé",
+      "date": "2026-11-16T10:47:14+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "If services are self-managing, self-healing, and self-delivering, what is left for ITSM to manage? That question opened ITSM26, the itSMF UK conference at MK One Stadium, and the twelve sessions recapped here answer it…",
+      "text": "If services are self-managing, self-healing, and self-delivering, what is left for ITSM to manage? That question opened ITSM26, the itSMF UK conference at MK One Stadium, and the twelve sessions recapped here answer it from different angles: SIAM and the Toblerone model, digital employee experience, AI with observability, iterative change, and culture indicators, with practical advice from each speaker."
+    },
+    {
       "id": "ec2e7166bce2",
       "title": "AI is changing access: Catch Microsoft Entra at Ignite 2026",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-catch-microsoft-entra-at-ignite-2026/ba-p/4513159",
       "source": "Microsoft Entra",
       "sourceId": "ms-entra",
       "kind": "Blog éditeur",
-      "date": "2026-11-14T00:13:31+00:00",
+      "date": "2026-11-15T04:06:11+00:00",
       "themes": [
         "acces"
       ],
@@ -1311,7 +1325,7 @@
         "ia-support"
       ],
       "excerpt": "In her first piece for the day, Rose de Fremery addresses AI’s unexpected cost surge . AI billing has transitioned from fixed SaaS pricing to volatile token-based models. As agentic workflows consume tokens rapidly,…",
-      "text": "In her first piece for the day, Rose de Fremery addresses AI’s unexpected cost surge . AI billing has transitioned from fixed SaaS pricing to volatile token-based models. As agentic workflows consume tokens rapidly, company IT spending faces surprising overages. Monitor expenses by workflow rather than individual tokens! In her second piece of the day, she examines AI and network monitoring . AI is transforming network security through an influx of SIEM solutions and generating complex traffic patterns from enterprise applications. To maintain security, organizations should review AI deployment, establish performance baselines, and refresh SIEM configurations. That concludes today’s coverage. Tomorrow we’ll return with two articles focused on security and software. 5 posts - 4 participants Read full topic",
+      "text": "In her first piece for the day, Rose de Fremery addresses AI’s unexpected cost surge . AI billing has transitioned from fixed SaaS pricing to volatile token-based models. As agentic workflows consume tokens rapidly, company IT spending faces surprising overages. Monitor expenses by workflow rather than individual tokens! In her second piece of the day, she examines AI and network monitoring . AI is transforming network security through an influx of SIEM solutions and generating complex traffic patterns from enterprise applications. To maintain security, organizations should review AI deployment, establish performance baselines, and refresh SIEM configurations. That concludes today’s coverage. Tomorrow we’ll return with two articles focused on security and software. 7 posts - 5 participants Read full topic",
       "backfill": true
     },
     {
