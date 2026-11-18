@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-17T14:45:05+00:00",
-  "lastAddedAt": "2026-11-17T14:45:05+00:00",
+  "collectedAt": "2026-11-18T14:24:30+00:00",
+  "lastAddedAt": "2026-11-18T14:24:30+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -18,7 +18,7 @@
         "alerte"
       ],
       "ok": true,
-      "lastItem": "2026-11-05T00:00:00+00:00"
+      "lastItem": "2026-11-18T00:00:00+00:00"
     },
     {
       "id": "certfr-avis",
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-17T00:00:00+00:00"
+      "lastItem": "2026-11-18T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-17T08:45:00+00:00"
+      "lastItem": "2026-11-18T10:31:17+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-17T11:02:44+00:00"
+      "lastItem": "2026-11-18T10:37:09+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-15T04:06:11+00:00"
+      "lastItem": "2026-11-18T00:39:46+00:00"
     },
     {
       "id": "ms-security",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-17T00:08:41+00:00"
+      "lastItem": "2026-11-17T18:14:00+00:00"
     },
     {
       "id": "itsm-tools",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-11-17T09:50:05+00:00"
+      "lastItem": "2026-11-18T10:22:37+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -348,6 +348,118 @@
   },
   "items": [
     {
+      "id": "e4cb9fcaff32",
+      "title": "Natural Stupidity: AI Adoption Failure",
+      "link": "https://itsm.tools/ai-adoption-failure/",
+      "source": "ITSM.tools",
+      "sourceId": "itsm-tools",
+      "kind": "Blog spécialisé",
+      "date": "2026-11-18T10:22:37+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "For twenty years the same attitude, behavior, and culture problems have topped the list of reasons ITSM transformations fail, and the 2026 survey shows only modest improvement. Paul Wilkinson argues AI adoption is now…",
+      "text": "For twenty years the same attitude, behavior, and culture problems have topped the list of reasons ITSM transformations fail, and the 2026 survey shows only modest improvement. Paul Wilkinson argues AI adoption is now repeating the pattern, ignoring strategic fit, leadership, culture, skills, and continual improvement in favor of certificates and shiny new tools, with experience management close behind."
+    },
+    {
+      "id": "64f2779c5471",
+      "title": "Mots de passe en clair : la CNIL inflige 5 millions d’euros",
+      "link": "https://www.zataz.com/mots-de-passe-en-clair-la-cnil-inflige-5-millions-deuros/",
+      "source": "Zataz",
+      "sourceId": "zataz",
+      "kind": "Actualité cyber",
+      "date": "2026-11-18T08:45:15+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "La CNIL sanctionne une société de 5 millions d’euros pour des mots de passe en clair et une conservation excessive des données.",
+      "text": "La CNIL sanctionne une société de 5 millions d’euros pour des mots de passe en clair et une conservation excessive des données."
+    },
+    {
+      "id": "032b3608e0ca",
+      "title": "Microsoft Perception : les agents IA spécialisés dans la cybersécurité sont disponibles !",
+      "link": "https://www.it-connect.fr/microsoft-perception-disponibilite-generale-ignite/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-18T07:53:56+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Project Perception devient Microsoft Perception et passe en disponibilité générale : triage des alertes, pentest web, Intune, MCP. Voici l'essentiel à retenir. Le post Microsoft Perception : les agents IA spécialisés…",
+      "text": "Project Perception devient Microsoft Perception et passe en disponibilité générale : triage des alertes, pentest web, Intune, MCP. Voici l'essentiel à retenir. Le post Microsoft Perception : les agents IA spécialisés dans la cybersécurité sont disponibles ! a été publié sur IT-Connect ."
+    },
+    {
+      "id": "2cffdfcd6d92",
+      "title": "Intune : Microsoft ouvre la gestion des machines Windows Server, en préversion",
+      "link": "https://www.it-connect.fr/intune-gerer-serveurs-windows-server-preversion/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-18T06:12:16+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Microsoft ouvre l'inscription des serveurs Windows Server dans Intune en préversion : stratégies, mises à jour, accès conditionnel. Voici comment ça marche. Le post Intune : Microsoft ouvre la gestion des machines…",
+      "text": "Microsoft ouvre l'inscription des serveurs Windows Server dans Intune en préversion : stratégies, mises à jour, accès conditionnel. Voici comment ça marche. Le post Intune : Microsoft ouvre la gestion des machines Windows Server, en préversion a été publié sur IT-Connect ."
+    },
+    {
+      "id": "84b83f41273c",
+      "title": "AI is changing access. See how Microsoft Entra helps you stay ahead.",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay/ba-p/4556456",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-18T00:39:46+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "⭐ Don't miss Microsoft Ignite BRK343 to see demos of what's in this post.⭐ Wednesday, November 18, 2026, 10:15 to 11:00 AM Pacific Time Watch: AI is changing access. See how Microsoft Entra helps you stay ahead. AI and…",
+      "text": "⭐ Don't miss Microsoft Ignite BRK343 to see demos of what's in this post.⭐ Wednesday, November 18, 2026, 10:15 to 11:00 AM Pacific Time Watch: AI is changing access. See how Microsoft Entra helps you stay ahead. AI and agents are changing the access landscape at a pace that challenges even mature identity and security programs. Without centralized visibility and control, agent sprawl risks becoming shadow IT at a scale we've never had to manage before. AI amplifies today's identity challenges. Every agent needs an identity, the right access, and controls that adapt as risk changes. We're designing Microsoft Entra for this reality: secure access for every identity, human or agent, to every resource, from anywhere. This week at Microsoft Ignite, we're announcing new Microsoft Entra capabilities, advancing this strategy around three customer priorities: strengthen your identity foundation, secure agent access at scale, and turn customer identity into a competitive advantage. Strengthen your identity foundation Agent adoption makes strengthening the identity foundation more urgent. Agents inherit unnecessary privileges, persistent access, and weak governance. Today's identity backlog becomes tomorrow's agent security problem. As one practitioner told us, “If you're not doing it for humans today, you're going to struggle with agents.” Make every sign-in phishing-resistant and verified Secure access starts with phishing-resistant credentials like passkeys, now the default for new…"
+    },
+    {
+      "id": "ec2e7166bce2",
+      "title": "AI is changing access: Catch Microsoft Entra at Ignite 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-catch-microsoft-entra-at-ignite-2026/ba-p/4513159",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-18T00:08:11+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to…",
+      "text": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to simplifying access policies and securing agents, our sessions bring practical guidance and demos to your toughest access challenges. Use this guide to plan your sessions, connect with our team, and enter the Microsoft Entra prize draw! Enter the Microsoft Entra prize draw Registered for Ignite? Check in at any of the seven eligible Microsoft Entra sessions in this post for a chance to win. These are the live-streamed breakouts, which you can join in person or online. How to enter Scan the QR code shown during an eligible session and complete the short entry form. Each session you check in to earns one entry. Entry period 12:00 AM PT on Tuesday, November 17, through 11:59 PM PT on Friday, November 20, 2026. Prizes One grand prize: an Xbox plus a 30-minute chat with a Microsoft Entra identity architect. Two Microsoft Entra swag bags: one for a decision-maker and one for a practitioner. Drawing Winners are selected by random drawing on December 1, 2026. Swag bag winners come from decision-maker and practitioner entries, and the grand prize winner from all entries. NO PURCHASE NECESSARY. Open to legal residents of the United States, including the District of Columbia and Puerto Rico, who are 18 or older and registered for Microsoft Ignite 2026. Entry period:…"
+    },
+    {
+      "id": "d6ae4d3b8acd",
+      "title": "Vulnérabilité dans Oracle Java SE (18 novembre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-016/",
+      "source": "CERT-FR",
+      "sourceId": "certfr-alertes",
+      "kind": "Alertes",
+      "date": "2026-11-18T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 17 novembre 2026, Oracle a publié un avis de sécurité concernant la vulnérabilité CVE-2026-114938, surnommée *java4shell*, qui affecte le décodeur Base64 de OpenJDK sur les processeurs x86-64 supportant AVX-512…",
+      "text": "Le 17 novembre 2026, Oracle a publié un avis de sécurité concernant la vulnérabilité CVE-2026-114938, surnommée *java4shell*, qui affecte le décodeur Base64 de OpenJDK sur les processeurs x86-64 supportant AVX-512 VBMI. Celle-ci permet à un attaquant de provoquer une exécution de code arbitraire..."
+    },
+    {
+      "id": "ba3cb83c335f",
+      "title": "The risks of device code authentication for AI coding agents",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/11/17/the-risks-of-device-code-authentication-for-ai-coding-agents/",
+      "source": "Microsoft Security",
+      "sourceId": "ms-security",
+      "kind": "Blog éditeur",
+      "date": "2026-11-17T15:00:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Lab research shows how device code phishing, a technique that applies to any device-flow client, can extend to AI coding agents, using GitHub Copilot CLI as an illustrative example. The post The risks of device code…",
+      "text": "Lab research shows how device code phishing, a technique that applies to any device-flow client, can extend to AI coding agents, using GitHub Copilot CLI as an illustrative example. The post The risks of device code authentication for AI coding agents appeared first on Microsoft Security Blog ."
+    },
+    {
       "id": "29480262e1ea",
       "title": "High volume phishing campaign uses Microsoft 365 outage lures to target multiple industry sectors",
       "link": "https://www.microsoft.com/en-us/security/blog/2026/11/16/high-volume-phishing-campaign-uses-microsoft-365-outage-lures-target-multiple-industry-sectors-2/",
@@ -402,20 +514,6 @@
       ],
       "excerpt": "De multiples vulnérabilités ont été découvertes dans Kerberos. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à…",
       "text": "De multiples vulnérabilités ont été découvertes dans Kerberos. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données."
-    },
-    {
-      "id": "ec2e7166bce2",
-      "title": "AI is changing access: Catch Microsoft Entra at Ignite 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-catch-microsoft-entra-at-ignite-2026/ba-p/4513159",
-      "source": "Microsoft Entra",
-      "sourceId": "ms-entra",
-      "kind": "Blog éditeur",
-      "date": "2026-11-15T04:06:11+00:00",
-      "themes": [
-        "acces"
-      ],
-      "excerpt": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to…",
-      "text": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to simplifying access policies and securing agents, our sessions bring practical guidance and demos to your toughest access challenges. Use this guide to plan your sessions, connect with our team, and enter the Microsoft Entra prize draw! Enter the Microsoft Entra prize draw Registered for Ignite? Check in at any of the seven eligible Microsoft Entra sessions in this post for a chance to win. These are the live-streamed breakouts, which you can join in person or online. How to enter Scan the QR code shown during an eligible session and complete the short entry form. Each session you check in to earns one entry. Entry period 12:00 AM PT on Tuesday, November 17, through 11:59 PM PT on Friday, November 20, 2026. Prizes One grand prize: an Xbox plus a 30-minute chat with a Microsoft Entra identity architect. Two Microsoft Entra swag bags: one for a decision-maker and one for a practitioner. Drawing Winners are selected by random drawing on December 1, 2026. Swag bag winners come from decision-maker and practitioner entries, and the grand prize winner from all entries. NO PURCHASE NECESSARY. Open to legal residents of the United States, including the District of Columbia and Puerto Rico, who are 18 or older and registered for Microsoft Ignite 2026. Entry period:…"
     },
     {
       "id": "3246cc411dc9",
