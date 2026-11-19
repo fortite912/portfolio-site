@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-18T14:24:30+00:00",
-  "lastAddedAt": "2026-11-18T14:24:30+00:00",
+  "collectedAt": "2026-11-19T14:35:52+00:00",
+  "lastAddedAt": "2026-11-19T14:35:52+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-18T10:31:17+00:00"
+      "lastItem": "2026-11-19T10:00:00+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-18T10:37:09+00:00"
+      "lastItem": "2026-11-19T14:01:02+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -74,7 +74,7 @@
       "since": "2026-11-02",
       "why": "Site officiel d'aide aux victimes : les arnaques du moment, utiles pour prévenir les utilisateurs.",
       "ok": true,
-      "lastItem": "2026-11-09T15:00:00+00:00"
+      "lastItem": "2026-11-19T10:29:47+00:00"
     },
     {
       "id": "ms-entra",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-18T00:39:46+00:00"
+      "lastItem": "2026-11-17T23:38:27+00:00"
     },
     {
       "id": "ms-security",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-11-18T10:22:37+00:00"
+      "lastItem": "2026-11-19T11:36:13+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-11-17T13:52:48+00:00"
+      "lastItem": "2026-11-18T12:18:33+00:00"
     },
     {
       "id": "glpi",
@@ -348,6 +348,34 @@
   },
   "items": [
     {
+      "id": "bf1e9a322e14",
+      "title": "Top 5 Risks of Using AI Agents in ITSM and How to Mitigate Them",
+      "link": "https://itsm.tools/top-5-ai-agent-risks-in-itsm-and-how-to-mitigate-them/",
+      "source": "ITSM.tools",
+      "sourceId": "itsm-tools",
+      "kind": "Blog spécialisé",
+      "date": "2026-11-19T11:36:13+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "AI agents promise self-healing service management, but every gain comes with new ways things can go wrong. This article walks through five concrete risks: misaligned use cases, data exposure and security gaps, model…",
+      "text": "AI agents promise self-healing service management, but every gain comes with new ways things can go wrong. This article walks through five concrete risks: misaligned use cases, data exposure and security gaps, model lock-in, AI agents deployed without institutional context, and picking native AI over third-party tools (or vice versa) without weighing the tradeoffs, along with practical mitigation for each."
+    },
+    {
+      "id": "92c5c801b077",
+      "title": "Today's articles: eMudhra revokes certificates again and the von Neumann bottleneck",
+      "link": "https://community.spiceworks.com/t/todays-articles-emudhra-revokes-certificates-again-and-the-von-neumann-bottleneck/1260016",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-11-18T12:18:33+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Today, Rose de Fremery covers two important stories. First, the eMudhra certificate mess returns for round two : eight more intermediate CAs have been revoked, leaving IT teams with cleanup work to finish by Dec. 4.…",
+      "text": "Today, Rose de Fremery covers two important stories. First, the eMudhra certificate mess returns for round two : eight more intermediate CAs have been revoked, leaving IT teams with cleanup work to finish by Dec. 4. Then, she looks at the 1945 bottleneck . Computers still rely on a single pathway that limits processing power and raises AI hardware costs. Workarounds can help, but IT buyers should keep an eye on the issue. That’s all for today. We’ll be back tomorrow with more insights. 2 posts - 2 participants Read full topic"
+    },
+    {
       "id": "e4cb9fcaff32",
       "title": "Natural Stupidity: AI Adoption Failure",
       "link": "https://itsm.tools/ai-adoption-failure/",
@@ -418,20 +446,6 @@
       "text": "⭐ Don't miss Microsoft Ignite BRK343 to see demos of what's in this post.⭐ Wednesday, November 18, 2026, 10:15 to 11:00 AM Pacific Time Watch: AI is changing access. See how Microsoft Entra helps you stay ahead. AI and agents are changing the access landscape at a pace that challenges even mature identity and security programs. Without centralized visibility and control, agent sprawl risks becoming shadow IT at a scale we've never had to manage before. AI amplifies today's identity challenges. Every agent needs an identity, the right access, and controls that adapt as risk changes. We're designing Microsoft Entra for this reality: secure access for every identity, human or agent, to every resource, from anywhere. This week at Microsoft Ignite, we're announcing new Microsoft Entra capabilities, advancing this strategy around three customer priorities: strengthen your identity foundation, secure agent access at scale, and turn customer identity into a competitive advantage. Strengthen your identity foundation Agent adoption makes strengthening the identity foundation more urgent. Agents inherit unnecessary privileges, persistent access, and weak governance. Today's identity backlog becomes tomorrow's agent security problem. As one practitioner told us, “If you're not doing it for humans today, you're going to struggle with agents.” Make every sign-in phishing-resistant and verified Secure access starts with phishing-resistant credentials like passkeys, now the default for new…"
     },
     {
-      "id": "ec2e7166bce2",
-      "title": "AI is changing access: Catch Microsoft Entra at Ignite 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-catch-microsoft-entra-at-ignite-2026/ba-p/4513159",
-      "source": "Microsoft Entra",
-      "sourceId": "ms-entra",
-      "kind": "Blog éditeur",
-      "date": "2026-11-18T00:08:11+00:00",
-      "themes": [
-        "acces"
-      ],
-      "excerpt": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to…",
-      "text": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to simplifying access policies and securing agents, our sessions bring practical guidance and demos to your toughest access challenges. Use this guide to plan your sessions, connect with our team, and enter the Microsoft Entra prize draw! Enter the Microsoft Entra prize draw Registered for Ignite? Check in at any of the seven eligible Microsoft Entra sessions in this post for a chance to win. These are the live-streamed breakouts, which you can join in person or online. How to enter Scan the QR code shown during an eligible session and complete the short entry form. Each session you check in to earns one entry. Entry period 12:00 AM PT on Tuesday, November 17, through 11:59 PM PT on Friday, November 20, 2026. Prizes One grand prize: an Xbox plus a 30-minute chat with a Microsoft Entra identity architect. Two Microsoft Entra swag bags: one for a decision-maker and one for a practitioner. Drawing Winners are selected by random drawing on December 1, 2026. Swag bag winners come from decision-maker and practitioner entries, and the grand prize winner from all entries. NO PURCHASE NECESSARY. Open to legal residents of the United States, including the District of Columbia and Puerto Rico, who are 18 or older and registered for Microsoft Ignite 2026. Entry period:…"
-    },
-    {
       "id": "d6ae4d3b8acd",
       "title": "Vulnérabilité dans Oracle Java SE (18 novembre 2026)",
       "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-016/",
@@ -444,6 +458,48 @@
       ],
       "excerpt": "Le 17 novembre 2026, Oracle a publié un avis de sécurité concernant la vulnérabilité CVE-2026-114938, surnommée *java4shell*, qui affecte le décodeur Base64 de OpenJDK sur les processeurs x86-64 supportant AVX-512…",
       "text": "Le 17 novembre 2026, Oracle a publié un avis de sécurité concernant la vulnérabilité CVE-2026-114938, surnommée *java4shell*, qui affecte le décodeur Base64 de OpenJDK sur les processeurs x86-64 supportant AVX-512 VBMI. Celle-ci permet à un attaquant de provoquer une exécution de code arbitraire..."
+    },
+    {
+      "id": "c9f0bcffe74a",
+      "title": "Multiples vulnérabilités dans F5 NGINX (18 novembre 2026)",
+      "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-017/",
+      "source": "CERT-FR",
+      "sourceId": "certfr-alertes",
+      "kind": "Alertes",
+      "date": "2026-11-18T00:00:00+00:00",
+      "themes": [
+        "alerte"
+      ],
+      "excerpt": "Le 18 novembre 2026, F5 a publié deux avis de sécurité concernant les vulnérabilités CVE-2026-123633 et CVE-2026-123007. Celles-ci affectent NGINX Open Source et NGINX Plus permettent à un attaquant non authentifié…",
+      "text": "Le 18 novembre 2026, F5 a publié deux avis de sécurité concernant les vulnérabilités CVE-2026-123633 et CVE-2026-123007. Celles-ci affectent NGINX Open Source et NGINX Plus permettent à un attaquant non authentifié d'exécuter du code à distance, en utilisant le protocole HTTP en version 2. Le..."
+    },
+    {
+      "id": "ec2e7166bce2",
+      "title": "AI is changing access: Catch Microsoft Entra at Ignite 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-catch-microsoft-entra-at-ignite-2026/ba-p/4513159",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-17T23:38:27+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to…",
+      "text": "Join us at Microsoft Ignite 2026, November 17–20, 2026, at Moscone Center in San Francisco and online. Explore Microsoft Entra and learn how to secure access for users and AI agents. From stopping identity attacks to simplifying access policies and securing agents, our sessions bring practical guidance and demos to your toughest access challenges. Use this guide to plan your sessions, connect with our team, and enter the Microsoft Entra prize draw! Enter the Microsoft Entra prize draw Registered for Ignite? Check in at any of the seven eligible Microsoft Entra sessions in this post for a chance to win. These are the live-streamed breakouts, which you can join in person or online. How to enter Scan the QR code shown during an eligible session and complete the short entry form. Each session you check in to earns one entry. Entry period 12:00 AM PT on Tuesday, November 17, through 11:59 PM PT on Friday, November 20, 2026. Prizes One grand prize: an Xbox plus a 30-minute chat with a Microsoft Entra identity architect. Two Microsoft Entra swag bags: one for a decision-maker and one for a practitioner. Drawing Winners are selected by random drawing on December 1, 2026. Swag bag winners come from decision-maker and practitioner entries, and the grand prize winner from all entries. NO PURCHASE NECESSARY. Open to legal residents of the United States, including the District of Columbia and Puerto Rico, who are 18 or older and registered for Microsoft Ignite 2026. Entry period:…"
+    },
+    {
+      "id": "6b481565f42d",
+      "title": "AI is changing access. See how Entra helps you stay ahead.",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-see-how-entra-helps-you-stay-ahead/ba-p/4556456",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-17T20:05:13+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "⭐ Don't miss Microsoft Ignite BRK343 to see demos of what's in this post.⭐ Wednesday, November 18, 2026, 10:15 to 11:00 AM Pacific Time Watch: AI is changing access. See how Microsoft Entra helps you stay ahead. AI and…",
+      "text": "⭐ Don't miss Microsoft Ignite BRK343 to see demos of what's in this post.⭐ Wednesday, November 18, 2026, 10:15 to 11:00 AM Pacific Time Watch: AI is changing access. See how Microsoft Entra helps you stay ahead. AI and agents are changing the access landscape at a pace that challenges even mature identity and security programs. Without centralized visibility and control, agent sprawl risks becoming shadow IT at a scale we've never had to manage before. AI amplifies today's identity challenges. It amplifies them. Every agent needs an identity, the right access, and controls that adapt as risk changes. We're designing Microsoft Entra for this reality: secure access for every identity, human or agent, to every resource, from anywhere. This week at Microsoft Ignite, we're announcing new Entra capabilities, advancing this strategy around three customer priorities: strengthen your identity foundation, secure agent access at scale, and turn customer identity into a competitive advantage. Strengthen your identity foundations Agent adoption makes strengthening the identity foundation more urgent. Agents inherit unnecessary privileges, persistent access, and weak governance. Today's identity backlog becomes tomorrow's agent security problem. As one practitioner told us, “If you're not doing it for humans today, you're going to struggle with agents.” Make every sign-in phishing-resistant and verified Secure access starts with phishing-resistant credentials like passkeys, now the…"
     },
     {
       "id": "ba3cb83c335f",
