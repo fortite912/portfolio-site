@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-20T14:13:43+00:00",
-  "lastAddedAt": "2026-11-20T14:13:43+00:00",
+  "collectedAt": "2026-11-21T13:37:44+00:00",
+  "lastAddedAt": "2026-11-21T13:37:44+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-19T00:00:00+00:00"
+      "lastItem": "2026-11-20T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-20T14:00:00+00:00"
+      "lastItem": "2026-11-21T12:00:00+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-20T13:39:14+00:00"
+      "lastItem": "2026-11-20T16:09:30+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-18T00:39:46+00:00"
+      "lastItem": "2026-11-20T16:00:00+00:00"
     },
     {
       "id": "ms-security",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-17T18:14:00+00:00"
+      "lastItem": "2026-11-20T17:00:00+00:00"
     },
     {
       "id": "itsm-tools",
@@ -347,6 +347,20 @@
     }
   },
   "items": [
+    {
+      "id": "37e55ddd691d",
+      "title": "Demystifying macOS Platform SSO: How Apple and Microsoft Entra ID work together",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/demystifying-macos-platform-sso-how-apple-and-microsoft-entra-id/ba-p/4437423",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-20T16:00:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Platform SSO has been transforming the macOS sign-in experience by bringing Microsoft Entra authentication closer to the operating system. Users can sign in to their Mac and access work applications with fewer…",
+      "text": "Platform SSO has been transforming the macOS sign-in experience by bringing Microsoft Entra authentication closer to the operating system. Users can sign in to their Mac and access work applications with fewer authentication prompts, while organizations retain Microsoft Entra device trust and access controls. As more organizations deploy Platform SSO, new questions have emerged: What actually happens under the hood? Which responsibilities belong to Apple, and which belong to Microsoft? Where are credentials created and protected? Does every application receive the Platform SSO Primary Refresh Token (PRT)? To help answer these questions, we published a new Microsoft Learn article: Architecture and authentication flow for macOS Platform SSO with Microsoft Entra ID . Apple Platform SSO is an extensible framework that can work with supported identity-provider extensions. This post focuses on its integration with Microsoft Entra ID through the Microsoft Enterprise SSO plug-in. It provides a practical mental model, highlights the ownership boundaries between Apple and Microsoft, and walks through the key parts of the architecture. Why the ownership boundary can be difficult to see From the user's perspective, Platform SSO can feel like one continuous experience. The Mac is enrolled, the user completes registration, and supported applications begin signing in with fewer prompts. Behind that experience, however, several systems retain distinct responsibilities. MDM (Mobile Device…"
+    },
     {
       "id": "f2c56499e050",
       "title": "Today's articles: What small businesses can learn from self-healing IT and telling users apart from credential stuffing bots",
