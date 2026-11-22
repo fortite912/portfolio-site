@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-21T13:37:44+00:00",
+  "collectedAt": "2026-11-22T13:29:49+00:00",
   "lastAddedAt": "2026-11-21T13:37:44+00:00",
   "windowDays": 120,
   "sources": [
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-20T16:09:30+00:00"
+      "lastItem": "2026-11-21T13:39:38+00:00"
     },
     {
       "id": "cybermalveillance",
