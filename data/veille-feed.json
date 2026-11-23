@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-22T13:29:49+00:00",
-  "lastAddedAt": "2026-11-21T13:37:44+00:00",
+  "collectedAt": "2026-11-23T16:18:30+00:00",
+  "lastAddedAt": "2026-11-23T16:18:30+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-20T00:00:00+00:00"
+      "lastItem": "2026-11-23T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-21T12:00:00+00:00"
+      "lastItem": "2026-11-23T10:30:00+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-21T13:39:38+00:00"
+      "lastItem": "2026-11-23T12:05:22+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-11-20T12:46:31+00:00"
+      "lastItem": "2026-11-23T12:37:19+00:00"
     },
     {
       "id": "glpi",
@@ -347,6 +347,49 @@
     }
   },
   "items": [
+    {
+      "id": "259d356493a0",
+      "title": "Today's articles: What you need to know before connecting AI to your service desk and the role of IT support services and knowledge manager",
+      "link": "https://community.spiceworks.com/t/todays-articles-what-you-need-to-know-before-connecting-ai-to-your-service-desk-and-the-role-of-it-support-services-and-knowledge-manager/1260145",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-11-23T12:37:19+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "First up is Mastufa Ahmed, with six questions to ask before connecting AI to your service desk . Vendor claims of AI or MCP support don’t tell the whole story, so check permissions, safeguards, costs, and ownership to…",
+      "text": "First up is Mastufa Ahmed, with six questions to ask before connecting AI to your service desk . Vendor claims of AI or MCP support don’t tell the whole story, so check permissions, safeguards, costs, and ownership to avoid governance headaches. Next, David Weldon’s IT Job Watch column explores the growing role of IT knowledge managers . As AI reshapes tech support, these specialists organize technical information, maintain knowledge bases, and turn solved tickets into useful guides. That’s all for today. Tomorrow, Denis Tom will cover workplace culture and Rose de Fremery will explore Freshworks’ helpdesk tools. 1 post - 1 participant Read full topic"
+    },
+    {
+      "id": "f42662dcd780",
+      "title": "BlackHatSect0r : phishing bancaire, extorsion et industrie",
+      "link": "https://www.zataz.com/blackhatsect0r-phishing-bancaire-extorsion-et-industrie/",
+      "source": "Zataz",
+      "sourceId": "zataz",
+      "kind": "Actualité cyber",
+      "date": "2026-11-23T09:51:37+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "BlackHatSect0r associe phishing bancaire, extorsion, destruction de sauvegardes et interfaces industrielles exposées.",
+      "text": "BlackHatSect0r associe phishing bancaire, extorsion, destruction de sauvegardes et interfaces industrielles exposées."
+    },
+    {
+      "id": "574b854373ba",
+      "title": "Specops lance une API pour vérifier l’identité des utilisateurs dans vos outils : chatbots IA, ITSM, etc.",
+      "link": "https://www.it-connect.fr/api-specops-authentication/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-23T08:00:00+00:00",
+      "themes": [
+        "ia-support",
+        "acces"
+      ],
+      "excerpt": "Specops lance l'API Specops Authentication : vérifiez l'identité d'un utilisateur depuis un chatbot IA ou ServiceNow avant toute action sensible. Le post Specops lance une API pour vérifier l’identité des utilisateurs…",
+      "text": "Specops lance l'API Specops Authentication : vérifiez l'identité d'un utilisateur depuis un chatbot IA ou ServiceNow avant toute action sensible. Le post Specops lance une API pour vérifier l’identité des utilisateurs dans vos outils : chatbots IA, ITSM, etc. a été publié sur IT-Connect ."
+    },
     {
       "id": "37e55ddd691d",
       "title": "Demystifying macOS Platform SSO: How Apple and Microsoft Entra ID work together",
