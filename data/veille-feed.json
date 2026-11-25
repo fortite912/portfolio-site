@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-24T16:05:54+00:00",
-  "lastAddedAt": "2026-11-24T16:05:54+00:00",
+  "collectedAt": "2026-11-25T15:53:08+00:00",
+  "lastAddedAt": "2026-11-25T15:53:08+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-24T00:00:00+00:00"
+      "lastItem": "2026-11-25T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-24T10:47:59+00:00"
+      "lastItem": "2026-11-25T11:00:00+00:00"
     },
     {
       "id": "zataz",
@@ -60,7 +60,7 @@
       "since": "2026-09-23",
       "why": "Actualité des piratages et des fuites de données, dont les vols de mots de passe.",
       "ok": true,
-      "lastItem": "2026-11-23T12:05:22+00:00"
+      "lastItem": "2026-11-25T11:40:44+00:00"
     },
     {
       "id": "cybermalveillance",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-20T16:00:00+00:00"
+      "lastItem": "2026-11-24T15:30:00+00:00"
     },
     {
       "id": "ms-security",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-11-19T11:36:13+00:00"
+      "lastItem": "2026-11-25T11:00:53+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -130,7 +130,7 @@
       "since": "2026-11-02",
       "why": "Forum de techniciens : comment ils utilisent l'IA dans leur travail de tous les jours.",
       "ok": true,
-      "lastItem": "2026-11-23T12:37:19+00:00"
+      "lastItem": "2026-11-25T12:47:34+00:00"
     },
     {
       "id": "glpi",
@@ -348,6 +348,34 @@
   },
   "items": [
     {
+      "id": "7ff5c5e7e1e0",
+      "title": "Today's articles: AI can't see all, and Atlassians' end-of-life date",
+      "link": "https://community.spiceworks.com/t/todays-articles-ai-cant-see-all-and-atlassians-end-of-life-date/1260239",
+      "source": "Spiceworks",
+      "sourceId": "spiceworks-ia",
+      "kind": "Communauté — IA",
+      "date": "2026-11-25T12:47:34+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Today, Rose de Fremery covers two essential topics. First: garbage in, AI out . AI help desks are only as good as the documentation and ticket notes behind them, so audit your knowledge base, update outdated articles,…",
+      "text": "Today, Rose de Fremery covers two essential topics. First: garbage in, AI out . AI help desks are only as good as the documentation and ticket notes behind them, so audit your knowledge base, update outdated articles, and capture what your team knows before paying for an AI upgrade. Her second piece looks at Atlassian’s cloud push . With Data Center products set to sunset by March 2029, IT teams must choose whether to migrate, switch vendors, or keep relying on manual patches. That’s all for today. Tomorrow, we’ll have a cloud(y) day: Priya Singh explores hybrid cloud architecture, followed by Shelby Green on the hidden costs of multi-cloud systems. 2 posts - 2 participants Read full topic"
+    },
+    {
+      "id": "1772298441b5",
+      "title": "Ask the Microsoft Entra experts anything, live on December 2",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ask-the-microsoft-entra-experts-anything-live-on-december-2/ba-p/4576043",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-24T15:30:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Microsoft Ignite 2026 brought a wave of news for Microsoft Entra , from new ways to secure AI agents to new tools for managing access at scale. Now it's your turn to ask the people who build it. On Tuesday, December 2,…",
+      "text": "Microsoft Ignite 2026 brought a wave of news for Microsoft Entra , from new ways to secure AI agents to new tools for managing access at scale. Now it's your turn to ask the people who build it. On Tuesday, December 2, Yina Arenas, Chief Product Officer for Microsoft Identity and Network Access, joins a panel of Microsoft Entra product and engineering experts for a live Ask Microsoft Anything (AMA). Post your questions and add the event to your calendar at https://aka.ms/EntraAMA Live AMA event details When: Tuesday, December 2, 2026, 11:00 AM–12:00 PM PT Where: Livestream on the Microsoft Tech Community Add to calendar: aka.ms/EntraAMA How to ask: Sign in to the Microsoft Tech Community (or create an account) and post your question as a comment on the event page. Post early to get your question in the queue. Can't join live? The recording will be available on demand as soon as the livestream ends. Meet the Microsoft Entra AMA panelists Yina Arenas Chief Product Officer Ankur Patel Partner Group Product Manager Ngozi Nwoko Director, Secure AI Ehud Itshaki Principal Product Manager Yair Tor Partner Product Manager Nichole Peterson Panel Host / Senior PMM Get ready: Watch the Microsoft Entra sessions at Ignite In case you missed it, here's the 45-minute overview of Microsoft Entra announcements and demos: We also detailed the announcements in this blogpost: Microsoft Entra news announcements from Microsoft Ignite November 2026 In addition to the video above, don't miss these…"
+    },
+    {
       "id": "2aa97911f22a",
       "title": "privacyIDEA : un serveur MFA open source pour sécuriser Windows et l’Active Directory",
       "link": "https://www.it-connect.fr/tuto-privacyidea-serveur-mfa-open-source/",
@@ -374,6 +402,20 @@
       ],
       "excerpt": "Une faille dans l'API d'Entra Connect Health a été exploitée pour lire les métadonnées de tenants, dont les e-mails des admins. Voici ce qu'il faut savoir. Le post Entra Connect Health : une faille exploitée a exposé…",
       "text": "Une faille dans l'API d'Entra Connect Health a été exploitée pour lire les métadonnées de tenants, dont les e-mails des admins. Voici ce qu'il faut savoir. Le post Entra Connect Health : une faille exploitée a exposé les e-mails des admins de tenants Microsoft a été publié sur IT-Connect ."
+    },
+    {
+      "id": "84b83f41273c",
+      "title": "AI is changing access. See how Microsoft Entra helps you stay ahead.",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay/ba-p/4556456",
+      "source": "Microsoft Entra",
+      "sourceId": "ms-entra",
+      "kind": "Blog éditeur",
+      "date": "2026-11-24T00:43:52+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "AI and agents are changing the access landscape at a pace that challenges even mature identity and security programs. Without centralized visibility and control, agent sprawl risks becoming shadow IT at a scale we've…",
+      "text": "AI and agents are changing the access landscape at a pace that challenges even mature identity and security programs. Without centralized visibility and control, agent sprawl risks becoming shadow IT at a scale we've never had to manage before. AI amplifies today's identity challenges. Every agent needs an identity, the right access, and controls that adapt as risk changes. We're designing Microsoft Entra for this reality: secure access for every identity, human or agent, to every resource, from anywhere. This week at Microsoft Ignite, we're announcing new Microsoft Entra capabilities, advancing this strategy around three customer priorities: strengthen your identity foundation, secure agent access at scale, and turn customer identity into a competitive advantage. Strengthen your identity foundation Agent adoption makes strengthening the identity foundation more urgent. Agents inherit unnecessary privileges, persistent access, and weak governance. Today's identity backlog becomes tomorrow's agent security problem. As one practitioner told us, “If you're not doing it for humans today, you're going to struggle with agents.” Make every sign-in phishing-resistant and verified Secure access starts with phishing-resistant credentials like passkeys, now the default for new accounts in Microsoft Entra. Yet 57% of organizations still rely on phishable authentication methods. [i] Weaker credentials like SMS codes leave users vulnerable to adversary-in-the-middle (AiTM) phishing…"
     },
     {
       "id": "259d356493a0",
@@ -543,20 +585,6 @@
       ],
       "excerpt": "Microsoft ouvre l'inscription des serveurs Windows Server dans Intune en préversion : stratégies, mises à jour, accès conditionnel. Voici comment ça marche. Le post Intune : Microsoft ouvre la gestion des machines…",
       "text": "Microsoft ouvre l'inscription des serveurs Windows Server dans Intune en préversion : stratégies, mises à jour, accès conditionnel. Voici comment ça marche. Le post Intune : Microsoft ouvre la gestion des machines Windows Server, en préversion a été publié sur IT-Connect ."
-    },
-    {
-      "id": "84b83f41273c",
-      "title": "AI is changing access. See how Microsoft Entra helps you stay ahead.",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay/ba-p/4556456",
-      "source": "Microsoft Entra",
-      "sourceId": "ms-entra",
-      "kind": "Blog éditeur",
-      "date": "2026-11-18T00:39:46+00:00",
-      "themes": [
-        "acces"
-      ],
-      "excerpt": "⭐ Don't miss Microsoft Ignite BRK343 to see demos of what's in this post.⭐ Wednesday, November 18, 2026, 10:15 to 11:00 AM Pacific Time Watch: AI is changing access. See how Microsoft Entra helps you stay ahead. AI and…",
-      "text": "⭐ Don't miss Microsoft Ignite BRK343 to see demos of what's in this post.⭐ Wednesday, November 18, 2026, 10:15 to 11:00 AM Pacific Time Watch: AI is changing access. See how Microsoft Entra helps you stay ahead. AI and agents are changing the access landscape at a pace that challenges even mature identity and security programs. Without centralized visibility and control, agent sprawl risks becoming shadow IT at a scale we've never had to manage before. AI amplifies today's identity challenges. Every agent needs an identity, the right access, and controls that adapt as risk changes. We're designing Microsoft Entra for this reality: secure access for every identity, human or agent, to every resource, from anywhere. This week at Microsoft Ignite, we're announcing new Microsoft Entra capabilities, advancing this strategy around three customer priorities: strengthen your identity foundation, secure agent access at scale, and turn customer identity into a competitive advantage. Strengthen your identity foundation Agent adoption makes strengthening the identity foundation more urgent. Agents inherit unnecessary privileges, persistent access, and weak governance. Today's identity backlog becomes tomorrow's agent security problem. As one practitioner told us, “If you're not doing it for humans today, you're going to struggle with agents.” Make every sign-in phishing-resistant and verified Secure access starts with phishing-resistant credentials like passkeys, now the default for new…"
     },
     {
       "id": "ec2e7166bce2",
