@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-25T15:53:08+00:00",
-  "lastAddedAt": "2026-11-25T15:53:08+00:00",
+  "collectedAt": "2026-11-26T15:33:49+00:00",
+  "lastAddedAt": "2026-11-26T15:33:49+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-25T00:00:00+00:00"
+      "lastItem": "2026-11-26T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-25T11:00:00+00:00"
+      "lastItem": "2026-11-26T15:22:58+00:00"
     },
     {
       "id": "zataz",
@@ -88,7 +88,7 @@
       "since": "2026-11-02",
       "why": "Les nouveautés de Microsoft sur la connexion des utilisateurs et la double authentification.",
       "ok": true,
-      "lastItem": "2026-11-24T15:30:00+00:00"
+      "lastItem": "2026-11-24T20:09:19+00:00"
     },
     {
       "id": "ms-security",
@@ -102,7 +102,7 @@
       "since": "2026-11-02",
       "why": "Analyses d'attaques réelles contre les comptes des entreprises.",
       "ok": true,
-      "lastItem": "2026-11-20T17:00:00+00:00"
+      "lastItem": "2026-11-25T18:09:06+00:00"
     },
     {
       "id": "itsm-tools",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-11-25T11:00:53+00:00"
+      "lastItem": "2026-11-26T09:06:25+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -348,6 +348,48 @@
   },
   "items": [
     {
+      "id": "71970c919313",
+      "title": "ITSM in 2027 – The BMC Helix View",
+      "link": "https://itsm.tools/2027-itsm-ai/",
+      "source": "ITSM.tools",
+      "sourceId": "itsm-tools",
+      "kind": "Blog spécialisé",
+      "date": "2026-11-26T09:06:25+00:00",
+      "themes": [
+        "ia-support"
+      ],
+      "excerpt": "Models are being commoditized, so BMC Helix expects operational context to separate reliable AI agents from educated guesses in 2027. Three of its leaders cover AI governance, small specialized AI agents that work like…",
+      "text": "Models are being commoditized, so BMC Helix expects operational context to separate reliable AI agents from educated guesses in 2027. Three of its leaders cover AI governance, small specialized AI agents that work like microservices, what AI means for administrator roles, and why buyers will ask vendors to show how they use AI internally, alongside how ITSM.tools tracks trends year on year."
+    },
+    {
+      "id": "0ebbcaf4f771",
+      "title": "Cyberattaque 1Password : devez-vous vous inquiéter pour vos mots de passe ?",
+      "link": "https://www.it-connect.fr/cyberattaque-1password-novembre-2026/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-26T05:51:00+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "1Password confirme une cyberattaque : des données clients volées sur des serveurs suite à la compromission du compte GitHub d'un salarié. Le post Cyberattaque 1Password : devez-vous vous inquiéter pour vos mots de…",
+      "text": "1Password confirme une cyberattaque : des données clients volées sur des serveurs suite à la compromission du compte GitHub d'un salarié. Le post Cyberattaque 1Password : devez-vous vous inquiéter pour vos mots de passe ? a été publié sur IT-Connect ."
+    },
+    {
+      "id": "1cfcf26f6e5a",
+      "title": "Signature NTLM : les mises à jour de novembre 2026 perturbent l’authentification sur Windows",
+      "link": "https://www.it-connect.fr/windows-novembre-2026-echec-authentification-ntlm-proxy-sso/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-26T05:17:49+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "Depuis les mises à jour Windows de novembre 2026, l'authentification NTLM peut échouer dans certains cas, notamment avec les proxys et certains SSO. Le post Signature NTLM : les mises à jour de novembre 2026 perturbent…",
+      "text": "Depuis les mises à jour Windows de novembre 2026, l'authentification NTLM peut échouer dans certains cas, notamment avec les proxys et certains SSO. Le post Signature NTLM : les mises à jour de novembre 2026 perturbent l’authentification sur Windows a été publié sur IT-Connect ."
+    },
+    {
       "id": "7ff5c5e7e1e0",
       "title": "Today's articles: AI can't see all, and Atlassians' end-of-life date",
       "link": "https://community.spiceworks.com/t/todays-articles-ai-cant-see-all-and-atlassians-end-of-life-date/1260239",
@@ -359,7 +401,7 @@
         "ia-support"
       ],
       "excerpt": "Today, Rose de Fremery covers two essential topics. First: garbage in, AI out . AI help desks are only as good as the documentation and ticket notes behind them, so audit your knowledge base, update outdated articles,…",
-      "text": "Today, Rose de Fremery covers two essential topics. First: garbage in, AI out . AI help desks are only as good as the documentation and ticket notes behind them, so audit your knowledge base, update outdated articles, and capture what your team knows before paying for an AI upgrade. Her second piece looks at Atlassian’s cloud push . With Data Center products set to sunset by March 2029, IT teams must choose whether to migrate, switch vendors, or keep relying on manual patches. That’s all for today. Tomorrow, we’ll have a cloud(y) day: Priya Singh explores hybrid cloud architecture, followed by Shelby Green on the hidden costs of multi-cloud systems. 2 posts - 2 participants Read full topic"
+      "text": "Today, Rose de Fremery covers two essential topics. First: garbage in, AI out . AI help desks are only as good as the documentation and ticket notes behind them, so audit your knowledge base, update outdated articles, and capture what your team knows before paying for an AI upgrade. Her second piece looks at Atlassian’s cloud push . With Data Center products set to sunset by March 2029, IT teams must choose whether to migrate, switch vendors, or keep relying on manual patches. That’s all for today. Tomorrow, we’ll have a cloud(y) day: Priya Singh explores hybrid cloud architecture, followed by Shelby Green on the hidden costs of multi-cloud systems. 4 posts - 4 participants Read full topic"
     },
     {
       "id": "1772298441b5",
@@ -368,12 +410,12 @@
       "source": "Microsoft Entra",
       "sourceId": "ms-entra",
       "kind": "Blog éditeur",
-      "date": "2026-11-24T15:30:00+00:00",
+      "date": "2026-11-24T20:09:19+00:00",
       "themes": [
         "acces"
       ],
       "excerpt": "Microsoft Ignite 2026 brought a wave of news for Microsoft Entra , from new ways to secure AI agents to new tools for managing access at scale. Now it's your turn to ask the people who build it. On Tuesday, December 2,…",
-      "text": "Microsoft Ignite 2026 brought a wave of news for Microsoft Entra , from new ways to secure AI agents to new tools for managing access at scale. Now it's your turn to ask the people who build it. On Tuesday, December 2, Yina Arenas, Chief Product Officer for Microsoft Identity and Network Access, joins a panel of Microsoft Entra product and engineering experts for a live Ask Microsoft Anything (AMA). Post your questions and add the event to your calendar at https://aka.ms/EntraAMA Live AMA event details When: Tuesday, December 2, 2026, 11:00 AM–12:00 PM PT Where: Livestream on the Microsoft Tech Community Add to calendar: aka.ms/EntraAMA How to ask: Sign in to the Microsoft Tech Community (or create an account) and post your question as a comment on the event page. Post early to get your question in the queue. Can't join live? The recording will be available on demand as soon as the livestream ends. Meet the Microsoft Entra AMA panelists Yina Arenas Chief Product Officer Ankur Patel Partner Group Product Manager Ngozi Nwoko Director, Secure AI Ehud Itshaki Principal Product Manager Yair Tor Partner Product Manager Nichole Peterson Panel Host / Senior PMM Get ready: Watch the Microsoft Entra sessions at Ignite In case you missed it, here's the 45-minute overview of Microsoft Entra announcements and demos: We also detailed the announcements in this blogpost: Microsoft Entra news announcements from Microsoft Ignite November 2026 In addition to the video above, don't miss these…"
+      "text": "Microsoft Ignite 2026 brought a wave of news for Microsoft Entra , from new ways to secure AI agents to new tools for managing access at scale. Now it's your turn to ask the people who build it. On Tuesday, December 2, Yina Arenas, Chief Product Officer for Microsoft Identity and Network Access, joins a panel of Microsoft Entra product and engineering experts for a live Ask Microsoft Anything (AMA). Post your questions and add the event to your calendar at https://aka.ms/EntraAMA Post your questions today, then watch the AMA on December 2 When: Tuesday, December 2, 2026, 11:00 AM–12:00 PM PT Where: Livestream on the Microsoft Tech Community Add to calendar: aka.ms/EntraAMA How to ask a question: Sign in to the Microsoft Tech Community (or create an account) and post your question as a comment on the event page . Post early to get your question in the queue! Can't join live? The recording will be available on demand at aka.ms/EntraAMA as soon as the livestream ends. Meet the experts: Microsoft Entra AMA panelists Yina Arenas Chief Product Officer Yina Arenas | LinkedIn Ankur Patel Partner Group Product Manager Ankur Patel | LinkedIn Ngozi Nwoko Director, Secure AI Ngozi Nwoko | LinkedIn Ehud Itshaki Principal Product Manager Ehud Itshaki | LinkedIn Yair Tor Partner Product Manager Yair Tor | LinkedIn Nichole Peterson Panel Host / Senior PMM Nichole Peterson | LinkedIn See the roadmap in action: Replay the Ignite 2026 Microsoft Entra sessions AI is changing access. See how…"
     },
     {
       "id": "2aa97911f22a",
