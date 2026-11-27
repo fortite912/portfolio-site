@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-26T15:33:49+00:00",
-  "lastAddedAt": "2026-11-26T15:33:49+00:00",
+  "collectedAt": "2026-11-27T15:26:02+00:00",
+  "lastAddedAt": "2026-11-27T15:26:02+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -32,7 +32,7 @@
       "since": "2026-09-23",
       "why": "Les avis officiels de l'État sur les failles : seuls ceux qui touchent mes sujets sont gardés.",
       "ok": true,
-      "lastItem": "2026-11-26T00:00:00+00:00"
+      "lastItem": "2026-11-27T00:00:00+00:00"
     },
     {
       "id": "itconnect",
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-26T15:22:58+00:00"
+      "lastItem": "2026-11-27T09:36:00+00:00"
     },
     {
       "id": "zataz",
@@ -116,7 +116,7 @@
       "since": "2026-11-02",
       "why": "Site spécialisé dans le support informatique, qui publie souvent sur l'IA au service d'assistance.",
       "ok": true,
-      "lastItem": "2026-11-26T09:06:25+00:00"
+      "lastItem": "2026-11-27T14:42:13+00:00"
     },
     {
       "id": "spiceworks-ia",
@@ -348,6 +348,35 @@
   },
   "items": [
     {
+      "id": "2990d1555b8d",
+      "title": "GLPI AI : découvrez comment l’IA peut aider vos techniciens au quotidien",
+      "link": "https://www.it-connect.fr/tuto-glpi-ai/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-27T08:31:20+00:00",
+      "themes": [
+        "ia-support",
+        "outils"
+      ],
+      "excerpt": "Tutoriel GLPI AI : installez le plugin, choisissez votre fournisseur d'IA, résumez vos tickets et branchez un client IA sur GLPI via le protocole MCP. Le post GLPI AI : découvrez comment l’IA peut aider vos techniciens…",
+      "text": "Tutoriel GLPI AI : installez le plugin, choisissez votre fournisseur d'IA, résumez vos tickets et branchez un client IA sur GLPI via le protocole MCP. Le post GLPI AI : découvrez comment l’IA peut aider vos techniciens au quotidien a été publié sur IT-Connect ."
+    },
+    {
+      "id": "9e9becac11f9",
+      "title": "GLPI 12 : voici les nouveautés de cette nouvelle version majeure",
+      "link": "https://www.it-connect.fr/glpi-12-nouveautes/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-27T08:00:00+00:00",
+      "themes": [
+        "outils"
+      ],
+      "excerpt": "GLPI 12 refond la base de connaissances, contrôle les sessions et crée des OLA par groupe. Voici nos tests et les points à vérifier avant de migrer. Le post GLPI 12 : voici les nouveautés de cette nouvelle version…",
+      "text": "GLPI 12 refond la base de connaissances, contrôle les sessions et crée des OLA par groupe. Voici nos tests et les points à vérifier avant de migrer. Le post GLPI 12 : voici les nouveautés de cette nouvelle version majeure a été publié sur IT-Connect ."
+    },
+    {
       "id": "71970c919313",
       "title": "ITSM in 2027 – The BMC Helix View",
       "link": "https://itsm.tools/2027-itsm-ai/",
@@ -401,7 +430,7 @@
         "ia-support"
       ],
       "excerpt": "Today, Rose de Fremery covers two essential topics. First: garbage in, AI out . AI help desks are only as good as the documentation and ticket notes behind them, so audit your knowledge base, update outdated articles,…",
-      "text": "Today, Rose de Fremery covers two essential topics. First: garbage in, AI out . AI help desks are only as good as the documentation and ticket notes behind them, so audit your knowledge base, update outdated articles, and capture what your team knows before paying for an AI upgrade. Her second piece looks at Atlassian’s cloud push . With Data Center products set to sunset by March 2029, IT teams must choose whether to migrate, switch vendors, or keep relying on manual patches. That’s all for today. Tomorrow, we’ll have a cloud(y) day: Priya Singh explores hybrid cloud architecture, followed by Shelby Green on the hidden costs of multi-cloud systems. 4 posts - 4 participants Read full topic"
+      "text": "Today, Rose de Fremery covers two essential topics. First: garbage in, AI out . AI help desks are only as good as the documentation and ticket notes behind them, so audit your knowledge base, update outdated articles, and capture what your team knows before paying for an AI upgrade. Her second piece looks at Atlassian’s cloud push . With Data Center products set to sunset by March 2029, IT teams must choose whether to migrate, switch vendors, or keep relying on manual patches. That’s all for today. Tomorrow, we’ll have a cloud(y) day: Priya Singh explores hybrid cloud architecture, followed by Shelby Green on the hidden costs of multi-cloud systems. 7 posts - 5 participants Read full topic"
     },
     {
       "id": "1772298441b5",
