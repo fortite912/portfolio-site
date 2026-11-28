@@ -1,6 +1,6 @@
 {
-  "collectedAt": "2026-11-27T15:26:02+00:00",
-  "lastAddedAt": "2026-11-27T15:26:02+00:00",
+  "collectedAt": "2026-11-28T14:25:11+00:00",
+  "lastAddedAt": "2026-11-28T14:25:11+00:00",
   "windowDays": 120,
   "sources": [
     {
@@ -46,7 +46,7 @@
       "since": "2026-09-23",
       "why": "Site français d'actualité et de tutoriels pour les administrateurs systèmes et réseaux.",
       "ok": true,
-      "lastItem": "2026-11-27T09:36:00+00:00"
+      "lastItem": "2026-11-27T19:45:50+00:00"
     },
     {
       "id": "zataz",
@@ -347,6 +347,20 @@
     }
   },
   "items": [
+    {
+      "id": "48f503159353",
+      "title": "VMware ESXi et Proxmox VE : des ransomwares déployés avec des identifiants mal protégés",
+      "link": "https://www.it-connect.fr/blacknevas-ransomware-vmware-esxi-vcenter/",
+      "source": "IT Connect",
+      "sourceId": "itconnect",
+      "kind": "Blog technique",
+      "date": "2026-11-27T19:45:50+00:00",
+      "themes": [
+        "acces"
+      ],
+      "excerpt": "BlackNevas et The Gentlemen ont frappé des hyperviseurs VMware ESXi et Proxmox VE avec de simples identifiants volés ou stockés au mauvais endroit. Le post VMware ESXi et Proxmox VE : des ransomwares déployés avec…",
+      "text": "BlackNevas et The Gentlemen ont frappé des hyperviseurs VMware ESXi et Proxmox VE avec de simples identifiants volés ou stockés au mauvais endroit. Le post VMware ESXi et Proxmox VE : des ransomwares déployés avec des identifiants mal protégés a été publié sur IT-Connect ."
+    },
     {
       "id": "2990d1555b8d",
       "title": "GLPI AI : découvrez comment l’IA peut aider vos techniciens au quotidien",
